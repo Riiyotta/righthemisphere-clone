@@ -202,6 +202,8 @@ export const PAGE_REVEALS = {
 // An entry can override this with its own `skip` selector.
 const SKIP = '.partners_list_wrapper-copy, [data-motion-skip]';
 
+const REVEAL_ID = 'ix3-reveal';
+
 function createFor(entry, scope, splits) {
   const skip = entry.skip || SKIP;
   const els = Array.from(scope.querySelectorAll(entry.selector)).filter((el) => !el.closest(skip));
@@ -217,7 +219,7 @@ function createFor(entry, scope, splits) {
       },
     };
     const tl = gsap.timeline({
-      scrollTrigger: st(el, entry.start),
+      scrollTrigger: { ...st(el, entry.start), id: REVEAL_ID },
       onComplete: () => own.forEach((s) => s.restore()),
     });
     entry.build(tl, el, api);
@@ -268,7 +270,16 @@ export function initReveals({ scope = document, include, exclude = [], extra = [
   let timer = 0;
   const ro = new ResizeObserver(() => {
     clearTimeout(timer);
-    timer = setTimeout(() => alive && ScrollTrigger.refresh(), 120);
+    timer = setTimeout(() => {
+      if (!alive) return;
+      ScrollTrigger.refresh();
+      // IX3 refreshes each trigger on its own, at the current scroll. That only differs from a
+      // global refresh for box-less (display:none) triggers, e.g. the credits overlay's names:
+      // their start becomes scrollY - 100vh, so they play now (measured on the original).
+      ScrollTrigger.getAll().forEach((s) => {
+        if (s.vars.id === REVEAL_ID && s.trigger && !s.trigger.getClientRects().length) s.refresh();
+      });
+    }, 120);
   });
   ro.observe(document.body);
 
