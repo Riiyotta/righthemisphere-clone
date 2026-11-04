@@ -17,13 +17,14 @@ const HOME = null; // "/" keeps index.html's own <title>/<meta>; App renders unc
 
 const STATIC = {
   '/about': {
-    head: { title: pages.about.title, description: 'Meet the minds behind Right Hemisphere.' },
+    head: { title: pages.about.title, description: 'Meet the minds behind Right Hemisphere.', social: 'full' },
     render: () => <About />,
   },
   '/services': {
     head: {
       title: pages.services.title,
       description: 'Bringing form to function. Interface Design | Webflow Development | Creative Design',
+      social: 'full',
     },
     render: () => <Services />,
   },
@@ -32,15 +33,16 @@ const STATIC = {
       title: pages.work.title,
       description:
         'See what Right Hemisphere can do for you. Explore our recent projects and get your next one started.',
+      social: 'full',
     },
     render: () => <WorkPage />,
   },
   '/contact': {
-    head: { title: pages.contact.title, description: 'Connect with Right Hemisphere for your next project.' },
+    head: { title: pages.contact.title, description: 'Connect with Right Hemisphere for your next project.', social: 'full' },
     render: () => <ContactPage />,
   },
   '/blog': {
-    head: { title: pages.blog.title, description: 'Read our Blogs' },
+    head: { title: pages.blog.title, description: 'Read our Blogs', social: 'full' },
     render: () => <BlogList />,
   },
 };
@@ -58,7 +60,7 @@ function resolve(pathname) {
 
   const study = Object.values(caseStudies).find((c) => c.route === path);
   if (study) {
-    return { head: { title: study.title, description: null }, render: () => <CaseStudy study={study} /> };
+    return { head: { title: study.title, description: null, social: 'title' }, render: () => <CaseStudy study={study} /> };
   }
 
   // Webflow's hosting-level 404 (checked live: /does-not-exist).
