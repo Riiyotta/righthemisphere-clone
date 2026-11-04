@@ -1,0 +1,107 @@
+{
+ "id": "hero.words",
+ "title": "Words-only hero",
+ "version": "1.0.0",
+ "purpose": "Page opener for about, work, contact and blog index: the three display h1 words spread over the 6-column grid with no subhead or cards.",
+ "semantic": {
+  "id": "hero.words",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.hero_words",
+  "file": "src/components/shared/HeroWords.jsx",
+  "tag": "section",
+  "lines": "6",
+  "needle": "<section className={`${sectionClass}"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/shared/HeroWords.jsx:4",
+   "needle": "export default function HeroWords"
+  }
+ ],
+ "iaSectionIds": [
+  "hero.words"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "about",
+   "work-index",
+   "contact",
+   "blog-list"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "words": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 3,
+   "maxItems": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "load-intro-words",
+   "none"
+  ],
+  "default": "load-intro-words"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.heading"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: h1 56px; <=767 padding 160/128, words left-aligned with 14px column gap and wrap"
+  ],
+  "cite": {
+   "cite": "src/components/Hero.jsx:20",
+   "needle": "sm:pb-128 sm:pt-160"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   522,
+   522
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 4,
+  "heightAt768": [
+   492,
+   492
+  ],
+  "instancesAt768": 4,
+  "heightAt390": [
+   336,
+   432
+  ],
+  "instancesAt390": 4,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:45",
+   "needle": "### 0.1 \"Hero words\" variant"
+  }
+ ]
+}

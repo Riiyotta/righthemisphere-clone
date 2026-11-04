@@ -1,0 +1,14 @@
+{
+ "id": "article-block",
+ "kind": "component",
+ "description": "Rich-text block: p, h2, h3, h4, ordered list or figure in the 688px column.",
+ "tokens": [
+  "font.size.article-h2"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/blog/RichText.jsx:6",
+   "needle": "function Block"
+  }
+ ]
+}

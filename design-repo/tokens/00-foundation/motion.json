@@ -1,0 +1,171 @@
+{
+ "category": "motion",
+ "note": "Durations and eases measured from the original's IX3/IX2 payload (CLONE_SPEC.md 14). Behaviour is in motion-patterns.json.",
+ "tokens": {
+  "motion.duration.reveal": {
+   "$type": "duration",
+   "$value": "1s",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:471",
+     "needle": "Default duration when unspecified: **0.5s**"
+    }
+   ]
+  },
+  "motion.duration.default": {
+   "$type": "duration",
+   "$value": "0.5s",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:471",
+     "needle": "Default duration when unspecified: **0.5s**"
+    }
+   ]
+  },
+  "motion.duration.hover-colour": {
+   "$type": "duration",
+   "$value": "500ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:542",
+     "needle": "colours back to `#000` 500ms"
+    }
+   ]
+  },
+  "motion.duration.hover-arrow": {
+   "$type": "duration",
+   "$value": "300ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:542",
+     "needle": "**300ms**"
+    }
+   ]
+  },
+  "motion.duration.hover-arrow-delay": {
+   "$type": "duration",
+   "$value": "250ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:542",
+     "needle": "delay 250ms"
+    }
+   ]
+  },
+  "motion.duration.faq": {
+   "$type": "duration",
+   "$value": "500ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:552",
+     "needle": "height 0 → auto **500ms** easeOutQuart"
+    }
+   ]
+  },
+  "motion.duration.slider": {
+   "$type": "duration",
+   "$value": "500ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:362",
+     "needle": "`data-duration=\"500\"`"
+    }
+   ]
+  },
+  "motion.duration.nav-panel": {
+   "$type": "duration",
+   "$value": "400ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:146",
+     "needle": "400ms `ease`"
+    }
+   ]
+  },
+  "motion.duration.credits-cover": {
+   "$type": "duration",
+   "$value": "800ms",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:565",
+     "needle": "scale 0 → 1 over 800ms"
+    }
+   ]
+  },
+  "motion.duration.lenis": {
+   "$type": "duration",
+   "$value": "1.5s",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:457",
+     "needle": "duration: 1.5"
+    }
+   ]
+  },
+  "motion.ease.circ-out": {
+   "$type": "easing",
+   "$value": "circ.out",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:469",
+     "needle": "`20` = `circ.out`"
+    }
+   ]
+  },
+  "motion.ease.power1-out": {
+   "$type": "easing",
+   "$value": "power1.out",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:468",
+     "needle": "`2` = `power1.out`"
+    }
+   ]
+  },
+  "motion.ease.none": {
+   "$type": "easing",
+   "$value": "none",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:467",
+     "needle": "`0` = `none`"
+    }
+   ]
+  },
+  "motion.ease.quart": {
+   "$type": "easing",
+   "$value": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:155",
+     "needle": "quart: 'cubic-bezier(0.165, 0.84, 0.44, 1)'"
+    }
+   ]
+  },
+  "motion.ease.lenis": {
+   "$type": "easing",
+   "$value": "min(1, 1.001 - 2^(-10t))",
+   "category": "motion",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:457",
+     "needle": "Math.pow(2, -10 * t)"
+    }
+   ]
+  }
+ }
+}

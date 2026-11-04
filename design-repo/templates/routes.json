@@ -1,0 +1,119 @@
+{
+ "note": "Every route the clone serves, mapped exactly once, enumerated from src/Router.jsx: '/' (App), the five STATIC paths, the blog post routes and the case-study routes read from src/data/pages-content.json. Anything else falls through to the Webflow-style 404 (catchAll), which is a template but not a counted route. verify_all re-derives this list from the source when the source tree is present.",
+ "source": "src/Router.jsx + src/data/pages-content.json",
+ "routes": [
+  {
+   "path": "/",
+   "template": "home",
+   "locale": "en",
+   "evidence": "src/Router.jsx (HOME: App)"
+  },
+  {
+   "path": "/about",
+   "template": "about",
+   "locale": "en",
+   "evidence": "src/Router.jsx (STATIC)"
+  },
+  {
+   "path": "/services",
+   "template": "services",
+   "locale": "en",
+   "evidence": "src/Router.jsx (STATIC)"
+  },
+  {
+   "path": "/work",
+   "template": "work-index",
+   "locale": "en",
+   "evidence": "src/Router.jsx (STATIC)"
+  },
+  {
+   "path": "/contact",
+   "template": "contact",
+   "locale": "en",
+   "evidence": "src/Router.jsx (STATIC)"
+  },
+  {
+   "path": "/blog",
+   "template": "blog-list",
+   "locale": "en",
+   "evidence": "src/Router.jsx (STATIC)"
+  },
+  {
+   "path": "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/design-and-the-question-of-authority",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/how-to-create-good-web-design-everytime",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/on-webflow-right-hemisphere-and-how-we-work",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/what-is-px-what-is-a-pt-what-is-dp",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/blog/what-should-be-the-size-of-an-icon-button",
+   "template": "blog-post",
+   "locale": "en",
+   "evidence": "src/Router.jsx (blogPosts.find) + src/data/pages-content.json"
+  },
+  {
+   "path": "/cheggout-sdk",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/Router.jsx (caseStudies) + src/data/pages-content.json"
+  },
+  {
+   "path": "/watch-with-papa",
+   "template": "case-study",
+   "locale": "en",
+   "evidence": "src/Router.jsx (caseStudies) + src/data/pages-content.json"
+  }
+ ],
+ "catchAll": {
+  "template": "not-found",
+  "probe": "/does-not-exist",
+  "evidence": "src/Router.jsx (resolve fallthrough)"
+ }
+}

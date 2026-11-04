@@ -1,0 +1,207 @@
+{
+ "id": "work.card-cluster",
+ "title": "Work card cluster",
+ "version": "1.0.0",
+ "purpose": "One grid wrapper of project cards on the 6-column grid with explicit placements and offsets (8 cards in the first wrapper, 8 in the next, 1 in the last on /work; 8 + 2 plus a 'see all' link on the home page). Each card has a title, optional detail, a tile-filled image, a rotated year, a caption and a VIEW row with an arrow pair.",
+ "semantic": {
+  "id": "work.card-cluster",
+  "category": "WORK"
+ },
+ "source": {
+  "id": "dom:div.work_element_content_wrapper",
+  "file": "src/components/Work.jsx",
+  "tag": "div",
+  "lines": "215",
+  "needle": "<div className={`${WRAPPER} pt-40`}>"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Work.jsx:144",
+   "needle": "export function WorkCard"
+  },
+  {
+   "cite": "src/components/work/WorkGrid.jsx:102",
+   "needle": "export default function WorkGrid"
+  }
+ ],
+ "iaSectionIds": [
+  "work.home-grid",
+  "work.full-grid"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 4,
+  "templates": [
+   "home",
+   "work-index"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "cards": {
+   "kind": "items",
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 6,
+     "required": true
+    },
+    "detail": {
+     "kind": "text",
+     "maxWords": 14,
+     "required": false
+    },
+    "caption": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    },
+    "year": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "href": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "layout": {
+     "kind": "enum",
+     "values": [
+      "portrait",
+      "landscape-left",
+      "landscape-right"
+     ],
+     "required": true
+    },
+    "fill": {
+     "kind": "enum",
+     "values": [
+      "black",
+      "navy",
+      "violet",
+      "teal",
+      "orange",
+      "amber",
+      "forest",
+      "olive",
+      "cyan",
+      "yellow-green",
+      "beige",
+      "grey",
+      "blue-grey"
+     ],
+     "required": true
+    },
+    "image": {
+     "kind": "media",
+     "assetRoles": [
+      "work.project-image"
+     ],
+     "generatedAssetRoles": [
+      "generated.project-visual",
+      "user.project-media"
+     ],
+     "required": true
+    },
+    "hero": {
+     "kind": "boolean",
+     "required": false
+    }
+   },
+   "minItems": 1,
+   "maxItems": 8,
+   "required": true
+  },
+  "viewLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "seeAll": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade",
+   "scroll-rise-y",
+   "scroll-slide-x",
+   "hover-border-accent",
+   "hover-arrow-swap",
+   "none"
+  ],
+  "default": "scroll-fade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: the grid becomes a flex column with 160px gap; portrait cards are pushed right (476px wide, margin-left 449.5px), landscape cards 713px or full width",
+   "<=767: card width = content - 26px (room for the vertical year label); header stacks (title over detail)",
+   "<=479: gap 80, header padding 12px"
+  ],
+  "cite": {
+   "cite": "src/components/Work.jsx:141",
+   "needle": "md:flex md:flex-col md:items-start md:gap-160"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "work.project-image"
+ ],
+ "generatedAssetRoles": [
+  "generated.project-visual",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   873,
+   3020
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 6,
+  "heightAt768": [
+   650,
+   5504
+  ],
+  "instancesAt768": 6,
+  "heightAt390": [
+   599,
+   3713
+  ],
+  "instancesAt390": 6,
+  "source": "extraction/measured-values.json#sectionHeights",
+  "decomposition": "Split at the real .work_element_content_wrapper boundary (home 2 wrappers, /work 4): the 25-card /work grid is ~86% of that page measured as one block, ~26% as four wrappers."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:193",
+   "needle": "## 3. `section_work`"
+  },
+  {
+   "cite": "CLONE_SPEC-PAGES.md:224",
+   "needle": "## 3. /work"
+  }
+ ]
+}

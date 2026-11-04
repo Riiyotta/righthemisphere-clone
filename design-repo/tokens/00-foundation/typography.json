@@ -1,0 +1,318 @@
+{
+ "category": "typography",
+ "note": "Type scale from the fluid --t* variables in tailwind.config.js (clamp formulas, desktop; <=991 and <=479 overrides are in the same file) plus the fixed article sizes of CLONE_SPEC-PAGES.md 6.1. PP Mori is commercial: it is font.family.reference (not PageSpec-referenceable); generated pages use font.family.sans.",
+ "tokens": {
+  "font.family.sans": {
+   "$type": "fontFamily",
+   "$value": "Inter, sans-serif",
+   "category": "fontFamily",
+   "evidence": [
+    {
+     "cite": "src/index.css:6",
+     "needle": "falls back to Inter 400"
+    },
+    {
+     "cite": "tailwind.config.js:85",
+     "needle": "sans: ['\"PP Mori\"', 'Inter', 'sans-serif']"
+    }
+   ]
+  },
+  "font.family.reference": {
+   "$type": "fontFamily",
+   "$value": "\"PP Mori\", Inter, sans-serif",
+   "category": "fontFamily",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:85",
+     "needle": "sans: ['\"PP Mori\"', 'Inter', 'sans-serif']"
+    },
+    {
+     "cite": "src/index.css:5",
+     "needle": "PP Mori is commercial"
+    }
+   ]
+  },
+  "font.weight.regular": {
+   "$type": "fontWeight",
+   "$value": "400",
+   "category": "fontWeight",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:87",
+     "needle": "fontWeight: { normal: '400' }"
+    },
+    {
+     "cite": "CLONE_SPEC.md:36",
+     "needle": "Use a 400 weight only"
+    }
+   ]
+  },
+  "font.weight.semibold": {
+   "$type": "fontWeight",
+   "$value": "600",
+   "category": "fontWeight",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:11",
+     "needle": "the 600 face **is** downloaded on blog-post pages"
+    }
+   ]
+  },
+  "letter-spacing.h1": {
+   "$type": "dimension",
+   "$value": "-0.9px",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:104",
+     "needle": "h1: '-0.9px'"
+    }
+   ]
+  },
+  "letter-spacing.h2": {
+   "$type": "dimension",
+   "$value": "-0.4px",
+   "category": "letterSpacing",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:105",
+     "needle": "h2: '-0.4px'"
+    }
+   ]
+  },
+  "line-height.body": {
+   "$type": "dimension",
+   "$value": "120%",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:108",
+     "needle": "body: '120%'"
+    }
+   ]
+  },
+  "line-height.year": {
+   "$type": "number",
+   "$value": "0.9",
+   "category": "lineHeight",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:109",
+     "needle": "year: '0.9'"
+    }
+   ]
+  },
+  "font.size.t10": {
+   "$type": "dimension",
+   "$value": "clamp(8px, 5.347px + 0.2674vw, 10px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:8",
+     "needle": "'--t10': 'clamp(8px, 5.347px + 0.2674vw, 10px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:42",
+     "needle": "| `--t10` |"
+    }
+   ]
+  },
+  "font.size.t12": {
+   "$type": "dimension",
+   "$value": "clamp(10px, 4.694px + 0.5348vw, 14px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:9",
+     "needle": "'--t12': 'clamp(10px, 4.694px + 0.5348vw, 14px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:43",
+     "needle": "| `--t12` |"
+    }
+   ]
+  },
+  "font.size.t14": {
+   "$type": "dimension",
+   "$value": "clamp(10px, 3.986px + 0.607vw, 14px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:10",
+     "needle": "'--t14': 'clamp(10px, 3.986px + 0.607vw, 14px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:44",
+     "needle": "| `--t14` |"
+    }
+   ]
+  },
+  "font.size.t16": {
+   "$type": "dimension",
+   "$value": "clamp(12px, 5.986px + 0.607vw, 16px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:11",
+     "needle": "'--t16': 'clamp(12px, 5.986px + 0.607vw, 16px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:45",
+     "needle": "| `--t16` |"
+    }
+   ]
+  },
+  "font.size.t20": {
+   "$type": "dimension",
+   "$value": "clamp(16px, 9.986px + 0.607vw, 20px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:12",
+     "needle": "'--t20': 'clamp(16px, 9.986px + 0.607vw, 20px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:46",
+     "needle": "| `--t20` |"
+    }
+   ]
+  },
+  "font.size.t24": {
+   "$type": "dimension",
+   "$value": "clamp(20px, 13.986px + 0.607vw, 24px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:13",
+     "needle": "'--t24': 'clamp(20px, 13.986px + 0.607vw, 24px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:47",
+     "needle": "| `--t24` |"
+    }
+   ]
+  },
+  "font.size.t32": {
+   "$type": "dimension",
+   "$value": "clamp(24px, 11.970px + 1.214vw, 32px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:14",
+     "needle": "'--t32': 'clamp(24px, 11.970px + 1.214vw, 32px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:48",
+     "needle": "| `--t32` |"
+    }
+   ]
+  },
+  "font.size.display": {
+   "$type": "dimension",
+   "$value": "clamp(52px, 0.69px + 5.1724vw, 100px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:15",
+     "needle": "'--display': 'clamp(52px, 0.69px + 5.1724vw, 100px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:49",
+     "needle": "| `--display` |"
+    }
+   ]
+  },
+  "font.size.hero-sub": {
+   "$type": "dimension",
+   "$value": "clamp(17px, 1.8103vw - 0.958px, 33.8px)",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:16",
+     "needle": "'--hero-sub': 'clamp(17px, 1.8103vw - 0.958px, 33.8px)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:50",
+     "needle": "| `--hero-sub` |"
+    }
+   ]
+  },
+  "font.size.brand": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:99",
+     "needle": "brand: ['14px'"
+    }
+   ]
+  },
+  "font.size.menu-label": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:100",
+     "needle": "'menu-label': ['14px'"
+    }
+   ]
+  },
+  "font.size.client-md": {
+   "$type": "dimension",
+   "$value": "16px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:101",
+     "needle": "'client-md': ['16px'"
+    }
+   ]
+  },
+  "font.size.article-h1": {
+   "$type": "dimension",
+   "$value": "40px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:389",
+     "needle": "**40px / 48px (line-height 1.2)"
+    }
+   ]
+  },
+  "font.size.article-h2": {
+   "$type": "dimension",
+   "$value": "24px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:401",
+     "needle": "| `h2` | 24px / 28.8"
+    }
+   ]
+  },
+  "font.size.article-h3": {
+   "$type": "dimension",
+   "$value": "20px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:402",
+     "needle": "| `h3` | 20px / 24"
+    }
+   ]
+  },
+  "font.size.article-h4": {
+   "$type": "dimension",
+   "$value": "18px",
+   "category": "fontSize",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:403",
+     "needle": "| `h4` | 18px / 21.6"
+    }
+   ]
+  }
+ }
+}

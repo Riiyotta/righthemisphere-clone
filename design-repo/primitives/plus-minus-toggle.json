@@ -1,0 +1,15 @@
+{
+ "id": "plus-minus-toggle",
+ "kind": "primitive",
+ "description": "32x32 toggle: a plus that scales on Y into the minus beneath it.",
+ "tokens": [
+  "color.accent",
+  "motion.duration.faq"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Faq.jsx:57",
+   "needle": "faq_add_icon"
+  }
+ ]
+}

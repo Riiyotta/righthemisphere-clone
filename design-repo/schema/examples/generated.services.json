@@ -1,0 +1,285 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "services",
+ "route": "/services",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Fieldnote Studio",
+  "description": "A small design studio making calm, useful interfaces."
+ },
+ "brand": {
+  "studioName": "Fieldnote Studio",
+  "domain": "fieldnote.example"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Projects",
+      "href": "/work"
+     },
+     {
+      "label": "Offer",
+      "href": "/services"
+     },
+     {
+      "label": "Studio",
+      "href": "/about"
+     },
+     {
+      "label": "Journal",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "Say hello",
+     "href": "/contact"
+    },
+    "menuLabel": "Menu",
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.services",
+   "content": {
+    "words": [
+     "our",
+     "offer"
+    ],
+    "intro": "Every engagement starts with a conversation about the people who will use the thing, then moves through design, build and a calm handover."
+   },
+   "motion": {
+    "pattern": "load-intro-services",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "list.pricing-table",
+   "content": {
+    "headers": [
+     "offer",
+     "includes",
+     "price"
+    ],
+    "rows": [
+     {
+      "number": "01",
+      "name": "Product design",
+      "deliverables": "Discovery interviews, flows, wireframes, visual design, a component library and a developer handover.",
+      "costLabel": "From:",
+      "cost": "$2,400"
+     },
+     {
+      "number": "02",
+      "name": "Brand system",
+      "deliverables": "Wordmark, colour and type rules, templates and a short usage guide for your team.",
+      "costLabel": "From:",
+      "cost": "$1,800"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary",
+    "spaceBlock": "space.112"
+   }
+  },
+  {
+   "section": "content.faq-accordion",
+   "content": {
+    "heading": "questions",
+    "items": [
+     {
+      "question": "Who is a good fit",
+      "answer": "Teams that value clarity and want a partner who will say no to clutter."
+     },
+     {
+      "question": "How long does a project take",
+      "answer": "Most engagements run six to ten weeks from first call to launch."
+     },
+     {
+      "question": "Do you handle hosting",
+      "answer": "We can set it up and hand over the keys, or keep it running for you."
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "accordion-height",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary",
+    "spaceBlock": "space.160"
+   }
+  },
+  {
+   "section": "cta.contact-lines",
+   "content": {
+    "lines": [
+     "shall we make",
+     "something",
+     "useful"
+    ],
+    "button": {
+     "label": "Start a conversation",
+     "href": "/contact"
+    }
+   },
+   "motion": {
+    "pattern": "contact-lines-slide",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "spaceBlock": "space.240"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "Collaborators",
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "placeholder.partner-badge",
+     "ref": "placeholder://affiliation-badge",
+     "alt": ""
+    },
+    "note": "Copyright Fieldnote Studio, 2026",
+    "addressLabel": "Find us",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "Side projects",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "Pages",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "Elsewhere",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-1",
+       "alt": "Monogram tile"
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-2",
+       "alt": "Monogram tile"
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

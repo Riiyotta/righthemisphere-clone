@@ -1,0 +1,180 @@
+{
+ "category": "semantic",
+ "note": "Roles resolve to one foundation colour ($ref); $value is the resolved value so the catalog can be re-derived. Surfaces and text are the PageSpec-referenceable roles (tokens/llm/token-policy.json).",
+ "tokens": {
+  "surface.page": {
+   "$type": "color",
+   "$value": "#FFFFFF",
+   "$ref": "color.paper",
+   "category": "surface"
+  },
+  "surface.panel": {
+   "$type": "color",
+   "$value": "#F3F4F6",
+   "$ref": "color.panel-grey",
+   "category": "surface"
+  },
+  "surface.media-dark": {
+   "$type": "color",
+   "$value": "#171717",
+   "$ref": "color.media-dark",
+   "category": "surface"
+  },
+  "surface.system": {
+   "$type": "color",
+   "$value": "#F5F5F5",
+   "$ref": "color.system-bg",
+   "category": "surface"
+  },
+  "surface.scrim": {
+   "$type": "color",
+   "$value": "rgba(0,0,0,0.5)",
+   "$ref": "color.overlay",
+   "category": "surface"
+  },
+  "surface.error": {
+   "$type": "color",
+   "$value": "#FFDEDE",
+   "$ref": "color.error-bg",
+   "category": "surface"
+  },
+  "surface.tile-black": {
+   "$type": "color",
+   "$value": "#000000",
+   "$ref": "color.project-black",
+   "category": "surface"
+  },
+  "surface.tile-navy": {
+   "$type": "color",
+   "$value": "#0F2844",
+   "$ref": "color.project-navy",
+   "category": "surface"
+  },
+  "surface.tile-violet": {
+   "$type": "color",
+   "$value": "#6165AF",
+   "$ref": "color.project-violet",
+   "category": "surface"
+  },
+  "surface.tile-teal": {
+   "$type": "color",
+   "$value": "#3E7170",
+   "$ref": "color.project-teal",
+   "category": "surface"
+  },
+  "surface.tile-orange": {
+   "$type": "color",
+   "$value": "#FF7136",
+   "$ref": "color.project-orange",
+   "category": "surface"
+  },
+  "surface.tile-amber": {
+   "$type": "color",
+   "$value": "#FB9920",
+   "$ref": "color.project-amber",
+   "category": "surface"
+  },
+  "surface.tile-forest": {
+   "$type": "color",
+   "$value": "#193526",
+   "$ref": "color.project-forest",
+   "category": "surface"
+  },
+  "surface.tile-olive": {
+   "$type": "color",
+   "$value": "#5B5B45",
+   "$ref": "color.project-olive",
+   "category": "surface"
+  },
+  "surface.tile-cyan": {
+   "$type": "color",
+   "$value": "#176C77",
+   "$ref": "color.project-cyan",
+   "category": "surface"
+  },
+  "surface.tile-yellow-green": {
+   "$type": "color",
+   "$value": "#E1D327",
+   "$ref": "color.project-yellow-green",
+   "category": "surface"
+  },
+  "surface.tile-beige": {
+   "$type": "color",
+   "$value": "#DFD9C4",
+   "$ref": "color.project-beige",
+   "category": "surface"
+  },
+  "surface.tile-grey": {
+   "$type": "color",
+   "$value": "#363638",
+   "$ref": "color.project-grey",
+   "category": "surface"
+  },
+  "surface.tile-blue-grey": {
+   "$type": "color",
+   "$value": "#F0F3F6",
+   "$ref": "color.project-blue-grey",
+   "category": "surface"
+  },
+  "text.primary": {
+   "$type": "color",
+   "$value": "#000000",
+   "$ref": "color.ink",
+   "category": "text"
+  },
+  "text.heading": {
+   "$type": "color",
+   "$value": "#1A1A1A",
+   "$ref": "color.ink-h1",
+   "category": "text"
+  },
+  "text.muted": {
+   "$type": "color",
+   "$value": "#7A7A7A",
+   "$ref": "color.grey",
+   "category": "text"
+  },
+  "text.accent": {
+   "$type": "color",
+   "$value": "#120DF7",
+   "$ref": "color.accent",
+   "category": "text"
+  },
+  "text.on-dark": {
+   "$type": "color",
+   "$value": "#FFFFFF",
+   "$ref": "color.paper",
+   "category": "text"
+  },
+  "text.field": {
+   "$type": "color",
+   "$value": "#333333",
+   "$ref": "color.field-text",
+   "category": "text"
+  },
+  "border.rule": {
+   "$type": "color",
+   "$value": "#CECECE",
+   "$ref": "color.rule",
+   "category": "border"
+  },
+  "border.accent": {
+   "$type": "color",
+   "$value": "#120DF7",
+   "$ref": "color.accent",
+   "category": "border"
+  },
+  "border.focus": {
+   "$type": "color",
+   "$value": "#3898EC",
+   "$ref": "color.focus",
+   "category": "border"
+  },
+  "border.strong": {
+   "$type": "color",
+   "$value": "#000000",
+   "$ref": "color.ink",
+   "category": "border"
+  }
+ }
+}

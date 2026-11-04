@@ -1,0 +1,16 @@
+{
+ "id": "display-heading",
+ "kind": "primitive",
+ "description": "h1/h2 display type: fluid --display size, uppercase, line-height 1.2, letter-spacing -0.9px.",
+ "tokens": [
+  "font.size.display",
+  "letter-spacing.h1",
+  "color.ink-h1"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Hero.jsx:26",
+   "needle": "tracking-h1"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "system.not-found",
+ "title": "Not found page",
+ "version": "1.0.0",
+ "purpose": "The hosting-level 'Page not found' screen on #f5f5f5 with a mono 404, a heading and a sentence; no site navigation or footer.",
+ "semantic": {
+  "id": "system.not-found",
+  "category": "SYSTEM"
+ },
+ "source": {
+  "id": "dom:div.utility-wrapper",
+  "file": "src/pages/NotFound.jsx",
+  "tag": "div",
+  "lines": "5",
+  "needle": "<div className=\"utility-wrapper\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/NotFound.jsx:3",
+   "needle": "export default function NotFound"
+  }
+ ],
+ "iaSectionIds": [
+  "system.not-found"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "not-found"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "code": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "heading": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "body": {
+   "kind": "text",
+   "maxWords": 20,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.system"
+  ],
+  "text": [
+   "text.primary"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "utility container padding and heading size shrink at <=767 (pages.css)"
+  ],
+  "cite": {
+   "cite": "src/pages/pages.css:1056",
+   "needle": ".utility-container {"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   900,
+   900
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   1024,
+   1024
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   844,
+   844
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "ia/ia.json:220",
+   "needle": "Webflow's hosting-level 'Page not found'"
+  }
+ ]
+}

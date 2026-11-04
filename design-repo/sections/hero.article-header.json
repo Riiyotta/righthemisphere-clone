@@ -1,0 +1,144 @@
+{
+ "id": "hero.article-header",
+ "title": "Article header",
+ "version": "1.0.0",
+ "purpose": "Page opener of a blog post: a 4:3 hero image in the 688px column, a fixed 40px headline with subtitle, and a published-on / author meta row.",
+ "semantic": {
+  "id": "hero.article-header",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.section_blog_hero",
+  "file": "src/pages/BlogPost.jsx",
+  "tag": "section",
+  "lines": "21",
+  "needle": "<section className=\"section_blog_hero\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/BlogPost.jsx:15",
+   "needle": "export default function BlogPost"
+  }
+ ],
+ "iaSectionIds": [
+  "hero.blog-post"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "blog-post"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "image": {
+   "kind": "media",
+   "assetRoles": [
+    "article.image"
+   ],
+   "generatedAssetRoles": [
+    "generated.article-image",
+    "user.project-media"
+   ],
+   "required": true
+  },
+  "title": {
+   "kind": "text",
+   "maxWords": 20,
+   "required": true
+  },
+  "subtitle": {
+   "kind": "text",
+   "maxWords": 40,
+   "required": true
+  },
+  "dateLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "date": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": false
+  },
+  "authorLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "author": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.heading",
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=767: meta row becomes a column with 16px gap",
+   "headline stays 40px/48px at every width"
+  ],
+  "cite": {
+   "cite": "src/pages/BlogPost.jsx:32",
+   "needle": "blog_info_element"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "article.image"
+ ],
+ "generatedAssetRoles": [
+  "generated.article-image",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   783,
+   850
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 10,
+  "heightAt768": [
+   786,
+   853
+  ],
+  "instancesAt768": 10,
+  "heightAt390": [
+   679,
+   775
+  ],
+  "instancesAt390": 10,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:386",
+   "needle": "**`section_blog_hero`**"
+  }
+ ]
+}

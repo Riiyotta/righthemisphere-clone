@@ -1,0 +1,18 @@
+{
+ "id": "award-group",
+ "kind": "component",
+ "description": "Award mark + name/level beside ruled rows with arrow pairs.",
+ "uses": [
+  "arrow-pair-diagonal",
+  "hairline-row"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Awards.jsx:67",
+   "needle": "awards_list_item_v2"
+  }
+ ]
+}

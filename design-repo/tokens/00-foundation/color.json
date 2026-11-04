@@ -1,0 +1,426 @@
+{
+ "category": "color",
+ "note": "Every value is in tailwind.config.js (cited line + needle) or src/pages/pages.css and agrees with CLONE_SPEC.md 0.1 / CLONE_SPEC-PAGES.md. The clone has no gradients and no shadows.",
+ "tokens": {
+  "color.ink": {
+   "$type": "color",
+   "$value": "#000000",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:57",
+     "needle": "ink: '#000000'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:18",
+     "needle": "| `ink` | `#000000`"
+    }
+   ]
+  },
+  "color.ink-h1": {
+   "$type": "color",
+   "$value": "#1A1A1A",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:58",
+     "needle": "'ink-h1': '#1A1A1A'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:19",
+     "needle": "| `ink-h1` | `#1A1A1A`"
+    }
+   ]
+  },
+  "color.grey": {
+   "$type": "color",
+   "$value": "#7A7A7A",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:59",
+     "needle": "grey: '#7A7A7A'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:20",
+     "needle": "| `grey` | `#7A7A7A`"
+    }
+   ]
+  },
+  "color.rule": {
+   "$type": "color",
+   "$value": "#CECECE",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:60",
+     "needle": "rule: '#CECECE'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:21",
+     "needle": "| `rule` | `#CECECE`"
+    }
+   ]
+  },
+  "color.accent": {
+   "$type": "color",
+   "$value": "#120DF7",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:61",
+     "needle": "accent: '#120DF7'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:22",
+     "needle": "| `accent` | `#120DF7`"
+    }
+   ]
+  },
+  "color.accent-alt": {
+   "$type": "color",
+   "$value": "#211CF7",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:62",
+     "needle": "'accent-alt': '#211CF7'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:23",
+     "needle": "| `accent-alt` | `#211CF7`"
+    }
+   ]
+  },
+  "color.paper": {
+   "$type": "color",
+   "$value": "#FFFFFF",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:63",
+     "needle": "paper: '#FFFFFF'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:24",
+     "needle": "| `paper` | `#FFFFFF`"
+    }
+   ]
+  },
+  "color.white-0": {
+   "$type": "color",
+   "$value": "rgba(255,255,255,0)",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:64",
+     "needle": "'white-0': 'rgba(255,255,255,0)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:25",
+     "needle": "| `white-0` |"
+    }
+   ]
+  },
+  "color.overlay": {
+   "$type": "color",
+   "$value": "rgba(0,0,0,0.5)",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:65",
+     "needle": "overlay: 'rgba(0,0,0,0.5)'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:26",
+     "needle": "| `overlay` |"
+    }
+   ]
+  },
+  "color.field-text": {
+   "$type": "color",
+   "$value": "#333333",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:455",
+     "needle": "color: #333333;"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:313",
+     "needle": "text colour `#333333`"
+    }
+   ]
+  },
+  "color.focus": {
+   "$type": "color",
+   "$value": "#3898EC",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:466",
+     "needle": "border-color: #3898ec;"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:317",
+     "needle": "border becomes `#3898EC`"
+    }
+   ]
+  },
+  "color.error-bg": {
+   "$type": "color",
+   "$value": "#FFDEDE",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:516",
+     "needle": "background-color: #ffdede;"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:327",
+     "needle": "`background:#FFDEDE`"
+    }
+   ]
+  },
+  "color.panel-grey": {
+   "$type": "color",
+   "$value": "#F3F4F6",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:874",
+     "needle": "background-color: #f3f4f6;"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:476",
+     "needle": "background `#F3F4F6`"
+    }
+   ]
+  },
+  "color.media-dark": {
+   "$type": "color",
+   "$value": "#171717",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:914",
+     "needle": "background-color: #171717;"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:467",
+     "needle": "**background `#171717`**"
+    }
+   ]
+  },
+  "color.system-bg": {
+   "$type": "color",
+   "$value": "#F5F5F5",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:1050",
+     "needle": "background-color: #f5f5f5;"
+    },
+    {
+     "cite": "ia/ia.json:220",
+     "needle": "#f5f5f5"
+    }
+   ]
+  },
+  "color.project-black": {
+   "$type": "color",
+   "$value": "#000000",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:68",
+     "needle": "black: '#000000'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:18",
+     "needle": "#000000"
+    }
+   ]
+  },
+  "color.project-navy": {
+   "$type": "color",
+   "$value": "#0F2844",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:69",
+     "needle": "navy: '#0F2844'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#0F2844"
+    }
+   ]
+  },
+  "color.project-violet": {
+   "$type": "color",
+   "$value": "#6165AF",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:70",
+     "needle": "violet: '#6165AF'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#6165AF"
+    }
+   ]
+  },
+  "color.project-teal": {
+   "$type": "color",
+   "$value": "#3E7170",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:71",
+     "needle": "teal: '#3E7170'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#3E7170"
+    }
+   ]
+  },
+  "color.project-orange": {
+   "$type": "color",
+   "$value": "#FF7136",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:72",
+     "needle": "orange: '#FF7136'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#FF7136"
+    }
+   ]
+  },
+  "color.project-amber": {
+   "$type": "color",
+   "$value": "#FB9920",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:73",
+     "needle": "amber: '#FB9920'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#FB9920"
+    }
+   ]
+  },
+  "color.project-forest": {
+   "$type": "color",
+   "$value": "#193526",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:74",
+     "needle": "forest: '#193526'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#193526"
+    }
+   ]
+  },
+  "color.project-olive": {
+   "$type": "color",
+   "$value": "#5B5B45",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:75",
+     "needle": "olive: '#5B5B45'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#5B5B45"
+    }
+   ]
+  },
+  "color.project-cyan": {
+   "$type": "color",
+   "$value": "#176C77",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:76",
+     "needle": "cyan: '#176C77'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:27",
+     "needle": "#176C77"
+    }
+   ]
+  },
+  "color.project-yellow-green": {
+   "$type": "color",
+   "$value": "#E1D327",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:78",
+     "needle": "'yellow-green': '#E1D327'"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:250",
+     "needle": "#E1D327"
+    }
+   ]
+  },
+  "color.project-beige": {
+   "$type": "color",
+   "$value": "#DFD9C4",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:79",
+     "needle": "beige: '#DFD9C4'"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:251",
+     "needle": "#DFD9C4"
+    }
+   ]
+  },
+  "color.project-grey": {
+   "$type": "color",
+   "$value": "#363638",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:80",
+     "needle": "grey: '#363638'"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:253",
+     "needle": "#363638"
+    }
+   ]
+  },
+  "color.project-blue-grey": {
+   "$type": "color",
+   "$value": "#F0F3F6",
+   "category": "color",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:81",
+     "needle": "'blue-grey': '#F0F3F6'"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:260",
+     "needle": "#F0F3F6"
+    }
+   ]
+  }
+ }
+}

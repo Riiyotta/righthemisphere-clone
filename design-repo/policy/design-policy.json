@@ -1,0 +1,81 @@
+{
+ "policyId": "creative-studio-portfolio-web",
+ "policyVersion": "1.0.0",
+ "commonIrVersion": "0.5",
+ "role": "local-extension",
+ "extends": {
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "note": "This file is a LOCAL EXTENSION layered on the generic N0 common design policy n0-design-constraints-common 0.1.0 (Common IR 0.5, enforcement hard-and-soft). It adds the portfolio rules below; it does not replace the common policy. The binding itself lives in registry.manifest.json designPolicy."
+ },
+ "title": "Creative-studio portfolio web generation policy",
+ "classification": {
+  "productCategory": "portfolio",
+  "productDomain": "creative-studio-portfolio",
+  "surfaces": [
+   "home",
+   "work-index",
+   "case-studies",
+   "about-and-team",
+   "services-and-rates",
+   "contact-enquiry",
+   "journal"
+  ],
+  "audiences": [
+   "prospective clients commissioning web design and development",
+   "collaborators and partner studios",
+   "readers of the studio journal"
+  ],
+  "decision": "A freelance/creative studio showing its work: a project index and case studies lead, followed by studio, team, services with a rate card, press and awards, clients, testimonials and an enquiry form. There are no plans, accounts, dashboards, integrations or demo booking.",
+  "evidence": [
+   {
+    "cite": "src/Router.jsx:18",
+    "needle": "const STATIC = {"
+   },
+   {
+    "cite": "src/components/Work.jsx:16",
+    "needle": "const GRID_1 = ["
+   },
+   {
+    "cite": "src/data/pages-content.json:559",
+    "needle": "\"costLabel\": \"Starts at:\""
+   },
+   {
+    "cite": "src/components/contact/ContactForm.jsx:4",
+    "needle": "LOCAL STUB"
+   },
+   {
+    "cite": "CLONE_SPEC-PAGES.md:430",
+    "needle": "## 7. Case-study template"
+   }
+  ],
+  "classifiedBy": "design-repo build agent (agent attestation, not a human sign-off)"
+ },
+ "generationRules": [
+  "Pages are drawn only from the 9 templates and 30 section contracts: home, about, services, work-index, contact, blog-list, blog-post, case-study and not-found. Work, case-study, about/team and contact structures are first class.",
+  "No pricing table, feature matrix, integrations, dashboard, plan comparison or demo-booking section is generated. The only price list is list.pricing-table on the services template, because the clone really has a rate card there; it is an agency rate list (a 'from' price per engagement), not a tier matrix.",
+  "Every PageSpec declares mode: reference (faithful reconstruction, source brand and clone assets allowed as evidence) or generated (a new page for another studio). Generated pages carry none of the source's brand, people, client names, award and press marks, photography, copy, claims or URLs (GENERATED_MODE_* rules; patterns in schema/protected-content.json, names and copy as hashes).",
+  "Real client names, project imagery, award and press marks, team members and their portraits, testimonials and the live enquiry endpoint are must-not-fabricate in generation mode: use the generation-safe asset roles (placeholder client mark, fictional portrait, placeholder award mark, placeholder.url) and original copy.",
+  "Personal identity (names, address, phone, email, social profiles) is never reproduced or invented to look real: fictional people and reserved .example/.invalid URLs only; phone links are not generated.",
+  "Page-level tokens come only from tokens/llm/token-catalog.json under tokens/llm/token-policy.json; no raw colours, lengths or font names (TOKEN_* rules). Generated pages use the one theme 'light' and the font token font.family.sans.",
+  "Long bodies are decomposed, never whole-page sections: blog posts into chapters, the work grid into card clusters, the blog index into 3-card clusters (wrapper gate, extraction/wrapper_gate.py)."
+ ],
+ "enforcedBy": [
+  "schema/pagespec.schema.json",
+  "schema/semantic_validate.py",
+  "schema/protected-content.json",
+  "compatibility/graph.json",
+  "assets/asset-roles.json",
+  "tokens/llm/token-policy.json",
+  "tokens/llm/token-catalog.json",
+  "templates/templates.json",
+  "extraction/wrapper_gate.py",
+  "policy/design-policy.json"
+ ],
+ "approval": {
+  "policyDecision": "bound-pending-architecture-review",
+  "architectureDecisionRecorded": false,
+  "note": "Bound by the build agent from source evidence; no human architecture review has confirmed the binding. Legal-content sign-off and asset-licensing review are separate approvals and are also open."
+ }
+}

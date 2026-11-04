@@ -1,0 +1,39 @@
+{
+ "category": "elevation",
+ "note": "No gradients, no shadows; two fixed layers.",
+ "tokens": {
+  "elevation.none": {
+   "$type": "shadow",
+   "$value": "none",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:29",
+     "needle": "`box-shadow: none` everywhere"
+    }
+   ]
+  },
+  "elevation.z-nav": {
+   "$type": "number",
+   "$value": "998",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:152",
+     "needle": "nav: '998'"
+    }
+   ]
+  },
+  "elevation.z-overlay": {
+   "$type": "number",
+   "$value": "999",
+   "category": "elevation",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:152",
+     "needle": "overlay: '999'"
+    }
+   ]
+  }
+ }
+}

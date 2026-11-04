@@ -1,0 +1,495 @@
+{
+ "version": "1.0.0",
+ "note": "DERIVED by extraction/build_derived.py. The closed list of what a generator may compose and set. verify_all.py checks parity both ways with the contract files and the schema node properties.",
+ "nodeProperties": [
+  "section",
+  "content",
+  "tokens",
+  "motion",
+  "retrievalEligible"
+ ],
+ "sections": {
+  "chrome.footer": {
+   "category": "SHELL",
+   "contentFields": [
+    "addressLabel",
+    "addressLines",
+    "badge",
+    "contacts",
+    "creditsLabel",
+    "mark",
+    "note",
+    "products",
+    "productsLabel",
+    "sitemap",
+    "sitemapLabel",
+    "socials",
+    "socialsLabel",
+    "wordmark"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-split-chars",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "chrome.navbar": {
+   "category": "SHELL",
+   "contentFields": [
+    "closeLabel",
+    "contact",
+    "links",
+    "mark",
+    "menuLabel",
+    "wordmark"
+   ],
+   "variants": [],
+   "motion": [
+    "hover-colour-fade",
+    "nav-panel-slide",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "content.faq-accordion": {
+   "category": "CONTENT",
+   "contentFields": [
+    "heading",
+    "items"
+   ],
+   "variants": [],
+   "motion": [
+    "accordion-height",
+    "scroll-fade-width",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "content.process-note": {
+   "category": "CONTENT",
+   "contentFields": [
+    "body",
+    "heading"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "content.studio-statement": {
+   "category": "CONTENT",
+   "contentFields": [
+    "button",
+    "paragraph",
+    "statement"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade",
+    "load-intro-words",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "conversion.enquiry-form": {
+   "category": "CONVERSION",
+   "contentFields": [
+    "budgetOptions",
+    "budgetPlaceholder",
+    "descriptionPlaceholder",
+    "emailPlaceholder",
+    "endpoint",
+    "errorMessage",
+    "namePlaceholder",
+    "submitLabel",
+    "successMessage",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "cta.case-more-work": {
+   "category": "CTA",
+   "contentFields": [
+    "button"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "cta.contact-details": {
+   "category": "CTA",
+   "contentFields": [
+    "items"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "cta.contact-lines": {
+   "category": "CTA",
+   "contentFields": [
+    "button",
+    "lines"
+   ],
+   "variants": [],
+   "motion": [
+    "contact-lines-slide",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "editorial.article-chapter": {
+   "category": "EDITORIAL",
+   "contentFields": [
+    "blocks",
+    "heading"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "editorial.blog-card-grid": {
+   "category": "EDITORIAL",
+   "contentFields": [
+    "heading",
+    "layout",
+    "posts"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade",
+    "hover-colour-fade",
+    "hover-arrow-swap",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.article-header": {
+   "category": "HERO",
+   "contentFields": [
+    "author",
+    "authorLabel",
+    "date",
+    "dateLabel",
+    "image",
+    "subtitle",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.case-header": {
+   "category": "HERO",
+   "contentFields": [
+    "brief",
+    "briefLabel",
+    "credit",
+    "creditLabel",
+    "liveLink",
+    "scope",
+    "title"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.home": {
+   "category": "HERO",
+   "contentFields": [
+    "addressLabel",
+    "button",
+    "email",
+    "phone",
+    "subhead",
+    "words"
+   ],
+   "variants": [],
+   "motion": [
+    "load-intro-home",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.services": {
+   "category": "HERO",
+   "contentFields": [
+    "intro",
+    "words"
+   ],
+   "variants": [],
+   "motion": [
+    "load-intro-services",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "hero.words": {
+   "category": "HERO",
+   "contentFields": [
+    "words"
+   ],
+   "variants": [],
+   "motion": [
+    "load-intro-words",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "list.pricing-table": {
+   "category": "LIST",
+   "contentFields": [
+    "headers",
+    "rows"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "list.product-links": {
+   "category": "LIST",
+   "contentFields": [
+    "heading",
+    "products"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "hover-arrow-swap",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "list.service-rows": {
+   "category": "LIST",
+   "contentFields": [
+    "button",
+    "heading",
+    "rows"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "list.team-roster": {
+   "category": "LIST",
+   "contentFields": [
+    "heading",
+    "members"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "hover-team-image",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "media.case-showcase": {
+   "category": "MEDIA",
+   "contentFields": [
+    "kind",
+    "media"
+   ],
+   "variants": [],
+   "motion": [
+    "none",
+    "lottie-loop"
+   ],
+   "retrievalEligible": true
+  },
+  "overlay.partner-credits": {
+   "category": "UTILITY",
+   "contentFields": [
+    "body",
+    "closeLabel",
+    "heading",
+    "partners"
+   ],
+   "variants": [],
+   "motion": [
+    "credits-overlay-open"
+   ],
+   "retrievalEligible": false
+  },
+  "proof.award-groups": {
+   "category": "PROOF",
+   "contentFields": [
+    "groups",
+    "heading",
+    "intro"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "scroll-scale-in",
+    "scroll-split-lines",
+    "hover-border-accent",
+    "hover-arrow-swap",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "proof.client-logo-grid": {
+   "category": "PROOF",
+   "contentFields": [
+    "button",
+    "heading",
+    "tiles"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-scale-stagger",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "proof.press-mentions": {
+   "category": "PROOF",
+   "contentFields": [
+    "heading",
+    "intro",
+    "mentions"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade-width",
+    "hover-border-accent",
+    "hover-arrow-swap",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "proof.testimonial-slider": {
+   "category": "PROOF",
+   "contentFields": [
+    "heading",
+    "nextLabel",
+    "prevLabel",
+    "slides"
+   ],
+   "variants": [],
+   "motion": [
+    "slider-outin",
+    "scroll-split-lines",
+    "scroll-slide-arrows",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "system.not-found": {
+   "category": "SYSTEM",
+   "contentFields": [
+    "body",
+    "code",
+    "heading"
+   ],
+   "variants": [],
+   "motion": [
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "work.card-cluster": {
+   "category": "WORK",
+   "contentFields": [
+    "cards",
+    "seeAll",
+    "viewLabel"
+   ],
+   "variants": [],
+   "motion": [
+    "scroll-fade",
+    "scroll-rise-y",
+    "scroll-slide-x",
+    "hover-border-accent",
+    "hover-arrow-swap",
+    "none"
+   ],
+   "retrievalEligible": true
+  },
+  "work.case-image-text": {
+   "category": "WORK",
+   "contentFields": [
+    "highlights",
+    "label",
+    "panel",
+    "paragraphs",
+    "side",
+    "visual"
+   ],
+   "variants": [],
+   "motion": [
+    "none",
+    "lottie-loop"
+   ],
+   "retrievalEligible": true
+  },
+  "work.case-overview": {
+   "category": "WORK",
+   "contentFields": [
+    "ideaLabel",
+    "ideaText",
+    "rows",
+    "visual"
+   ],
+   "variants": [],
+   "motion": [
+    "lottie-loop",
+    "scroll-fade",
+    "none"
+   ],
+   "retrievalEligible": true
+  }
+ },
+ "primitives": [
+  "arrow-pair-diagonal",
+  "button-v2",
+  "display-heading",
+  "hairline-row",
+  "nav-link",
+  "plus-minus-toggle",
+  "section-heading",
+  "tile-image-frame",
+  "underlined-field",
+  "wordmark",
+  "year-label"
+ ],
+ "components": [
+  "article-block",
+  "award-group",
+  "blog-card",
+  "client-tile",
+  "faq-item",
+  "link-group",
+  "partner-link-row",
+  "showcase-text-block",
+  "team-row",
+  "testimonial-slide",
+  "work-card"
+ ]
+}

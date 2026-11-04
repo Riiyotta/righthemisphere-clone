@@ -1,0 +1,72 @@
+{
+ "category": "component",
+ "note": "Component-scoped measurements (CLONE_SPEC.md 0.5, 3, 5, 10).",
+ "tokens": {
+  "component.button-v2.padding-bottom": {
+   "$type": "dimension",
+   "$value": "2.4px",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:105",
+     "needle": "padding-bottom:2.4px"
+    }
+   ]
+  },
+  "component.work-card.header-gap": {
+   "$type": "dimension",
+   "$value": "14px",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:199",
+     "needle": "gap 14, padding-bottom 10"
+    }
+   ]
+  },
+  "component.list-row.padding": {
+   "$type": "dimension",
+   "$value": "12px 0",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:275",
+     "needle": "padding 12/12, `border-bottom:1px #CECECE`"
+    }
+   ]
+  },
+  "component.field.height": {
+   "$type": "dimension",
+   "$value": "48px",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:311",
+     "needle": "height 48 (`3rem`)"
+    }
+   ]
+  },
+  "component.faq-item.row-height": {
+   "$type": "dimension",
+   "$value": "32px",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:150",
+     "needle": "faq: '32px'"
+    }
+   ]
+  },
+  "component.slider.mask-height": {
+   "$type": "dimension",
+   "$value": "272px",
+   "category": "component",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:138",
+     "needle": "mask: '272px'"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "id": "year-label",
+ "kind": "primitive",
+ "description": "Vertical 4-digit year rotated -90 degrees beside a card image.",
+ "tokens": [
+  "font.size.t16",
+  "line-height.year"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Work.jsx:190",
+   "needle": "-rotate-90"
+  }
+ ]
+}

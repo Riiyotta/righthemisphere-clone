@@ -1,0 +1,156 @@
+{
+ "id": "editorial.article-chapter",
+ "title": "Article chapter",
+ "version": "1.0.0",
+ "purpose": "One chapter of a blog post body in the 688px rich-text column: an optional 24px heading (the chapter starts at each h2) followed by paragraphs, 20px/18px subheadings, an ordered list and figures. A post body is decomposed into chapters, never one whole-article section.",
+ "semantic": {
+  "id": "editorial.article-chapter",
+  "category": "EDITORIAL"
+ },
+ "source": {
+  "id": "dom:div.blog_righ_text",
+  "file": "src/components/blog/RichText.jsx",
+  "tag": "div",
+  "lines": "38",
+  "needle": "<div className=\"blog_righ_text w-richtext\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/blog/RichText.jsx:36",
+   "needle": "export default function RichText"
+  },
+  {
+   "cite": "src/components/blog/RichText.jsx:6",
+   "needle": "function Block"
+  }
+ ],
+ "iaSectionIds": [
+  "content.blog-body"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 12,
+  "templates": [
+   "blog-post"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 15,
+   "required": false
+  },
+  "blocks": {
+   "kind": "items",
+   "fields": {
+    "kind": {
+     "kind": "enum",
+     "values": [
+      "paragraph",
+      "subheading",
+      "minor-heading",
+      "ordered-list",
+      "figure"
+     ],
+     "required": true
+    },
+    "text": {
+     "kind": "text",
+     "maxWords": 120,
+     "required": false
+    },
+    "listItems": {
+     "kind": "textList",
+     "maxWords": 40,
+     "minItems": 1,
+     "maxItems": 12,
+     "required": false
+    },
+    "figure": {
+     "kind": "media",
+     "assetRoles": [
+      "article.image"
+     ],
+     "generatedAssetRoles": [
+      "generated.article-image",
+      "user.project-media"
+     ],
+     "required": false
+    }
+   },
+   "minItems": 1,
+   "maxItems": 30,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "body size follows the --t16 formula without the <=991 override (14.73px at 1440, 12px at <=991); h1/h2/h3/h4 stay fixed",
+   "center figures are 60% wide; full-width figures use the image's intrinsic width capped at 100%"
+  ],
+  "cite": {
+   "cite": "src/components/blog/RichText.jsx:25",
+   "needle": "w-richtext-align-"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "article.image"
+ ],
+ "generatedAssetRoles": [
+  "generated.article-image",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   59,
+   1929
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 43,
+  "heightAt768": [
+   34,
+   1890
+  ],
+  "instancesAt768": 43,
+  "heightAt390": [
+   67,
+   1428
+  ],
+  "instancesAt390": 43,
+  "source": "extraction/measured-values.json#sectionHeights",
+  "decomposition": "Chapters are the children of .blog_righ_text grouped at each h2 (a leading group without a heading is its own chapter); measured that way by extraction/measure_sections.mjs. The longest post body is ~6,200px; its largest chapter ~1,930px (23% of the page)."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:396",
+   "needle": "**`section_blog_body`**"
+  }
+ ]
+}

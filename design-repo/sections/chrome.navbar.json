@@ -1,0 +1,158 @@
+{
+ "id": "chrome.navbar",
+ "title": "Navigation bar",
+ "version": "1.0.0",
+ "purpose": "Fixed 44px bar on a 6-column grid: logo mark with a two-line wordmark in column 1, four text links on the column lines and a full-width underlined CONTACT link with a sliding arrow pair; below 992px it collapses to a MENU toggle with a panel that slides down.",
+ "semantic": {
+  "id": "chrome.navbar",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:div.nav",
+  "file": "src/components/Navbar.jsx",
+  "tag": "div",
+  "lines": "23",
+  "needle": "<div className=\"nav fixed"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Navbar.jsx:17",
+   "needle": "export default function Navbar"
+  },
+  {
+   "cite": "src/components/ui/Parts.jsx:33",
+   "needle": "export function Brand"
+  }
+ ],
+ "iaSectionIds": [
+  "shell.navbar"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "mustBeFirst": true,
+  "onePerPage": true,
+  "templates": [
+   "home",
+   "about",
+   "services",
+   "work-index",
+   "contact",
+   "blog-list",
+   "blog-post",
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "wordmark": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 2,
+   "required": true
+  },
+  "mark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.logo-mark"
+   ],
+   "generatedAssetRoles": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "required": true
+  },
+  "links": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 3,
+   "maxItems": 5,
+   "required": true
+  },
+  "contact": {
+   "kind": "link",
+   "maxWords": 2,
+   "required": true
+  },
+  "menuLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "closeLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "hover-colour-fade",
+   "nav-panel-slide",
+   "none"
+  ],
+  "default": "hover-colour-fade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: menu button (label + 10px glyph) replaces the link row; the link panel is white, padding 40px 20px, 224px tall and slides from translateY(-224px) over 400ms",
+   "brand margin-left 20px (16px at <=479)"
+  ],
+  "cite": {
+   "cite": "src/components/Navbar.jsx:35",
+   "needle": "md:transition-[transform,visibility] md:duration-400"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "brand.logo-mark"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy",
+  "placeholder.brand-mark",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   44,
+   44
+  ],
+  "inFlowAt1440": false,
+  "instancesAt1440": 18,
+  "heightAt768": [
+   44,
+   44
+  ],
+  "instancesAt768": 18,
+  "heightAt390": [
+   44,
+   44
+  ],
+  "instancesAt390": 18,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:122",
+   "needle": "## 1. Nav (`.nav.w-nav`)"
+  }
+ ]
+}

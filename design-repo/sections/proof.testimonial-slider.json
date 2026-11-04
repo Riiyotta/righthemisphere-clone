@@ -1,0 +1,135 @@
+{
+ "id": "proof.testimonial-slider",
+ "title": "Testimonial slider",
+ "version": "1.0.0",
+ "purpose": "Heading and a 6-slide fade slider with a quote and grey author line, bottom-ruled mask, and PREV / NEXT text arrows below. Loops, no autoplay. Real reviews are must-not-fabricate.",
+ "semantic": {
+  "id": "proof.testimonial-slider",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section.section_testimonials",
+  "file": "src/components/Testimonials.jsx",
+  "tag": "section",
+  "lines": "44",
+  "needle": "<section className=\"section_testimonials\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Testimonials.jsx:39",
+   "needle": "export default function Testimonials"
+  }
+ ],
+ "iaSectionIds": [
+  "proof.testimonials"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "slides": {
+   "kind": "items",
+   "fields": {
+    "quote": {
+     "kind": "text",
+     "maxWords": 60,
+     "required": true
+    },
+    "author": {
+     "kind": "text",
+     "maxWords": 8,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 8,
+   "required": true
+  },
+  "prevLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  },
+  "nextLabel": {
+   "kind": "text",
+   "maxWords": 1,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "slider-outin",
+   "scroll-split-lines",
+   "scroll-slide-arrows",
+   "none"
+  ],
+  "default": "slider-outin"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: slider moves to columns 3-6 on the heading row; <=767 flex column"
+  ],
+  "cite": {
+   "cite": "src/components/Testimonials.jsx:52",
+   "needle": "md:col-start-3 md:col-end-7 md:row-start-1"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   581,
+   581
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   464,
+   464
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   543,
+   543
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:347",
+   "needle": "## 9. `section_testimonials`"
+  }
+ ]
+}

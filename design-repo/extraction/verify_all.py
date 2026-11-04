@@ -1,0 +1,497 @@
+#!/usr/bin/env python3
+"""One-shot verification of this design-repo. Exit 1 on any failure.
+
+    python3 extraction/verify_all.py                 # verify
+    python3 extraction/verify_all.py --write-counts  # recompute manifest counts + README count block, then verify
+
+Checks (each named in the output):
+  JSON            every *.json parses
+  MANIFEST        entryPoints exist and stay inside design-repo; required entry points registered; counts
+                  recomputed from disk; allowlistVersion == tokens/llm/component-allowlist.json version
+  README_COUNTS   README count block equals the recomputed counts (never hand-typed)
+  DERIVED         schema/pagespec.schema.json, schema/section-contract.schema.json, token-catalog and
+                  component-allowlist equal what extraction/build_derived.py derives from the source files
+  ALLOWLIST       parity both ways: allowlist ids <-> contract / primitive / component files
+  CONTRACTS       every section contract validates against the closed schema/section-contract.schema.json;
+                  contract-level reference/generated asset roles == the union of its field roles
+  SOURCE_SEMANTIC R7: semantic.id == id == file stem, source.id != id
+  RETRIEVAL       R8: RETRIEVAL_INELIGIBLE pin (here == semantic_validate.py) == contracts == allowlist ==
+                  templates; runtime-looking ids must be pinned; only SHELL/UTILITY may be ineligible
+  PINS            R3: PINNED_AVAILABILITY here == semantic_validate.py == assets/asset-roles.json; pinned
+                  generation policies; substitutes generation-safe; generatedAssetRoles generation-safe
+  TOKENS          R10: policy keys / pairs / referenceable list / theme resolve to real catalog entries;
+                  contract token lists exist in the catalog
+  MOTION          every contract motion pattern exists with a fallback from the closed fallback enum
+  TEMPLATES       node sections exist; routes 1:1 (18) + the catch-all 404, template route lists in sync; with the
+                  source tree: routes == src/Router.jsx statics + src/data/pages-content.json blog posts and cases
+  IA_SYNC         with ia/ia.json present: every ia section is covered by >= 1 contract (iaSectionIds), every
+                  listed id exists, and the ia route list == routes.json
+  PROTECTED_SYNC  with the source tree: schema/protected-content.json == what extraction/build_protected.py derives
+  MEASURED_SYNC   contract.measured heights == extraction/measured-values.json
+  POLICY          category is portfolio; designPolicy binds n0-design-constraints-common 0.1.0 (Common IR 0.5,
+                  hard-and-soft, domain portfolio); policy/design-policy.json exists with its enforcedBy files on disk;
+                  contentHash recomputed by extraction/policy_hash.py; approval still pending architecture review
+  GRAPH_SYNC      compatibility/graph.json rule ids == semantic_validate.RULES (same severities)
+  CITATIONS       every {cite, needle}: file exists, range inside the file, needle inside the range
+  SOURCE_TAGS     R7: each contract's source.file has <tag (or the CSS rule) at source.lines with the needle
+  EXAMPLES        every example passes schema + semantic validation; a generated AND a reference example
+                  per template family
+  WRAPPER_GATE    R9: extraction/wrapper_gate.py
+  HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
+Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
+design-repo/); when that source tree is absent they are reported as warnings, never as passes or failures.
+"""
+import importlib.util, json, re, sys
+from pathlib import Path
+
+sys.dont_write_bytecode = True
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT.parent
+EXPECTED_ROUTES = 18
+
+PINNED_AVAILABILITY = {
+    "brand.logo-mark": "blocked-for-generation",
+    "brand.partner-badge": "blocked-for-generation",
+    "client.logo": "blocked-for-generation",
+    "award.mark": "blocked-for-generation",
+    "person.portrait": "blocked-for-generation",
+    "case.video-embed": "blocked-for-generation",
+    "form.live-endpoint": "blocked-for-generation",
+    "work.project-image": "reference-only",
+    "article.image": "reference-only",
+    "case.motion-json": "reference-only",
+    "font.display-original": "reference-only",
+    "generated.brand-mark": "generation-safe",
+    "placeholder.brand-mark": "generation-safe",
+    "generated.project-visual": "generation-safe",
+    "user.project-media": "generation-safe",
+    "placeholder.client-logo": "generation-safe",
+    "placeholder.award-mark": "generation-safe",
+    "fictional.portrait": "generation-safe",
+    "generated.article-image": "generation-safe",
+    "generated.motion-graphic": "generation-safe",
+    "placeholder.video": "generation-safe",
+    "placeholder.partner-badge": "generation-safe",
+    "licensed-or-fallback.font": "generation-safe",
+    "icon.ui": "generation-safe",
+    "placeholder.url": "generation-safe",
+    "original.copy": "generation-safe",
+    "fictional.person": "generation-safe",
+    "placeholder.metric": "generation-safe"
+}
+RETRIEVAL_INELIGIBLE = {"overlay.partner-credits"}
+RUNTIME_ID = re.compile(r"(^shell\.|^utility\.|^overlay\.|overlay|modal|dialog|drawer|loader|preloader|toast|hud|cookie|consent|cursor|lightbox)")
+REQUIRED_ENTRYPOINTS = ("token-catalog", "token-policy", "component-allowlist", "motion-patterns", "asset-roles", "pagespec.schema", "section-contract.schema",
+                        "semantic_validate", "adversarial_test", "verify_all", "wrapper_gate", "prove_drift", "measured-values", "measure_sections", "build_derived", "protected-content", "build_protected", "policy_hash", "design-policy")
+
+BOUND_POLICY = {"policyId": "n0-design-constraints-common", "policyVersion": "0.1.0", "commonIrVersion": "0.5", "enforcementMode": "hard-and-soft", "domain": "portfolio"}
+
+FAILS, WARNS, PASSES = [], [], []
+
+
+def fail(check, msg): FAILS.append((check, msg))
+def warn(check, msg): WARNS.append((check, msg))
+def j(rel): return json.loads((ROOT / rel).read_text())
+
+
+def load_module(name, rel):
+    spec = importlib.util.spec_from_file_location(name, ROOT / rel)
+    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+
+
+def compute_counts():
+    secs = sorted((ROOT / "sections").glob("*.json"))
+    cat = j("tokens/llm/token-catalog.json")["tokens"]
+    tpl = j("templates/templates.json")["templates"]
+    ex = [ROOT / "schema/example.pagespec.json"] + sorted((ROOT / "schema/examples").glob("*.json"))
+    exm = [json.loads(p.read_text())["mode"] for p in ex]
+    roles = j("assets/asset-roles.json")["roles"]
+    adv = load_module("adv_count", "schema/tests/adversarial_test.py")
+    drift = load_module("drift_count", "extraction/prove_drift.py")
+    return {
+        "tokens": len(cat),
+        "pageSpecReferenceableTokens": sum(1 for t in cat.values() if t.get("pageSpecReferenceable")),
+        "primitives": len(list((ROOT / "primitives").glob("*.json"))),
+        "components": len(list((ROOT / "components").glob("*.json"))),
+        "sections": len(secs),
+        "retrievalIneligibleSections": sum(1 for p in secs if json.loads(p.read_text()).get("retrievalEligible") is False),
+        "templates": len(tpl),
+        "routes": len(j("templates/routes.json")["routes"]),
+        "assetRoles": len(roles),
+        "generationSafeAssetRoles": sum(1 for r in roles.values() if r["availability"] == "generation-safe"),
+        "motionPatterns": len(j("tokens/00-foundation/motion-patterns.json")["patterns"]),
+        "graphRules": len(j("compatibility/graph.json")["rules"]),
+        "examples": len(ex), "referenceExamples": exm.count("reference"), "generatedExamples": exm.count("generated"),
+        "adversarialMutations": len(adv.MUTATIONS) + len(adv.REPO_MUTATIONS) + len(adv.GATE_MUTATIONS),
+        "adversarialControls": len(ex) + 1,
+        "driftCases": len(drift.CASES),
+    }
+
+
+def readme_block(c):
+    rows = "\n".join(f"| {k} | {v} |" for k, v in c.items())
+    return f"<!-- counts:start (written by extraction/verify_all.py --write-counts) -->\n| item | count |\n|---|---|\n{rows}\n<!-- counts:end -->"
+
+
+def check_citation(obj, where):
+    """obj = {cite: 'path:a[-b]', needle}. Returns False when the cited file is absent (self-contained copy)."""
+    m = re.match(r"^(.+):(\d+)(?:-(\d+))?$", obj["cite"])
+    if not m:
+        fail("CITATIONS", f"{where}: malformed cite {obj['cite']!r}"); return True
+    path, a, b = m.group(1), int(m.group(2)), int(m.group(3) or m.group(2))
+    f = (ROOT / path) if path.startswith(("extraction/", "schema/", "tokens/", "sections/", "templates/")) else (SRC / path)
+    if not f.exists():
+        return False
+    lines = f.read_text(errors="ignore").split("\n")
+    if a < 1 or b > len(lines) or a > b:
+        fail("CITATIONS", f"{where}: {obj['cite']} outside {path} (1-{len(lines)})"); return True
+    if obj.get("needle") and not any(obj["needle"] in l for l in lines[a - 1:b]):
+        fail("CITATIONS", f"{where}: needle {obj['needle'][:50]!r} not at {obj['cite']}")
+    return True
+
+
+def walk_cites(o, where, out):
+    if isinstance(o, dict):
+        if isinstance(o.get("cite"), str) and "needle" in o:
+            out.append((o, where))
+        for v in o.values():
+            walk_cites(v, where, out)
+    elif isinstance(o, list):
+        for v in o:
+            walk_cites(v, where, out)
+
+
+def field_roles(fields, key):
+    out = set()
+    for f in fields.values():
+        out |= set(f.get(key, []))
+        if f["kind"] in ("items", "group"):
+            out |= field_roles(f["fields"], key)
+    return out
+
+
+def slugify(s):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s.lower())
+    s = re.sub(r"[^\w\s-]", "", s).strip()
+    return re.sub(r"[\s_.]+", "-", s)
+
+
+def main(write_counts=False):
+    docs = {}
+    for p in sorted(ROOT.rglob("*.json")):
+        try:
+            docs[str(p.relative_to(ROOT))] = json.loads(p.read_text())
+        except Exception as e:
+            fail("JSON", f"{p.relative_to(ROOT)}: {e}")
+    PASSES.append("JSON")
+    man = j("registry.manifest.json")
+    counts = compute_counts()
+    if write_counts:
+        man["counts"] = counts
+        (ROOT / "registry.manifest.json").write_text(json.dumps(man, indent=1, ensure_ascii=False) + "\n")
+        rd = (ROOT / "README.md").read_text()
+        rd = re.sub(r"<!-- counts:start.*?<!-- counts:end -->", readme_block(counts), rd, flags=re.S)
+        (ROOT / "README.md").write_text(rd)
+    # MANIFEST
+    eps = man.get("entryPoints", {})
+    for name, ep in eps.items():
+        if ep.startswith("..") or ep.startswith("/") or not (ROOT / ep).exists():
+            fail("MANIFEST", f"entryPoint {name} -> {ep} missing or outside design-repo")
+    for need in REQUIRED_ENTRYPOINTS:
+        if not any(need in ep for ep in eps.values()):
+            fail("MANIFEST", f"{need} not registered in entryPoints")
+    if man.get("counts") != counts:
+        diff = {k: (man.get("counts", {}).get(k), v) for k, v in counts.items() if man.get("counts", {}).get(k) != v}
+        fail("MANIFEST", f"counts drift (manifest, disk): {diff}")
+    al = j("tokens/llm/component-allowlist.json")
+    if man.get("allowlistVersion") != al.get("version"):
+        fail("MANIFEST", f"allowlistVersion {man.get('allowlistVersion')} != allowlist {al.get('version')}")
+    PASSES.append("MANIFEST")
+    rd = (ROOT / "README.md").read_text()
+    if readme_block(counts) not in rd:
+        fail("README_COUNTS", "README count block is stale; run verify_all.py --write-counts")
+    PASSES.append("README_COUNTS")
+    # DERIVED
+    bd = load_module("bd", "extraction/build_derived.py")
+    for rel, fn in (("schema/pagespec.schema.json", bd.build_schema), ("schema/section-contract.schema.json", bd.build_contract_schema),
+                    ("tokens/llm/token-catalog.json", bd.build_catalog), ("tokens/llm/component-allowlist.json", bd.build_allowlist)):
+        want, have = fn(), j(rel)
+        if want != have:
+            if rel.endswith("token-catalog.json"):
+                wt, ht = want["tokens"], have["tokens"]
+                for t in sorted(set(wt) - set(ht)): fail("DERIVED", f"{rel}: {t} in token files but missing from catalog")
+                for t in sorted(set(ht) - set(wt)): fail("DERIVED", f"{rel}: {t} in catalog but not in any token file")
+                for t in sorted(set(wt) & set(ht)):
+                    if wt[t] != ht[t]: fail("DERIVED", f"{rel}: {t} catalog {ht[t]} != token files {wt[t]}")
+                if want["counts"] != have["counts"]: fail("DERIVED", f"{rel}: counts {have['counts']} != {want['counts']}")
+            else:
+                fail("DERIVED", f"{rel} differs from what extraction/build_derived.py derives (hand-edited or stale)")
+    PASSES.append("DERIVED")
+    # ALLOWLIST
+    contracts = {p.stem: json.loads(p.read_text()) for p in sorted((ROOT / "sections").glob("*.json"))}
+    prims = {json.loads(p.read_text())["id"] for p in (ROOT / "primitives").glob("*.json")}
+    comps = {json.loads(p.read_text())["id"] for p in (ROOT / "components").glob("*.json")}
+    for kind, have, listed in (("sections", set(contracts), set(al["sections"])), ("primitives", prims, set(al["primitives"])), ("components", comps, set(al["components"]))):
+        for x in sorted(listed - have): fail("ALLOWLIST", f"phantom {kind} entry {x} (no contract file)")
+        for x in sorted(have - listed): fail("ALLOWLIST", f"orphan {kind} contract {x} (not in allowlist)")
+    for sid, c in contracts.items():
+        a = al["sections"].get(sid)
+        if a and (sorted(c["content"]) != a["contentFields"] or c["variants"] != a["variants"] or c["motion"]["allowed"] != a["motion"]):
+            fail("ALLOWLIST", f"{sid}: allowlist settable properties out of sync with the contract")
+    for comp in (ROOT / "components").glob("*.json"):
+        for u in json.loads(comp.read_text()).get("uses", []):
+            if u not in prims and u not in comps: fail("ALLOWLIST", f"component {comp.stem} uses unknown {u}")
+    sch = j("schema/pagespec.schema.json")
+    if set(al["nodeProperties"]) != set(sch["definitions"]["node"]["properties"]):
+        fail("ALLOWLIST", f"allowlist nodeProperties {al['nodeProperties']} != schema node properties")
+    PASSES.append("ALLOWLIST")
+    # CONTRACTS
+    from jsonschema import Draft7Validator
+    cs = Draft7Validator(j("schema/section-contract.schema.json"))
+    for sid, c in contracts.items():
+        for e in cs.iter_errors(c):
+            fail("CONTRACTS", f"{sid}: {'/'.join(map(str, e.absolute_path))} {e.message[:120]}")
+        if set(c.get("referenceAssetRoles", [])) != field_roles(c["content"], "assetRoles"):
+            fail("CONTRACTS", f"{sid}: referenceAssetRoles != union of its media fields' assetRoles")
+        if not field_roles(c["content"], "generatedAssetRoles") <= set(c.get("generatedAssetRoles", [])):
+            fail("CONTRACTS", f"{sid}: generatedAssetRoles misses a field-level generated role")
+    PASSES.append("CONTRACTS")
+    # SOURCE_SEMANTIC
+    for sid, c in contracts.items():
+        if not (c["id"] == sid == c["semantic"]["id"]):
+            fail("SOURCE_SEMANTIC", f"{sid}: id/semantic.id/file stem disagree")
+        if c["source"]["id"] == c["id"]:
+            fail("SOURCE_SEMANTIC", f"{sid}: source.id must not equal the semantic id")
+    PASSES.append("SOURCE_SEMANTIC")
+    # RETRIEVAL
+    sv = load_module("sv", "schema/semantic_validate.py")
+    if sv.RETRIEVAL_INELIGIBLE != RETRIEVAL_INELIGIBLE:
+        fail("RETRIEVAL", "RETRIEVAL_INELIGIBLE differs between verify_all.py and semantic_validate.py")
+    false_set = {s for s, c in contracts.items() if c.get("retrievalEligible") is False}
+    if false_set != RETRIEVAL_INELIGIBLE:
+        fail("RETRIEVAL", f"contracts false {sorted(false_set)} != pin {sorted(RETRIEVAL_INELIGIBLE)}")
+    for sid, c in contracts.items():
+        if RUNTIME_ID.search(sid) and sid not in RETRIEVAL_INELIGIBLE:
+            fail("RETRIEVAL", f"{sid} looks like runtime UI but is not pinned ineligible")
+        if al["sections"].get(sid, {}).get("retrievalEligible") != (sid not in RETRIEVAL_INELIGIBLE):
+            fail("RETRIEVAL", f"allowlist {sid}.retrievalEligible disagrees with the pin")
+        if c.get("retrievalEligible") is False and len(c.get("retrievalReason", "")) < 30:
+            fail("RETRIEVAL", f"{sid}: reason < 30 chars")
+        if c.get("retrievalEligible") is False and c["semantic"]["category"] not in ("SHELL", "UTILITY"):
+            fail("RETRIEVAL", f"{sid}: content category {c['semantic']['category']} marked ineligible")
+    for t, tpl in j("templates/templates.json")["templates"].items():
+        for n in tpl["nodes"]:
+            if "section" in n and n.get("retrievalEligible") != (n["section"] not in RETRIEVAL_INELIGIBLE):
+                fail("RETRIEVAL", f"template {t}: node {n['section']} retrievalEligible disagrees with the pin")
+    PASSES.append("RETRIEVAL")
+    # PINS
+    roles = j("assets/asset-roles.json")["roles"]
+    if sv.PINNED_AVAILABILITY != PINNED_AVAILABILITY:
+        fail("PINS", "PINNED_AVAILABILITY differs between verify_all.py and semantic_validate.py")
+    if set(roles) != set(PINNED_AVAILABILITY):
+        fail("PINS", f"roles not pinned / pins without role: {sorted(set(roles) ^ set(PINNED_AVAILABILITY))}")
+    for r, av in PINNED_AVAILABILITY.items():
+        if r in roles and roles[r]["availability"] != av:
+            fail("PINS", f"{r}: registry {roles[r]['availability']!r} != pinned {av!r}")
+    for r, pol in sv.PINNED_GENERATION_POLICY.items():
+        if roles.get(r, {}).get("generationPolicy") != pol:
+            fail("PINS", f"{r}: generationPolicy pinned to {pol!r}")
+    for r, d in roles.items():
+        if d["availability"] != "generation-safe" and not all(PINNED_AVAILABILITY.get(s) == "generation-safe" for s in d.get("generationSafeSubstitutes", [None])):
+            fail("PINS", f"{r}: substitutes must be generation-safe roles")
+        if d["availability"] != "generation-safe" and d.get("generationPolicy") in ("may-generate-new", "may-reuse-licensed"):
+            fail("PINS", f"{r}: a {d['availability']} role cannot be reusable in generated mode")
+    for sid, c in contracts.items():
+        for r in c["generatedAssetRoles"] + sorted(field_roles(c["content"], "generatedAssetRoles")):
+            if PINNED_AVAILABILITY.get(r) != "generation-safe":
+                fail("PINS", f"{sid}: generatedAssetRoles lists non-generation-safe {r}")
+    PASSES.append("PINS")
+    # TOKENS
+    cat = j("tokens/llm/token-catalog.json")["tokens"]
+    pol = j("tokens/llm/token-policy.json")
+    real_cats = {t["category"] for t in cat.values()}
+    for k in pol["rawValueRestrictions"]:
+        if k not in real_cats: fail("TOKENS", f"policy rawValueRestrictions key {k!r} is not a catalog category")
+    for k, v in pol["pageSpecTokenFields"].items():
+        if v["category"] not in real_cats: fail("TOKENS", f"policy field {k} -> unknown category {v['category']}")
+    for x in pol["pageSpecReferenceable"] + pol["fontFamilyAllowed"]:
+        if x not in cat: fail("TOKENS", f"policy token {x} not in catalog")
+    for s, ts in pol["surfaceTextPairs"].items():
+        for x in [s] + ts:
+            if x not in cat: fail("TOKENS", f"policy pair token {x} not in catalog")
+    dark = j("tokens/themes/light.json")["resolves"]
+    sem = j("tokens/10-semantic/semantic.json")["tokens"]
+    for s in pol["themes"]["light"]:
+        if s not in dark: fail("TOKENS", f"theme light does not resolve {s}")
+    for s, ref in dark.items():
+        if ref not in cat or s not in sem or sem[s]["$value"] != cat[ref]["value"] or sem[s]["$ref"] != ref:
+            fail("TOKENS", f"theme light: {s} -> {ref} does not resolve to the same foundation value")
+    for sid, c in contracts.items():
+        for x in c["tokens"]["surfaces"] + c["tokens"]["text"]:
+            if x not in cat: fail("TOKENS", f"{sid}: token {x} not in catalog")
+    for kind in ("primitives", "components"):
+        for f in sorted((ROOT / kind).glob("*.json")):
+            for x in json.loads(f.read_text()).get("tokens", []):
+                if x not in cat: fail("TOKENS", f"{kind}/{f.name}: token {x} not in catalog")
+    PASSES.append("TOKENS")
+    # MOTION
+    mpj = j("tokens/00-foundation/motion-patterns.json"); mp = mpj["patterns"]
+    for k, v in mp.items():
+        if v.get("reducedMotionFallback") not in mpj["fallbackEnum"]: fail("MOTION", f"pattern {k}: fallback {v.get('reducedMotionFallback')!r} not in the closed enum")
+    for sid, c in contracts.items():
+        for p in c["motion"]["allowed"]:
+            if p not in mp: fail("MOTION", f"{sid}: pattern {p} unknown")
+        if c["motion"]["default"] not in c["motion"]["allowed"]: fail("MOTION", f"{sid}: default not in allowed")
+    PASSES.append("MOTION")
+    # TEMPLATES
+    tpls = j("templates/templates.json")["templates"]
+    routes = j("templates/routes.json")["routes"]
+    for t, tpl in tpls.items():
+        for n in tpl["nodes"]:
+            for s in ([n["section"]] if "section" in n else n["allowed"]):
+                if s not in contracts: fail("TEMPLATES", f"{t}: unknown section {s}")
+    paths = [r["path"] for r in routes]
+    if len(paths) != len(set(paths)): fail("TEMPLATES", "a route is mapped more than once")
+    if len(paths) != EXPECTED_ROUTES: fail("TEMPLATES", f"{len(paths)} routes, expected {EXPECTED_ROUTES}")
+    for r in routes:
+        if r["template"] not in tpls: fail("TEMPLATES", f"{r['path']}: unknown template {r['template']}")
+        elif not re.match(tpls[r["template"]]["routePattern"], r["path"]): fail("TEMPLATES", f"{r['path']}: does not match {r['template']} routePattern")
+    for t, tpl in tpls.items():
+        if sorted(tpl["routes"]) != sorted(r["path"] for r in routes if r["template"] == t): fail("TEMPLATES", f"{t}: routes list out of sync with routes.json")
+    ca = j("templates/routes.json").get("catchAll", {})
+    if ca.get("template") not in tpls or not tpls[ca["template"]].get("catchAll"): fail("TEMPLATES", "routes.json catchAll must name the catch-all template")
+    router, content_p = SRC / "src/Router.jsx", SRC / "src/data/pages-content.json"
+    if router.exists() and content_p.exists():
+        rt = router.read_text(); ct = json.loads(content_p.read_text())
+        want = ["/"] + re.findall(r"^  '(/[a-z-]+)': \{", rt, re.M) + [p_["route"] for p_ in ct["blogPosts"]] + [c_["route"] for c_ in ct["caseStudies"].values()]
+        if sorted(want) != sorted(paths): fail("TEMPLATES", f"routes.json != routes derived from src/Router.jsx + pages-content.json: {sorted(set(want) ^ set(paths))}")
+    else:
+        warn("TEMPLATES", "source tree not present (self-contained copy): 1:1 checked against routes.json only")
+    PASSES.append("TEMPLATES")
+    # IA_SYNC
+    ia_p = SRC / "ia/ia.json"
+    if ia_p.exists():
+        ia = json.loads(ia_p.read_text())
+        ia_ids = set(ia["sections"]) if isinstance(ia["sections"], dict) else {s["id"] for s in ia["sections"]}
+        mapped = {x for c in contracts.values() for x in c.get("iaSectionIds", [])}
+        for x in sorted(ia_ids - mapped): fail("IA_SYNC", f"ia section {x} is covered by no contract")
+        for x in sorted(mapped - ia_ids): fail("IA_SYNC", f"iaSectionIds {x} not in ia/ia.json")
+        ia_routes = sorted(r for t_ in ia["templates"] for r in t_["routes"])
+        if ia_routes != sorted(paths): fail("IA_SYNC", f"ia routes != routes.json: {sorted(set(ia_routes) ^ set(paths))}")
+        if {t_["id"].split(".", 1)[1].replace("work", "work-index") if t_["id"] == "template.work" else t_["id"].split(".", 1)[1] for t_ in ia["templates"]} != set(tpls):
+            fail("IA_SYNC", "ia templates differ from the template families")
+        PASSES.append(f"IA_SYNC ({len(ia_ids)} ia sections covered by {len(contracts)} contracts, {len(ia_routes)} ia routes)")
+    else:
+        warn("IA_SYNC", "ia/ia.json not present (self-contained copy): skipped")
+        PASSES.append("IA_SYNC (skipped)")
+    # PROTECTED_SYNC
+    if (SRC / "src/data/pages-content.json").exists() and (SRC / "src/components").exists():
+        bp = load_module("bp", "extraction/build_protected.py")
+        if json.dumps(bp.build(), indent=1, ensure_ascii=False) + "\n" != (ROOT / "schema/protected-content.json").read_text():
+            fail("PROTECTED_SYNC", "schema/protected-content.json differs from what extraction/build_protected.py derives from the source")
+        PASSES.append("PROTECTED_SYNC")
+    else:
+        warn("PROTECTED_SYNC", "source tree absent: protected-content.json not re-derivable")
+        PASSES.append("PROTECTED_SYNC (skipped)")
+    # MEASURED_SYNC
+    mvals = j("extraction/measured-values.json")
+    for sid, c in contracts.items():
+        if not isinstance(mvals.get("sectionHeights", {}).get("routes"), dict):
+            warn("MEASURED_SYNC", "no sectionHeights to compare (reported by WRAPPER_GATE)"); break
+        hs = [s["h"] for r in mvals["sectionHeights"]["routes"].values() for s in r["sections"] if s["id"] == sid]
+        want = [round(min(hs)), round(max(hs))] if hs else None
+        if c["measured"].get("heightAt1440") != want: fail("MEASURED_SYNC", f"{sid}: contract heightAt1440 {c['measured'].get('heightAt1440')} != measured {want}")
+    PASSES.append("MEASURED_SYNC")
+    # GRAPH_SYNC
+    g = {r["id"]: r["severity"] for r in j("compatibility/graph.json")["rules"]}
+    if g != sv.RULES: fail("GRAPH_SYNC", f"graph rules/severities differ from semantic_validate.RULES: {sorted(set(g.items()) ^ set(sv.RULES.items()))}")
+    PASSES.append("GRAPH_SYNC")
+    # CITATIONS + SOURCE_TAGS
+    cites = []
+    for rel, doc in docs.items():
+        walk_cites(doc, rel, cites)
+    resolved = sum(1 for o, w in cites if check_citation(o, w))
+    if resolved < len(cites):
+        warn("CITATIONS", f"{len(cites) - resolved}/{len(cites)} citations not checkable (source tree absent)")
+    PASSES.append(f"CITATIONS ({resolved}/{len(cites)} resolved)")
+    tag_ok = 0
+    for sid, c in contracts.items():
+        s = c["source"]; f = SRC / s["file"]
+        if not f.exists():
+            continue
+        lines = f.read_text(errors="ignore").split("\n")
+        a, _, b = s["lines"].partition("-"); a = int(a); b = int(b or a)
+        if b > len(lines): fail("SOURCE_TAGS", f"{sid}: {s['file']}:{s['lines']} out of range"); continue
+        seg = "\n".join(lines[a - 1:b])
+        tag_here = (s["tag"] == "css-pseudo" and "::" in seg and "{" in seg) or f"<{s['tag']}" in seg
+        if not tag_here or s["needle"] not in seg:
+            fail("SOURCE_TAGS", f"{sid}: <{s['tag']} with {s['needle'][:40]!r} not at {s['file']}:{s['lines']}")
+        else:
+            tag_ok += 1
+    if tag_ok < len(contracts) and not (SRC / "src").exists():
+        warn("SOURCE_TAGS", "source tree absent: source tags not checkable")
+    PASSES.append(f"SOURCE_TAGS ({tag_ok}/{len(contracts)} verified)")
+    # EXAMPLES
+    repo = sv.load_repo(ROOT)
+    fams = {}
+    for p in sv.example_paths(ROOT):
+        spec = json.loads(p.read_text())
+        e, w = sv.validate(spec, repo)
+        for code, msg in e: fail("EXAMPLES", f"{p.relative_to(ROOT)}: {code} {msg}")
+        fams.setdefault(spec["template"], set()).add(spec["mode"])
+    for t in tpls:
+        for m in ("generated", "reference"):
+            if m not in fams.get(t, set()): fail("EXAMPLES", f"no {m} example for template {t}")
+    PASSES.append("EXAMPLES")
+    # WRAPPER_GATE
+    wg = load_module("wg", "extraction/wrapper_gate.py")
+    e, w = wg.check(ROOT)
+    for code, msg in e: fail("WRAPPER_GATE", f"{code} {msg}")
+    for code, msg in w: warn("WRAPPER_GATE", f"{code} {msg}")
+    PASSES.append("WRAPPER_GATE")
+    # POLICY
+    ph = load_module("ph", "extraction/policy_hash.py")
+    dp = man.get("designPolicy") or {}
+    errs = []
+    for k, v in BOUND_POLICY.items():
+        if dp.get(k) != v: errs.append(f"designPolicy.{k} is {dp.get(k)!r}, expected {v!r}")
+    if man.get("category") != "portfolio" or dp.get("category") != "portfolio": errs.append("category must be 'portfolio' in the manifest and in designPolicy")
+    pfile = ROOT / (dp.get("localExtension") or {}).get("ref", "policy/design-policy.json")
+    if not pfile.exists(): errs.append("policy/design-policy.json missing")
+    else:
+        pol = json.loads(pfile.read_text())
+        if pol.get("classification", {}).get("productCategory") != "portfolio": errs.append("policy classification.productCategory must be 'portfolio'")
+        if (pol.get("extends") or {}).get("policyId") != BOUND_POLICY["policyId"] or (pol.get("extends") or {}).get("policyVersion") != BOUND_POLICY["policyVersion"]:
+            errs.append("policy must extend the bound common policy id/version")
+        if (pol.get("policyId"), pol.get("policyVersion")) != (dp["localExtension"]["policyId"], dp["localExtension"]["policyVersion"]): errs.append("policy id/version disagree with designPolicy.localExtension")
+        for f in pol.get("enforcedBy", []):
+            if not (ROOT / f).exists(): errs.append(f"policy enforcedBy file missing: {f}")
+        ap = pol.get("approval") or {}
+        if ap.get("policyDecision") != "bound-pending-architecture-review" or ap.get("architectureDecisionRecorded") is not False: errs.append("policy approval must stay pending architecture review")
+    if dp.get("contentHashFiles") != ph.POLICY_FILES: errs.append("designPolicy.contentHashFiles != extraction/policy_hash.py POLICY_FILES")
+    want_h = ph.compute(ROOT)
+    if dp.get("contentHash") != want_h: errs.append(f"designPolicy.contentHash {dp.get('contentHash')!r} != recomputed {want_h!r} (run: python3 extraction/policy_hash.py --write)")
+    if man.get("status") != "design-review-pending" or man.get("productionApproved") is not False: errs.append("status must be design-review-pending and productionApproved false")
+    for e in errs: fail("POLICY", e)
+    PASSES.append("POLICY")
+    # HYGIENE (character classes keep this file free of the literal patterns it searches for)
+    absre = re.compile(r"/U[s]ers/[A-Za-z0-9._-]+/|/h[o]me/[A-Za-z0-9._-]+/|/p[r]ivate/(tmp|var)/|C:\\\\U[s]ers\\\\")
+    for p in ROOT.rglob("*"):
+        if p.is_dir() and p.name in ("__pycache__", "__MACOSX"): fail("HYGIENE", f"junk dir {p.relative_to(ROOT)}")
+        if p.is_file():
+            if p.name in (".DS_Store", "Thumbs.db", "desktop.ini"): fail("HYGIENE", f"junk file {p.relative_to(ROOT)}")
+            elif p.suffix in (".json", ".md", ".py", ".mjs", ".txt") and absre.search(p.read_text(errors="ignore")): fail("HYGIENE", f"absolute path in {p.relative_to(ROOT)}")
+    PASSES.append("HYGIENE")
+
+    for c in PASSES:
+        name = c.split(" ")[0]
+        print(f"{'FAIL' if any(f[0] == name for f in FAILS) else 'PASS'}  {c}")
+    for c, m in WARNS: print(f"warn  {c}: {m}")
+    for c, m in FAILS: print(f"FAIL  {c}: {m}")
+    print(f"\nverify_all: {len(FAILS)} failures, {len(WARNS)} warnings; counts {json.dumps(counts)}")
+    return 1 if FAILS else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main("--write-counts" in sys.argv))

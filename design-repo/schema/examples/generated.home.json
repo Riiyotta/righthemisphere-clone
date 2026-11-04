@@ -1,0 +1,584 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "home",
+ "route": "/",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Fieldnote Studio",
+  "description": "A small design studio making calm, useful interfaces."
+ },
+ "brand": {
+  "studioName": "Fieldnote Studio",
+  "domain": "fieldnote.example"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Projects",
+      "href": "/work"
+     },
+     {
+      "label": "Offer",
+      "href": "/services"
+     },
+     {
+      "label": "Studio",
+      "href": "/about"
+     },
+     {
+      "label": "Journal",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "Say hello",
+     "href": "/contact"
+    },
+    "menuLabel": "Menu",
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.home",
+   "content": {
+    "words": [
+     "crafting",
+     "calm",
+     "interfaces"
+    ],
+    "subhead": "for curious small teams",
+    "button": {
+     "label": "Selected projects",
+     "href": "#work"
+    },
+    "addressLabel": "Drop us a line:",
+    "email": {
+     "label": "hello@fieldnote.example",
+     "href": "mailto:hello@fieldnote.example"
+    }
+   },
+   "motion": {
+    "pattern": "load-intro-home",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.heading",
+    "font": "font.family.sans",
+    "spaceBlock": "space.240"
+   }
+  },
+  {
+   "section": "work.card-cluster",
+   "content": {
+    "cards": [
+     {
+      "title": "Harbor and Pine",
+      "caption": "DESIGN / BUILD",
+      "year": "2026",
+      "href": "/harbor-and-pine-rebrand",
+      "layout": "portrait",
+      "fill": "forest",
+      "image": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://project-1",
+       "alt": "Abstract artwork on a flat colour tile"
+      },
+      "detail": "A timetable that reads at a glance",
+      "hero": true
+     },
+     {
+      "title": "Tamarind Row",
+      "caption": "BRANDING",
+      "year": "2025",
+      "href": "https://tamarind.example/",
+      "layout": "landscape-right",
+      "fill": "amber",
+      "image": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://project-2",
+       "alt": "Abstract artwork on a flat colour tile"
+      },
+      "detail": "Identity for a night market"
+     },
+     {
+      "title": "Quillstone Press",
+      "caption": "FRONT END",
+      "year": "2025",
+      "href": "https://quillstone.example/",
+      "layout": "landscape-left",
+      "fill": "navy",
+      "image": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://project-3",
+       "alt": "Abstract artwork on a flat colour tile"
+      }
+     }
+    ],
+    "viewLabel": "OPEN"
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "work.card-cluster",
+   "content": {
+    "cards": [
+     {
+      "title": "Harbor and Pine",
+      "caption": "DESIGN / BUILD",
+      "year": "2026",
+      "href": "/harbor-and-pine-rebrand",
+      "layout": "portrait",
+      "fill": "forest",
+      "image": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://project-4",
+       "alt": "Abstract artwork on a flat colour tile"
+      },
+      "detail": "A timetable that reads at a glance"
+     },
+     {
+      "title": "Tamarind Row",
+      "caption": "BRANDING",
+      "year": "2025",
+      "href": "https://tamarind.example/",
+      "layout": "landscape-right",
+      "fill": "amber",
+      "image": {
+       "assetRole": "generated.project-visual",
+       "ref": "generated://project-5",
+       "alt": "Abstract artwork on a flat colour tile"
+      },
+      "detail": "Identity for a night market"
+     }
+    ],
+    "viewLabel": "OPEN",
+    "seeAll": {
+     "label": "all projects",
+     "href": "/work"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "content.studio-statement",
+   "content": {
+    "paragraph": "We are a small studio of designers and engineers who care about the quiet details that make a product feel finished.",
+    "statement": "Small details, carefully kept",
+    "button": {
+     "label": "About the studio",
+     "href": "/about"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "list.service-rows",
+   "content": {
+    "heading": "What we do",
+    "rows": [
+     {
+      "title": "Product design",
+      "note": "Interfaces people understand on the first try",
+      "index": "01"
+     },
+     {
+      "title": "Brand systems",
+      "note": "Marks, type and rules that hold together",
+      "index": "02"
+     },
+     {
+      "title": "Front end",
+      "note": "Fast, accessible code that is easy to change",
+      "index": "03"
+     }
+    ],
+    "button": {
+     "label": "The full offer",
+     "href": "/services"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "proof.award-groups",
+   "content": {
+    "intro": "Recognition is pleasant, but the work is the point.",
+    "heading": "mentions",
+    "groups": [
+     {
+      "name": "Example Design Prize",
+      "level": "Shortlist",
+      "mark": {
+       "assetRole": "placeholder.award-mark",
+       "ref": "placeholder://mark-6",
+       "alt": "Neutral square mark"
+      },
+      "entries": [
+       {
+        "title": "Harbor and Pine",
+        "label": "2026",
+        "href": "https://prize.example/entries/1"
+       },
+       {
+        "title": "Tamarind Row",
+        "label": "2025",
+        "href": "https://prize.example/entries/2"
+       }
+      ]
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "proof.press-mentions",
+   "content": {
+    "heading": "In print",
+    "intro": "Where our writing has travelled.",
+    "mentions": [
+     {
+      "title": "Notes on timetable typography",
+      "source": "Example Review",
+      "href": "https://review.example/notes"
+     },
+     {
+      "title": "Small teams and slow software",
+      "source": "Sample Weekly",
+      "href": "https://weekly.example/slow"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "proof.client-logo-grid",
+   "content": {
+    "heading": "people we build with",
+    "tiles": [
+     {
+      "name": "Harbor and Pine",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-7",
+       "alt": "Monogram tile"
+      },
+      "numberTone": "white"
+     },
+     {
+      "name": "Tamarind Row",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-8",
+       "alt": "Monogram tile"
+      },
+      "numberTone": "black"
+     },
+     {
+      "name": "Quillstone Press",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-9",
+       "alt": "Monogram tile"
+      },
+      "numberTone": "white"
+     },
+     {
+      "name": "Northgate Ferries",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-10",
+       "alt": "Monogram tile"
+      },
+      "numberTone": "grey"
+     }
+    ],
+    "button": {
+     "label": "browse everyone",
+     "href": "/about#clients"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-scale-stagger",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "proof.testimonial-slider",
+   "content": {
+    "heading": "kind words",
+    "slides": [
+     {
+      "quote": "They listened first, then made something simpler than we had dared to ask for.",
+      "author": "Founder, an example ferry line"
+     },
+     {
+      "quote": "Calm, quick and honest about trade-offs.",
+      "author": "Director, an example press"
+     }
+    ],
+    "prevLabel": "Back",
+    "nextLabel": "Onward"
+   },
+   "motion": {
+    "pattern": "slider-outin",
+    "reducedMotionFallback": "instant"
+   }
+  },
+  {
+   "section": "content.faq-accordion",
+   "content": {
+    "heading": "questions",
+    "items": [
+     {
+      "question": "Who is a good fit",
+      "answer": "Teams that value clarity and want a partner who will say no to clutter."
+     },
+     {
+      "question": "How long does a project take",
+      "answer": "Most engagements run six to ten weeks from first call to launch."
+     },
+     {
+      "question": "Do you handle hosting",
+      "answer": "We can set it up and hand over the keys, or keep it running for you."
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "accordion-height",
+    "reducedMotionFallback": "instant"
+   },
+   "tokens": {
+    "surface": "surface.page",
+    "text": "text.primary",
+    "spaceBlock": "space.160"
+   }
+  },
+  {
+   "section": "editorial.blog-card-grid",
+   "content": {
+    "layout": "staggered",
+    "posts": [
+     {
+      "title": "Designing for quiet screens",
+      "href": "/blog/designing-for-quiet-screens",
+      "image": {
+       "assetRole": "generated.article-image",
+       "ref": "generated://article-11",
+       "alt": "Soft-focus studio still life"
+      },
+      "cta": "Read on"
+     },
+     {
+      "title": "A short history of the footnote",
+      "href": "/blog/a-short-history-of-the-footnote",
+      "image": {
+       "assetRole": "generated.article-image",
+       "ref": "generated://article-12",
+       "alt": "Soft-focus studio still life"
+      },
+      "cta": "Read on"
+     },
+     {
+      "title": "Why we sketch in public",
+      "href": "/blog/why-we-sketch-in-public",
+      "image": {
+       "assetRole": "generated.article-image",
+       "ref": "generated://article-13",
+       "alt": "Soft-focus studio still life"
+      },
+      "cta": "Read on"
+     }
+    ],
+    "heading": "Journal"
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "cta.contact-lines",
+   "content": {
+    "lines": [
+     "shall we make",
+     "something",
+     "useful"
+    ],
+    "button": {
+     "label": "Start a conversation",
+     "href": "/contact"
+    }
+   },
+   "motion": {
+    "pattern": "contact-lines-slide",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "spaceBlock": "space.240"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "Collaborators",
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "placeholder.partner-badge",
+     "ref": "placeholder://affiliation-badge",
+     "alt": ""
+    },
+    "note": "Copyright Fieldnote Studio, 2026",
+    "addressLabel": "Find us",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "Side projects",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "Pages",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "Elsewhere",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-14",
+       "alt": "Monogram tile"
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-15",
+       "alt": "Monogram tile"
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

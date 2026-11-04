@@ -1,0 +1,122 @@
+{
+ "id": "cta.contact-details",
+ "title": "Contact details",
+ "version": "1.0.0",
+ "purpose": "Contact page info row: phone, email and address, each a grey label over a black underlined link or text (address right-aligned in columns 5-6).",
+ "semantic": {
+  "id": "cta.contact-details",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:section.section_contact_info",
+  "file": "src/components/contact/ContactInfo.jsx",
+  "tag": "section",
+  "lines": "14",
+  "needle": "<section className=\"section_contact_info\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/contact/ContactInfo.jsx:12",
+   "needle": "export default function ContactInfo"
+  }
+ ],
+ "iaSectionIds": [
+  "cta.contact-info"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "contact"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "items": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "value": {
+     "kind": "text",
+     "maxWords": 10,
+     "required": true
+    },
+    "href": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": false
+    }
+   },
+   "minItems": 1,
+   "maxItems": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: flex column, gap 40, everything left-aligned"
+  ],
+  "cite": {
+   "cite": "src/components/contact/ContactInfo.jsx:1",
+   "needle": "contact_info_wrapper"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   119,
+   119
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   337,
+   337
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   334,
+   334
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:290",
+   "needle": "**4.1 `section_contact_info`**"
+  }
+ ]
+}

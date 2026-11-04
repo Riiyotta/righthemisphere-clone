@@ -1,0 +1,169 @@
+{
+ "id": "proof.award-groups",
+ "title": "Award groups",
+ "version": "1.0.0",
+ "purpose": "Recognition list: an intro paragraph, a 'features' heading and award groups, each with a 40px mark, award name and level on the left and ruled rows (project, date or year, diagonal arrow) on the right. Third-party marks: must-not-fabricate.",
+ "semantic": {
+  "id": "proof.award-groups",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section.section_awards",
+  "file": "src/components/Awards.jsx",
+  "tag": "section",
+  "lines": "53",
+  "needle": "<section className=\"section_awards\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Awards.jsx:51",
+   "needle": "export default function Awards"
+  }
+ ],
+ "iaSectionIds": [
+  "list.awards"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "intro": {
+   "kind": "text",
+   "maxWords": 20,
+   "required": true
+  },
+  "heading": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "groups": {
+   "kind": "items",
+   "fields": {
+    "name": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "level": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "mark": {
+     "kind": "media",
+     "assetRoles": [
+      "award.mark"
+     ],
+     "generatedAssetRoles": [
+      "placeholder.award-mark"
+     ],
+     "required": true
+    },
+    "entries": {
+     "kind": "items",
+     "fields": {
+      "title": {
+       "kind": "text",
+       "maxWords": 5,
+       "required": true
+      },
+      "label": {
+       "kind": "text",
+       "maxWords": 4,
+       "required": true
+      },
+      "href": {
+       "kind": "text",
+       "maxWords": 1,
+       "required": true
+      }
+     },
+     "minItems": 1,
+     "maxItems": 6,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "scroll-scale-in",
+   "scroll-split-lines",
+   "hover-border-accent",
+   "hover-arrow-swap",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: detail grid becomes a flex column; each group a column with 40px gap, rows 38px"
+  ],
+  "cite": {
+   "cite": "src/components/Awards.jsx:67",
+   "needle": "md:flex md:flex-col md:gap-40"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "award.mark"
+ ],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.award-mark",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   1324,
+   1324
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   1349,
+   1349
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   1349,
+   1349
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights",
+  "categoryNote": "ia/ia.json files this under LIST (hairline-ruled rows); the AI-facing category is PROOF because the content is third-party recognition."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:283",
+   "needle": "## 6. `section_awards`"
+  }
+ ]
+}

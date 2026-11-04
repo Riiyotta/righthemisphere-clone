@@ -1,0 +1,16 @@
+{
+ "id": "hairline-row",
+ "kind": "primitive",
+ "description": "1px #CECECE bottom border row whose border turns accent over 500ms on hover.",
+ "tokens": [
+  "color.rule",
+  "color.accent",
+  "motion.duration.hover-colour"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:150",
+   "needle": ".list_row {"
+  }
+ ]
+}

@@ -1,0 +1,1007 @@
+{
+ "version": "1.0.0",
+ "derivedFrom": [
+  "tokens/00-foundation/breakpoint.json",
+  "tokens/00-foundation/color.json",
+  "tokens/00-foundation/elevation.json",
+  "tokens/00-foundation/motion.json",
+  "tokens/00-foundation/radius.json",
+  "tokens/00-foundation/spacing.json",
+  "tokens/00-foundation/typography.json",
+  "tokens/10-semantic/semantic.json",
+  "tokens/20-component/component.json",
+  "tokens/30-layout/layout.json",
+  "tokens/llm/token-policy.json (pageSpecReferenceable)"
+ ],
+ "note": "DERIVED by extraction/build_derived.py; verify_all.py re-derives it and fails on any drift (missing, extra or changed token). Values trace to tailwind.config.js / src/pages/pages.css via each token's evidence.",
+ "counts": {
+  "total": 164,
+  "pageSpecReferenceable": 25
+ },
+ "tokens": {
+  "breakpoint.main-min": {
+   "category": "breakpoint",
+   "value": "992px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "breakpoint.medium-max": {
+   "category": "breakpoint",
+   "value": "991px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "breakpoint.small-max": {
+   "category": "breakpoint",
+   "value": "767px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "breakpoint.tiny-max": {
+   "category": "breakpoint",
+   "value": "479px",
+   "file": "tokens/00-foundation/breakpoint.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink": {
+   "category": "color",
+   "value": "#000000",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.ink-h1": {
+   "category": "color",
+   "value": "#1A1A1A",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.grey": {
+   "category": "color",
+   "value": "#7A7A7A",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.rule": {
+   "category": "color",
+   "value": "#CECECE",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.accent": {
+   "category": "color",
+   "value": "#120DF7",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.accent-alt": {
+   "category": "color",
+   "value": "#211CF7",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.paper": {
+   "category": "color",
+   "value": "#FFFFFF",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.white-0": {
+   "category": "color",
+   "value": "rgba(255,255,255,0)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.overlay": {
+   "category": "color",
+   "value": "rgba(0,0,0,0.5)",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.field-text": {
+   "category": "color",
+   "value": "#333333",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.focus": {
+   "category": "color",
+   "value": "#3898EC",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.error-bg": {
+   "category": "color",
+   "value": "#FFDEDE",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.panel-grey": {
+   "category": "color",
+   "value": "#F3F4F6",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.media-dark": {
+   "category": "color",
+   "value": "#171717",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.system-bg": {
+   "category": "color",
+   "value": "#F5F5F5",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-black": {
+   "category": "color",
+   "value": "#000000",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-navy": {
+   "category": "color",
+   "value": "#0F2844",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-violet": {
+   "category": "color",
+   "value": "#6165AF",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-teal": {
+   "category": "color",
+   "value": "#3E7170",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-orange": {
+   "category": "color",
+   "value": "#FF7136",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-amber": {
+   "category": "color",
+   "value": "#FB9920",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-forest": {
+   "category": "color",
+   "value": "#193526",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-olive": {
+   "category": "color",
+   "value": "#5B5B45",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-cyan": {
+   "category": "color",
+   "value": "#176C77",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-yellow-green": {
+   "category": "color",
+   "value": "#E1D327",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-beige": {
+   "category": "color",
+   "value": "#DFD9C4",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-grey": {
+   "category": "color",
+   "value": "#363638",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "color.project-blue-grey": {
+   "category": "color",
+   "value": "#F0F3F6",
+   "file": "tokens/00-foundation/color.json",
+   "pageSpecReferenceable": false
+  },
+  "elevation.none": {
+   "category": "elevation",
+   "value": "none",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "elevation.z-nav": {
+   "category": "elevation",
+   "value": "998",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "elevation.z-overlay": {
+   "category": "elevation",
+   "value": "999",
+   "file": "tokens/00-foundation/elevation.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.reveal": {
+   "category": "motion",
+   "value": "1s",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.default": {
+   "category": "motion",
+   "value": "0.5s",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.hover-colour": {
+   "category": "motion",
+   "value": "500ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.hover-arrow": {
+   "category": "motion",
+   "value": "300ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.hover-arrow-delay": {
+   "category": "motion",
+   "value": "250ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.faq": {
+   "category": "motion",
+   "value": "500ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.slider": {
+   "category": "motion",
+   "value": "500ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.nav-panel": {
+   "category": "motion",
+   "value": "400ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.credits-cover": {
+   "category": "motion",
+   "value": "800ms",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.duration.lenis": {
+   "category": "motion",
+   "value": "1.5s",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.ease.circ-out": {
+   "category": "motion",
+   "value": "circ.out",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.ease.power1-out": {
+   "category": "motion",
+   "value": "power1.out",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.ease.none": {
+   "category": "motion",
+   "value": "none",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.ease.quart": {
+   "category": "motion",
+   "value": "cubic-bezier(0.165, 0.84, 0.44, 1)",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "motion.ease.lenis": {
+   "category": "motion",
+   "value": "min(1, 1.001 - 2^(-10t))",
+   "file": "tokens/00-foundation/motion.json",
+   "pageSpecReferenceable": false
+  },
+  "radius.none": {
+   "category": "radius",
+   "value": "0px",
+   "file": "tokens/00-foundation/radius.json",
+   "pageSpecReferenceable": false
+  },
+  "space.0": {
+   "category": "spacing",
+   "value": "0px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.1": {
+   "category": "spacing",
+   "value": "1px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.2": {
+   "category": "spacing",
+   "value": "2px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.2-4": {
+   "category": "spacing",
+   "value": "2.4px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.3-2": {
+   "category": "spacing",
+   "value": "3.2px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.3-36": {
+   "category": "spacing",
+   "value": "3.36px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.4": {
+   "category": "spacing",
+   "value": "4px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.4-8": {
+   "category": "spacing",
+   "value": "4.8px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.8": {
+   "category": "spacing",
+   "value": "8px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.10": {
+   "category": "spacing",
+   "value": "10px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.12": {
+   "category": "spacing",
+   "value": "12px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.14": {
+   "category": "spacing",
+   "value": "14px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.16": {
+   "category": "spacing",
+   "value": "16px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.19": {
+   "category": "spacing",
+   "value": "19px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.20": {
+   "category": "spacing",
+   "value": "20px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.23-5": {
+   "category": "spacing",
+   "value": "23.5px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.24": {
+   "category": "spacing",
+   "value": "24px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.26": {
+   "category": "spacing",
+   "value": "26px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.28": {
+   "category": "spacing",
+   "value": "28px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.32": {
+   "category": "spacing",
+   "value": "32px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.40": {
+   "category": "spacing",
+   "value": "40px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.44": {
+   "category": "spacing",
+   "value": "44px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.61": {
+   "category": "spacing",
+   "value": "61px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.64": {
+   "category": "spacing",
+   "value": "64px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.80": {
+   "category": "spacing",
+   "value": "80px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.96": {
+   "category": "spacing",
+   "value": "96px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.104": {
+   "category": "spacing",
+   "value": "104px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.112": {
+   "category": "spacing",
+   "value": "112px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.128": {
+   "category": "spacing",
+   "value": "128px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.131": {
+   "category": "spacing",
+   "value": "131px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.160": {
+   "category": "spacing",
+   "value": "160px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.192": {
+   "category": "spacing",
+   "value": "192px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.208": {
+   "category": "spacing",
+   "value": "208px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.224": {
+   "category": "spacing",
+   "value": "224px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.240": {
+   "category": "spacing",
+   "value": "240px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": true
+  },
+  "space.280": {
+   "category": "spacing",
+   "value": "280px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.288": {
+   "category": "spacing",
+   "value": "288px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.300-9": {
+   "category": "spacing",
+   "value": "300.9px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.320": {
+   "category": "spacing",
+   "value": "320px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.449-5": {
+   "category": "spacing",
+   "value": "449.5px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.480": {
+   "category": "spacing",
+   "value": "480px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.496": {
+   "category": "spacing",
+   "value": "496px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "space.479": {
+   "category": "spacing",
+   "value": "479px",
+   "file": "tokens/00-foundation/spacing.json",
+   "pageSpecReferenceable": false
+  },
+  "font.family.sans": {
+   "category": "fontFamily",
+   "value": "Inter, sans-serif",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": true
+  },
+  "font.family.reference": {
+   "category": "fontFamily",
+   "value": "\"PP Mori\", Inter, sans-serif",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.weight.regular": {
+   "category": "fontWeight",
+   "value": "400",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.weight.semibold": {
+   "category": "fontWeight",
+   "value": "600",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "letter-spacing.h1": {
+   "category": "letterSpacing",
+   "value": "-0.9px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "letter-spacing.h2": {
+   "category": "letterSpacing",
+   "value": "-0.4px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "line-height.body": {
+   "category": "lineHeight",
+   "value": "120%",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "line-height.year": {
+   "category": "lineHeight",
+   "value": "0.9",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t10": {
+   "category": "fontSize",
+   "value": "clamp(8px, 5.347px + 0.2674vw, 10px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t12": {
+   "category": "fontSize",
+   "value": "clamp(10px, 4.694px + 0.5348vw, 14px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t14": {
+   "category": "fontSize",
+   "value": "clamp(10px, 3.986px + 0.607vw, 14px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t16": {
+   "category": "fontSize",
+   "value": "clamp(12px, 5.986px + 0.607vw, 16px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t20": {
+   "category": "fontSize",
+   "value": "clamp(16px, 9.986px + 0.607vw, 20px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t24": {
+   "category": "fontSize",
+   "value": "clamp(20px, 13.986px + 0.607vw, 24px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.t32": {
+   "category": "fontSize",
+   "value": "clamp(24px, 11.970px + 1.214vw, 32px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.display": {
+   "category": "fontSize",
+   "value": "clamp(52px, 0.69px + 5.1724vw, 100px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.hero-sub": {
+   "category": "fontSize",
+   "value": "clamp(17px, 1.8103vw - 0.958px, 33.8px)",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.brand": {
+   "category": "fontSize",
+   "value": "14px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.menu-label": {
+   "category": "fontSize",
+   "value": "14px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.client-md": {
+   "category": "fontSize",
+   "value": "16px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.article-h1": {
+   "category": "fontSize",
+   "value": "40px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.article-h2": {
+   "category": "fontSize",
+   "value": "24px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.article-h3": {
+   "category": "fontSize",
+   "value": "20px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.size.article-h4": {
+   "category": "fontSize",
+   "value": "18px",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.page": {
+   "category": "surface",
+   "value": "#FFFFFF",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.panel": {
+   "category": "surface",
+   "value": "#F3F4F6",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.media-dark": {
+   "category": "surface",
+   "value": "#171717",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.system": {
+   "category": "surface",
+   "value": "#F5F5F5",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.scrim": {
+   "category": "surface",
+   "value": "rgba(0,0,0,0.5)",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.error": {
+   "category": "surface",
+   "value": "#FFDEDE",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.tile-black": {
+   "category": "surface",
+   "value": "#000000",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-navy": {
+   "category": "surface",
+   "value": "#0F2844",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-violet": {
+   "category": "surface",
+   "value": "#6165AF",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-teal": {
+   "category": "surface",
+   "value": "#3E7170",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-orange": {
+   "category": "surface",
+   "value": "#FF7136",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-amber": {
+   "category": "surface",
+   "value": "#FB9920",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-forest": {
+   "category": "surface",
+   "value": "#193526",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-olive": {
+   "category": "surface",
+   "value": "#5B5B45",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-cyan": {
+   "category": "surface",
+   "value": "#176C77",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "surface.tile-yellow-green": {
+   "category": "surface",
+   "value": "#E1D327",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.tile-beige": {
+   "category": "surface",
+   "value": "#DFD9C4",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.tile-grey": {
+   "category": "surface",
+   "value": "#363638",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "surface.tile-blue-grey": {
+   "category": "surface",
+   "value": "#F0F3F6",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "text.primary": {
+   "category": "text",
+   "value": "#000000",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.heading": {
+   "category": "text",
+   "value": "#1A1A1A",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.muted": {
+   "category": "text",
+   "value": "#7A7A7A",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.accent": {
+   "category": "text",
+   "value": "#120DF7",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.on-dark": {
+   "category": "text",
+   "value": "#FFFFFF",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "text.field": {
+   "category": "text",
+   "value": "#333333",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": true
+  },
+  "border.rule": {
+   "category": "border",
+   "value": "#CECECE",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.accent": {
+   "category": "border",
+   "value": "#120DF7",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.focus": {
+   "category": "border",
+   "value": "#3898EC",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "border.strong": {
+   "category": "border",
+   "value": "#000000",
+   "file": "tokens/10-semantic/semantic.json",
+   "pageSpecReferenceable": false
+  },
+  "component.button-v2.padding-bottom": {
+   "category": "component",
+   "value": "2.4px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.work-card.header-gap": {
+   "category": "component",
+   "value": "14px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.list-row.padding": {
+   "category": "component",
+   "value": "12px 0",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.field.height": {
+   "category": "component",
+   "value": "48px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.faq-item.row-height": {
+   "category": "component",
+   "value": "32px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "component.slider.mask-height": {
+   "category": "component",
+   "value": "272px",
+   "file": "tokens/20-component/component.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.container-max": {
+   "category": "layout",
+   "value": "1648px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.gutter-main": {
+   "category": "layout",
+   "value": "32px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.gutter-medium": {
+   "category": "layout",
+   "value": "20px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.gutter-tiny": {
+   "category": "layout",
+   "value": "16px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.grid-columns": {
+   "category": "layout",
+   "value": "6",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.nav-height": {
+   "category": "layout",
+   "value": "44px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.article-column": {
+   "category": "layout",
+   "value": "688px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.section-pad-main": {
+   "category": "layout",
+   "value": "112px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.section-pad-medium": {
+   "category": "layout",
+   "value": "96px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.hero-pad-main": {
+   "category": "layout",
+   "value": "240px 192px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  },
+  "layout.hero-pad-small": {
+   "category": "layout",
+   "value": "160px 128px",
+   "file": "tokens/30-layout/layout.json",
+   "pageSpecReferenceable": false
+  }
+ }
+}

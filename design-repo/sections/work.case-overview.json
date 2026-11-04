@@ -1,0 +1,153 @@
+{
+ "id": "work.case-overview",
+ "title": "Case overview",
+ "version": "1.0.0",
+ "purpose": "First block after the case header: a stack overview of 2-3 ruled rows (label, value, number), an optional 'idea' paragraph, beside a square visual (image or animation).",
+ "semantic": {
+  "id": "work.case-overview",
+  "category": "WORK"
+ },
+ "source": {
+  "id": "dom:div.project_subhead_element",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "div",
+  "lines": "51",
+  "needle": "<div className=\"project_subhead_element\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:48",
+   "needle": "function Subhead"
+  }
+ ],
+ "iaSectionIds": [
+  "work.case-subhead"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "rows": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "value": {
+     "kind": "text",
+     "maxWords": 14,
+     "required": true
+    },
+    "number": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 4,
+   "required": true
+  },
+  "ideaLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": false
+  },
+  "ideaText": {
+   "kind": "text",
+   "maxWords": 70,
+   "required": false
+  },
+  "visual": {
+   "kind": "media",
+   "assetRoles": [
+    "work.project-image",
+    "case.motion-json"
+   ],
+   "generatedAssetRoles": [
+    "generated.project-visual",
+    "generated.motion-graphic",
+    "user.project-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "lottie-loop",
+   "scroll-fade",
+   "none"
+  ],
+  "default": "lottie-loop"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: flex column, padding 96/96, visual full width with margin-top 96px (0 at <=767)"
+  ],
+  "cite": {
+   "cite": "src/pages/CaseStudy.jsx:52",
+   "needle": "project_stack_overview_wrapper"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "case.motion-json",
+  "work.project-image"
+ ],
+ "generatedAssetRoles": [
+  "generated.motion-graphic",
+  "generated.project-visual",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   788,
+   788
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   1172,
+   1310
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   677,
+   939
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:457",
+   "needle": "**`section_project_subhead`**"
+  }
+ ]
+}

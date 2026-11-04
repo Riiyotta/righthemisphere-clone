@@ -1,0 +1,123 @@
+{
+ "id": "content.studio-statement",
+ "title": "Studio statement",
+ "version": "1.0.0",
+ "purpose": "Short studio statement block: on the home page an uppercase statement in column 1, a paragraph in columns 4-6 and an underlined button; on /about the paragraph alone in columns 4-6.",
+ "semantic": {
+  "id": "content.studio-statement",
+  "category": "CONTENT"
+ },
+ "source": {
+  "id": "dom:section.section_about_us",
+  "file": "src/components/About.jsx",
+  "tag": "section",
+  "lines": "11",
+  "needle": "<section id=\"about\" className=\"section_about_us\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/About.jsx:9",
+   "needle": "export default function About"
+  },
+  {
+   "cite": "src/components/about/AboutIntro.jsx:3",
+   "needle": "export default function AboutIntro"
+  }
+ ],
+ "iaSectionIds": [
+  "content.home-about",
+  "content.about-intro"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home",
+   "about"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "statement": {
+   "kind": "text",
+   "maxWords": 12,
+   "required": false
+  },
+  "paragraph": {
+   "kind": "text",
+   "maxWords": 45,
+   "required": true
+  },
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade",
+   "load-intro-words",
+   "none"
+  ],
+  "default": "scroll-fade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: flex column, gap 40, statement one line, paragraph full width, button wrapper a 3-column grid",
+   "<=479: statement two lines, button full width"
+  ],
+  "cite": {
+   "cite": "src/components/About.jsx:14",
+   "needle": "md:flex md:flex-col md:gap-40 md:py-96"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   230,
+   392
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   278,
+   376
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   278,
+   457
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:256",
+   "needle": "## 4. `section_about_us`"
+  }
+ ]
+}

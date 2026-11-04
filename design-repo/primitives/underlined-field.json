@@ -1,0 +1,15 @@
+{
+ "id": "underlined-field",
+ "kind": "primitive",
+ "description": "Form field under a 1px accent rule; 48px input, 18.73px type, focus border #3898EC.",
+ "tokens": [
+  "color.focus",
+  "component.field.height"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/contact/ContactForm.jsx:44",
+   "needle": "text_field contact"
+  }
+ ]
+}

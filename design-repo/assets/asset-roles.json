@@ -1,0 +1,450 @@
+{
+ "version": "1.0.0",
+ "availabilityEnum": [
+  "reference-only",
+  "generation-safe",
+  "blocked-for-generation"
+ ],
+ "referencePolicyEnum": [
+  "clone-uses-source-asset",
+  "cite-as-evidence-only",
+  "not-applicable"
+ ],
+ "generationPolicyEnum": [
+  "may-generate-new",
+  "may-reuse-licensed",
+  "must-not-reuse",
+  "must-not-reuse-live-endpoint",
+  "user-supplied-only"
+ ],
+ "note": "Availability is ALSO pinned in code (PINNED_AVAILABILITY in extraction/verify_all.py and schema/semantic_validate.py); editing this file alone cannot loosen it. No source mark, client, person or award is ever reusable in generated mode. Generated media refs must use generated://, placeholder:// or user://. Reference policy 'clone-uses-source-asset' is a fact about the clone (it ships the real files), not permission.",
+ "roles": {
+  "brand.logo-mark": {
+   "availability": "blocked-for-generation",
+   "description": "The studio's logo mark (18x28 mark in the nav and footer, public/images logo.svg). Identifies the source.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:21",
+     "needle": "\"slot\": \"logo_img (nav + footer)\""
+    },
+    {
+     "cite": "src/components/ui/Parts.jsx:36",
+     "needle": "logo_img"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "brand.partner-badge": {
+   "availability": "blocked-for-generation",
+   "description": "The third-party 'certified partner' badge in the footer (128x26): a mark owned by a platform vendor, not by the studio.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:22",
+     "needle": "\"slot\": \"certified_partner_badge (footer)\""
+    },
+    {
+     "cite": "src/components/Footer.jsx:8",
+     "needle": "certified_partner_badge"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.partner-badge"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence. A vendor partner badge must never be fabricated or reproduced."
+  },
+  "work.project-image": {
+   "availability": "reference-only",
+   "description": "Client project imagery behind the work cards (portrait/landscape images on a coloured tile) and the case-study images.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:25",
+     "needle": "\"slot\": \"card 1 portrait_hero (project_img_hero)\""
+    },
+    {
+     "cite": "src/components/Work.jsx:147",
+     "needle": "project_image_wrap"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.project-visual",
+    "user.project-media"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "client.logo": {
+   "availability": "blocked-for-generation",
+   "description": "Real client and partner logos: the client tiles (15 + 21), the partner-credits overlay (64px) and the second-tier logos.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:36",
+     "needle": "\"slot\": \"partner_image x15 (client logos)\""
+    },
+    {
+     "cite": "src/components/Partners.jsx:73",
+     "needle": "partner_image_item"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.client-logo"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence. Real client names and marks are must-not-fabricate."
+  },
+  "award.mark": {
+   "availability": "blocked-for-generation",
+   "description": "Third-party award marks (4 tiles, 40x40) in the awards list.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:35",
+     "needle": "\"slot\": \"feature_icon x4 (award logos)\""
+    },
+    {
+     "cite": "src/components/Awards.jsx:6",
+     "needle": "const AWWWARDS = {"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.award-mark"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence. Award and press marks are must-not-fabricate: a generated page may show only a neutral placeholder mark."
+  },
+  "person.portrait": {
+   "availability": "blocked-for-generation",
+   "description": "Real team member portraits (250x250, shown grayscale on row hover).",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:94",
+     "needle": "Source images are 250×250"
+    },
+    {
+     "cite": "src/components/about/Team.jsx:37",
+     "needle": "team_img"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "fictional.portrait"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence. Real people's likenesses are never reusable."
+  },
+  "article.image": {
+   "availability": "reference-only",
+   "description": "Blog hero images (4:3) and in-article figures of the real posts.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "src/pages/BlogPost.jsx:25",
+     "needle": "blog_hero_image"
+    },
+    {
+     "cite": "src/components/blog/RichText.jsx:25",
+     "needle": "<figure"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.article-image",
+    "user.project-media"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "case.motion-json": {
+   "availability": "reference-only",
+   "description": "Case-study Lottie animations (three JSON files) rendered with the svg renderer.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "src/components/case-study/Lottie.jsx:2",
+     "needle": "lottie"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:532",
+     "needle": "**Lottie JSON, not downloaded**"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "generated.motion-graphic"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "case.video-embed": {
+   "availability": "blocked-for-generation",
+   "description": "The YouTube embed (client film) on the Watch-with-Papa case study.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "src/components/case-study/Showcase.jsx:25",
+     "needle": "youtube.com/embed"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:537",
+     "needle": "Video: YouTube `Xkd0TjIPlpM`"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.video"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "form.live-endpoint": {
+   "availability": "blocked-for-generation",
+   "description": "The live enquiry form target: the Webflow form with its Turnstile site key and redirect. A generated form must never post to it.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse-live-endpoint",
+   "evidence": [
+    {
+     "cite": "src/components/contact/ContactForm.jsx:4",
+     "needle": "LOCAL STUB"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:324",
+     "needle": "data-turnstile-sitekey"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder.url"
+   ],
+   "licensing": "Source is the real, live site of a working creative studio (the Webflow site named in registry.manifest.json). The clone is the owner's own rebuild and ships the real client work, logos, team photos and copy, so the clone itself is NOT a clean-room source. Never reproduce any of it in a generated page; reference mode may cite it only as evidence."
+  },
+  "font.display-original": {
+   "availability": "reference-only",
+   "description": "PP Mori, the commercial typeface (Regular 400 and Semibold 600). Shipped in the clone's public/fonts.",
+   "referencePolicy": "clone-uses-source-asset",
+   "generationPolicy": "must-not-reuse",
+   "evidence": [
+    {
+     "cite": "src/index.css:5",
+     "needle": "PP Mori is commercial"
+    },
+    {
+     "cite": "asset-manifest.json:6",
+     "needle": "\"family\": \"PP Mori\", \"cssName\": \"Ppmori\", \"weight\": 400"
+    }
+   ],
+   "generationSafeSubstitutes": [
+    "licensed-or-fallback.font"
+   ],
+   "licensing": "PP Mori is a commercial font: reference-only. Generated pages use font.family.sans (Inter, OFL) or a font the operator has licensed."
+  },
+  "generated.brand-mark": {
+   "availability": "generation-safe",
+   "description": "A newly generated neutral logo mark for the operator's brand (same 18x28 box).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:21",
+     "needle": "Replace with a neutral mark of the same box"
+    }
+   ]
+  },
+  "placeholder.brand-mark": {
+   "availability": "generation-safe",
+   "description": "A neutral placeholder mark in the logo box until the operator supplies one.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:21",
+     "needle": "Replace with a neutral mark of the same box"
+    }
+   ]
+  },
+  "generated.project-visual": {
+   "availability": "generation-safe",
+   "description": "Generated or abstract artwork on a surface.tile-* fill standing in for client work (ratios from asset-manifest imageSlots).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:24",
+     "needle": "\"imageSlots\": ["
+    }
+   ]
+  },
+  "user.project-media": {
+   "availability": "generation-safe",
+   "description": "The operator's own project media, supplied by the user.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:24",
+     "needle": "\"imageSlots\": ["
+    }
+   ]
+  },
+  "placeholder.client-logo": {
+   "availability": "generation-safe",
+   "description": "A neutral monogram tile (1:1) for a fictional client; never a real logo.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:4",
+     "needle": "client logos"
+    }
+   ]
+  },
+  "placeholder.award-mark": {
+   "availability": "generation-safe",
+   "description": "A neutral square mark (1:1, 40px) for a fictional or operator-owned recognition.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:4",
+     "needle": "award logos"
+    }
+   ]
+  },
+  "fictional.portrait": {
+   "availability": "generation-safe",
+   "description": "A generated avatar or silhouette (1:1) for a fictional person.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:94",
+     "needle": "Source images are 250×250"
+    }
+   ]
+  },
+  "generated.article-image": {
+   "availability": "generation-safe",
+   "description": "A generated image (4:3 hero, in-article figure) for an original article.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:37",
+     "needle": "\"slot\": \"blog_img x3\""
+    }
+   ]
+  },
+  "generated.motion-graphic": {
+   "availability": "generation-safe",
+   "description": "A generated looping graphic or short animation standing in for a case-study Lottie.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:499",
+     "needle": "Lotties: autoplay and loop from load"
+    }
+   ]
+  },
+  "placeholder.video": {
+   "availability": "generation-safe",
+   "description": "A placeholder frame or operator-supplied video in the 16:9 (56.17%) box.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "user-supplied-only",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:465",
+     "needle": "`padding-top:56.17%`"
+    }
+   ]
+  },
+  "placeholder.partner-badge": {
+   "availability": "generation-safe",
+   "description": "A neutral blank badge box (128x26) for an operator's own affiliation; never a vendor mark.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:22",
+     "needle": "\"slot\": \"certified_partner_badge (footer)\""
+    }
+   ]
+  },
+  "licensed-or-fallback.font": {
+   "availability": "generation-safe",
+   "description": "Inter (OFL) or a font the operator has licensed, set through font.family.sans.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-reuse-licensed",
+   "evidence": [
+    {
+     "cite": "src/index.css:6",
+     "needle": "falls back to Inter 400"
+    }
+   ]
+  },
+  "icon.ui": {
+   "availability": "generation-safe",
+   "description": "The redrawn UI glyphs: NE arrow, right arrow, plus, minus, menu, close (generic shapes, no brand content).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "asset-manifest.json:11",
+     "needle": "\"uiGlyphs_redraw\": ["
+    }
+   ]
+  },
+  "placeholder.url": {
+   "availability": "generation-safe",
+   "description": "Reserved .example / .invalid URLs and example.com for every link, form action and mail address.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:545",
+     "needle": "Form submission and success/error states were not triggered."
+    }
+   ]
+  },
+  "original.copy": {
+   "availability": "generation-safe",
+   "description": "Original copy written for the operator; never source copy.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:7",
+     "needle": "**Content rule.**"
+    }
+   ]
+  },
+  "fictional.person": {
+   "availability": "generation-safe",
+   "description": "An invented person name (team row, article author, credit).",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:9",
+     "needle": "`pages.about.team.members[]`"
+    }
+   ]
+  },
+  "placeholder.metric": {
+   "availability": "generation-safe",
+   "description": "An invented figure, price, date or rating clearly belonging to the operator.",
+   "referencePolicy": "not-applicable",
+   "generationPolicy": "may-generate-new",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:194",
+     "needle": "grey \"Starts at:\""
+    }
+   ]
+  }
+ }
+}

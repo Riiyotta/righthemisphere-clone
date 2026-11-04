@@ -1,0 +1,136 @@
+{
+ "id": "proof.press-mentions",
+ "title": "Press mentions",
+ "version": "1.0.0",
+ "purpose": "Four ruled rows of external mentions (title, grey source, diagonal arrow pair) beside a heading and a one-line intro in columns 3-6. Publication names are third-party marks: must-not-fabricate.",
+ "semantic": {
+  "id": "proof.press-mentions",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section.section_media_mentions",
+  "file": "src/components/MediaMentions.jsx",
+  "tag": "section",
+  "lines": "24",
+  "needle": "<section className=\"section_media_mentions\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/MediaMentions.jsx:22",
+   "needle": "export default function MediaMentions"
+  }
+ ],
+ "iaSectionIds": [
+  "list.media-mentions"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "intro": {
+   "kind": "text",
+   "maxWords": 16,
+   "required": true
+  },
+  "mentions": {
+   "kind": "items",
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 14,
+     "required": true
+    },
+    "source": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "href": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "hover-border-accent",
+   "hover-arrow-swap",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: element spans the full width as a 4-column grid; <=767 flex column, gap 40"
+  ],
+  "cite": {
+   "cite": "src/components/MediaMentions.jsx:28",
+   "needle": "sm:flex sm:flex-col sm:gap-40"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   553,
+   553
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   506,
+   506
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   635,
+   635
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights",
+  "categoryNote": "ia/ia.json files this under LIST; the AI-facing category is PROOF (press)."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:305",
+   "needle": "## 7. `section_media_mentions`"
+  }
+ ]
+}

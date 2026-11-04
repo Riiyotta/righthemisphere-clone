@@ -1,0 +1,129 @@
+{
+ "id": "content.faq-accordion",
+ "title": "FAQ accordion",
+ "version": "1.0.0",
+ "purpose": "Heading in column 3 and five independent accordion items in columns 4-6: index and question, a plus that collapses into a minus, answer revealed by height 0 -> auto over 500ms.",
+ "semantic": {
+  "id": "content.faq-accordion",
+  "category": "CONTENT"
+ },
+ "source": {
+  "id": "dom:section.section_faq",
+  "file": "src/components/Faq.jsx",
+  "tag": "section",
+  "lines": "75",
+  "needle": "<section className=\"section_faq\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Faq.jsx:73",
+   "needle": "export default function Faq"
+  },
+  {
+   "cite": "src/components/Faq.jsx:30",
+   "needle": "function FaqItem"
+  }
+ ],
+ "iaSectionIds": [
+  "content.faq"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home",
+   "services"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "items": {
+   "kind": "items",
+   "fields": {
+    "question": {
+     "kind": "text",
+     "maxWords": 10,
+     "required": true
+    },
+    "answer": {
+     "kind": "text",
+     "maxWords": 45,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 8,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "accordion-height",
+   "scroll-fade-width",
+   "none"
+  ],
+  "default": "accordion-height"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: header at column 1, items at x 496; <=767 flex column, header padding-bottom 40"
+  ],
+  "cite": {
+   "cite": "src/components/Faq.jsx:80",
+   "needle": "md:col-start-1 md:col-end-4 sm:pb-40"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   549,
+   549
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   501,
+   501
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   580,
+   580
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:370",
+   "needle": "## 10. `section_faq`"
+  }
+ ]
+}

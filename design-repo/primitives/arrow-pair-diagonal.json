@@ -1,0 +1,15 @@
+{
+ "id": "arrow-pair-diagonal",
+ "kind": "primitive",
+ "description": "12px box clipping a black NE arrow and a blue NE arrow parked bottom-left; swap on hover (300ms, second 250ms later).",
+ "tokens": [
+  "color.ink",
+  "color.accent"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/ui/Parts.jsx:22",
+   "needle": "export function DiagArrow"
+  }
+ ]
+}

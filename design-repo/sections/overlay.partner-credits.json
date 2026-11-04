@@ -1,0 +1,148 @@
+{
+ "id": "overlay.partner-credits",
+ "title": "Partner credits overlay",
+ "version": "1.0.0",
+ "purpose": "Hidden full-screen dialog opened from the footer trigger: a 50% black scrim, a white panel revealed by a cover that scales in from the top-right, a heading, a paragraph and a list of partner rows with logo, name, note and arrow.",
+ "semantic": {
+  "id": "overlay.partner-credits",
+  "category": "UTILITY"
+ },
+ "source": {
+  "id": "dom:div.partners_list_wrapper-copy",
+  "file": "src/components/Footer.jsx",
+  "tag": "div",
+  "lines": "102-104",
+  "needle": "partners_list_wrapper-copy fixed inset-0"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Footer.jsx:94",
+   "needle": "function PartnerCredits"
+  }
+ ],
+ "iaSectionIds": [
+  "shell.partner-credits"
+ ],
+ "retrievalEligible": false,
+ "retrievalReason": "Modal dialog (role=dialog) hidden until the footer trigger is clicked: runtime UI that takes no page height, not retrievable page content.",
+ "constraints": {
+  "onePerPage": true,
+  "mustBeLast": true,
+  "requires": [
+   "chrome.footer"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "body": {
+   "kind": "text",
+   "maxWords": 30,
+   "required": true
+  },
+  "partners": {
+   "kind": "items",
+   "fields": {
+    "link": {
+     "kind": "link",
+     "maxWords": 5,
+     "required": true
+    },
+    "note": {
+     "kind": "text",
+     "maxWords": 16,
+     "required": true
+    },
+    "logo": {
+     "kind": "media",
+     "assetRoles": [
+      "client.logo"
+     ],
+     "generatedAssetRoles": [
+      "placeholder.client-logo"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  },
+  "closeLabel": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "credits-overlay-open"
+  ],
+  "default": "credits-overlay-open"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: flex layout, the panel spans the full content width",
+   "<=479: panel height 480px, heading anchored to the bottom"
+  ],
+  "cite": {
+   "cite": "src/components/Footer.jsx:114",
+   "needle": "xs:h-480"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "client.logo"
+ ],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.client-logo",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   0,
+   0
+  ],
+  "inFlowAt1440": false,
+  "instancesAt1440": 18,
+  "heightAt768": [
+   0,
+   0
+  ],
+  "instancesAt768": 18,
+  "heightAt390": [
+   0,
+   0
+  ],
+  "instancesAt390": 18,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:433",
+   "needle": "**Partner credits overlay** (opens from the footer trigger):"
+  }
+ ]
+}

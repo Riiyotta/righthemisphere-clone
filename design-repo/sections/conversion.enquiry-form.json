@@ -1,0 +1,161 @@
+{
+ "id": "conversion.enquiry-form",
+ "title": "Enquiry form",
+ "version": "1.0.0",
+ "purpose": "Contact page enquiry form: title, name and email fields, a required budget select (placeholder + four options), a project description textarea and a Submit button, each row under a 1px accent rule; native HTML5 validation, success and error blocks.",
+ "semantic": {
+  "id": "conversion.enquiry-form",
+  "category": "CONVERSION"
+ },
+ "source": {
+  "id": "dom:section.section_contact_form",
+  "file": "src/components/contact/ContactForm.jsx",
+  "tag": "section",
+  "lines": "23",
+  "needle": "<section className=\"section_contact\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/contact/ContactForm.jsx:8",
+   "needle": "export default function ContactForm"
+  }
+ ],
+ "iaSectionIds": [
+  "cta.contact-form"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "contact"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 25,
+   "required": true
+  },
+  "namePlaceholder": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "emailPlaceholder": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "budgetPlaceholder": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "budgetOptions": {
+   "kind": "textList",
+   "maxWords": 3,
+   "minItems": 2,
+   "maxItems": 6,
+   "required": true
+  },
+  "descriptionPlaceholder": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "submitLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "successMessage": {
+   "kind": "text",
+   "maxWords": 14,
+   "required": true
+  },
+  "errorMessage": {
+   "kind": "text",
+   "maxWords": 14,
+   "required": true
+  },
+  "endpoint": {
+   "kind": "media",
+   "assetRoles": [
+    "form.live-endpoint"
+   ],
+   "generatedAssetRoles": [
+    "placeholder.url"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent",
+   "text.field"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: the form spans the full width (3-column grid)",
+   "<=479: the two blocks become flex columns; inputs stack at 48px with a 16px gap"
+  ],
+  "cite": {
+   "cite": "src/components/contact/ContactForm.jsx:42",
+   "needle": "contact_foem_block_1"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "form.live-endpoint"
+ ],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   708,
+   708
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   690,
+   690
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   818,
+   818
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:299",
+   "needle": "**4.2 `section_contact` (form page variant; NOT the homepage CTA)**"
+  }
+ ]
+}

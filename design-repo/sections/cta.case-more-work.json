@@ -1,0 +1,105 @@
+{
+ "id": "cta.case-more-work",
+ "title": "More work link",
+ "version": "1.0.0",
+ "purpose": "Closing wide 'see more work' underlined button, centred (the original links it to /about).",
+ "semantic": {
+  "id": "cta.case-more-work",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:section.section_project_showcase_vew_project",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "section",
+  "lines": "128",
+  "needle": "className={s.section}"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:103",
+   "needle": "section_project_showcase_vew_project"
+  }
+ ],
+ "iaSectionIds": [
+  "work.case-view-project"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "padding 112/112; content-width button with 16px gap"
+  ],
+  "cite": {
+   "cite": "src/pages/CaseStudy.jsx:108",
+   "needle": "wide gap-16"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   251,
+   251
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   247,
+   247
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   247,
+   247
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:486",
+   "needle": "**`section_project_showcase_vew_project`**"
+  }
+ ]
+}

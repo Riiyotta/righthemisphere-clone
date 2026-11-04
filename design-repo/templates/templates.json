@@ -1,0 +1,588 @@
+{
+ "version": "1.0.0",
+ "note": "One template per page purpose (9, from ia/ia.json, re-checked against src/Router.jsx). nodes are structured objects; maxRepeat caps a repeatable cluster; a 'slot' node accepts a run of the listed sections in any order (case-study bodies vary per project). Routes: templates/routes.json (18, each once) plus the catch-all 404.",
+ "templates": {
+  "home": {
+   "purpose": "Home: the studio's front page. Hero with display words, the selected work as two card clusters, a statement, services, awards, press mentions, client logos, testimonials, FAQ, blog strip and the contact call to action.",
+   "family": "home",
+   "routePattern": "^/$",
+   "routes": [
+    "/"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/App.jsx:17",
+     "needle": "export default function App"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.home",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "work.card-cluster",
+     "required": true,
+     "repeatable": true,
+     "maxRepeat": 2,
+     "retrievalEligible": true
+    },
+    {
+     "section": "content.studio-statement",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "list.service-rows",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.award-groups",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.press-mentions",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.client-logo-grid",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.testimonial-slider",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "content.faq-accordion",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "editorial.blog-card-grid",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.contact-lines",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "about": {
+   "purpose": "About: who the studio is. Words hero, intro statement, team roster, process note, client logos, products, blog strip and contact call to action.",
+   "family": "about",
+   "routePattern": "^/about$",
+   "routes": [
+    "/about"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/About.jsx:41",
+     "needle": "export default function About"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.words",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "content.studio-statement",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "list.team-roster",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "content.process-note",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "proof.client-logo-grid",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "list.product-links",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "editorial.blog-card-grid",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.contact-lines",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "services": {
+   "purpose": "Services: what the studio does and costs. Services hero, price table, FAQ and contact call to action.",
+   "family": "services",
+   "routePattern": "^/services$",
+   "routes": [
+    "/services"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/Services.jsx:12",
+     "needle": "export default function"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.services",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "list.pricing-table",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "content.faq-accordion",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.contact-lines",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "work-index": {
+   "purpose": "Work index: the full project list as up to four card clusters under a words hero, then the contact call to action.",
+   "family": "portfolio-index",
+   "routePattern": "^/work$",
+   "routes": [
+    "/work"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/Work.jsx:9",
+     "needle": "export default function WorkPage"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.words",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "work.card-cluster",
+     "required": true,
+     "repeatable": true,
+     "maxRepeat": 4,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.contact-lines",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "contact": {
+   "purpose": "Contact: words hero, contact details and the enquiry form (no contact call to action on this page).",
+   "family": "contact",
+   "routePattern": "^/contact$",
+   "routes": [
+    "/contact"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/Contact.jsx:9",
+     "needle": "export default function ContactPage"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.words",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "cta.contact-details",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "conversion.enquiry-form",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "blog-list": {
+   "purpose": "Blog index: words hero and the blog posts as staggered card clusters of three (no contact call to action).",
+   "family": "article-index",
+   "routePattern": "^/blog$",
+   "routes": [
+    "/blog"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/BlogList.jsx:12",
+     "needle": "export default function BlogList"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.words",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "editorial.blog-card-grid",
+     "required": true,
+     "repeatable": true,
+     "maxRepeat": 4,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "blog-post": {
+   "purpose": "Blog post: article header, the body as chapters, and a two-card read-more row.",
+   "family": "article",
+   "routePattern": "^/blog/[a-z0-9-]+$",
+   "routes": [
+    "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+    "/blog/design-and-the-question-of-authority",
+    "/blog/how-to-create-good-web-design-everytime",
+    "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+    "/blog/on-webflow-right-hemisphere-and-how-we-work",
+    "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+    "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+    "/blog/what-is-px-what-is-a-pt-what-is-dp",
+    "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+    "/blog/what-should-be-the-size-of-an-icon-button"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/BlogPost.jsx:15",
+     "needle": "export default function BlogPost"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.article-header",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "editorial.article-chapter",
+     "required": true,
+     "repeatable": true,
+     "maxRepeat": 12,
+     "retrievalEligible": true
+    },
+    {
+     "section": "editorial.blog-card-grid",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "case-study": {
+   "purpose": "Case study: header, overview, a body slot of showcase media and image/text rows whose order is data-driven per study, then the 'see more work' link.",
+   "family": "case-study",
+   "routePattern": "^/(?!about$|services$|work$|contact$|blog$)[a-z0-9-]+$",
+   "routes": [
+    "/cheggout-sdk",
+    "/watch-with-papa"
+   ],
+   "catchAll": false,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/CaseStudy.jsx:136",
+     "needle": "export default function CaseStudy"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "chrome.navbar",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "hero.case-header",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "work.case-overview",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "slot": "case-body",
+     "allowed": [
+      "media.case-showcase",
+      "work.case-image-text"
+     ],
+     "minItems": 2,
+     "maxItems": 8
+    },
+    {
+     "section": "cta.case-more-work",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "chrome.footer",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    },
+    {
+     "section": "overlay.partner-credits",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": false
+    }
+   ]
+  },
+  "not-found": {
+   "purpose": "Not found: the hosting-level 404 screen with no site chrome; served for any unmatched path.",
+   "family": "system",
+   "routePattern": "^/.*$",
+   "routes": [],
+   "catchAll": true,
+   "evidence": [
+    {
+     "cite": "src/Router.jsx:71",
+     "needle": "export default function Router"
+    },
+    {
+     "cite": "src/pages/NotFound.jsx:3",
+     "needle": "export default function NotFound"
+    }
+   ],
+   "nodes": [
+    {
+     "section": "system.not-found",
+     "required": true,
+     "repeatable": false,
+     "retrievalEligible": true
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "id": "hero.case-header",
+ "title": "Case-study header",
+ "version": "1.0.0",
+ "purpose": "Page opener of a case study: display h1 in columns 1-3, a project brief in columns 5-6, then a row with scope, a live-link underlined link and a credit line.",
+ "semantic": {
+  "id": "hero.case-header",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.section_project_hero",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "section",
+  "lines": "12",
+  "needle": "<section className=\"section_project_hero\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/pages/CaseStudy.jsx:10",
+   "needle": "function Hero"
+  }
+ ],
+ "iaSectionIds": [
+  "hero.case-study"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "title": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "briefLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "brief": {
+   "kind": "text",
+   "maxWords": 60,
+   "required": true
+  },
+  "scope": {
+   "kind": "text",
+   "maxWords": 10,
+   "required": true
+  },
+  "liveLink": {
+   "kind": "link",
+   "maxWords": 4,
+   "required": true
+  },
+  "creditLabel": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": true
+  },
+  "credit": {
+   "kind": "link",
+   "maxWords": 5,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.heading",
+   "text.primary",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: h1 wraps to two lines; <=767: header and detail rows become columns (gap 48 / 16)"
+  ],
+  "cite": {
+   "cite": "src/pages/CaseStudy.jsx:23",
+   "needle": "project_detail_element"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   558,
+   558
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   633,
+   648
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   583,
+   583
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:441",
+   "needle": "**`section_project_hero`**"
+  }
+ ]
+}

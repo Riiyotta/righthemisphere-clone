@@ -1,0 +1,131 @@
+{
+ "category": "layout",
+ "note": "Layout grid and section rhythm (CLONE_SPEC.md 0.3, 0.4), confirmed by the measured heights in extraction/measured-values.json.",
+ "tokens": {
+  "layout.container-max": {
+   "$type": "dimension",
+   "$value": "1648px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:112",
+     "needle": "container: '1648px'"
+    },
+    {
+     "cite": "CLONE_SPEC.md:75",
+     "needle": "`max-width: 1648px`"
+    }
+   ]
+  },
+  "layout.gutter-main": {
+   "$type": "dimension",
+   "$value": "32px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:74",
+     "needle": "horizontal padding **32px** at ≥992"
+    }
+   ]
+  },
+  "layout.gutter-medium": {
+   "$type": "dimension",
+   "$value": "20px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:74",
+     "needle": "**20px** at 480–991"
+    }
+   ]
+  },
+  "layout.gutter-tiny": {
+   "$type": "dimension",
+   "$value": "16px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:74",
+     "needle": "**16px** at ≤479"
+    }
+   ]
+  },
+  "layout.grid-columns": {
+   "$type": "number",
+   "$value": "6",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:76",
+     "needle": "**6-column grid, gap 0**"
+    }
+   ]
+  },
+  "layout.nav-height": {
+   "$type": "dimension",
+   "$value": "44px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:135",
+     "needle": "nav: '44px'"
+    }
+   ]
+  },
+  "layout.article-column": {
+   "$type": "dimension",
+   "$value": "688px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "src/pages/pages.css:569",
+     "needle": "max-width: 688px;"
+    }
+   ]
+  },
+  "layout.section-pad-main": {
+   "$type": "dimension",
+   "$value": "112px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:83",
+     "needle": "| about | 112 / 112 |"
+    }
+   ]
+  },
+  "layout.section-pad-medium": {
+   "$type": "dimension",
+   "$value": "96px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:83",
+     "needle": "| about | 112 / 112 | 96 / 96 | 96 / 96 |"
+    }
+   ]
+  },
+  "layout.hero-pad-main": {
+   "$type": "dimension",
+   "$value": "240px 192px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:82",
+     "needle": "| hero header block | 240 / 192"
+    }
+   ]
+  },
+  "layout.hero-pad-small": {
+   "$type": "dimension",
+   "$value": "160px 128px",
+   "category": "layout",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:82",
+     "needle": "160 / 128"
+    }
+   ]
+  }
+ }
+}

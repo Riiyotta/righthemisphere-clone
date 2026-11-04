@@ -1,0 +1,14 @@
+{
+ "id": "showcase-text-block",
+ "kind": "component",
+ "description": "Caps label, paragraphs and a disc list, bottom-aligned in a 3-column grid.",
+ "tokens": [
+  "font.size.t16"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/case-study/Showcase.jsx:39",
+   "needle": "export function ShowcaseText"
+  }
+ ]
+}

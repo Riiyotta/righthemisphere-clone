@@ -1,0 +1,15 @@
+{
+ "id": "tile-image-frame",
+ "kind": "primitive",
+ "description": "Image on a flat tile fill (overflow hidden, no radius); the box ratio comes from the image.",
+ "tokens": [
+  "color.project-black",
+  "radius.none"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Work.jsx:147",
+   "needle": "project_image_wrap"
+  }
+ ]
+}

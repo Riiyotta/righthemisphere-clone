@@ -1,0 +1,115 @@
+{
+ "id": "cta.contact-lines",
+ "title": "Contact call to action",
+ "version": "1.0.0",
+ "purpose": "Three huge masked display lines that slide in alternately, centred, with a 192px underlined 'work with us' style button; closes about, services, work and home.",
+ "semantic": {
+  "id": "cta.contact-lines",
+  "category": "CTA"
+ },
+ "source": {
+  "id": "dom:section.section_contact",
+  "file": "src/components/Contact.jsx",
+  "tag": "section",
+  "lines": "10",
+  "needle": "<section id=\"contact\" className=\"section_contact\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Contact.jsx:8",
+   "needle": "export default function Contact"
+  }
+ ],
+ "iaSectionIds": [
+  "cta.contact-lines"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home",
+   "about",
+   "services",
+   "work-index"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "lines": {
+   "kind": "textList",
+   "maxWords": 3,
+   "minItems": 3,
+   "maxItems": 3,
+   "required": true
+  },
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "contact-lines-slide",
+   "none"
+  ],
+  "default": "contact-lines-slide"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: padding 96/96, gap 40"
+  ],
+  "cite": {
+   "cite": "src/components/Contact.jsx:14",
+   "needle": "md:gap-40 sm:mb-40"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   641,
+   641
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 4,
+  "heightAt768": [
+   435,
+   435
+  ],
+  "instancesAt768": 4,
+  "heightAt390": [
+   439,
+   439
+  ],
+  "instancesAt390": 4,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:406",
+   "needle": "## 12. `section_contact`"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "id": "blog-card",
+ "kind": "component",
+ "description": "4:3 image, title and a 'read' underlined row; whole card is the link.",
+ "uses": [
+  "button-v2"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Blogs.jsx:36",
+   "needle": "export function BlogCard"
+  }
+ ]
+}

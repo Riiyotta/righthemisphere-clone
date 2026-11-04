@@ -1,0 +1,15 @@
+{
+ "id": "section-heading",
+ "kind": "primitive",
+ "description": "h2 caps: 32px fluid, uppercase, letter-spacing -0.4px, margin-bottom 10px.",
+ "tokens": [
+  "font.size.t32",
+  "letter-spacing.h2"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:59",
+   "needle": "h2.text-size-h2.caps {"
+  }
+ ]
+}

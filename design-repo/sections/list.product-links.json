@@ -1,0 +1,124 @@
+{
+ "id": "list.product-links",
+ "title": "Product links",
+ "version": "1.0.0",
+ "purpose": "Three hairline rows of products the studio has built: name, description and a diagonal arrow pair (columns 4-6, accent border and arrow swap on hover).",
+ "semantic": {
+  "id": "list.product-links",
+  "category": "LIST"
+ },
+ "source": {
+  "id": "dom:section.section_our_products",
+  "file": "src/components/about/Products.jsx",
+  "tag": "section",
+  "lines": "8",
+  "needle": "<section className=\"section_our_products\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/about/Products.jsx:6",
+   "needle": "export default function Products"
+  }
+ ],
+ "iaSectionIds": [
+  "list.products"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "about"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 6,
+   "required": true
+  },
+  "products": {
+   "kind": "items",
+   "fields": {
+    "link": {
+     "kind": "link",
+     "maxWords": 3,
+     "required": true
+    },
+    "description": {
+     "kind": "text",
+     "maxWords": 20,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 6,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "hover-arrow-swap",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991 header and list move to columns 3-6; <=767 flex column"
+  ],
+  "cite": {
+   "cite": "src/components/about/Products.jsx:15",
+   "needle": "our_products_list"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   488,
+   488
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   502,
+   502
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   527,
+   527
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:121",
+   "needle": "**1.5 `section_our_products`** (new list)"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "version": "1.0.0",
+ "note": "Rhythm/structure rules JSON Schema cannot express. Ids and severities are machine-checked against schema/semantic_validate.py RULES by verify_all.py (GRAPH_SYNC).",
+ "rules": [
+  {
+   "id": "ONE_HERO",
+   "severity": "error",
+   "rule": "Exactly one HERO node per page; the not-found template has none (NO_HERO_TEMPLATES in the validator), every other template opens with one."
+  },
+  {
+   "id": "HERO_FIRST_CONTENT",
+   "severity": "error",
+   "rule": "The first node that is not SHELL/UTILITY is the HERO (not-found excepted)."
+  },
+  {
+   "id": "MUST_BE_FIRST",
+   "severity": "error",
+   "rule": "Sections with constraints.mustBeFirst (chrome.navbar) are node 0."
+  },
+  {
+   "id": "MUST_BE_LAST",
+   "severity": "error",
+   "rule": "Sections with constraints.mustBeLast (overlay.partner-credits, mounted inside the footer) are the last node."
+  },
+  {
+   "id": "ONE_PER_PAGE",
+   "severity": "error",
+   "rule": "onePerPage / maxPerPage sections do not exceed their caps."
+  },
+  {
+   "id": "REQUIRES_SECTION",
+   "severity": "error",
+   "rule": "constraints.requires: the overlay needs the footer that mounts it."
+  },
+  {
+   "id": "TEMPLATE_ONLY",
+   "severity": "error",
+   "rule": "constraints.templates restricts a section to its template family."
+  },
+  {
+   "id": "ROUTE_PATTERN",
+   "severity": "error",
+   "rule": "route matches the template's routePattern, in both modes."
+  },
+  {
+   "id": "ROUTE_TEMPLATE_MISMATCH",
+   "severity": "error",
+   "rule": "A reference spec's route is mapped to its template in routes.json (the catch-all 404 may use any unmatched path)."
+  },
+  {
+   "id": "RETRIEVAL_INELIGIBLE_SHELL_ONLY",
+   "severity": "error",
+   "rule": "Only SHELL/UTILITY sections may be retrievalEligible:false; nodes cannot override the contract."
+  },
+  {
+   "id": "BLOG_CLUSTER_LAYOUT",
+   "severity": "error",
+   "rule": "editorial.blog-card-grid layout 'related' appears only on blog-post (2 cards); 'staggered' on every other template."
+  },
+  {
+   "id": "CARD_CLUSTER_LAST_ONLY_SEE_ALL",
+   "severity": "error",
+   "rule": "work.card-cluster seeAll is allowed only on the last cluster of a home page and never on /work clusters."
+  },
+  {
+   "id": "NO_ADJACENT_SAME_CATEGORY",
+   "severity": "warn",
+   "rule": "Two adjacent nodes of the same category, except the named exceptions.",
+   "exceptions": [
+    {
+     "categories": [
+      "SHELL",
+      "SHELL"
+     ],
+     "why": "navbar and footer are never adjacent in practice; listed for symmetry"
+    },
+    {
+     "categories": [
+      "WORK",
+      "WORK"
+     ],
+     "why": "work card clusters repeat; case-study overview precedes showcase rows"
+    },
+    {
+     "categories": [
+      "MEDIA",
+      "WORK"
+     ],
+     "why": "case-study showcase media and image/text rows interleave"
+    },
+    {
+     "categories": [
+      "WORK",
+      "MEDIA"
+     ],
+     "why": "case-study showcase media and image/text rows interleave"
+    },
+    {
+     "categories": [
+      "MEDIA",
+      "MEDIA"
+     ],
+     "why": "two full-width showcases may follow each other"
+    },
+    {
+     "categories": [
+      "EDITORIAL",
+      "EDITORIAL"
+     ],
+     "why": "article chapters and blog card clusters repeat"
+    },
+    {
+     "categories": [
+      "PROOF",
+      "PROOF"
+     ],
+     "why": "awards, press, clients and testimonials are consecutive on the home page"
+    },
+    {
+     "categories": [
+      "LIST",
+      "LIST"
+     ],
+     "why": "about page lists follow each other"
+    },
+    {
+     "categories": [
+      "UTILITY",
+      "SHELL"
+     ],
+     "why": "the overlay is mounted inside the footer"
+    },
+    {
+     "categories": [
+      "SHELL",
+      "UTILITY"
+     ],
+     "why": "the overlay is mounted inside the footer"
+    }
+   ]
+  },
+  {
+   "id": "NO_CONSECUTIVE_DUPLICATE",
+   "severity": "warn",
+   "rule": "The same section twice in a row, except repeatable clusters, chapters and showcase rows.",
+   "exemptSections": [
+    "work.card-cluster",
+    "editorial.article-chapter",
+    "editorial.blog-card-grid",
+    "work.case-image-text",
+    "media.case-showcase"
+   ]
+  },
+  {
+   "id": "ARTICLE_HAS_HEADED_CHAPTER",
+   "severity": "warn",
+   "rule": "A blog-post body with more than one chapter should give every chapter after the first a heading."
+  },
+  {
+   "id": "MOTION_BUDGET",
+   "severity": "warn",
+   "rule": "At most 2 ambient-loop motion nodes per page.",
+   "ambient": [
+    "lottie-loop"
+   ],
+   "max": 2
+  }
+ ]
+}

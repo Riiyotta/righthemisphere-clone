@@ -1,0 +1,18 @@
+{
+ "id": "partner-link-row",
+ "kind": "component",
+ "description": "64px logo, name, grey note and an arrow pair in a ruled row.",
+ "uses": [
+  "arrow-pair-diagonal",
+  "hairline-row"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Footer.jsx:121",
+   "needle": "partner_link list_row"
+  }
+ ]
+}

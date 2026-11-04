@@ -1,0 +1,131 @@
+{
+ "id": "hero.home",
+ "title": "Home hero",
+ "version": "1.0.0",
+ "purpose": "Page opener of the home page: three display h1 words spread across the full width, a right-aligned subhead, and an info block with a two-line 'things we did' link with a rotated arrow and a right-aligned address label, email and phone.",
+ "semantic": {
+  "id": "hero.home",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.section_hero",
+  "file": "src/components/Hero.jsx",
+  "tag": "section",
+  "lines": "16",
+  "needle": "<section className=\"section_hero"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Hero.jsx:14",
+   "needle": "export default function Hero"
+  }
+ ],
+ "iaSectionIds": [
+  "hero.home"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "words": {
+   "kind": "textList",
+   "maxWords": 1,
+   "minItems": 3,
+   "maxItems": 3,
+   "required": true
+  },
+  "subhead": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "addressLabel": {
+   "kind": "text",
+   "maxWords": 5,
+   "required": true
+  },
+  "email": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": true
+  },
+  "phone": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "load-intro-home",
+   "none"
+  ],
+  "default": "load-intro-home"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: h1 56px; <=767 padding 160/128, words left-aligned with 14px column gap and wrap"
+  ],
+  "cite": {
+   "cite": "src/components/Hero.jsx:20",
+   "needle": "sm:pb-128 sm:pt-160"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   662,
+   662
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   631,
+   631
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   460,
+   460
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:159",
+   "needle": "## 2. `section_hero`"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "id": "wordmark",
+ "kind": "primitive",
+ "description": "Logo mark (16x24.875) with a two-line text wordmark (14px, 80x28).",
+ "tokens": [
+  "font.size.brand"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/ui/Parts.jsx:33",
+   "needle": "export function Brand"
+  }
+ ]
+}

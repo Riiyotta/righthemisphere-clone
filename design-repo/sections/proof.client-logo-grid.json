@@ -1,0 +1,146 @@
+{
+ "id": "proof.client-logo-grid",
+ "title": "Client logo grid",
+ "version": "1.0.0",
+ "purpose": "Client tiles on the 6-column grid in rows with deliberate empty columns: a numbered square logo with a grey name under it (15 on the home page with a 'see all clients' button, 21 on /about without). Real client logos and names are must-not-fabricate.",
+ "semantic": {
+  "id": "proof.client-logo-grid",
+  "category": "PROOF"
+ },
+ "source": {
+  "id": "dom:section.section_partners_v3",
+  "file": "src/components/Partners.jsx",
+  "tag": "section",
+  "lines": "53",
+  "needle": "<section id={id} className=\"section_partners_v3\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Partners.jsx:50",
+   "needle": "export default function Partners"
+  }
+ ],
+ "iaSectionIds": [
+  "proof.partners"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 1,
+  "templates": [
+   "home",
+   "about"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "tiles": {
+   "kind": "items",
+   "fields": {
+    "name": {
+     "kind": "text",
+     "maxWords": 5,
+     "required": true
+    },
+    "logo": {
+     "kind": "media",
+     "assetRoles": [
+      "client.logo"
+     ],
+     "generatedAssetRoles": [
+      "placeholder.client-logo"
+     ],
+     "required": true
+    },
+    "numberTone": {
+     "kind": "enum",
+     "values": [
+      "white",
+      "black",
+      "grey"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 24,
+   "required": true
+  },
+  "button": {
+   "kind": "link",
+   "maxWords": 3,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-scale-stagger",
+   "none"
+  ],
+  "default": "scroll-scale-stagger"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: images hidden; tiles become full-width text rows (number box + name, 37px) in 3 then 2 columns"
+  ],
+  "cite": {
+   "cite": "src/components/Partners.jsx:77",
+   "needle": "md:hidden"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "client.logo"
+ ],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.client-logo",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   879,
+   964
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 2,
+  "heightAt768": [
+   886,
+   1044
+  ],
+  "instancesAt768": 2,
+  "heightAt390": [
+   886,
+   1044
+  ],
+  "instancesAt390": 2,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:319",
+   "needle": "## 8. `section_partners_v3`"
+  }
+ ]
+}

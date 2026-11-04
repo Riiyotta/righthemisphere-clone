@@ -1,0 +1,15 @@
+{
+ "id": "client-tile",
+ "kind": "component",
+ "description": "Numbered square logo with a grey name; text row at <=991.",
+ "tokens": [
+  "font.size.t14",
+  "color.grey"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Partners.jsx:73",
+   "needle": "partner_image_item_wrapper"
+  }
+ ]
+}

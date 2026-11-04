@@ -1,0 +1,268 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "blog-list",
+ "route": "/blog",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Placeholder page title",
+  "description": "Placeholder description of the reference page."
+ },
+ "brand": {
+  "studioName": "Right Hemisphere",
+  "domain": "righthemisphere.studio"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Right",
+     "Hemisphere"
+    ],
+    "mark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://chrome.navbar/mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Work",
+      "href": "/work"
+     },
+     {
+      "label": "services",
+      "href": "/services"
+     },
+     {
+      "label": "about",
+      "href": "/about"
+     },
+     {
+      "label": "Blog",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "CONTACT",
+     "href": "/contact"
+    },
+    "menuLabel": "MENU",
+    "closeLabel": "CLOSE"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.words",
+   "content": {
+    "words": [
+     "read",
+     "our",
+     "blogs"
+    ]
+   },
+   "motion": {
+    "pattern": "load-intro-words",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "text": "text.heading"
+   }
+  },
+  {
+   "section": "editorial.blog-card-grid",
+   "content": {
+    "layout": "staggered",
+    "posts": [
+     {
+      "title": "Designing for quiet screens",
+      "href": "/blog/designing-for-quiet-screens",
+      "image": {
+       "assetRole": "article.image",
+       "ref": "clone://editorial.blog-card-grid/image",
+       "alt": ""
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "title": "A short history of the footnote",
+      "href": "/blog/a-short-history-of-the-footnote",
+      "image": {
+       "assetRole": "article.image",
+       "ref": "clone://editorial.blog-card-grid/image",
+       "alt": ""
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "title": "Why we sketch in public",
+      "href": "/blog/why-we-sketch-in-public",
+      "image": {
+       "assetRole": "article.image",
+       "ref": "clone://editorial.blog-card-grid/image",
+       "alt": ""
+      },
+      "cta": "READ BLOG"
+     }
+    ],
+    "heading": "Journal"
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "editorial.blog-card-grid",
+   "content": {
+    "layout": "staggered",
+    "posts": [
+     {
+      "title": "Designing for quiet screens",
+      "href": "/blog/designing-for-quiet-screens",
+      "image": {
+       "assetRole": "article.image",
+       "ref": "clone://editorial.blog-card-grid/image",
+       "alt": ""
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-fade",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "our partners",
+    "wordmark": [
+     "Right",
+     "Hemisphere"
+    ],
+    "mark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://chrome.footer/mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "brand.partner-badge",
+     "ref": "clone://chrome.footer/badge",
+     "alt": ""
+    },
+    "note": "Placeholder copyright line",
+    "addressLabel": "ADDRESS:",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "OUR PRODUCTS:",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "SITEMAP:",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "SOCIALS:",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "client.logo",
+       "ref": "clone://overlay.partner-credits/logo",
+       "alt": ""
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "client.logo",
+       "ref": "clone://overlay.partner-credits/logo",
+       "alt": ""
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

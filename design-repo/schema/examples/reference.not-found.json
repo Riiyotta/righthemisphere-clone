@@ -1,0 +1,34 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "not-found",
+ "route": "/does-not-exist",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Placeholder page title",
+  "description": "Placeholder description of the reference page."
+ },
+ "brand": {
+  "studioName": "Right Hemisphere",
+  "domain": "righthemisphere.studio"
+ },
+ "nodes": [
+  {
+   "section": "system.not-found",
+   "content": {
+    "code": "404",
+    "heading": "Nothing here",
+    "body": "That address does not lead anywhere. Try the front page."
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.system",
+    "text": "text.primary"
+   }
+  }
+ ]
+}

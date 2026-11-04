@@ -1,0 +1,171 @@
+{
+ "id": "editorial.blog-card-grid",
+ "title": "Blog card grid",
+ "version": "1.0.0",
+ "purpose": "Up to three blog cards in the staggered 6-column placement (the pattern repeats every three cards): 4:3 image, title and a 'read blog' underlined row; optional 'Blogs' heading. Also the two-card 'read more' row at the end of an article. Editorial news content, never FEATURES.",
+ "semantic": {
+  "id": "editorial.blog-card-grid",
+  "category": "EDITORIAL"
+ },
+ "source": {
+  "id": "dom:section.section_blogs",
+  "file": "src/components/Blogs.jsx",
+  "tag": "section",
+  "lines": "73",
+  "needle": "<section id=\"blogs\" className=\"section_blogs\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Blogs.jsx:36",
+   "needle": "export function BlogCard"
+  },
+  {
+   "cite": "src/components/Blogs.jsx:71",
+   "needle": "export default function Blogs"
+  },
+  {
+   "cite": "src/pages/BlogPost.jsx:57",
+   "needle": "section_more_blogs"
+  }
+ ],
+ "iaSectionIds": [
+  "content.blog-cards",
+  "content.more-blogs"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 4,
+  "templates": [
+   "home",
+   "about",
+   "blog-list",
+   "blog-post"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "layout": {
+   "kind": "enum",
+   "values": [
+    "staggered",
+    "related"
+   ],
+   "required": true
+  },
+  "heading": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": false
+  },
+  "posts": {
+   "kind": "items",
+   "fields": {
+    "title": {
+     "kind": "text",
+     "maxWords": 14,
+     "required": true
+    },
+    "href": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "image": {
+     "kind": "media",
+     "assetRoles": [
+      "article.image"
+     ],
+     "generatedAssetRoles": [
+      "generated.article-image",
+      "user.project-media"
+     ],
+     "required": true
+    },
+    "cta": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 3,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade",
+   "hover-colour-fade",
+   "hover-arrow-swap",
+   "none"
+  ],
+  "default": "scroll-fade"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: 2 columns of 465.5px, column gap 20, row gap 96",
+   "<=767: 1 column, row gap 96"
+  ],
+  "cite": {
+   "cite": "src/components/Blogs.jsx:80",
+   "needle": "md:grid-cols-two md:gap-x-20 md:gap-y-96"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "article.image"
+ ],
+ "generatedAssetRoles": [
+  "generated.article-image",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   456,
+   1190
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 16,
+  "heightAt768": [
+   394,
+   947
+  ],
+  "instancesAt768": 16,
+  "heightAt390": [
+   376,
+   1445
+  ],
+  "instancesAt390": 16,
+  "source": "extraction/measured-values.json#sectionHeights",
+  "decomposition": "Split by the 3-card placement pattern: the 10-card /blog index (83% of its page as one block) is four clusters of 3 + 3 + 3 + 1 cards (~22% each); the first carries the heading."
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:386",
+   "needle": "## 11. `section_blogs`"
+  },
+  {
+   "cite": "CLONE_SPEC-PAGES.md:345",
+   "needle": "## 5. /blog (list)"
+  }
+ ]
+}

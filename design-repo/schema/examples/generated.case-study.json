@@ -1,0 +1,324 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "case-study",
+ "route": "/harbor-and-pine-rebrand",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Fieldnote Studio",
+  "description": "A small design studio making calm, useful interfaces."
+ },
+ "brand": {
+  "studioName": "Fieldnote Studio",
+  "domain": "fieldnote.example"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Projects",
+      "href": "/work"
+     },
+     {
+      "label": "Offer",
+      "href": "/services"
+     },
+     {
+      "label": "Studio",
+      "href": "/about"
+     },
+     {
+      "label": "Journal",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "Say hello",
+     "href": "/contact"
+    },
+    "menuLabel": "Menu",
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.case-header",
+   "content": {
+    "title": "harbor and pine",
+    "briefLabel": "project brief",
+    "brief": "A regional ferry operator wanted timetables that a hurried commuter could read in two seconds, on a phone, in the rain.",
+    "scope": "UI DESIGN / FRONT END",
+    "liveLink": {
+     "label": "visit the site",
+     "href": "https://harborpine.example/"
+    },
+    "creditLabel": "PHOTOGRAPHY BY:",
+    "credit": {
+     "label": "A friend of the studio",
+     "href": "#"
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "work.case-overview",
+   "content": {
+    "rows": [
+     {
+      "label": "Role",
+      "value": "Design and front end",
+      "number": "01"
+     },
+     {
+      "label": "Stack",
+      "value": "Static site, a small timetable API",
+      "number": "02"
+     }
+    ],
+    "ideaLabel": "THE IDEA",
+    "ideaText": "Treat the timetable as a sentence: where, when, how long.",
+    "visual": {
+     "assetRole": "generated.motion-graphic",
+     "ref": "generated://overview-loop",
+     "alt": "Looping abstract shapes"
+    }
+   },
+   "motion": {
+    "pattern": "lottie-loop",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "media.case-showcase",
+   "content": {
+    "kind": "image",
+    "media": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://project-1",
+     "alt": "Abstract artwork on a flat colour tile"
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.media-dark",
+    "text": "text.on-dark"
+   }
+  },
+  {
+   "section": "work.case-image-text",
+   "content": {
+    "side": "media-left",
+    "panel": "none",
+    "label": "THE TIMETABLE",
+    "paragraphs": [
+     "Departures sit on one line each, with the next sailing in bold."
+    ],
+    "highlights": [
+     "Readable at arm's length",
+     "Works offline"
+    ],
+    "visual": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://showcase-media-left",
+     "alt": "Abstract artwork"
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.panel",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "work.case-image-text",
+   "content": {
+    "side": "text-left",
+    "panel": "none",
+    "label": "THE TIMETABLE",
+    "paragraphs": [
+     "Departures sit on one line each, with the next sailing in bold."
+    ],
+    "highlights": [
+     "Readable at arm's length",
+     "Works offline"
+    ],
+    "visual": {
+     "assetRole": "generated.project-visual",
+     "ref": "generated://showcase-text-left",
+     "alt": "Abstract artwork"
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.panel",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "cta.case-more-work",
+   "content": {
+    "button": {
+     "label": "more projects",
+     "href": "/work"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "Collaborators",
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "placeholder.partner-badge",
+     "ref": "placeholder://affiliation-badge",
+     "alt": ""
+    },
+    "note": "Copyright Fieldnote Studio, 2026",
+    "addressLabel": "Find us",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "Side projects",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "Pages",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "Elsewhere",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-2",
+       "alt": "Monogram tile"
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-3",
+       "alt": "Monogram tile"
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

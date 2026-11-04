@@ -1,0 +1,18 @@
+{
+ "id": "faq-item",
+ "kind": "component",
+ "description": "Index + question row with a plus-minus toggle and a height-animated answer.",
+ "uses": [
+  "plus-minus-toggle",
+  "hairline-row"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Faq.jsx:30",
+   "needle": "function FaqItem"
+  }
+ ]
+}

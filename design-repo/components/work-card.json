@@ -1,0 +1,20 @@
+{
+ "id": "work-card",
+ "kind": "component",
+ "description": "Card: title (+detail), tile-filled image with year label, caption row with VIEW and an arrow pair.",
+ "uses": [
+  "tile-image-frame",
+  "year-label",
+  "arrow-pair-diagonal",
+  "hairline-row"
+ ],
+ "tokens": [
+  "font.size.t32"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Work.jsx:144",
+   "needle": "export function WorkCard"
+  }
+ ]
+}

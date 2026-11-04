@@ -1,0 +1,17 @@
+{
+ "id": "link-group",
+ "kind": "component",
+ "description": "Grey label over a stack of uppercase nav links.",
+ "uses": [
+  "nav-link"
+ ],
+ "tokens": [
+  "font.size.t14"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Footer.jsx:69",
+   "needle": "function LinkGroup"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "id": "list.team-roster",
+ "title": "Team roster",
+ "version": "1.0.0",
+ "purpose": "Hairline-ruled rows of team members: name, role and an optional underlined profile link on the left, a two-digit number on the right; on hover a grayscale 229px portrait scales in at column 4 (desktop only).",
+ "semantic": {
+  "id": "list.team-roster",
+  "category": "LIST"
+ },
+ "source": {
+  "id": "dom:section.section_team",
+  "file": "src/components/about/Team.jsx",
+  "tag": "section",
+  "lines": "9",
+  "needle": "<section className=\"section_team\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/about/Team.jsx:7",
+   "needle": "export default function Team"
+  }
+ ],
+ "iaSectionIds": [
+  "list.team"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "about"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "heading": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "members": {
+   "kind": "items",
+   "fields": {
+    "number": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "name": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "role": {
+     "kind": "text",
+     "maxWords": 6,
+     "required": true
+    },
+    "link": {
+     "kind": "link",
+     "maxWords": 3,
+     "required": false
+    },
+    "portrait": {
+     "kind": "media",
+     "assetRoles": [
+      "person.portrait"
+     ],
+     "generatedAssetRoles": [
+      "fictional.portrait"
+     ],
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 16,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-fade-width",
+   "hover-team-image",
+   "none"
+  ],
+  "default": "scroll-fade-width"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: portrait hidden, row spans 4 then 6 columns",
+   "<=479: each row is a column (name / role / link), row height ~97px"
+  ],
+  "cite": {
+   "cite": "src/components/about/Team.jsx:36",
+   "needle": "team_image_grid"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "person.portrait"
+ ],
+ "generatedAssetRoles": [
+  "fictional.portrait",
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   844,
+   844
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   801,
+   801
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   1336,
+   1336
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:76",
+   "needle": "**1.2 `section_team`**"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "id": "team-row",
+ "kind": "component",
+ "description": "Name, role, profile link and number with a hover portrait.",
+ "uses": [
+  "hairline-row"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/about/Team.jsx:23",
+   "needle": "team_list_item"
+  }
+ ]
+}

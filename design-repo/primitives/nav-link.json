@@ -1,0 +1,15 @@
+{
+ "id": "nav-link",
+ "kind": "primitive",
+ "description": "Uppercase 14px link, instant accent colour and underline on hover; current page accent.",
+ "tokens": [
+  "font.size.t14",
+  "color.accent"
+ ],
+ "evidence": [
+  {
+   "cite": "src/index.css:84",
+   "needle": ".nav_link {"
+  }
+ ]
+}

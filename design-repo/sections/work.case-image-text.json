@@ -1,0 +1,156 @@
+{
+ "id": "work.case-image-text",
+ "title": "Showcase row",
+ "version": "1.0.0",
+ "purpose": "Alternating two-column showcase row (also the '2 images' variant): a visual half (image, GIF, or animation on an optional grey panel) and a text half with a caps label, paragraphs and a bulleted highlights list, bottom-aligned.",
+ "semantic": {
+  "id": "work.case-image-text",
+  "category": "WORK"
+ },
+ "source": {
+  "id": "dom:section.section_project_showcase_image-text",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "section",
+  "lines": "128",
+  "needle": "className={s.section}"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/case-study/Showcase.jsx:39",
+   "needle": "export function ShowcaseText"
+  }
+ ],
+ "iaSectionIds": [
+  "work.case-image-text",
+  "work.case-two-images"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 6,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "side": {
+   "kind": "enum",
+   "values": [
+    "media-left",
+    "text-left"
+   ],
+   "required": true
+  },
+  "panel": {
+   "kind": "enum",
+   "values": [
+    "none",
+    "grey"
+   ],
+   "required": true
+  },
+  "label": {
+   "kind": "text",
+   "maxWords": 4,
+   "required": true
+  },
+  "paragraphs": {
+   "kind": "textList",
+   "maxWords": 60,
+   "minItems": 0,
+   "maxItems": 3,
+   "required": false
+  },
+  "highlights": {
+   "kind": "textList",
+   "maxWords": 20,
+   "minItems": 0,
+   "maxItems": 8,
+   "required": false
+  },
+  "visual": {
+   "kind": "media",
+   "assetRoles": [
+    "work.project-image",
+    "case.motion-json"
+   ],
+   "generatedAssetRoles": [
+    "generated.project-visual",
+    "generated.motion-graphic",
+    "user.project-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none",
+   "lottie-loop"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page",
+   "surface.panel"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: image wrapper margin-top 96px; <=767 flex column in DOM order (text-first rows stay text-first), padding 16/16"
+  ],
+  "cite": {
+   "cite": "src/components/case-study/Showcase.jsx:57",
+   "needle": "project_showcase_text_wrapper"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "case.motion-json",
+  "work.project-image"
+ ],
+ "generatedAssetRoles": [
+  "generated.motion-graphic",
+  "generated.project-visual",
+  "original.copy",
+  "placeholder.url",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   643,
+   1006
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 7,
+  "heightAt768": [
+   479,
+   670
+  ],
+  "instancesAt768": 7,
+  "heightAt390": [
+   482,
+   885
+  ],
+  "instancesAt390": 7,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:471",
+   "needle": "**`section_project_showcase_image-text`**"
+  }
+ ]
+}

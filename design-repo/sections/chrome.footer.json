@@ -1,0 +1,222 @@
+{
+ "id": "chrome.footer",
+ "title": "Site footer",
+ "version": "1.0.0",
+ "purpose": "Four footer blocks on the 6-column grid: a partner-credits trigger with the brand mark, vendor badge and copyright note; an address and contact block; a products link group; a right-aligned sitemap and socials group.",
+ "semantic": {
+  "id": "chrome.footer",
+  "category": "SHELL"
+ },
+ "source": {
+  "id": "dom:footer.section_footer",
+  "file": "src/components/Footer.jsx",
+  "tag": "footer",
+  "lines": "166",
+  "needle": "<footer className=\"section_footer\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/Footer.jsx:158",
+   "needle": "export default function Footer"
+  },
+  {
+   "cite": "src/components/Footer.jsx:69",
+   "needle": "function LinkGroup"
+  }
+ ],
+ "iaSectionIds": [
+  "shell.footer"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "home",
+   "about",
+   "services",
+   "work-index",
+   "contact",
+   "blog-list",
+   "blog-post",
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "creditsLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": true
+  },
+  "wordmark": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 1,
+   "maxItems": 2,
+   "required": true
+  },
+  "mark": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.logo-mark"
+   ],
+   "generatedAssetRoles": [
+    "generated.brand-mark",
+    "placeholder.brand-mark"
+   ],
+   "required": true
+  },
+  "badge": {
+   "kind": "media",
+   "assetRoles": [
+    "brand.partner-badge"
+   ],
+   "generatedAssetRoles": [
+    "placeholder.partner-badge"
+   ],
+   "required": false
+  },
+  "note": {
+   "kind": "text",
+   "maxWords": 8,
+   "required": true
+  },
+  "addressLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "addressLines": {
+   "kind": "textList",
+   "maxWords": 12,
+   "minItems": 1,
+   "maxItems": 3,
+   "required": true
+  },
+  "contacts": {
+   "kind": "items",
+   "fields": {
+    "label": {
+     "kind": "text",
+     "maxWords": 2,
+     "required": true
+    },
+    "link": {
+     "kind": "link",
+     "maxWords": 4,
+     "required": true
+    }
+   },
+   "minItems": 0,
+   "maxItems": 3,
+   "required": false
+  },
+  "productsLabel": {
+   "kind": "text",
+   "maxWords": 3,
+   "required": false
+  },
+  "products": {
+   "kind": "linkList",
+   "maxWords": 3,
+   "minItems": 0,
+   "maxItems": 4,
+   "required": false
+  },
+  "sitemapLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": true
+  },
+  "sitemap": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 3,
+   "maxItems": 8,
+   "required": true
+  },
+  "socialsLabel": {
+   "kind": "text",
+   "maxWords": 2,
+   "required": false
+  },
+  "socials": {
+   "kind": "linkList",
+   "maxWords": 2,
+   "minItems": 0,
+   "maxItems": 4,
+   "required": false
+  }
+ },
+ "motion": {
+  "allowed": [
+   "scroll-split-chars",
+   "none"
+  ],
+  "default": "scroll-split-chars"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=991: two rows (address + right block, then brand + products)",
+   "<=479: single column: address, sitemap/socials, products, brand block"
+  ],
+  "cite": {
+   "cite": "src/components/Footer.jsx:196",
+   "needle": "md:col-start-1 md:col-end-4 md:row-start-1"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "brand.logo-mark",
+  "brand.partner-badge"
+ ],
+ "generatedAssetRoles": [
+  "generated.brand-mark",
+  "original.copy",
+  "placeholder.brand-mark",
+  "placeholder.partner-badge",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   375,
+   375
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 18,
+  "heightAt768": [
+   523,
+   523
+  ],
+  "instancesAt768": 18,
+  "heightAt390": [
+   776,
+   776
+  ],
+  "instancesAt390": 18,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC.md:415",
+   "needle": "## 13. `section_footer`"
+  }
+ ]
+}

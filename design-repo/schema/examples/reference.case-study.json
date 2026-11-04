@@ -1,0 +1,324 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "case-study",
+ "route": "/cheggout-sdk",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Placeholder page title",
+  "description": "Placeholder description of the reference page."
+ },
+ "brand": {
+  "studioName": "Right Hemisphere",
+  "domain": "righthemisphere.studio"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Right",
+     "Hemisphere"
+    ],
+    "mark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://chrome.navbar/mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Work",
+      "href": "/work"
+     },
+     {
+      "label": "services",
+      "href": "/services"
+     },
+     {
+      "label": "about",
+      "href": "/about"
+     },
+     {
+      "label": "Blog",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "CONTACT",
+     "href": "/contact"
+    },
+    "menuLabel": "MENU",
+    "closeLabel": "CLOSE"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.case-header",
+   "content": {
+    "title": "harbor and pine",
+    "briefLabel": "project brief",
+    "brief": "A regional ferry operator wanted timetables that a hurried commuter could read in two seconds, on a phone, in the rain.",
+    "scope": "UI DESIGN / FRONT END",
+    "liveLink": {
+     "label": "visit the site",
+     "href": "https://harborpine.example/"
+    },
+    "creditLabel": "PHOTOGRAPHY BY:",
+    "credit": {
+     "label": "A friend of the studio",
+     "href": "#"
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "work.case-overview",
+   "content": {
+    "rows": [
+     {
+      "label": "Role",
+      "value": "Design and front end",
+      "number": "01"
+     },
+     {
+      "label": "Stack",
+      "value": "Static site, a small timetable API",
+      "number": "02"
+     }
+    ],
+    "ideaLabel": "THE IDEA",
+    "ideaText": "Treat the timetable as a sentence: where, when, how long.",
+    "visual": {
+     "assetRole": "work.project-image",
+     "ref": "clone://work.case-overview/visual",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "lottie-loop",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "media.case-showcase",
+   "content": {
+    "kind": "image",
+    "media": {
+     "assetRole": "work.project-image",
+     "ref": "clone://media.case-showcase/media",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.media-dark",
+    "text": "text.on-dark"
+   }
+  },
+  {
+   "section": "work.case-image-text",
+   "content": {
+    "side": "media-left",
+    "panel": "none",
+    "label": "THE TIMETABLE",
+    "paragraphs": [
+     "Departures sit on one line each, with the next sailing in bold."
+    ],
+    "highlights": [
+     "Readable at arm's length",
+     "Works offline"
+    ],
+    "visual": {
+     "assetRole": "work.project-image",
+     "ref": "clone://work.case-image-text/visual",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.panel",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "work.case-image-text",
+   "content": {
+    "side": "text-left",
+    "panel": "none",
+    "label": "THE TIMETABLE",
+    "paragraphs": [
+     "Departures sit on one line each, with the next sailing in bold."
+    ],
+    "highlights": [
+     "Readable at arm's length",
+     "Works offline"
+    ],
+    "visual": {
+     "assetRole": "work.project-image",
+     "ref": "clone://work.case-image-text/visual",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   },
+   "tokens": {
+    "surface": "surface.panel",
+    "text": "text.primary"
+   }
+  },
+  {
+   "section": "cta.case-more-work",
+   "content": {
+    "button": {
+     "label": "more projects",
+     "href": "/work"
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "our partners",
+    "wordmark": [
+     "Right",
+     "Hemisphere"
+    ],
+    "mark": {
+     "assetRole": "brand.logo-mark",
+     "ref": "clone://chrome.footer/mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "brand.partner-badge",
+     "ref": "clone://chrome.footer/badge",
+     "alt": ""
+    },
+    "note": "Placeholder copyright line",
+    "addressLabel": "ADDRESS:",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "OUR PRODUCTS:",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "SITEMAP:",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "SOCIALS:",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "client.logo",
+       "ref": "clone://overlay.partner-credits/logo",
+       "alt": ""
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "client.logo",
+       "ref": "clone://overlay.partner-credits/logo",
+       "alt": ""
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

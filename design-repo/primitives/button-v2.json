@@ -1,0 +1,16 @@
+{
+ "id": "button-v2",
+ "kind": "primitive",
+ "description": "Label + sliding right-arrow pair + 1px underline; arrows swap on hover, label and line fade to accent over 500ms.",
+ "tokens": [
+  "color.ink",
+  "color.accent",
+  "component.button-v2.padding-bottom"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/ui/Parts.jsx:5",
+   "needle": "export function ButtonV2"
+  }
+ ]
+}

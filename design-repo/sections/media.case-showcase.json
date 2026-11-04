@@ -1,0 +1,133 @@
+{
+ "id": "media.case-showcase",
+ "title": "Full-width showcase",
+ "version": "1.0.0",
+ "purpose": "Full-width case media in a centred flex row: an image or GIF at its intrinsic width capped at 100%, a Lottie on a dark panel overhanging 5% each side, or a 16:9 video embed (56.17% box).",
+ "semantic": {
+  "id": "media.case-showcase",
+  "category": "MEDIA"
+ },
+ "source": {
+  "id": "dom:section.section_project_showcase_full_width_image",
+  "file": "src/pages/CaseStudy.jsx",
+  "tag": "section",
+  "lines": "94-128",
+  "needle": "section_project_showcase_full_width_image"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/case-study/Showcase.jsx:5",
+   "needle": "export function Media"
+  }
+ ],
+ "iaSectionIds": [
+  "work.case-full-width"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "maxPerPage": 4,
+  "templates": [
+   "case-study"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "kind": {
+   "kind": "enum",
+   "values": [
+    "image",
+    "motion",
+    "video"
+   ],
+   "required": true
+  },
+  "media": {
+   "kind": "media",
+   "assetRoles": [
+    "work.project-image",
+    "case.motion-json",
+    "case.video-embed"
+   ],
+   "generatedAssetRoles": [
+    "generated.project-visual",
+    "generated.motion-graphic",
+    "placeholder.video",
+    "user.project-media"
+   ],
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none",
+   "lottie-loop"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page",
+   "surface.media-dark"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "padding 44/44, 16/16 at <=767; the dark Lottie panel keeps min-width 110%"
+  ],
+  "cite": {
+   "cite": "src/pages/CaseStudy.jsx:94",
+   "needle": "project_showcase_full_width_image"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [
+  "case.motion-json",
+  "case.video-embed",
+  "work.project-image"
+ ],
+ "generatedAssetRoles": [
+  "generated.motion-graphic",
+  "generated.project-visual",
+  "original.copy",
+  "placeholder.url",
+  "placeholder.video",
+  "user.project-media"
+ ],
+ "measured": {
+  "heightAt1440": [
+   861,
+   1065
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 3,
+  "heightAt768": [
+   497,
+   605
+  ],
+  "instancesAt768": 3,
+  "heightAt390": [
+   233,
+   286
+  ],
+  "instancesAt390": 3,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:464",
+   "needle": "**`section_project_showcase_full_width_image`**"
+  }
+ ]
+}

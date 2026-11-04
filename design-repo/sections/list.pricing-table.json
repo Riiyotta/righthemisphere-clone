@@ -1,0 +1,139 @@
+{
+ "id": "list.pricing-table",
+ "title": "Services price table",
+ "version": "1.0.0",
+ "purpose": "Services page table: a 5-column grid with grey column labels and four rows, each with a number and name, a long deliverables paragraph and a right-aligned 'starts at' price. The clone really has this rate card; it is an agency price list, not a tier comparison.",
+ "semantic": {
+  "id": "list.pricing-table",
+  "category": "LIST"
+ },
+ "source": {
+  "id": "dom:section.section_services_detail",
+  "file": "src/components/services/ServicesTable.jsx",
+  "tag": "section",
+  "lines": "5",
+  "needle": "<section className=\"section_services_detail\">"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/services/ServicesTable.jsx:3",
+   "needle": "export default function ServicesTable"
+  }
+ ],
+ "iaSectionIds": [
+  "list.pricing"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "services"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "headers": {
+   "kind": "textList",
+   "maxWords": 2,
+   "minItems": 3,
+   "maxItems": 3,
+   "required": true
+  },
+  "rows": {
+   "kind": "items",
+   "fields": {
+    "number": {
+     "kind": "text",
+     "maxWords": 1,
+     "required": true
+    },
+    "name": {
+     "kind": "text",
+     "maxWords": 4,
+     "required": true
+    },
+    "deliverables": {
+     "kind": "text",
+     "maxWords": 70,
+     "required": true
+    },
+    "costLabel": {
+     "kind": "text",
+     "maxWords": 3,
+     "required": true
+    },
+    "cost": {
+     "kind": "text",
+     "maxWords": 2,
+     "required": true
+    }
+   },
+   "minItems": 1,
+   "maxItems": 8,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "none"
+  ],
+  "default": "none"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.primary",
+   "text.heading",
+   "text.muted",
+   "text.accent"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=479: header hidden; each row is a column (name, deliverables, cost) with 16px gap"
+  ],
+  "cite": {
+   "cite": "src/components/services/ServicesTable.jsx:10",
+   "needle": "services_in_detail_header"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   737,
+   737
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   1140,
+   1140
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   963,
+   963
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:186",
+   "needle": "**2.2 `section_services_detail`** (new pricing table)"
+  }
+ ]
+}

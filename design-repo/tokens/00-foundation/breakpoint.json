@@ -1,0 +1,50 @@
+{
+ "category": "breakpoint",
+ "note": "Webflow breakpoints: main >=992, medium 768-991, small 480-767, tiny <=479 (desktop-first max-widths).",
+ "tokens": {
+  "breakpoint.main-min": {
+   "$type": "dimension",
+   "$value": "992px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:9",
+     "needle": "`main` ≥992"
+    }
+   ]
+  },
+  "breakpoint.medium-max": {
+   "$type": "dimension",
+   "$value": "991px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:49",
+     "needle": "md: { max: '991px' }"
+    }
+   ]
+  },
+  "breakpoint.small-max": {
+   "$type": "dimension",
+   "$value": "767px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:50",
+     "needle": "sm: { max: '767px' }"
+    }
+   ]
+  },
+  "breakpoint.tiny-max": {
+   "$type": "dimension",
+   "$value": "479px",
+   "category": "breakpoint",
+   "evidence": [
+    {
+     "cite": "tailwind.config.js:51",
+     "needle": "xs: { max: '479px' }"
+    }
+   ]
+  }
+ }
+}

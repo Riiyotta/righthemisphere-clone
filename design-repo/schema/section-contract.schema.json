@@ -1,0 +1,604 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Section contract",
+ "description": "Closed schema for sections/*.json. DERIVED by extraction/build_derived.py (enums from assets/asset-roles.json and motion-patterns.json).",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "title",
+  "version",
+  "purpose",
+  "semantic",
+  "source",
+  "implementedBy",
+  "iaSectionIds",
+  "retrievalEligible",
+  "constraints",
+  "variants",
+  "content",
+  "motion",
+  "tokens",
+  "responsive",
+  "referenceAssetRoles",
+  "generatedAssetRoles",
+  "measured",
+  "evidence"
+ ],
+ "definitions": {
+  "cite": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "cite",
+    "needle"
+   ],
+   "properties": {
+    "cite": {
+     "type": "string",
+     "pattern": "^.+:[0-9]+(-[0-9]+)?$"
+    },
+    "needle": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "field": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "kind",
+    "required"
+   ],
+   "properties": {
+    "kind": {
+     "enum": [
+      "text",
+      "textList",
+      "link",
+      "linkList",
+      "media",
+      "mediaList",
+      "items",
+      "group",
+      "enum",
+      "enumList",
+      "boolean"
+     ]
+    },
+    "required": {
+     "type": "boolean"
+    },
+    "maxWords": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "minItems": {
+     "type": "integer",
+     "minimum": 0
+    },
+    "maxItems": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "assetRoles": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "article.image",
+       "award.mark",
+       "brand.logo-mark",
+       "brand.partner-badge",
+       "case.motion-json",
+       "case.video-embed",
+       "client.logo",
+       "fictional.person",
+       "fictional.portrait",
+       "font.display-original",
+       "form.live-endpoint",
+       "generated.article-image",
+       "generated.brand-mark",
+       "generated.motion-graphic",
+       "generated.project-visual",
+       "icon.ui",
+       "licensed-or-fallback.font",
+       "original.copy",
+       "person.portrait",
+       "placeholder.award-mark",
+       "placeholder.brand-mark",
+       "placeholder.client-logo",
+       "placeholder.metric",
+       "placeholder.partner-badge",
+       "placeholder.url",
+       "placeholder.video",
+       "user.project-media",
+       "work.project-image"
+      ]
+     }
+    },
+    "generatedAssetRoles": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "article.image",
+       "award.mark",
+       "brand.logo-mark",
+       "brand.partner-badge",
+       "case.motion-json",
+       "case.video-embed",
+       "client.logo",
+       "fictional.person",
+       "fictional.portrait",
+       "font.display-original",
+       "form.live-endpoint",
+       "generated.article-image",
+       "generated.brand-mark",
+       "generated.motion-graphic",
+       "generated.project-visual",
+       "icon.ui",
+       "licensed-or-fallback.font",
+       "original.copy",
+       "person.portrait",
+       "placeholder.award-mark",
+       "placeholder.brand-mark",
+       "placeholder.client-logo",
+       "placeholder.metric",
+       "placeholder.partner-badge",
+       "placeholder.url",
+       "placeholder.video",
+       "user.project-media",
+       "work.project-image"
+      ]
+     }
+    },
+    "values": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "string"
+     }
+    },
+    "fields": {
+     "type": "object",
+     "additionalProperties": {
+      "$ref": "#/definitions/field"
+     }
+    }
+   },
+   "allOf": [
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "enum": [
+         "text",
+         "textList",
+         "link",
+         "linkList"
+        ]
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "maxWords"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "enum": [
+         "media",
+         "mediaList"
+        ]
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "assetRoles",
+       "generatedAssetRoles"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "enum": [
+         "items",
+         "group"
+        ]
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "fields"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "enum": [
+         "enum",
+         "enumList"
+        ]
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "values"
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z]+\\.[a-z0-9-]+$"
+  },
+  "title": {
+   "type": "string",
+   "minLength": 1
+  },
+  "version": {
+   "type": "string"
+  },
+  "purpose": {
+   "type": "string",
+   "minLength": 20
+  },
+  "semantic": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "category"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "category": {
+     "enum": [
+      "SHELL",
+      "UTILITY",
+      "HERO",
+      "WORK",
+      "LIST",
+      "PROOF",
+      "CONTENT",
+      "EDITORIAL",
+      "MEDIA",
+      "CTA",
+      "CONVERSION",
+      "SYSTEM"
+     ]
+    }
+   }
+  },
+  "source": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "file",
+    "tag",
+    "lines",
+    "needle"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^dom:"
+    },
+    "file": {
+     "type": "string"
+    },
+    "tag": {
+     "type": "string"
+    },
+    "lines": {
+     "type": "string",
+     "pattern": "^[0-9]+(-[0-9]+)?$"
+    },
+    "needle": {
+     "type": "string",
+     "minLength": 3
+    }
+   }
+  },
+  "implementedBy": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "$ref": "#/definitions/cite"
+   }
+  },
+  "iaSectionIds": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "retrievalEligible": {
+   "type": "boolean"
+  },
+  "retrievalReason": {
+   "type": "string",
+   "minLength": 30
+  },
+  "constraints": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "onePerPage": {
+     "type": "boolean"
+    },
+    "maxPerPage": {
+     "type": "integer"
+    },
+    "mustBeFirst": {
+     "type": "boolean"
+    },
+    "mustBeLast": {
+     "type": "boolean"
+    },
+    "requires": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "templates": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "variants": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "content": {
+   "type": "object",
+   "additionalProperties": {
+    "$ref": "#/definitions/field"
+   }
+  },
+  "motion": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "allowed",
+    "default"
+   ],
+   "properties": {
+    "allowed": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "enum": [
+       "accordion-height",
+       "contact-lines-slide",
+       "credits-overlay-open",
+       "hover-arrow-swap",
+       "hover-border-accent",
+       "hover-colour-fade",
+       "hover-team-image",
+       "load-intro-home",
+       "load-intro-services",
+       "load-intro-words",
+       "lottie-loop",
+       "nav-panel-slide",
+       "none",
+       "scroll-fade",
+       "scroll-fade-width",
+       "scroll-rise-y",
+       "scroll-scale-in",
+       "scroll-scale-stagger",
+       "scroll-slide-arrows",
+       "scroll-slide-x",
+       "scroll-split-chars",
+       "scroll-split-lines",
+       "slider-outin",
+       "smooth-scroll"
+      ]
+     }
+    },
+    "default": {
+     "enum": [
+      "accordion-height",
+      "contact-lines-slide",
+      "credits-overlay-open",
+      "hover-arrow-swap",
+      "hover-border-accent",
+      "hover-colour-fade",
+      "hover-team-image",
+      "load-intro-home",
+      "load-intro-services",
+      "load-intro-words",
+      "lottie-loop",
+      "nav-panel-slide",
+      "none",
+      "scroll-fade",
+      "scroll-fade-width",
+      "scroll-rise-y",
+      "scroll-scale-in",
+      "scroll-scale-stagger",
+      "scroll-slide-arrows",
+      "scroll-slide-x",
+      "scroll-split-chars",
+      "scroll-split-lines",
+      "slider-outin",
+      "smooth-scroll"
+     ]
+    }
+   }
+  },
+  "tokens": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "surfaces",
+    "text"
+   ],
+   "properties": {
+    "surfaces": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "text": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "responsive": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "webflowBreakpoints",
+    "changes",
+    "cite"
+   ],
+   "properties": {
+    "webflowBreakpoints": {
+     "const": [
+      991,
+      767,
+      479
+     ]
+    },
+    "changes": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "string"
+     }
+    },
+    "cite": {
+     "$ref": "#/definitions/cite"
+    },
+    "measured768": {
+     "type": "string"
+    },
+    "measured390": {
+     "type": "string"
+    }
+   }
+  },
+  "referenceAssetRoles": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "article.image",
+     "award.mark",
+     "brand.logo-mark",
+     "brand.partner-badge",
+     "case.motion-json",
+     "case.video-embed",
+     "client.logo",
+     "fictional.person",
+     "fictional.portrait",
+     "font.display-original",
+     "form.live-endpoint",
+     "generated.article-image",
+     "generated.brand-mark",
+     "generated.motion-graphic",
+     "generated.project-visual",
+     "icon.ui",
+     "licensed-or-fallback.font",
+     "original.copy",
+     "person.portrait",
+     "placeholder.award-mark",
+     "placeholder.brand-mark",
+     "placeholder.client-logo",
+     "placeholder.metric",
+     "placeholder.partner-badge",
+     "placeholder.url",
+     "placeholder.video",
+     "user.project-media",
+     "work.project-image"
+    ]
+   }
+  },
+  "generatedAssetRoles": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "article.image",
+     "award.mark",
+     "brand.logo-mark",
+     "brand.partner-badge",
+     "case.motion-json",
+     "case.video-embed",
+     "client.logo",
+     "fictional.person",
+     "fictional.portrait",
+     "font.display-original",
+     "form.live-endpoint",
+     "generated.article-image",
+     "generated.brand-mark",
+     "generated.motion-graphic",
+     "generated.project-visual",
+     "icon.ui",
+     "licensed-or-fallback.font",
+     "original.copy",
+     "person.portrait",
+     "placeholder.award-mark",
+     "placeholder.brand-mark",
+     "placeholder.client-logo",
+     "placeholder.metric",
+     "placeholder.partner-badge",
+     "placeholder.url",
+     "placeholder.video",
+     "user.project-media",
+     "work.project-image"
+    ]
+   }
+  },
+  "measured": {
+   "type": "object"
+  },
+  "evidence": {
+   "type": "array",
+   "items": {
+    "$ref": "#/definitions/cite"
+   }
+  }
+ },
+ "allOf": [
+  {
+   "if": {
+    "properties": {
+     "retrievalEligible": {
+      "const": false
+     }
+    }
+   },
+   "then": {
+    "required": [
+     "retrievalReason"
+    ]
+   }
+  }
+ ]
+}

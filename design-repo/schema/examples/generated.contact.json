@@ -1,0 +1,250 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "contact",
+ "route": "/contact",
+ "locale": "en",
+ "theme": "light",
+ "meta": {
+  "title": "Fieldnote Studio",
+  "description": "A small design studio making calm, useful interfaces."
+ },
+ "brand": {
+  "studioName": "Fieldnote Studio",
+  "domain": "fieldnote.example"
+ },
+ "nodes": [
+  {
+   "section": "chrome.navbar",
+   "content": {
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "links": [
+     {
+      "label": "Projects",
+      "href": "/work"
+     },
+     {
+      "label": "Offer",
+      "href": "/services"
+     },
+     {
+      "label": "Studio",
+      "href": "/about"
+     },
+     {
+      "label": "Journal",
+      "href": "/blog"
+     }
+    ],
+    "contact": {
+     "label": "Say hello",
+     "href": "/contact"
+    },
+    "menuLabel": "Menu",
+    "closeLabel": "Close"
+   },
+   "motion": {
+    "pattern": "hover-colour-fade",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "hero.words",
+   "content": {
+    "words": [
+     "say",
+     "hello",
+     "now"
+    ]
+   },
+   "motion": {
+    "pattern": "load-intro-words",
+    "reducedMotionFallback": "static-final-state"
+   },
+   "tokens": {
+    "text": "text.heading"
+   }
+  },
+  {
+   "section": "cta.contact-details",
+   "content": {
+    "items": [
+     {
+      "label": "MAIL:",
+      "value": "hello@fieldnote.example",
+      "href": "mailto:hello@fieldnote.example"
+     },
+     {
+      "label": "STUDIO:",
+      "value": "12 Quarry Lane, Aldermouth"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "conversion.enquiry-form",
+   "content": {
+    "title": "Tell us a little about the project and we will reply within two working days.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "budgetPlaceholder": "Budget range",
+    "budgetOptions": [
+     "Under $3k",
+     "$3k to $8k",
+     "Above $8k"
+    ],
+    "descriptionPlaceholder": "What are you making?",
+    "submitLabel": "Send",
+    "successMessage": "Thank you, your note has arrived.",
+    "errorMessage": "Something went wrong, please try again.",
+    "endpoint": {
+     "assetRole": "placeholder.url",
+     "ref": "placeholder://form-endpoint",
+     "alt": ""
+    }
+   },
+   "motion": {
+    "pattern": "scroll-fade-width",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "chrome.footer",
+   "content": {
+    "creditsLabel": "Collaborators",
+    "wordmark": [
+     "Fieldnote",
+     "Studio"
+    ],
+    "mark": {
+     "assetRole": "generated.brand-mark",
+     "ref": "generated://fieldnote-mark",
+     "alt": ""
+    },
+    "badge": {
+     "assetRole": "placeholder.partner-badge",
+     "ref": "placeholder://affiliation-badge",
+     "alt": ""
+    },
+    "note": "Copyright Fieldnote Studio, 2026",
+    "addressLabel": "Find us",
+    "addressLines": [
+     "12 Quarry Lane, Aldermouth"
+    ],
+    "contacts": [
+     {
+      "label": "Mail",
+      "link": {
+       "label": "hello@fieldnote.example",
+       "href": "mailto:hello@fieldnote.example"
+      }
+     }
+    ],
+    "productsLabel": "Side projects",
+    "products": [
+     {
+      "label": "Tidepool Notes",
+      "href": "https://tidepool.example/"
+     },
+     {
+      "label": "Kiln Fonts",
+      "href": "https://kiln.example/"
+     }
+    ],
+    "sitemapLabel": "Pages",
+    "sitemap": [
+     {
+      "label": "home",
+      "href": "/"
+     },
+     {
+      "label": "projects",
+      "href": "/work"
+     },
+     {
+      "label": "offer",
+      "href": "/services"
+     },
+     {
+      "label": "studio",
+      "href": "/about"
+     },
+     {
+      "label": "journal",
+      "href": "/blog"
+     },
+     {
+      "label": "contact",
+      "href": "/contact"
+     }
+    ],
+    "socialsLabel": "Elsewhere",
+    "socials": [
+     {
+      "label": "Postcards",
+      "href": "https://postcards.example/fieldnote"
+     },
+     {
+      "label": "Network",
+      "href": "https://network.example/fieldnote"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scroll-split-chars",
+    "reducedMotionFallback": "static-final-state"
+   }
+  },
+  {
+   "section": "overlay.partner-credits",
+   "content": {
+    "heading": "Collaborators",
+    "body": "Good work is rarely made alone. These are some of the small teams we have shared a desk with.",
+    "partners": [
+     {
+      "link": {
+       "label": "Alder & Ash",
+       "href": "https://alder.example/"
+      },
+      "note": "Brand and packaging for independent makers",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-1",
+       "alt": "Monogram tile"
+      }
+     },
+     {
+      "link": {
+       "label": "Pinewick Lab",
+       "href": "https://pinewick.example/"
+      },
+      "note": "Prototyping studio for connected objects",
+      "logo": {
+       "assetRole": "placeholder.client-logo",
+       "ref": "placeholder://client-2",
+       "alt": "Monogram tile"
+      }
+     }
+    ],
+    "closeLabel": "Close collaborators"
+   },
+   "motion": {
+    "pattern": "credits-overlay-open",
+    "reducedMotionFallback": "instant"
+   },
+   "retrievalEligible": false
+  }
+ ]
+}

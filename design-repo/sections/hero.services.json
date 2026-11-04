@@ -1,0 +1,110 @@
+{
+ "id": "hero.services",
+ "title": "Services hero",
+ "version": "1.0.0",
+ "purpose": "Page opener of the services page: 'our' in column 1 and 'services' in columns 3-4 (sliding in from x -50%), with an introductory paragraph under it in columns 3-4.",
+ "semantic": {
+  "id": "hero.services",
+  "category": "HERO"
+ },
+ "source": {
+  "id": "dom:section.section_hero_services",
+  "file": "src/components/services/ServicesHero.jsx",
+  "tag": "section",
+  "lines": "5",
+  "needle": "<section className=\"section_hero_services"
+ },
+ "implementedBy": [
+  {
+   "cite": "src/components/services/ServicesHero.jsx:3",
+   "needle": "export default function ServicesHero"
+  }
+ ],
+ "iaSectionIds": [
+  "hero.services"
+ ],
+ "retrievalEligible": true,
+ "constraints": {
+  "onePerPage": true,
+  "templates": [
+   "services"
+  ]
+ },
+ "variants": [],
+ "content": {
+  "words": {
+   "kind": "textList",
+   "maxWords": 1,
+   "minItems": 2,
+   "maxItems": 2,
+   "required": true
+  },
+  "intro": {
+   "kind": "text",
+   "maxWords": 60,
+   "required": true
+  }
+ },
+ "motion": {
+  "allowed": [
+   "load-intro-services",
+   "none"
+  ],
+  "default": "load-intro-services"
+ },
+ "tokens": {
+  "surfaces": [
+   "surface.page"
+  ],
+  "text": [
+   "text.heading",
+   "text.primary"
+  ]
+ },
+ "responsive": {
+  "webflowBreakpoints": [
+   991,
+   767,
+   479
+  ],
+  "changes": [
+   "<=767: words in one flex line with 14px gap; padding 160/40; intro wraps reversed under the words"
+  ],
+  "cite": {
+   "cite": "src/components/services/ServicesHero.jsx:20",
+   "needle": "services_in-detail_description"
+  },
+  "measured768": "heightAt768 in measured",
+  "measured390": "heightAt390 in measured"
+ },
+ "referenceAssetRoles": [],
+ "generatedAssetRoles": [
+  "original.copy",
+  "placeholder.url"
+ ],
+ "measured": {
+  "heightAt1440": [
+   686,
+   686
+  ],
+  "inFlowAt1440": true,
+  "instancesAt1440": 1,
+  "heightAt768": [
+   734,
+   734
+  ],
+  "instancesAt768": 1,
+  "heightAt390": [
+   490,
+   490
+  ],
+  "instancesAt390": 1,
+  "source": "extraction/measured-values.json#sectionHeights"
+ },
+ "evidence": [
+  {
+   "cite": "CLONE_SPEC-PAGES.md:171",
+   "needle": "**2.1 `section_hero_services`** (new hero)"
+  }
+ ]
+}

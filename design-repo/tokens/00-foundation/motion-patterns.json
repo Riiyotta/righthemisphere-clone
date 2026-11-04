@@ -1,0 +1,355 @@
+{
+ "version": "1.0.0",
+ "fallbackEnum": [
+  "none",
+  "instant",
+  "static-final-state",
+  "disabled"
+ ],
+ "note": "Closed motion vocabulary from the measured IX3/IX2 interactions (CLONE_SPEC.md 14, CLONE_SPEC-PAGES.md 1.M-8). reducedMotionFallback is required on every PageSpec node and must equal the value here (MOTION_FALLBACK_MISMATCH). Honest gap: the clone itself has no prefers-reduced-motion handling (cloneReducedMotionBehaviour). Timings are CLONE_SPEC values; the original's IX3 timelines were read from its registration payload and spot-sampled, not frame-recorded for the inner pages.",
+ "patterns": {
+  "none": {
+   "description": "No motion.",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [],
+   "cloneReducedMotionBehaviour": "not applicable"
+  },
+  "load-intro-home": {
+   "description": "Home load timeline (IX3 wf:load): hero opacity, h1 chars random mask stagger 0.5, heading width 86% -> 100% at 1.25s (0.8s circ.out), hero wrap height 90vh -> auto at 1.27s, nav/info chars at 1.59s, subhead 1.75s, hero cards 1.86-1.89s, button lines 2.22s (1s), contact arrows 2.93s; ends ~3.57s.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:482",
+     "needle": "### 14.3 Page-load intro"
+    },
+    {
+     "cite": "CLONE_SPEC.md:504",
+     "needle": "The intro finishes at about t = 3.57s"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "load-intro-words": {
+   "description": "Words-only hero intro (about, work, contact, blog): heading chars at 0, heading width from 92% (about) / 65% (work) / 60% (contact, blog) -> 100% at 1.25s, wrap height 90vh -> auto at 1.27s (1.17s; 0.8s on work), nav chars 1.59s, logo 1.91s, every button line 2.22s, contact arrows 2.93s. About adds the intro paragraph (words, y 150% -> 0).",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:137",
+     "needle": "### 1.M Motion (about)"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:504",
+     "needle": "## 8. New-motion summary"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "load-intro-services": {
+   "description": "Services intro: section opacity, heading chars, 'services' word x -50% -> 0 at 1.25s (0.99s), intro words y 200px -> 0 at 1.27s, table y 200px -> 0 at 1.51s, then the shared nav/logo/line/arrow tail. No height intro.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:204",
+     "needle": "### 2.M Motion (services)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-fade": {
+   "description": "Opacity 0 -> 1 on scroll-in (IX3 wf:scroll, play once, never reverses): text-size-medium, headings, work card header/detail/year, blog and work images (with image scale 1.1 -> 1 / 1.25 -> 1).",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:506",
+     "needle": "### 14.4 Scroll-triggered reveals"
+    },
+    {
+     "cite": "CLONE_SPEC.md:472",
+     "needle": "`toggleActions: \"play none none none\"`"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-fade-width": {
+   "description": "Rows reveal with opacity 0 -> 1 and width 20%/50% -> 100% (1s circ.out): buttons, service rows, award and media rows, FAQ items, team items, product links (stagger), contact form block.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:521",
+     "needle": "| `.service_wrapper` | 4 |"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:153",
+     "needle": "`.team_item` (12 triggers)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-rise-y": {
+   "description": "Portrait work cards rise y 8rem -> 0 (1s circ.out) as they enter.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:510",
+     "needle": "| `.work_card_portrait` | 2 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-slide-x": {
+   "description": "Landscape work cards slide x -5rem (left) / 5rem (right) -> 0 (1s circ.out), no opacity.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:511",
+     "needle": "| `.work_card_landscape_left` | 3 |"
+    },
+    {
+     "cite": "CLONE_SPEC.md:512",
+     "needle": "| `.work_card_landscape_right` | 3 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-split-lines": {
+   "description": "SplitText lines (no mask) fade in with stagger amount 0.5: awards intro and testimonial quotes.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:519",
+     "needle": "| `.text-size-medium.long-para` (awards intro"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-split-chars": {
+   "description": "SplitText chars (no mask) fade in, stagger amount 0.5 from random: footer blocks.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:531",
+     "needle": "| `.footer_block` | 4 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-scale-stagger": {
+   "description": "Client tiles scale 0 -> 1 with opacity (0.5s circ.out), stagger amount 1 from random; names fade with the same stagger.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:525",
+     "needle": "| `.partner_list_image_grid` (each row)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-slide-arrows": {
+   "description": "Testimonial PREV/NEXT arrows slide in (x 200% / -200% -> 0, 1s).",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:526",
+     "needle": "| `.testimonial_left_arrow` | 1 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "scroll-scale-in": {
+   "description": "Award logos scale 0 -> 1 (0.8s circ.out) with name and label fades at 0.14s and 0.34s.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:522",
+     "needle": "| `.award_wrapper` | 4 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "contact-lines-slide": {
+   "description": "Three display lines slide in alternately (SplitText lines, mask lines): x 5rem / -5rem / 5rem -> 0 and y 200% -> 0 over ~1s, stagger amount 1; trigger top 90% / top 60%.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": false,
+   "breakpointGate": "main+medium (>=768); static end state at <=767",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:530",
+     "needle": "| `.contact_element_wrapper` | 1 |"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "accordion-height": {
+   "description": "FAQ item opens: detail height 0 -> auto over 500ms easeOutQuart and the plus scaleY 1 -> 0; items independent, all start closed; close is the reverse.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:551",
+     "needle": "- **FAQ** (a-4 open / a-5 close"
+    },
+    {
+     "cite": "CLONE_SPEC.md:554",
+     "needle": "Items are independent; several can be open at once"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "slider-outin": {
+   "description": "Testimonial slider (Webflow outin, 500ms ease): current slide fades out ~250ms, incoming fades in; infinite loop, no autoplay, no sliding.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:557",
+     "needle": "- **Testimonial slider** (Webflow `outin`, 500ms `ease`)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "credits-overlay-open": {
+   "description": "Partner-credits overlay: backdrop appears instantly, white cover scales 0 -> 1 from the top-right over 800ms, rows width 50% -> 100% (800ms, 1000ms at +200/400/600ms), content opacity 0 -> 1 over 400ms at +600ms; close is instant.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:563",
+     "needle": "- **Footer partner credits** (a-18 open / a-22 close)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "nav-panel-slide": {
+   "description": "<=991 menu panel slides translateY(-224px) -> 0 over 400ms ease; label and glyph swap instantly.",
+   "reducedMotionFallback": "instant",
+   "ambient": false,
+   "breakpointGate": "<=991",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:146",
+     "needle": "**Open animation** (Webflow nav \"default\", 400ms `ease`)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "hover-arrow-swap": {
+   "description": "Arrow pair swap on hover: outgoing arrow translates 300ms, incoming blue arrow 300ms after a 250ms delay (500ms / 200ms on product rows); out snaps back instantly.",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:535",
+     "needle": "### 14.5 Hover and click interactions"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:162",
+     "needle": "`a.product_link` (a-31/a-32)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "hover-border-accent": {
+   "description": "List-row, work-card detail and product-row border-bottom colour to accent over 500ms easeOutQuart; out 500ms.",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:545",
+     "needle": "| `.award_winner_item` (a-16/17)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "hover-colour-fade": {
+   "description": "Button label and underline colour to accent over 500ms; nav links swap colour instantly (and underline).",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:542",
+     "needle": "| `.button_v2` links (a-12/13)"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:41",
+     "needle": "**Correction to CLONE_SPEC §14.5 (nav link hover):**"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "hover-team-image": {
+   "description": "Team row hover: grayscale square portrait scales 0 -> 1 over 800ms easeOutQuart at column 4, row border to black over 500ms; out 100ms then hidden after 800ms. Desktop only (hidden <=991).",
+   "reducedMotionFallback": "none",
+   "ambient": false,
+   "breakpointGate": ">=992",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:161",
+     "needle": "`.team_list_item` (a-10/a-11)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "smooth-scroll": {
+   "description": "Lenis smooth scroll (duration 1.5, expo-out easing, syncTouch false) bound to the GSAP ticker; blog post pages use native scroll.",
+   "reducedMotionFallback": "disabled",
+   "ambient": false,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC.md:455",
+     "needle": "**Lenis init**"
+    },
+    {
+     "cite": "CLONE_SPEC-PAGES.md:24",
+     "needle": "**no** (native scroll; no Lenis or jsdelivr GSAP script)"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  },
+  "lottie-loop": {
+   "description": "Case-study Lottie JSON animations autoplay and loop from load (svg renderer); the native duration applies.",
+   "reducedMotionFallback": "static-final-state",
+   "ambient": true,
+   "breakpointGate": "all",
+   "evidence": [
+    {
+     "cite": "CLONE_SPEC-PAGES.md:499",
+     "needle": "Lotties: autoplay and loop from load"
+    }
+   ],
+   "cloneReducedMotionBehaviour": "unchanged: the clone has no prefers-reduced-motion branch (src/motion/*.js gate only on breakpoints via gsap.matchMedia; at <=767 it renders the static end state). reducedMotionFallback is therefore what a GENERATED page must do, not what the clone does."
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "id": "testimonial-slide",
+ "kind": "component",
+ "description": "Quote over a grey author line in a bottom-ruled mask with PREV/NEXT arrows.",
+ "uses": [
+  "arrow-pair-diagonal"
+ ],
+ "tokens": [
+  "font.size.t20"
+ ],
+ "evidence": [
+  {
+   "cite": "src/components/Testimonials.jsx:65",
+   "needle": "testimonial_slide_element"
+  }
+ ]
+}
