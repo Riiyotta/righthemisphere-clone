@@ -1,0 +1,92 @@
+/* IX2 hover arrow swaps (CLONE_SPEC §14.5, re-measured on the original).
+   Hover-in: outgoing arrow slides 300ms; incoming (blue) slides 300ms after a 250ms delay.
+   Hover-out: arrows snap back (0ms), because the resting rules carry no transition.
+   Uses the individual `translate` property so it composes with rotations (PREV icons,
+   hero arrow) and never fights GSAP's inline `transform` (reveals clear theirs on completion).
+   Colour fades (500ms) are the existing transitions in index.css. */
+
+:root {
+  --ix2-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* button_v2 links (a-12/13) and the blog-card row (a-27/28, whole card is the hover target) */
+a.button_v2:hover .arrow_mid.right,
+.blog_card:hover .button_v2 .arrow_mid.default {
+  translate: 100% 0;
+  transition: translate 300ms var(--ix2-quart);
+}
+a.button_v2:hover .arrow_mid.left,
+.blog_card:hover .button_v2 .arrow_mid.left {
+  translate: 100% 0;
+  transition: translate 300ms var(--ix2-quart) 250ms;
+}
+
+/* Work card (a-14/15): NE arrows exit / enter towards the top-right */
+.work_card:hover .work_arrow_icon.default {
+  translate: 100% -100%;
+  transition: translate 300ms var(--ix2-quart);
+}
+.work_card:hover .work_arrow_icon.bottom {
+  translate: 100% -100%;
+  transition: translate 300ms var(--ix2-quart) 250ms;
+}
+
+/* Award / media rows (a-16/17) and overlay partner rows (a-29/30) */
+.list_row:hover .arrow_pair > .default {
+  translate: 100% -100%;
+  transition: translate 300ms var(--ix2-quart);
+}
+.list_row:hover .arrow_pair > .bottom {
+  translate: 100% -100%;
+  transition: translate 300ms var(--ix2-quart) 250ms;
+}
+
+/* Nav CONTACT (a-33): 500ms each, blue arrow delayed 200ms */
+.nav_link.contact:hover .contact_link_icon.default {
+  translate: 100% 0;
+  transition: translate 500ms var(--ix2-quart);
+}
+.nav_link.contact:hover .contact_link_icon.left {
+  translate: 100% 0;
+  transition: translate 500ms var(--ix2-quart) 200ms;
+}
+
+/* Slider NEXT (a-23/24) */
+.testimonial_right_arrow:hover .slider_icon.default {
+  translate: 100% 0;
+  transition: translate 300ms var(--ix2-quart);
+}
+.testimonial_right_arrow:hover .slider_icon.left {
+  translate: 100% 0;
+  transition: translate 300ms var(--ix2-quart) 250ms;
+}
+
+/* Slider PREV (a-25/26): icons are rotated 180°, they travel left */
+.testimonial_left_arrow:hover .prev.default {
+  translate: -100% 0;
+  transition: translate 300ms var(--ix2-quart);
+}
+.testimonial_left_arrow:hover .prev.right {
+  translate: -100% 0;
+  transition: translate 300ms var(--ix2-quart) 250ms;
+}
+
+/* ---- Inner pages (CLONE_SPEC-PAGES; scoped to inner-page classes, homepage unaffected) ---- */
+
+/* /about product row (a-31/a-32): both NE arrows 500ms easeOutQuart, .bottom delayed 200ms;
+   hover-out snaps back. More specific than the .list_row rule above, so it wins here only.
+   Border #CECECE → #120DF7 is the shared .list_row transition (500ms quart both ways). */
+.product_link.list_row:hover .arrow_pair > .default {
+  translate: 100% -100%;
+  transition: translate 500ms var(--ix2-quart);
+}
+.product_link.list_row:hover .arrow_pair > .bottom {
+  translate: 100% -100%;
+  transition: translate 500ms var(--ix2-quart) 200ms;
+}
+
+/* /about team row border (a-10/a-11): in #CECECE → #000 500ms linear, out 500ms quart.
+   The image scale/display is JS (team-hover.js). */
+.team_list_item:hover {
+  transition: border-color 500ms linear;
+}

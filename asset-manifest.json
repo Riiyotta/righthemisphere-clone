@@ -1,0 +1,43 @@
+{
+  "source": "https://www.righthemisphere.studio/",
+  "measuredAt": "2026-11-04, Chrome (Playwright), viewport 1440x900 unless noted",
+  "note": "Dimensions only. All photography, client logos, award logos and brand marks are to be replaced by neutral placeholders. Rendered sizes are at 1440 unless a width is given. 'nat' = intrinsic pixel size of the original file, used here only to derive the aspect ratio.",
+  "fonts": [
+    {"family": "PP Mori", "cssName": "Ppmori", "weight": 400, "file": "PPMori-Regular.woff2", "loaded": true, "usage": "every visible text node (body, h1, all text-size-* classes)", "fallback": "Arial, sans-serif"},
+    {"family": "PP Mori", "cssName": "Ppmori", "weight": 600, "file": "PPMori-Semibold.woff2", "loaded": false, "usage": "declared in @font-face but never requested; weight-500 h2s fall back to the 400 face"},
+    {"family": "Karla", "weights": [300, 400, 500, 600, 700], "via": "Google WebFont loader 1.6.26", "loaded": "only the latin 400 woff2 is downloaded", "usage": "none. No CSS rule references Karla; it is loaded and never applied"},
+    {"family": "General Sans", "cssName": "Generalsans", "loaded": false, "usage": "declared in @font-face (200-700 + italics + variable) and never applied on the homepage"}
+  ],
+  "uiGlyphs_redraw": [
+    {"id": "arrow-ne", "desc": "Solid diagonal arrow pointing up-right; filled path, 20x20 viewBox, ~2.3px stroke weight", "colors": ["#000000", "#120DF7"], "rendered": {"work_arrow_icon": "12.72px (= --text-14) square", "award/media/partner arrows": "12px"}, "originals": ["black test.svg", "blue test.svg"]},
+    {"id": "arrow-right", "desc": "Solid arrow pointing right (shaft + chevron head), 20x20 viewBox", "colors": ["#000000", "#120DF7"], "rendered": {"arrow_mid (button_v2, blog)": "16px (14px at <=991)", "slider_icon": "14px", "contact_link_icon (nav CONTACT)": "12.72px"}, "originals": ["black test foward.svg", "blue test foward.svg"]},
+    {"id": "arrow-ne-small", "desc": "Same NE arrow, 16x16 viewBox, blue #120DF7. Used rotated 90deg (it points down-right) in the hero 'things we did' button", "rendered": "12.72px at 1440, 10px at 991"},
+    {"id": "plus", "desc": "Plus made of 2px bars, 24x24 viewBox, #120DF7", "rendered": "18.73px (= --text-20) in FAQ; 16px in the footer 'partner credits' link"},
+    {"id": "minus", "desc": "2px bar, 24x24 viewBox, #120DF7", "rendered": "18.73px (FAQ, sits under the plus)"},
+    {"id": "menu", "desc": "3 horizontal bars 0.92px thick, 10x10, #120DF7", "rendered": "10px (<=991 only)"},
+    {"id": "close", "desc": "X of two 0.92px bars, 10x10, #120DF7", "rendered": "10px menu close; 18.73px partner-overlay close"}
+  ],
+  "brandAssets_placeholder": [
+    {"slot": "logo_img (nav + footer)", "nat": [18, 28], "rendered": [16, 24.875], "ar": "18:28", "note": "brand mark (red dot #E62C39 + blue #120DF7 'h'). Replace with a neutral mark of the same box"},
+    {"slot": "certified_partner_badge (footer)", "nat": [480, 97], "rendered": [128, 25.86], "ar": "4.95:1"}
+  ],
+  "imageSlots": [
+    {"section": "work", "slot": "card 1 portrait_hero (project_img_hero)", "rendered1440": [459, 601], "ar": "496:650 (0.763)", "fit": "width:100%, height:auto (no object-fit)", "wrapperBg": "#000000"},
+    {"section": "work", "slot": "card 2 landscape_right_hero", "rendered1440": [688, 387], "ar": "16:9 (1440x810)", "fit": "width:100%, height:auto", "wrapperBg": "#0F2844"},
+    {"section": "work", "slot": "card 3 landscape_left", "rendered1440": [459, 376], "ar": "496:407 (1.219)", "wrapperBg": "#000000", "note": "intrinsic width 496px caps the card at <=991 (renders 496 wide)"},
+    {"section": "work", "slot": "card 4 landscape_right", "rendered1440": [585, 389], "ar": "1440:958 (1.503)", "wrapperBg": "#6165AF"},
+    {"section": "work", "slot": "card 5 landscape_left", "rendered1440": [688, 344], "ar": "2:1", "wrapperBg": "#3E7170"},
+    {"section": "work", "slot": "card 6 portrait", "rendered1440": [459, 597], "ar": "479:624 (0.768)", "wrapperBg": "#FF7136", "note": "intrinsic width 479px caps the card at <=991"},
+    {"section": "work", "slot": "card 7 landscape_left", "rendered1440": [688, 400], "ar": "1440:838 (1.718)", "wrapperBg": "#FB9920"},
+    {"section": "work", "slot": "card 8 landscape_right (square)", "rendered1440": [459, 459], "ar": "1:1", "wrapperBg": "#193526"},
+    {"section": "work", "slot": "card 9 portrait (grid 2)", "rendered1440": [459, 533], "ar": "1440:1672 (0.861)", "wrapperBg": "#193526 inside an outer #5B5B45 wrapper"},
+    {"section": "work", "slot": "card 10 landscape_right (grid 2)", "rendered1440": [688, 340], "ar": "1440:712 (2.022)", "wrapperBg": "#176C77"},
+    {"section": "awards", "slot": "feature_icon x4 (award logos)", "nat": [300, 300], "rendered": [40, 40], "ar": "1:1"},
+    {"section": "partners", "slot": "partner_image x15 (client logos)", "nat": [120, 120], "rendered1440": [114.66, 114.66], "rendered1280": [101.33, 101.33], "ar": "1:1", "hiddenAt": "<=991 (display:none)"},
+    {"section": "blogs", "slot": "blog_img x3", "nat": [1200, 900], "rendered1440": [459, 344], "rendered991": [466, 349], "rendered479": [447, 335], "ar": "4:3", "fit": "width:100% height:auto, wrapper overflow hidden"},
+    {"section": "footer overlay", "slot": "partner_logo x4", "rendered": [64, 64], "ar": "1:1", "note": "only visible inside the 'partner credits' overlay"}
+  ],
+  "video": [],
+  "canvas": [],
+  "backgroundImages": []
+}

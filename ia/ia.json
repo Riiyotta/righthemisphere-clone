@@ -1,0 +1,401 @@
+{
+  "meta": {
+    "source": "Right Hemisphere replica (https://www.righthemisphere.studio/)",
+    "status": "measured-from-codebase",
+    "totalRoutes": 18,
+    "totalTemplates": 9,
+    "derivedFrom": "src/Router.jsx, src/App.jsx, src/pages/*, src/data/pages-content.json; cross-checked against the crawl in .recon/pages/"
+  },
+  "categories": {
+    "SHELL": "Site chrome present on every designed page: fixed nav, footer, footer overlays.",
+    "HERO": "First block under the nav that names the page; each variant has its own load intro.",
+    "WORK": "Project showcase blocks: work cards, case-study media and copy.",
+    "LIST": "Hairline-ruled row lists (services, awards, mentions, team, products, pricing).",
+    "PROOF": "Social proof: client/partner logos and testimonials.",
+    "CONTENT": "Editorial blocks: statements, process copy, FAQ, blog cards, article body.",
+    "CTA": "Blocks whose job is to get the visitor to make contact.",
+    "SYSTEM": "Host-level pages outside the site's design system."
+  },
+  "sections": {
+    "shell.navbar": {
+      "category": "SHELL",
+      "description": "Fixed 44px nav: two-line wordmark, LABS/PROJECTS/INDEX/NEWS links, underlined CONTACT link with arrow; collapses to a slide-down menu at ≤991. Marks the current route's link #120DF7.",
+      "scope": "Every template except the 404.",
+      "implementedBy": "Navbar.jsx"
+    },
+    "shell.footer": {
+      "category": "SHELL",
+      "description": "Four footer blocks (brand + certified-partner badge, address, products, sitemap/socials) with char-split reveal; includes the partner-credits trigger.",
+      "scope": "Every template except the 404.",
+      "implementedBy": "Footer.jsx"
+    },
+    "shell.partner-credits": {
+      "category": "SHELL",
+      "description": "Hidden full-screen overlay opened from the footer: white cover scales in, then a 4-column list of partner credit rows with logos and diagonal arrows.",
+      "scope": "Every template except the 404, mounted inside the footer.",
+      "implementedBy": "Footer.jsx > PartnerCredits"
+    },
+    "hero.home": {
+      "category": "HERO",
+      "description": "Homepage hero: three-word display h1 with random char fade, subhead, info block (address/email/phone), 'Things we did' button, plus two hero work cards; runs the full ~2.9s load intro.",
+      "scope": "Home only.",
+      "implementedBy": "Hero.jsx"
+    },
+    "hero.words": {
+      "category": "HERO",
+      "description": "Words-only display hero: the h1 words spread across the 6-column grid, no subhead or cards; intro widens the heading (92/65/60%→100%) and shrinks the header from 90vh.",
+      "scope": "About, Work, Contact and Blog list templates.",
+      "implementedBy": "shared/HeroWords.jsx"
+    },
+    "hero.services": {
+      "category": "HERO",
+      "description": "Services hero: 'our' in column 1, 'services' in columns 3–4 sliding in from x −50%, and an intro paragraph rising word by word.",
+      "scope": "Services only.",
+      "implementedBy": "services/ServicesHero.jsx"
+    },
+    "hero.blog-post": {
+      "category": "HERO",
+      "description": "Article header in the 688px column: 4:3 hero image, 40px h1, subtitle, date and author (empty values hidden).",
+      "scope": "Blog post template (10 routes).",
+      "implementedBy": "pages/BlogPost.jsx"
+    },
+    "hero.case-study": {
+      "category": "HERO",
+      "description": "Case-study header: h1, project brief, scope list, credits and live-link buttons.",
+      "scope": "Case study template (2 routes).",
+      "implementedBy": "pages/CaseStudy.jsx > Hero"
+    },
+    "work.home-grid": {
+      "category": "WORK",
+      "description": "Homepage selected-work grid: 10 work cards placed on a 6-column grid with negative offsets, year labels, diagonal-arrow detail rows, and a 'see all' button.",
+      "scope": "Home only.",
+      "implementedBy": "Work.jsx"
+    },
+    "work.full-grid": {
+      "category": "WORK",
+      "description": "Full project index: 25 work cards in 4 grid wrappers, same card component as the homepage grid, no 'see all' button.",
+      "scope": "Work only.",
+      "implementedBy": "work/WorkGrid.jsx (WorkCard from Work.jsx)"
+    },
+    "work.case-subhead": {
+      "category": "WORK",
+      "description": "Stack overview with numbered items beside a square image (Lottie on Cheggout).",
+      "scope": "Case study template, first section.",
+      "implementedBy": "pages/CaseStudy.jsx > Subhead"
+    },
+    "work.case-full-width": {
+      "category": "WORK",
+      "description": "Full-width showcase media: image, GIF, Lottie, or the YouTube embed (56.17% box) on Watch with Papa.",
+      "scope": "Case study template; appears 1–2 times per study.",
+      "implementedBy": "case-study/Showcase.jsx > Media"
+    },
+    "work.case-image-text": {
+      "category": "WORK",
+      "description": "Alternating image/text showcase row with highlights list.",
+      "scope": "Case study template; repeats 2–4 times per study.",
+      "implementedBy": "case-study/Showcase.jsx > ShowcaseText + Media"
+    },
+    "work.case-two-images": {
+      "category": "WORK",
+      "description": "Two showcase images side by side.",
+      "scope": "Case study template; Cheggout only in the current data.",
+      "implementedBy": "pages/CaseStudy.jsx > Section"
+    },
+    "work.case-view-project": {
+      "category": "WORK",
+      "description": "Closing wide 'see more work' ButtonV2 (links to /about, as on the original).",
+      "scope": "Case study template, last section.",
+      "implementedBy": "pages/CaseStudy.jsx > Section (ButtonV2)"
+    },
+    "content.home-about": {
+      "category": "CONTENT",
+      "description": "Homepage about statement and long paragraph with a button.",
+      "scope": "Home only.",
+      "implementedBy": "About.jsx"
+    },
+    "content.about-intro": {
+      "category": "CONTENT",
+      "description": "About page intro paragraph in columns 4–6, word-split rise on load.",
+      "scope": "About only.",
+      "implementedBy": "about/AboutIntro.jsx"
+    },
+    "content.process": {
+      "category": "CONTENT",
+      "description": "'Our process' heading and copy in columns 5–6.",
+      "scope": "About only.",
+      "implementedBy": "about/Process.jsx"
+    },
+    "content.faq": {
+      "category": "CONTENT",
+      "description": "Five-item accordion; items open independently, height 0↔auto and plus icon scaleY over 0.5s.",
+      "scope": "Home and Services.",
+      "implementedBy": "Faq.jsx"
+    },
+    "content.blog-cards": {
+      "category": "CONTENT",
+      "description": "Staggered blog card grid with image-scale reveal and arrow-swap hover; 3 cards on Home/About, all 10 on the blog list.",
+      "scope": "Home, About and Blog list.",
+      "implementedBy": "Blogs.jsx"
+    },
+    "content.blog-body": {
+      "category": "CONTENT",
+      "description": "Rich-text article body rendered from structured blocks (p/h2/h3/h4/ol/figure), PP Mori Semibold for bold.",
+      "scope": "Blog post template (10 routes).",
+      "implementedBy": "blog/RichText.jsx"
+    },
+    "content.more-blogs": {
+      "category": "CONTENT",
+      "description": "'Read more' row of 2 BlogCards at the end of an article.",
+      "scope": "Blog post template (10 routes).",
+      "implementedBy": "pages/BlogPost.jsx (BlogCard from Blogs.jsx)"
+    },
+    "list.services": {
+      "category": "LIST",
+      "description": "Homepage services: 4 rows that widen 20→100% on reveal, plus a 46%-wide button.",
+      "scope": "Home only.",
+      "implementedBy": "Services.jsx"
+    },
+    "list.awards": {
+      "category": "LIST",
+      "description": "4 award groups (11 rows) with award logo scale-in, winner name and label; rows turn accent on hover.",
+      "scope": "Home only.",
+      "implementedBy": "Awards.jsx"
+    },
+    "list.media-mentions": {
+      "category": "LIST",
+      "description": "4 media-mention rows with diagonal arrows; border to accent on hover.",
+      "scope": "Home only.",
+      "implementedBy": "MediaMentions.jsx"
+    },
+    "list.team": {
+      "category": "LIST",
+      "description": "12 team rows; hovering shows a grayscale 229px portrait at column 4 and turns the border black.",
+      "scope": "About only.",
+      "implementedBy": "about/Team.jsx"
+    },
+    "list.products": {
+      "category": "LIST",
+      "description": "3 product rows with double up-right arrows (second delayed 200ms) and accent border on hover.",
+      "scope": "About only.",
+      "implementedBy": "about/Products.jsx"
+    },
+    "list.pricing": {
+      "category": "LIST",
+      "description": "Services pricing table: 5-column grid, 4 rows rising from 200px on load; no row interactions.",
+      "scope": "Services only.",
+      "implementedBy": "services/ServicesTable.jsx"
+    },
+    "proof.partners": {
+      "category": "PROOF",
+      "description": "Partner/client logo tiles in rows of 5 with deliberate empty columns, random-stagger scale-in; 15 tiles + button on Home, 21 tiles in 4 rows and no button on About ('Clients').",
+      "scope": "Home and About.",
+      "implementedBy": "Partners.jsx"
+    },
+    "proof.testimonials": {
+      "category": "PROOF",
+      "description": "6-slide testimonial slider, 'outin' crossfade, PREV/NEXT text arrows, loops, no autoplay.",
+      "scope": "Home only.",
+      "implementedBy": "Testimonials.jsx"
+    },
+    "cta.contact-lines": {
+      "category": "CTA",
+      "description": "Three huge masked display lines that slide in alternately, plus a 192px contact button.",
+      "scope": "Home, About, Services and Work.",
+      "implementedBy": "Contact.jsx"
+    },
+    "cta.contact-info": {
+      "category": "CTA",
+      "description": "Contact page info row: phone, email and address.",
+      "scope": "Contact only.",
+      "implementedBy": "contact/ContactInfo.jsx"
+    },
+    "cta.contact-form": {
+      "category": "CTA",
+      "description": "Enquiry form: name, email, required 5-option budget select, project description, submit; native validation, #FFDEDE error box. Local stub — does not post to Webflow.",
+      "scope": "Contact only.",
+      "implementedBy": "contact/ContactForm.jsx"
+    },
+    "system.not-found": {
+      "category": "SYSTEM",
+      "description": "Webflow's hosting-level 'Page not found' on #f5f5f5, no site chrome; system fonts stand in for Graphik/Roboto Mono.",
+      "scope": "Any unmatched path.",
+      "implementedBy": "pages/NotFound.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.home",
+        "work.home-grid",
+        "content.home-about",
+        "list.services",
+        "list.awards",
+        "list.media-mentions",
+        "proof.partners",
+        "proof.testimonials",
+        "content.faq",
+        "content.blog-cards",
+        "cta.contact-lines",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.about",
+      "name": "About",
+      "routeCount": 1,
+      "routes": [
+        "/about"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.words",
+        "content.about-intro",
+        "list.team",
+        "content.process",
+        "proof.partners",
+        "list.products",
+        "content.blog-cards",
+        "cta.contact-lines",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.services",
+      "name": "Services",
+      "routeCount": 1,
+      "routes": [
+        "/services"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.services",
+        "list.pricing",
+        "content.faq",
+        "cta.contact-lines",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.work",
+      "name": "Work index",
+      "routeCount": 1,
+      "routes": [
+        "/work"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.words",
+        "work.full-grid",
+        "cta.contact-lines",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.contact",
+      "name": "Contact",
+      "routeCount": 1,
+      "routes": [
+        "/contact"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.words",
+        "cta.contact-info",
+        "cta.contact-form",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.blog-list",
+      "name": "Blog list",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.words",
+        "content.blog-cards",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "routeCount": 10,
+      "routes": [
+        "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+        "/blog/design-and-the-question-of-authority",
+        "/blog/how-to-create-good-web-design-everytime",
+        "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+        "/blog/on-webflow-right-hemisphere-and-how-we-work",
+        "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+        "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+        "/blog/what-is-px-what-is-a-pt-what-is-dp",
+        "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+        "/blog/what-should-be-the-size-of-an-icon-button"
+      ],
+      "chrome": "full",
+      "sections": [
+        "shell.navbar",
+        "hero.blog-post",
+        "content.blog-body",
+        "content.more-blogs",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.case-study",
+      "name": "Case study",
+      "routeCount": 2,
+      "routes": [
+        "/cheggout-sdk",
+        "/watch-with-papa"
+      ],
+      "chrome": "full",
+      "notes": "Showcase section order is data-driven per study (src/data/pages-content.json caseStudies[*].sections); listed here in first-appearance order.",
+      "sections": [
+        "shell.navbar",
+        "hero.case-study",
+        "work.case-subhead",
+        "work.case-full-width",
+        "work.case-image-text",
+        "work.case-two-images",
+        "work.case-view-project",
+        "shell.footer",
+        "shell.partner-credits"
+      ]
+    },
+    {
+      "id": "template.not-found",
+      "name": "404",
+      "routeCount": 0,
+      "routes": [],
+      "chrome": "none",
+      "notes": "Catch-all for unmatched paths; not a real route, so it adds 0 to totalRoutes.",
+      "sections": [
+        "system.not-found"
+      ]
+    }
+  ]
+}

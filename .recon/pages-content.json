@@ -1,0 +1,4504 @@
+{
+ "source": "https://www.righthemisphere.studio/",
+ "note": "Extracted from .recon/pages/*.html (server HTML). Image src = local /images/<decoded filename>, full-size preferred; srcset lists the -p-NNN variants as served. Text keeps line breaks (\\n) where the original has <br>.",
+ "pages": {
+  "about": {
+   "route": "/about",
+   "title": "About Right Hemisphere",
+   "heroWords": [
+    "systems",
+    "standard",
+    "culture"
+   ],
+   "heroNavigation_hidden": [
+    [],
+    [
+     "Work",
+     "About",
+     "Services",
+     "Awards"
+    ],
+    [
+     "Clients",
+     "Testimonials",
+     "FAQs",
+     "Blogs"
+    ],
+    [
+     "Request Portfolio",
+     "Contact"
+    ]
+   ],
+   "intro": "We’re a bunch of creatives and engineers exploring how beauty meets utility to create experiences that command attention. This involves a degree of precision, objectivity and loads of empathy towards what we are building and for whom.",
+   "team": {
+    "heading": "team",
+    "members": [
+     {
+      "num": "01",
+      "name": "Ankita Saikia",
+      "role": "Business Head",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://www.linkedin.com/in/ankita-saikia4/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc5c6f21a60f40a36ee3e_image 25.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "02",
+      "name": "Kaushik Barua",
+      "role": "Operations Head",
+      "link": {
+       "text": "Instargram",
+       "href": "https://www.instagram.com/kakabura?stkn=MWhlcDJtZzgxZXA0MQ==",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc6da37129ba6f4bf2773_image 26.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "03",
+      "name": "Porag Gogoi",
+      "role": "Creative Head",
+      "link": {
+       "text": "Product Hunt",
+       "href": "https://www.producthunt.com/@porag_gogoi",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abccad1f23ba1e9ebe5a0af_image 24.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "04",
+      "name": "Uddipta Das",
+      "role": "Communications Head",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://www.linkedin.com/in/uddipta-das-44a2583b7/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc7b482b8ecfd7faf3577_image 27.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "05",
+      "name": "Chinmoy Raj Deka",
+      "role": "Frontend Engineer",
+      "link": {
+       "text": "Github",
+       "href": "https://github.com/ChinmoyRaj123",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc80c1b070386b5661489_image 28.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "06",
+      "name": "Pranab Bora",
+      "role": "Frontend Engineer",
+      "link": {
+       "text": "Github",
+       "href": "https://github.com/prnbbora4",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc8580fb0ba4287ffa903_image 29.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "07",
+      "name": "Entirani Bhuyan",
+      "role": "Webflow/Wordpress Developer",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://www.linkedin.com/in/entirani-bhuyan-b83b44227/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc896c13a12b1ed8f566d_image 31.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "08",
+      "name": "Mofiqul Islam",
+      "role": "Backend Engineer",
+      "link": {
+       "text": "Github",
+       "href": "https://github.com/Mofiqul",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc922c276b0bf83383ac3_image 32.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "09",
+      "name": "Abhishek Deb",
+      "role": "Senior Designer",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://www.linkedin.com/in/abhishek-deb-4a327b225/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc9b7d013113127bd04e1_image 33.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "10",
+      "name": "Joni Medhi",
+      "role": "Designer",
+      "link": {
+       "text": "LinkedIn",
+       "href": "https://www.linkedin.com/in/joni-medhi/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc9c6dca04877f3533b50_image 35.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "11",
+      "name": "Lithungo Shitiri",
+      "role": "Designer",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://www.linkedin.com/in/lithungo-shitiri-b816452a0/",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abcc9fad013113127bd4086_image 30.png",
+       "loading": "lazy"
+      }
+     },
+     {
+      "num": "12",
+      "name": "Prachuryya Das",
+      "role": "Shopify Developer",
+      "link": {
+       "text": "Linkedin",
+       "href": "https://in.linkedin.com/in/prachuryya-das-9a1723430",
+       "target": "_blank"
+      },
+      "image": {
+       "src": "/images/6abdeadb0baefae6e8d529a6_image 34.png",
+       "loading": "lazy"
+      }
+     }
+    ]
+   },
+   "process": {
+    "heading": "our process",
+    "text": "Sometimes we start from scratch, other times we build on foundations laid. But most of the time we start with a problem and end with a happy client that keeps coming back for more."
+   },
+   "clients": {
+    "heading": "Clients",
+    "rows": [
+     [
+      {
+       "num": "01",
+       "numClass": "client_name color-white",
+       "name": "Prime Video",
+       "image": {
+        "src": "/images/6a8ff838dec8341819739a78_prime video.png",
+        "alt": "Prime Video logo with white text and a curved arrow on a blue background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "02",
+       "numClass": "client_name color-white",
+       "name": "UC Berkeley",
+       "image": {
+        "src": "/images/6a8ff83bdec8341819739c91_uc berkeley.png",
+        "alt": "UC Berkeley logo with gold text on a dark blue background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "03",
+       "numClass": "client_name color-white",
+       "name": "Razorpay",
+       "image": {
+        "src": "/images/6a8ff8394a84a8e59e61e16c_razorpay.png",
+        "alt": "Razorpay logo with stylized blue and white 'R' followed by the word 'azorpay' in white on black background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "04",
+       "numClass": "client_name",
+       "name": "Pigeon & Co.",
+       "image": {
+        "src": "/images/6ae17c609a623782357feb60_pigeon and co.png",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "05",
+       "numClass": "client_name color-black",
+       "name": "Govt of Madhya Pradesh",
+       "image": {
+        "src": "/images/6a8ff838ae7857075677b005_mp govt.png",
+        "alt": "Emblem of India featuring the Lion Capital of Ashoka above the text 'The heart of Incredible India'.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "06",
+       "numClass": "client_name color-black",
+       "name": "Studio Ping Pong",
+       "image": {
+        "src": "/images/6a8ff838fb0202d3b455f6d2_ping pong.png",
+        "alt": "The words 'PING PONG' in bold black letters on a yellow background, with the letters stylized and a dot used to represent the letter 'O' in 'PONG'.",
+        "loading": "lazy"
+       }
+      }
+     ],
+     [
+      {
+       "num": "07",
+       "numClass": "client_name color-white",
+       "name": "Mattered",
+       "image": {
+        "src": "/images/6a8ff841c5ebb416ebede5f2_mattered.png",
+        "alt": "White text on a black background reading 'Mattered.'",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "08",
+       "numClass": "client_name color-black",
+       "name": "Moshimbo",
+       "image": {
+        "src": "/images/6a8ff8414a84a8e59e61e5ce_moshimbo.png",
+        "alt": "The word 'moshimbo' written in bold black stylized lowercase letters on a light pink background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "09",
+       "numClass": "client_name color-white",
+       "name": "Supari Studios",
+       "image": {
+        "src": "/images/6a8ff83afb0202d3b455f847_supari studios.png",
+        "alt": "White stylized text reading 'SUPARI STUDIOS' with a burst shape behind 'SUPARI' on a red background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "10",
+       "numClass": "client_name color-white",
+       "name": "Bare Bones Collective",
+       "image": {
+        "src": "/images/6a8ff83da42bf0f579cb4c40_bare bones collective.png",
+        "alt": "Logo with the words 'BARE BONES COLLECTIVE' spelled out in white rounded square blocks on a black background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "11",
+       "numClass": "client_name color-white",
+       "name": "Kulfi Collective",
+       "image": {
+        "src": "/images/6a8ff840cd7764f54d32d400_kulfi collective.png",
+        "alt": "White stylized logo on black background featuring the letters 'K', 'U', and 'fi' with decorative elements including a starburst and connecting lines.",
+        "loading": "lazy"
+       }
+      }
+     ],
+     [
+      {
+       "num": "12",
+       "numClass": "client_name color-white",
+       "name": "Post Office Studios",
+       "image": {
+        "src": "/images/6a8ff838294ee17b5de0ba7c_post office.png",
+        "alt": "Teal colored rectangular outline with the words 'POST OFFICE' inside on a black background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "13",
+       "numClass": "client_name color-black",
+       "name": "Fashion for Good",
+       "image": {
+        "src": "/images/6a8ff8400ec37c4f7d3cd1dd_fashion for good.png",
+        "alt": "Logo featuring the words 'FASHION FOR GOOD' with the letters arranged in a stacked and aligned format with a stylized green circular icon on top.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "14",
+       "numClass": "client_name color-white",
+       "name": "Boon",
+       "image": {
+        "src": "/images/6a8ff83d8073883a3f4ce3c7_boon.png",
+        "alt": "White lowercase letters spelling 'boon' on a blue background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "15",
+       "numClass": "client_name color-black",
+       "name": "Anomaly Brands",
+       "image": {
+        "src": "/images/6a8ff83bdec8341819739cd3_anomaly.png",
+        "alt": "The word 'Anomaly:' written in bold black text on a white background.",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "16",
+       "numClass": "client_name color-black",
+       "name": "Enter.health",
+       "image": {
+        "src": "/images/6a8ff83f8073883a3f4ce8a0_enter.png",
+        "alt": "Blue stylized arrow pointing down above the word ENTER in bold black text on a light gray background.",
+        "loading": "lazy"
+       }
+      }
+     ],
+     [
+      {
+       "num": "17",
+       "numClass": "client_name color-black",
+       "name": "Tinker Labs",
+       "image": {
+        "src": "/images/6a8ff83b4f099901022df952_tinker labs.png",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "18",
+       "numClass": "client_name color-white",
+       "name": "Lupin Foundation",
+       "image": {
+        "src": "/images/6a8ff8410ec37c4f7d3cd3d3_lupin.png",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "19",
+       "numClass": "client_name color-white",
+       "name": "Ecodrive",
+       "image": {
+        "src": "/images/6a8ff83e251b715e30eac400_ecodrive.png",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "20",
+       "numClass": "client_name color-white",
+       "name": "College Vidya",
+       "image": {
+        "src": "/images/6a8ff840c5ebb416ebede503_college vidya.png",
+        "loading": "lazy"
+       }
+      },
+      {
+       "num": "21",
+       "numClass": "client_name color-white",
+       "name": "Cheggout",
+       "image": {
+        "src": "/images/6a8ff83d4a84a8e59e61e3af_cheggout.png",
+        "loading": "lazy"
+       }
+      }
+     ]
+    ],
+    "button": null
+   },
+   "products": {
+    "heading": "products we have developed",
+    "items": [
+     {
+      "name": "Skara",
+      "desc": "No-code OTT app builder",
+      "href": "https://skara.app/",
+      "target": "_blank"
+     },
+     {
+      "name": "Sato",
+      "desc": "Distraction-free, custom video player builder",
+      "href": "https://www.satoplayer.com/",
+      "target": "_blank"
+     },
+     {
+      "name": "Borno",
+      "desc": "Alphabet learning made fun",
+      "href": "https://borno-app.webflow.io/",
+      "target": "_blank"
+     }
+    ]
+   },
+   "blogs": {
+    "heading": "Blogs",
+    "cards": [
+     {
+      "href": "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+      "title": "Are Designers Just Copycats? The Truth About UX Originality",
+      "image": {
+       "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/design-and-the-question-of-authority",
+      "title": "Design and the Question of Authority",
+      "image": {
+       "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/how-to-create-good-web-design-everytime",
+      "title": "How to create good web design. EVERYTIME.",
+      "image": {
+       "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  "services": {
+   "route": "/services",
+   "title": "Services",
+   "heroWords": [
+    "our",
+    "services"
+   ],
+   "intro": "Building the digital shopfront for your business begins with understanding what makes your brand remarkable. We start there and make sure to translate everything into an unforgettable web experience.",
+   "tableHeader": [
+    "service",
+    "deliverables",
+    "cost"
+   ],
+   "services": [
+    {
+     "num": "01",
+     "name": "UI/UX Design",
+     "deliverables": "UX research, competitor analysis, user personas, user journey mapping, information architecture, sitemap, user flows, wireframing, UI design, design systems, responsive design, interactive prototyping, usability testing, design iterations, micro-interactions, developer handoff, design documentation, design QA, and post-launch UX support.",
+     "costLabel": "Starts at:",
+     "cost": "$1000"
+    },
+    {
+     "num": "02",
+     "name": "Web Design",
+     "deliverables": "Website strategy, content structure, sitemap, responsive web design, landing page design, corporate website design, e-commerce design, UI design, interaction design, animation and micro-interactions, design systems, responsive layouts, interactive prototypes, CMS-ready designs, developer handoff, design documentation, and post-launch design support.",
+     "costLabel": "Starts at:",
+     "cost": "$1000"
+    },
+    {
+     "num": "03",
+     "name": "Digital Design",
+     "deliverables": "Digital design strategy, social media creatives, digital campaigns, display ads, banner design, email creatives, presentation design, marketing collateral, promotional graphics, motion graphics, animated assets, illustrations, iconography, visual storytelling, campaign concepts, and digital brand assets.",
+     "costLabel": "Starts at:",
+     "cost": "$500"
+    },
+    {
+     "num": "04",
+     "name": "Web Development",
+     "deliverables": "Website development, responsive development, front-end development, CMS development, e-commerce development, custom web development, Webflow development, WordPress development, interactive elements, animations and transitions, API integrations, third-party integrations, performance optimization, SEO implementation, cross-browser testing, quality assurance, deployment, and post-launch maintenance.",
+     "costLabel": "Starts at:",
+     "cost": "$1500"
+    }
+   ],
+   "faq": {
+    "heading": "faq's",
+    "items": [
+     {
+      "num": "01",
+      "q": "Who we work with",
+      "a": "Brands that believe in the intangible value of design. Teams that want a development partner to get their visions built without compromises."
+     },
+     {
+      "num": "02",
+      "q": "What is our tech stack",
+      "a": "We build on Webflow, Framer, Wix, Shopify and Wordpress. If required, we write custom code for automations and added functionalities."
+     },
+     {
+      "num": "03",
+      "q": "Do we migrate websites",
+      "a": "Yes. A large chunk of our work involves frictionless migration of websites from legacy systems to new ones. We work closely with your old team to ensure you regain control over your website."
+     },
+     {
+      "num": "04",
+      "q": "Do we offer website maintenance",
+      "a": "Yes. Every site we build comes with 2 months of free maintenance post-handover. Beyond that we have maintenance retainers which is way more economical than keeping an in-house tech team on payroll."
+     },
+     {
+      "num": "05",
+      "q": "Do we offer a free UI and UX audit",
+      "a": "Yes. If you are unsure about your website being user-friendly, fill out the contact form and we will sit with you to give you honest and research-backed feedback."
+     }
+    ]
+   }
+  },
+  "work": {
+   "route": "/work",
+   "title": "Work",
+   "heroWords": [
+    "good",
+    "work",
+    "is here"
+   ],
+   "wrappers": [
+    {
+     "class": "work_element_content_wrapper",
+     "cards": [
+      {
+       "class": "work_card_portrait_hero bare_bones",
+       "href": "https://www.barebonescollective.com/",
+       "target": "_blank",
+       "title": "Bare Bones Collective",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap black hero",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca52_bbc.png",
+        "alt": "Cartoon skeleton wearing pink shorts surfing on teal ocean waves with a yellow surfboard against a black background.",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right_hero rise_india",
+       "href": "https://rise-india-wip.webflow.io/",
+       "target": "_blank",
+       "title": "RiseIndia",
+       "detail": "Official Strategic partner for Nike India",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap navy hero",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca4f_Mask group-min 1.png",
+        "alt": "Group of eight diverse young men forming a circle looking down at the camera with a dark blue sky background and a white Nike logo in the center.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6a8827216cb56caa7e99ca4f_Mask group-min 1-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6a8827216cb56caa7e99ca4f_Mask group-min 1.png",
+          "w": "741w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 741px"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left anomaly left",
+       "href": "https://anomalybrands.com/",
+       "target": "_blank",
+       "title": "Anomaly Brands",
+       "detail": "Web archive 2025",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap black",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca50_Frame 1244839316.png",
+        "alt": "Word 'Anomaly' repeated three times in white uppercase and lowercase letters on a black background, with the top and bottom instances shown upside down and distorted as reflections.",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right moshimbo right",
+       "href": "https://www.moshimbo.com/",
+       "target": "_blank",
+       "title": "Moshimbo",
+       "detail": "A beautiful design studio with an ugly ‘m’",
+       "detailClass": "work_card_header_detail_wrapper card_right",
+       "fillClass": "project_image_wrap violet",
+       "image": {
+        "src": "/images/6abc95dcc8b60eb215447084_moshimbo.png",
+        "alt": "A three-dimensional arrangement of pink letters scattered and rotated on a black background, appearing as abstract shapes without forming readable words.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abc95dcc8b60eb215447084_moshimbo-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abc95dcc8b60eb215447084_moshimbo.png",
+          "w": "756w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 756px"
+       },
+       "year": "2025",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left kulfi left",
+       "href": "https://www.kulficollective.com/",
+       "target": "_blank",
+       "title": "Kulfi Collective",
+       "detail": "Stories that shape culture",
+       "detailClass": "work_card_header_detail_wrapper kulfi",
+       "fillClass": "project_image_wrap green",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca53_kulfi.png",
+        "alt": "Three women sitting inside a car with colorful lighting, one in the foreground looking intently at the camera, text reading 'Stories that shape culture' overlayed in white.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6a8827216cb56caa7e99ca53_kulfi-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6a8827216cb56caa7e99ca53_kulfi.png",
+          "w": "764w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 764px"
+       },
+       "year": "2023",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_portrait post_office_studios right",
+       "href": "https://www.postofficestudios.com/",
+       "target": "_blank",
+       "title": "Post Office\nStudios",
+       "detail": "Exploring new dimensions of storytelling",
+       "detailClass": "work_card_header_detail_wrapper kulfi",
+       "fillClass": "project_image_wrap orange",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca54_Frame 1244839319.png",
+        "alt": "Close-up of a LEGO Batman minifigure with a black mask and cape, glowing eyes, and a grimacing mouth, set against a blurred orange background.",
+        "loading": "lazy"
+       },
+       "year": "2024",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left supari_studios left",
+       "href": "https://www.suparistudios.com/",
+       "target": "_blank",
+       "title": "Supari Studios",
+       "detail": "Killing it since 1975",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap yellow",
+       "image": {
+        "src": "/images/6abc951fa900d21d00bd0780_supari studios.png",
+        "alt": "Cartoon illustration of seven diverse characters with various hairstyles and outfits standing confidently on a hill with an orange sky and clouds in the background, accompanied by a small glowing-eyed robot on the right.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abc951fa900d21d00bd0780_supari studios-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abc951fa900d21d00bd0780_supari studios.png",
+          "w": "756w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 756px"
+       },
+       "year": "2023",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right tinker_labs right",
+       "href": "/watch-with-papa",
+       "target": null,
+       "title": "Watch with Papa",
+       "detail": null,
+       "detailClass": null,
+       "fillClass": "project_image_wrap dark-green",
+       "image": {
+        "src": "/images/6ab64d22277ca773fad5baff_WATCH WITH PAPA.png",
+        "alt": "Three men indoors with an older man in a brown suit and glasses standing behind two younger men sitting on a couch, one wearing a blue striped shirt and the other a black shirt.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab64d22277ca773fad5baff_WATCH WITH PAPA-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab64d22277ca773fad5baff_WATCH WITH PAPA-p-800.png",
+          "w": "800w"
+         },
+         {
+          "src": "/images/6ab64d22277ca773fad5baff_WATCH WITH PAPA.png",
+          "w": "1000w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
+       },
+       "year": "2026",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      }
+     ]
+    },
+    {
+     "class": "work_element_content_wrapper _2",
+     "cards": [
+      {
+       "class": "work_card_portrait jungle left",
+       "href": "/cheggout-sdk",
+       "target": null,
+       "title": "Cheggout SDK",
+       "detail": "Connecting banks, brands through intelligent rewards",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap dark-green",
+       "image": {
+        "src": "/images/6ab657cc17b9e5b0b6bc6502_cheggout.png",
+        "alt": "Mobile phone screen showing Bank of Baroda app with offer for 2 months of Audible Premium Plus free, options for hot deals, locals, flights, dine in, and gift cards, and featured coupons including free 2 months Audible Premium Plus and flat 20% off premium tea.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab657cc17b9e5b0b6bc6502_cheggout-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab657cc17b9e5b0b6bc6502_cheggout.png",
+          "w": "688w"
+         }
+        ],
+        "sizes": "(max-width: 688px) 100vw, 688px"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right right",
+       "href": "https://www.worldofwaste.co/",
+       "target": "_blank",
+       "title": "World of waste",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap bottle_green",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca58_image 4764.png",
+        "alt": "World map highlighting the countries Canada, United States of America, United Kingdom, Netherlands, Belgium, Germany, Poland, Spain, Morocco, Tunisia, Egypt, Turkey, Pakistan, India, Bangladesh, Sri Lanka in teal while other countries are in gray.",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6a8827216cb56caa7e99ca58_image 4764-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6a8827216cb56caa7e99ca58_image 4764.png",
+          "w": "724w"
+         }
+        ],
+        "sizes": "(max-width: 724px) 100vw, 724px"
+       },
+       "year": "2025",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left mocha left",
+       "href": "https://mocha-cafe-and-bar.webflow.io/",
+       "target": "_blank",
+       "title": "Mocha Cafe & Bar",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap yellow",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca59_image 4762.png",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right moshimbo right",
+       "href": "https://borno-app.webflow.io/",
+       "target": "_blank",
+       "title": "Borno",
+       "detail": "Learning Alphabets is Fun",
+       "detailClass": "work_card_header_detail_wrapper borno",
+       "fillClass": "project_image_wrap yellow-green",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca5a_image 4765.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6a8827216cb56caa7e99ca5a_image 4765-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6a8827216cb56caa7e99ca5a_image 4765.png",
+          "w": "614w"
+         }
+        ],
+        "sizes": "(max-width: 614px) 100vw, 614px"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left passion_films",
+       "href": "https://www.cheggout.com/",
+       "target": "_blank",
+       "title": "Cheggout",
+       "detail": "Powering engagement where money moves",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap beige",
+       "image": {
+        "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website-p-800.png",
+          "w": "800w"
+         },
+         {
+          "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website-p-1080.png",
+          "w": "1080w"
+         },
+         {
+          "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website-p-1600.png",
+          "w": "1600w"
+         },
+         {
+          "src": "/images/6abcdc81e22dcd746a3ee5c3_cheggout website.png",
+          "w": "1920w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_portrait moshimbo right",
+       "href": "https://school-of-yokohama.webflow.io/",
+       "target": "_blank",
+       "title": "School of Yokohama",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap beige",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca5c_image 4763.png",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left supari_studios left",
+       "href": "https://www.satoplayer.com/",
+       "target": "_blank",
+       "title": "Sato Player",
+       "detail": "Build a player that feels native to your.",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap grey",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca6f_Frame 1244839334.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6a8827216cb56caa7e99ca6f_Frame 1244839334-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6a8827216cb56caa7e99ca6f_Frame 1244839334.png",
+          "w": "756w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 756px"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right tinker_labs right",
+       "href": "https://project-mondrian.webflow.io/",
+       "target": "_blank",
+       "title": "Project Mondrian",
+       "detail": null,
+       "detailClass": null,
+       "fillClass": "project_image_wrap black",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca5d_Frame 1244839341.png",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      }
+     ]
+    },
+    {
+     "class": "work_element_content_wrapper _2",
+     "cards": [
+      {
+       "class": "work_card_portrait jungle left",
+       "href": "https://helloboon.com/",
+       "target": "_blank",
+       "title": "Hello Boon",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap dark-green",
+       "image": {
+        "src": "/images/6ab640d4beefa10c39505d11_boon water.png",
+        "loading": "lazy"
+       },
+       "year": "2024",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right right",
+       "href": "https://www.myndfulness.app/",
+       "target": "_blank",
+       "title": "Myndfulness",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap bottle_green",
+       "image": {
+        "src": "/images/6ab6410a1c654965066972f9_myndfulness.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab6410a1c654965066972f9_myndfulness-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab6410a1c654965066972f9_myndfulness.png",
+          "w": "741w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 741px"
+       },
+       "year": "2021",
+       "caption": "design / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left anomaly left",
+       "href": "https://www.tinkerlabs.in/",
+       "target": "_blank",
+       "title": "Tinkerlabs",
+       "detail": "Simple ideas can move the world.",
+       "detailClass": "work_card_header_detail_wrapper",
+       "fillClass": "project_image_wrap black",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca56_image 4757.png",
+        "loading": "lazy"
+       },
+       "year": "2024",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right moshimbo right",
+       "href": "https://www.womeninfinancegroup.com/",
+       "target": "_blank",
+       "title": "Women in Finance",
+       "detail": "Helping women reach their potential in the world of finance",
+       "detailClass": "work_card_header_detail_wrapper card_right",
+       "fillClass": "project_image_wrap violet",
+       "image": {
+        "src": "/images/6ab64f502de02804bb3520bd_women in finance.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab64f502de02804bb3520bd_women in finance-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab64f502de02804bb3520bd_women in finance.png",
+          "w": "615w"
+         }
+        ],
+        "sizes": "(max-width: 615px) 100vw, 615px"
+       },
+       "year": "2024",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_portrait moshimbo right",
+       "href": "https://www.junglebook.studio/",
+       "target": "_blank",
+       "title": "Jungle Book Studios",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap dark-green",
+       "image": {
+        "src": "/images/6a8827216cb56caa7e99ca57_Frame 1244839333.png",
+        "loading": "lazy"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right right",
+       "href": "https://www.enter.health/",
+       "target": "_blank",
+       "title": "Enter.health",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap blue_grey",
+       "image": {
+        "src": "/images/6abb8e5b0870d0db28d54357_enter.health.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abb8e5b0870d0db28d54357_enter.health-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abb8e5b0870d0db28d54357_enter.health.png",
+          "w": "724w"
+         }
+        ],
+        "sizes": "(max-width: 724px) 100vw, 724px"
+       },
+       "year": "2025",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_left supari_studios left",
+       "href": "https://girishnarayandas.webflow.io/",
+       "target": "_blank",
+       "title": "Girish Narayandas",
+       "detail": null,
+       "detailClass": null,
+       "fillClass": "project_image_wrap grey",
+       "image": {
+        "src": "/images/6abddef80ca1b180ba871a29_girish narayandas.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abddef80ca1b180ba871a29_girish narayandas-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abddef80ca1b180ba871a29_girish narayandas.png",
+          "w": "756w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 756px"
+       },
+       "year": "2026",
+       "caption": "DESIGN / DEVELOPMENT (PROJECT UNDER DEVELOPMENT)",
+       "view": "VIEW"
+      },
+      {
+       "class": "work_card_landscape_right tinker_labs right",
+       "href": "https://www.anuyajakatdar.com/",
+       "target": "_blank",
+       "title": "Anuya Jakatdar",
+       "detail": null,
+       "detailClass": null,
+       "fillClass": "project_image_wrap black",
+       "image": {
+        "src": "/images/6abddf078f380217bd69d1ee_anuya jakatdar.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abddf078f380217bd69d1ee_anuya jakatdar-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abddf078f380217bd69d1ee_anuya jakatdar.png",
+          "w": "517w"
+         }
+        ],
+        "sizes": "100vw"
+       },
+       "year": "2025",
+       "caption": "DESIGN / DEVELOPMENT",
+       "view": "VIEW"
+      }
+     ]
+    },
+    {
+     "class": "work_element_content_wrapper _2",
+     "cards": [
+      {
+       "class": "work_card_portrait jungle left",
+       "href": "https://www.lupinfoundation.in/",
+       "target": "_blank",
+       "title": "Lupin Foundation",
+       "detail": null,
+       "detailClass": "work_card_header_detail_wrapper hide",
+       "fillClass": "project_image_wrap dark-green",
+       "image": {
+        "src": "/images/6acdbef8b1bf4e9824fa9073_lupin.png",
+        "loading": "lazy"
+       },
+       "year": "2026",
+       "caption": "DEVELOPMENT",
+       "view": "VIEW"
+      }
+     ]
+    }
+   ]
+  },
+  "contact": {
+   "route": "/contact",
+   "title": "Contact",
+   "heroWords": [
+    "work",
+    "with",
+    "us"
+   ],
+   "info": [
+    {
+     "label": "CALL/WHATSAPP:",
+     "value": "+91 9085226014",
+     "href": "tel:+919085226014"
+    },
+    {
+     "label": "EMAIL:",
+     "value": "hello@righthemisphere.studio",
+     "href": "mailto:hello@righthemisphere.studio"
+    },
+    {
+     "label": "ADDRESS:",
+     "value": "5th floor, Peace Enclave, Ulubari,\nGuwahati-781007,\nAssam, India",
+     "href": null
+    }
+   ],
+   "form": {
+    "name": "email-form",
+    "redirect": "/",
+    "method": "get",
+    "turnstileSitekey": "0x4AAAAAAAQTptj2So4dx43e",
+    "title": "Fill out the form below and we will get back to you within a day.",
+    "fields": [
+     {
+      "tag": "input",
+      "type": "text",
+      "name": "name",
+      "dataName": "Name",
+      "placeholder": "Your Name",
+      "required": true,
+      "maxlength": "256",
+      "value": null,
+      "options": null
+     },
+     {
+      "tag": "input",
+      "type": "email",
+      "name": "email",
+      "dataName": "Email",
+      "placeholder": "Your Email",
+      "required": true,
+      "maxlength": "256",
+      "value": null,
+      "options": null
+     },
+     {
+      "tag": "select",
+      "type": null,
+      "name": "field-2",
+      "dataName": "Field 2",
+      "placeholder": null,
+      "required": true,
+      "maxlength": null,
+      "value": null,
+      "options": [
+       {
+        "value": "",
+        "label": "Estimated Budget"
+       },
+       {
+        "value": "<$1500",
+        "label": "<$1500"
+       },
+       {
+        "value": "$1500-$3000",
+        "label": "$1500-$3000"
+       },
+       {
+        "value": "$3000-$5000",
+        "label": "$3000-$5000"
+       },
+       {
+        "value": ">$5000",
+        "label": ">$5000"
+       }
+      ]
+     },
+     {
+      "tag": "textarea",
+      "type": null,
+      "name": "field",
+      "dataName": "Field",
+      "placeholder": "Project Description",
+      "required": true,
+      "maxlength": "5000",
+      "value": null,
+      "options": null
+     },
+     {
+      "tag": "input",
+      "type": "submit",
+      "name": null,
+      "dataName": null,
+      "placeholder": null,
+      "required": false,
+      "maxlength": null,
+      "value": "Submit",
+      "options": null
+     }
+    ],
+    "success": "Thank you! We've received\nyour message.",
+    "error": "Oops! Something went wrong while submitting the form."
+   }
+  },
+  "blog": {
+   "route": "/blog",
+   "title": "Blog",
+   "heroWords": [
+    "read",
+    "our",
+    "blogs"
+   ],
+   "heading": "Blogs",
+   "cards": [
+    {
+     "href": "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+     "slug": "are-designers-just-copycats-the-truth-about-ux-originality",
+     "title": "Are Designers Just Copycats? The Truth About UX Originality",
+     "image": {
+      "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/design-and-the-question-of-authority",
+     "slug": "design-and-the-question-of-authority",
+     "title": "Design and the Question of Authority",
+     "image": {
+      "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/how-to-create-good-web-design-everytime",
+     "slug": "how-to-create-good-web-design-everytime",
+     "title": "How to create good web design. EVERYTIME.",
+     "image": {
+      "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+     "slug": "mobile-first-design-why-most-websites-fail-on-phones",
+     "title": "Mobile First Design: Why Most Websites Fail on Phones",
+     "image": {
+      "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/on-webflow-right-hemisphere-and-how-we-work",
+     "slug": "on-webflow-right-hemisphere-and-how-we-work",
+     "title": "On Webflow, Right Hemisphere, and How We Work",
+     "image": {
+      "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+     "slug": "the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+     "title": "The subtle art of choosing typography and how to approach it.",
+     "image": {
+      "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+     "slug": "watching-movies-and-how-it-helped-me-become-a-better-designer",
+     "title": "Watching movies and how it helped me become a better designer.",
+     "image": {
+      "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/what-is-px-what-is-a-pt-what-is-dp",
+     "slug": "what-is-px-what-is-a-pt-what-is-dp",
+     "title": "What is px? What is a pt? What is dp?",
+     "image": {
+      "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+     "slug": "why-a-button-can-be-patented-but-a-heritage-cant",
+     "title": "Why a Button Can Be Patented, But a Heritage Can’t",
+     "image": {
+      "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    },
+    {
+     "href": "/blog/what-should-be-the-size-of-an-icon-button",
+     "slug": "what-should-be-the-size-of-an-icon-button",
+     "title": "What should be the size of an icon button?",
+     "image": {
+      "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+      "loading": "lazy",
+      "srcset": [
+       {
+        "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-500.png",
+        "w": "500w"
+       },
+       {
+        "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-800.png",
+        "w": "800w"
+       },
+       {
+        "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-1080.png",
+        "w": "1080w"
+       },
+       {
+        "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+        "w": "1200w"
+       }
+      ],
+      "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+     },
+     "cta": "READ BLOG"
+    }
+   ]
+  }
+ },
+ "caseStudies": {
+  "cheggout-sdk": {
+   "route": "/cheggout-sdk",
+   "title": "Cheggout SDK",
+   "h1": "cheggout sdk",
+   "brief": {
+    "label": "project brief",
+    "text": "Cheggout is an ad-tech company partnered with 20+ PSU banks in India. They reached us out to redesign the white-label marketplace SDK they integrate within banking apps."
+   },
+   "scope": "UI DESIGN",
+   "liveLink": {
+    "text": "VIEW WEBSITE",
+    "href": "https://www.cheggout.com/",
+    "target": "_blank"
+   },
+   "credit": {
+    "label": "DESIGNED BY OUR FRIEND:",
+    "link": {
+     "text": "ANUBHABH BORA",
+     "href": "#",
+     "target": "_blank"
+    }
+   },
+   "sections": [
+    {
+     "section": "section_project_subhead",
+     "blocks": [
+      {
+       "class": "project_stack_overview_wrapper",
+       "stack": [
+        {
+         "cells": [
+          "Design Stack",
+          "Figma"
+         ],
+         "num": "01"
+        },
+        {
+         "cells": [
+          "Highlights",
+          "Cheggout powers major private banks and institutions in India"
+         ],
+         "num": "02"
+        }
+       ],
+       "content": {
+        "label": "THE IDEA",
+        "paragraphs": [
+         "Cheggout enables banks to activate and retain customers with an interactive and gamified marketplace SDK which they integrate within the banks’ existing mobile applications. They wanted a user experience and interface revamp which ensured customer interacts and completes actions within the app. They wanted us to simplify existing userflow and create assets to resonate with the banking audience and their expectations from modern banking/commerce apps."
+        ]
+       }
+      },
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6abb839887ce1b2ac102aa4b_cheggout_logo.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abb839887ce1b2ac102aa4b_cheggout_logo-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abb839887ce1b2ac102aa4b_cheggout_logo.png",
+          "w": "800w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 800px"
+       }
+      }
+     ],
+     "elementClass": "project_subhead_element"
+    },
+    {
+     "section": "section_project_showcase_full_width_image",
+     "blocks": [
+      {
+       "class": "project_cheggout_lottie_wrapper",
+       "lottie": [
+        {
+         "class": "cheggout_json",
+         "data-src": "https://cdn.prod.website-files.com/6a8827216cb56caa7e99c99d/6abb83b9a7aa7f9e3c7b4e6c_homepage.json",
+         "data-loop": "1",
+         "data-autoplay": "1",
+         "data-renderer": "svg",
+         "data-duration": "0",
+         "data-default-duration": "0",
+         "data-loading": "lazy",
+         "data-direction": "1"
+        }
+       ]
+      }
+     ],
+     "elementClass": "project_showcase_full_width_image_element"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6abb87e827e21f49c7544d4a_cheggout_moble_app.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6abb87e827e21f49c7544d4a_cheggout_moble_app-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6abb87e827e21f49c7544d4a_cheggout_moble_app.png",
+          "w": "800w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 800px"
+       }
+      },
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The Context",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "This project involved understanding user motivations and what drives them. Cheggout had information clusters that helped them understand behaviour of customer segments. Our job was to ensure users who landed on the SDK interacted with the intended sections. Cheggout helps banks boost card value, drive activation, grow usage, and achieve measurable business growth. Our job was to use our UX and UI design experience to ensure the app SDK did as promised."
+         }
+        ]
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_2_images",
+     "blocks": [
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The CHALLENGE",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "Since Cheggout’s SDK integrates with multiple banks, each with their guidelines, we had to ensure what we designed could be easily optimized for each individual bank’s app. So, we began with a skeletal frame which clearly laid out the userflow and built on top of that. This helped us keep the experience uniform across all the banking apps, while making minimal changes to the UI elements so that the app SDK was customized enough for the bank but the experience remained the same."
+         }
+        ]
+       }
+      },
+      {
+       "class": "project_showcase_image_wrapper bg_color_grey",
+       "lottie": [
+        {
+         "class": "project_showcase_square_json scale_80",
+         "data-src": "https://cdn.prod.website-files.com/6a8827216cb56caa7e99c99d/6abb88d1dedc5ac37d6f92cc_performance%20marketing.json",
+         "data-loop": "1",
+         "data-autoplay": "1",
+         "data-renderer": "svg",
+         "data-duration": "0",
+         "data-default-duration": "9",
+         "data-loading": "eager",
+         "data-direction": "1"
+        }
+       ]
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element-copy"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_image_wrapper bg_color_grey",
+       "lottie": [
+        {
+         "class": "project_showcase_square_json scale_80",
+         "data-src": "https://cdn.prod.website-files.com/6a8827216cb56caa7e99c99d/6abb892c27e21f49c7556137_monetize%20hero.json",
+         "data-loop": "1",
+         "data-autoplay": "1",
+         "data-renderer": "svg",
+         "data-duration": "6.5",
+         "data-default-duration": "0",
+         "data-loading": "eager",
+         "data-direction": "1"
+        }
+       ]
+      },
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "THE SUCCESS",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "The SDK led to 46% more debit card and mobile app activations and banks saw six times more digital payments. User engagement grew by four times and retained three times more than before the app was integrated."
+         }
+        ]
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_vew_project",
+     "blocks": [
+      {
+       "class": "button_v2 wide w-inline-block",
+       "button": {
+        "text": "see more work",
+        "href": "/about",
+        "target": null
+       }
+      }
+     ],
+     "elementClass": "project_showcase_live_proj_element"
+    }
+   ]
+  },
+  "watch-with-papa": {
+   "route": "/watch-with-papa",
+   "title": "Watch with papa",
+   "h1": "watch with papa",
+   "brief": {
+    "label": "project brief",
+    "text": "Barebone Collective reached out to us to build the backend of a web application for Amazon Prime Video’s 2026 Father’s Day campaign ‘Watch with Papa’."
+   },
+   "scope": "FRONT END DEVELOPMENT / BACKEND DEVELEOPMENT",
+   "liveLink": {
+    "text": "VIEW CAMPAIGN",
+    "href": "https://www.youtube.com/watch?v=Xkd0TjIPlpM&t=2s",
+    "target": "_blank"
+   },
+   "credit": {
+    "label": "DESIGNED BY OUR FRIENDS AT:",
+    "link": {
+     "text": "BARE BONES COLLECTIVE",
+     "href": "#",
+     "target": "_blank"
+    }
+   },
+   "sections": [
+    {
+     "section": "section_project_subhead",
+     "blocks": [
+      {
+       "class": "project_stack_overview_wrapper",
+       "stack": [
+        {
+         "cells": [
+          "Design Stack",
+          "Figma"
+         ],
+         "num": "01"
+        },
+        {
+         "cells": [
+          "Dev Stack",
+          "Loveable, Digital Ocean"
+         ],
+         "num": "02"
+        },
+        {
+         "cells": [
+          "Highlights",
+          "Completed in 5 working days"
+         ],
+         "num": "03"
+        }
+       ]
+      },
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6ab64fa844f3939bf9427ded_PRIME VIDEO.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab64fa844f3939bf9427ded_PRIME VIDEO-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab64fa844f3939bf9427ded_PRIME VIDEO-p-800.png",
+          "w": "800w"
+         },
+         {
+          "src": "/images/6ab64fa844f3939bf9427ded_PRIME VIDEO.png",
+          "w": "1000w"
+         }
+        ],
+        "sizes": "100vw"
+       }
+      }
+     ],
+     "elementClass": "project_subhead_element"
+    },
+    {
+     "section": "section_project_showcase_full_width_image",
+     "blocks": [
+      {
+       "class": "project_showcase_video",
+       "video": {
+        "iframeSrc": "//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FXkd0TjIPlpM%3Fstart%3D2%26feature%3Doembed%26start%3D2&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DXkd0TjIPlpM&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXkd0TjIPlpM%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube",
+        "title": "WATCH WITH PAPA | HAPPY FATHER's DAY | ft @Puravjha_, Dalip Tahil, @aatmeme",
+        "embedWrapper": "w-video w-embed",
+        "paddingTopRatio": "56.17% (measured 772.89/1376)"
+       }
+      }
+     ],
+     "elementClass": "project_showcase_full_width_image_element"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6ab6506dba0a9f439d9e9ddc_6a3bb8254db5436629f819cf_01.gif",
+        "loading": "lazy"
+       }
+      },
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The Idea",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "The web app helped kids schedule the one thing dads really want - time together."
+         },
+         {
+          "type": "p",
+          "text": "On the app, you can:"
+         },
+         {
+          "type": "ul",
+          "items": [
+           "Pick a favourite show or movie on Prime Video",
+           "Choose a date and time to watch it with your father",
+           "Generate a personalised ticket",
+           "Send it to your father"
+          ]
+         },
+         {
+          "type": "p",
+          "text": "It also had the following add-on fun activities:"
+         },
+         {
+          "type": "ul",
+          "items": [
+           "Popcorn making responsibility",
+           "Permission for unlimited dad jokes",
+           "A 15-minute post-watch discussion"
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The Context",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "The frontend was designed by Barebones Collective and developed with Loveable. Our task was to add the functionality layer and build a robust backend to handle the expected traffic during the campaign. While the application was a standalone system, the features like booking tickets, add-ons and generating the personalized ticket mimicked the theatre booking experience everyone is used to. So, we had to ensure the backend was built to support the frontend experience at all times. And given the audience base of Amazon Prime Video, we had to optimize the backend to cater them all."
+         }
+        ]
+       }
+      },
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6ab65018a665c3dd2f0d5a0f_6a3bb859ea7ad84718cb676a_02.gif",
+        "loading": "lazy"
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6ab65004e2f1ff0dcc6003a5_6a3bb8b04973e3e0cd332ef5_03.gif",
+        "loading": "lazy"
+       }
+      },
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The Challenge",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "One of the challenges was ensuring the application worked without storing any user data. The brief stated users should be able to access and generate tickets without having to create an account or sign in to the application. Since the application lets users book more than one ticket, listing all tickets was a ‘must-have’ feature. Without having a database to associate users to their activity within the app was a challenge. We found a way around the no-database policy by storing the ticket booking information on the users’ local storage which ensured they found all tickets they booked when they accessed the application from the same browser."
+         }
+        ]
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_image-text",
+     "blocks": [
+      {
+       "class": "project_showcase_text_wrapper",
+       "content": {
+        "label": "The Success",
+        "blocks": [
+         {
+          "type": "p",
+          "text": "We finished the project in 5 days, including multiple cups of coffee and rounds of tweaking and testing the backend to ensure Prime video subscribers loved the experience as much as we and our pals at Barebones Collective did."
+         },
+         {
+          "type": "p",
+          "text": "All and all, it was a fun experience for us. And for us, it was the first exposure to adding a backend to an AI generated frontend."
+         }
+        ]
+       }
+      },
+      {
+       "class": "project_showcase_image_wrapper",
+       "image": {
+        "src": "/images/6ab65018a665c3dd2f0d5a0f_6a3bb859ea7ad84718cb676a_02.gif",
+        "loading": "lazy"
+       }
+      }
+     ],
+     "elementClass": "project_showcase_image-text_element"
+    },
+    {
+     "section": "section_project_showcase_full_width_image",
+     "blocks": [
+      {
+       "class": "project_showcase_video",
+       "image": {
+        "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563.png",
+        "loading": "lazy",
+        "srcset": [
+         {
+          "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563-p-500.png",
+          "w": "500w"
+         },
+         {
+          "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563-p-800.png",
+          "w": "800w"
+         },
+         {
+          "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563-p-1080.png",
+          "w": "1080w"
+         },
+         {
+          "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563-p-1600.png",
+          "w": "1600w"
+         },
+         {
+          "src": "/images/6ab651eaf9a8ee1e3c5659fe_Frame 1244839563.png",
+          "w": "1920w"
+         }
+        ],
+        "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
+       }
+      }
+     ],
+     "elementClass": "project_showcase_full_width_image_element"
+    },
+    {
+     "section": "section_project_showcase_vew_project",
+     "blocks": [
+      {
+       "class": "button_v2 wide w-inline-block",
+       "button": {
+        "text": "see more work",
+        "href": "/about",
+        "target": null
+       }
+      }
+     ],
+     "elementClass": "project_showcase_live_proj_element"
+    }
+   ]
+  }
+ },
+ "blogPosts": [
+  {
+   "slug": "are-designers-just-copycats-the-truth-about-ux-originality",
+   "route": "/blog/are-designers-just-copycats-the-truth-about-ux-originality",
+   "listOrder": 1,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "Are Designers Just Copycats? The Truth About UX Originality",
+   "subtitle": "Are designers just copying each other? A look at design patterns, tradition, and why originality in UX often builds on what already works.",
+   "heroImage": {
+    "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4f88ef046e735fd9974fe_rose-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4f88ef046e735fd9974fe_rose.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "March 13, 2025",
+    "authorLabel": "author:",
+    "author": "Rajashri Das",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "Has tradition become performative? Culture today seems to live under constant pressure to stay relevant. Rituals are reshaped, symbols are polished, and heritage is neatly packaged for modern audiences. Traditions quietly shift to match trends, tastes, and whatever the moment demands. What once moved naturally from one generation to the next now arrives curated and market ready. In the name of keeping tradition alive, people have found rather profitable ways to redesign it.",
+     "text": "Has tradition become performative? Culture today seems to live under constant pressure to stay relevant. Rituals are reshaped, symbols are polished, and heritage is neatly packaged for modern audiences. Traditions quietly shift to match trends, tastes, and whatever the moment demands. What once moved naturally from one generation to the next now arrives curated and market ready. In the name of keeping tradition alive, people have found rather profitable ways to redesign it."
+    },
+    {
+     "type": "p",
+     "html": "And in many ways, this is inevitable. Time changes things. People change with it. What one generation treats as sacred, the next generation edits, alters, and reshapes to suit its own moment. Traditions bend, meanings shift, and ideas slowly pick up new shapes as they pass through different hands. Creative work has always moved like this. Artists look at what came before them, borrow from it, argue with it, sometimes improve it, sometimes simply recycle it. Very little appears out of nowhere. Most things we proudly call new are often just older ideas wearing better clothes.",
+     "text": "And in many ways, this is inevitable. Time changes things. People change with it. What one generation treats as sacred, the next generation edits, alters, and reshapes to suit its own moment. Traditions bend, meanings shift, and ideas slowly pick up new shapes as they pass through different hands. Creative work has always moved like this. Artists look at what came before them, borrow from it, argue with it, sometimes improve it, sometimes simply recycle it. Very little appears out of nowhere. Most things we proudly call new are often just older ideas wearing better clothes."
+    },
+    {
+     "type": "p",
+     "html": "Better clothes. Who does not like them? The same idea appears quite clearly in design, especially in the world of UX and UI. Spend enough time looking at digital products and the similarities start to show. The same navigation bars, the same card layouts, the same buttons appearing again and again across different platforms. Even when the product is new, the interface rarely feels unfamiliar. Like the outfit repeater debate. Everyone frowns upon it, yet most wardrobes run on it. Design is not very different. Are designers creating something new, or just giving old ideas better clothes?",
+     "text": "Better clothes. Who does not like them? The same idea appears quite clearly in design, especially in the world of UX and UI. Spend enough time looking at digital products and the similarities start to show. The same navigation bars, the same card layouts, the same buttons appearing again and again across different platforms. Even when the product is new, the interface rarely feels unfamiliar. Like the outfit repeater debate. Everyone frowns upon it, yet most wardrobes run on it. Design is not very different. Are designers creating something new, or just giving old ideas better clothes?"
+    },
+    {
+     "type": "p",
+     "html": "In many ways, this repetition is not accidental. Design depends on familiarity. A button should look like a button, not something people have to pause and figure out. A menu should clearly tell customers what food is available, not confuse them with stylish calligraphy. Interfaces work best when people understand them instantly. Users arrive with expectations. They assume things will behave in ways they have already learned elsewhere. When designers follow those expectations, the experience feels smooth and natural. Not every corner of design needs a state of the art evolution. Sometimes the smartest choice is to keep things simple and familiar.",
+     "text": "In many ways, this repetition is not accidental. Design depends on familiarity. A button should look like a button, not something people have to pause and figure out. A menu should clearly tell customers what food is available, not confuse them with stylish calligraphy. Interfaces work best when people understand them instantly. Users arrive with expectations. They assume things will behave in ways they have already learned elsewhere. When designers follow those expectations, the experience feels smooth and natural. Not every corner of design needs a state of the art evolution. Sometimes the smartest choice is to keep things simple and familiar."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f44b449188fc1528361f_69b920925f0e0c6813ec90a2_93e1c310.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:1536pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "Interlocking Monograms across luxury brands - Chanel's CC and Gucci's GG",
+     "text": "Interlocking Monograms across luxury brands - Chanel's CC and Gucci's GG"
+    },
+    {
+     "type": "p",
+     "html": "And because familiarity matters so much, designers rarely begin from absolute scratch. Much of the design world already runs on shared structures that people recognize. Tools like Figma and Wix openly provide templates, components, and readymade layouts. Things like navigation bars, cards, grids, and buttons appear again and again across products because people already know how to use them. Designers step in, arrange these pieces, adapt them, and shape them around the needs of a product. The work is not about inventing every element from nothing. It is about knowing how to use what already exists well.",
+     "text": "And because familiarity matters so much, designers rarely begin from absolute scratch. Much of the design world already runs on shared structures that people recognize. Tools like Figma and Wix openly provide templates, components, and readymade layouts. Things like navigation bars, cards, grids, and buttons appear again and again across products because people already know how to use them. Designers step in, arrange these pieces, adapt them, and shape them around the needs of a product. The work is not about inventing every element from nothing. It is about knowing how to use what already exists well."
+    },
+    {
+     "type": "p",
+     "html": "This pattern may sound extremely similar to T.S Eliot’s essay<strong> ‘Tradition and Individual Talent”</strong>. Eliot argued that tradition is never separate from the present. Every new work grows out of what already exists. The past does not disappear, it just shapes the present. What we call originality is just tradition, slightly rearranged.",
+     "text": "This pattern may sound extremely similar to T.S Eliot’s essay ‘Tradition and Individual Talent”. Eliot argued that tradition is never separate from the present. Every new work grows out of what already exists. The past does not disappear, it just shapes the present. What we call originality is just tradition, slightly rearranged."
+    },
+    {
+     "type": "p",
+     "html": "Seen this way, the idea of designers as copycats feels slightly misplaced. UX and UI grow by building on what already exists. Patterns repeat because people understand them. Designers simply refine them, adapt them, and make them work better. Sometimes originality is not invention. It is simply knowing what deserves to be repeated.",
+     "text": "Seen this way, the idea of designers as copycats feels slightly misplaced. UX and UI grow by building on what already exists. Patterns repeat because people understand them. Designers simply refine them, adapt them, and make them work better. Sometimes originality is not invention. It is simply knowing what deserves to be repeated."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/design-and-the-question-of-authority",
+      "title": "Design and the Question of Authority",
+      "image": {
+       "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/on-webflow-right-hemisphere-and-how-we-work",
+      "title": "On Webflow, Right Hemisphere, and How We Work",
+      "image": {
+       "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "design-and-the-question-of-authority",
+   "route": "/blog/design-and-the-question-of-authority",
+   "listOrder": 2,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "Design and the Question of Authority",
+   "subtitle": "Design has always been an act of interpretation. What happens when AI begins to share that role?",
+   "heroImage": {
+    "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "March 12, 2026",
+    "authorLabel": "author:",
+    "author": "Rajashri Das",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "Design is power because it is interpretation. To design is to decide what is central and what is peripheral. That authority has largely belonged to humans. It may not for much longer.",
+     "text": "Design is power because it is interpretation. To design is to decide what is central and what is peripheral. That authority has largely belonged to humans. It may not for much longer."
+    },
+    {
+     "type": "p",
+     "html": "This is not a rejection of progress. The world is moving fast. Artificial intelligence now designs interfaces, writes code, builds systems, and makes decisions in seconds. It consumes energy and water at scale to do so. And we call that efficiency. The same human mind that once questioned God during the Renaissance now asks algorithms what to write, what to choose, what to think. We fought wars. We built nations. Now we outsource judgement. Speed has increased. Authority is slipping.",
+     "text": "This is not a rejection of progress. The world is moving fast. Artificial intelligence now designs interfaces, writes code, builds systems, and makes decisions in seconds. It consumes energy and water at scale to do so. And we call that efficiency. The same human mind that once questioned God during the Renaissance now asks algorithms what to write, what to choose, what to think. We fought wars. We built nations. Now we outsource judgement. Speed has increased. Authority is slipping."
+    },
+    {
+     "type": "p",
+     "html": "And authority has slipped before. During the Renaissance, humans began to question divine power and reconsider their place in the hierarchy of the world. The idea that authority could be examined, even challenged, took hold. Art reflected that shift. In <strong><em>The Creation of Adam</em></strong>, Adam does not kneel or shrink. He meets God at eye level. The space between them is narrow.  Meaning is no longer untouchable. It is open to human interpretation.",
+     "text": "And authority has slipped before. During the Renaissance, humans began to question divine power and reconsider their place in the hierarchy of the world. The idea that authority could be examined, even challenged, took hold. Art reflected that shift. In The Creation of Adam, Adam does not kneel or shrink. He meets God at eye level. The space between them is narrow.  Meaning is no longer untouchable. It is open to human interpretation."
+    },
+    {
+     "type": "p",
+     "html": "If the Renaissance brought interpretation into human hands, the AI era is quietly taking it back. Algorithms decide what ranks first, what gets seen, what is suggested, what disappears. They influence decisions before humans realise a decision has been shaped. We call it progress. We rarely call it power. But when machines interpret the world for us, humans are no longer the final authority.",
+     "text": "If the Renaissance brought interpretation into human hands, the AI era is quietly taking it back. Algorithms decide what ranks first, what gets seen, what is suggested, what disappears. They influence decisions before humans realise a decision has been shaped. We call it progress. We rarely call it power. But when machines interpret the world for us, humans are no longer the final authority."
+    },
+    {
+     "type": "p",
+     "html": "If AI can interpret, generate, and build systems on its own, what keeps designers relevant? When algorithms decide the order, draft the layout, and shape the flow, humans step back. The structure is set before the designer begins. The designer edits what the system has already created. When machines interpret, they hold part of the power.",
+     "text": "If AI can interpret, generate, and build systems on its own, what keeps designers relevant? When algorithms decide the order, draft the layout, and shape the flow, humans step back. The structure is set before the designer begins. The designer edits what the system has already created. When machines interpret, they hold part of the power."
+    },
+    {
+     "type": "p",
+     "html": "If Renaissance was a moment when humans claimed authority over meaning, then the AI era asks a harder question. What happens when interpretation is no longer only human? What is left for humans when systems make the decisions? Is this another shift in power, or the start of something else? The destabilisation has begun. Where it leads is still unclear.",
+     "text": "If Renaissance was a moment when humans claimed authority over meaning, then the AI era asks a harder question. What happens when interpretation is no longer only human? What is left for humans when systems make the decisions? Is this another shift in power, or the start of something else? The destabilisation has begun. Where it leads is still unclear."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/how-to-create-good-web-design-everytime",
+      "title": "How to create good web design. EVERYTIME.",
+      "image": {
+       "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+      "title": "Watching movies and how it helped me become a better designer.",
+      "image": {
+       "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "how-to-create-good-web-design-everytime",
+   "route": "/blog/how-to-create-good-web-design-everytime",
+   "listOrder": 3,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "How to create good web design. EVERYTIME.",
+   "subtitle": "Good web design comes from making clear choices while solving real problems. Fancy rarely fixes bad structure.",
+   "heroImage": {
+    "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "",
+    "authorLabel": "author:",
+    "author": "",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "All web design is composed of four elements.",
+     "text": "All web design is composed of four elements."
+    },
+    {
+     "type": "ol",
+     "items": [
+      {
+       "html": "Text",
+       "text": "Text"
+      },
+      {
+       "html": "Empty Space",
+       "text": "Empty Space"
+      },
+      {
+       "html": "Images / videos.",
+       "text": "Images / videos."
+      },
+      {
+       "html": "Geometric objects (your button, tag enclosures etc.)",
+       "text": "Geometric objects (your button, tag enclosures etc.)"
+      }
+     ]
+    },
+    {
+     "type": "p",
+     "html": "A good designer is the one who knows how to choreograph the dance between the 4 elements in a way that makes sense to the audience.",
+     "text": "A good designer is the one who knows how to choreograph the dance between the 4 elements in a way that makes sense to the audience."
+    },
+    {
+     "type": "h2",
+     "html": "But, how do we even start ?",
+     "text": "But, how do we even start ?"
+    },
+    {
+     "type": "p",
+     "html": "Looking for references on pinterest or dribble is easy but before we go on typing on our search bars, it is important to learn 2 concepts —",
+     "text": "Looking for references on pinterest or dribble is easy but before we go on typing on our search bars, it is important to learn 2 concepts —"
+    },
+    {
+     "type": "h2",
+     "html": "1. The grid",
+     "text": "1. The grid"
+    },
+    {
+     "type": "p",
+     "html": "The grid helps navigate the white space of our artboards and more importantly determines how and where we would place our elements. Grids can range from simple squares to complex ones with columns and gutters.",
+     "text": "The grid helps navigate the white space of our artboards and more importantly determines how and where we would place our elements. Grids can range from simple squares to complex ones with columns and gutters."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f24b24400bb5e27a579d_69958729da1f0e63a0a1cbc5_1_urIhtVIJstMyskJ-U287OQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "For simplicity, here is an equally spaced grid with grid lines running horizontally and vertically.",
+     "text": "For simplicity, here is an equally spaced grid with grid lines running horizontally and vertically."
+    },
+    {
+     "type": "h2",
+     "html": "2. Rhythm",
+     "text": "2. Rhythm"
+    },
+    {
+     "type": "p",
+     "html": "Think of rhythm as pattern repetition. It could be as simple as repeating elements in regular intervals and as complex as trying to mimic rhyming schemes in poetry.",
+     "text": "Think of rhythm as pattern repetition. It could be as simple as repeating elements in regular intervals and as complex as trying to mimic rhyming schemes in poetry."
+    },
+    {
+     "type": "p",
+     "html": "Note that rhythm is not limited to repeating shapes and patterns. It could also be done with colors, sizes, typography and any element or combination of elements in your design.",
+     "text": "Note that rhythm is not limited to repeating shapes and patterns. It could also be done with colors, sizes, typography and any element or combination of elements in your design."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f26c50abfe13ac4f2701_69958729da1f0e63a0a1cbb6_1_JvzueVcGfkkNy5TfQspUog.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "In the image above, we see a basic rhythm of a collection of 3, 1 and 2 squares repeated vertically.",
+     "text": "In the image above, we see a basic rhythm of a collection of 3, 1 and 2 squares repeated vertically."
+    },
+    {
+     "type": "h2",
+     "html": "Let’s try to create a poster.",
+     "text": "Let’s try to create a poster."
+    },
+    {
+     "type": "p",
+     "html": "For simplicity, we will limit ourselves to circular dots, two text sizes and a basic square grid.",
+     "text": "For simplicity, we will limit ourselves to circular dots, two text sizes and a basic square grid."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f290d299dff7ab2cd19c_69958729da1f0e63a0a1cbb9_1_yh1iSuohCBGAdF3ZUwfsAg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:528pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "Elements we will use to create our poster.",
+     "text": "Elements we will use to create our poster."
+    },
+    {
+     "type": "h2",
+     "html": "1. First, let’s think about rhythm.",
+     "text": "1. First, let’s think about rhythm."
+    },
+    {
+     "type": "p",
+     "html": "Let’s start with something simple (A,B,A,B) and think of ways to make it interesting.",
+     "text": "Let’s start with something simple (A,B,A,B) and think of ways to make it interesting."
+    },
+    {
+     "type": "p",
+     "html": "<em>Remember, how you determine your rhythm will depend on what you decide to draw inspiration from. The more time you spend in this step, the better your results.</em>",
+     "text": "Remember, how you determine your rhythm will depend on what you decide to draw inspiration from. The more time you spend in this step, the better your results."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f2b02feffd9ef0dc33b2_69958729da1f0e63a0a1cbbf_1_sAWCZ3geeO_ZcSZE8O4u_A.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:528pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "Blue dots create a pattern A,B,A,B",
+     "text": "Blue dots create a pattern A,B,A,B"
+    },
+    {
+     "type": "p",
+     "html": "While the pattern above looks fine, let’s think of making it less obvious to the viewer. We want the pattern to register on the viewer’s subconcious.",
+     "text": "While the pattern above looks fine, let’s think of making it less obvious to the viewer. We want the pattern to register on the viewer’s subconcious."
+    },
+    {
+     "type": "h3",
+     "html": "What if we made the second set of A, B inverted/mirrored ?",
+     "text": "What if we made the second set of A, B inverted/mirrored ?"
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4f2fa9fbb937d90815e67_69958729da1f0e63a0a1cbc8_1_oFKW8U_W6Ms0txWo87V8JA (1).png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "As you can see, the pattern looks just random enough to generate intrigue.",
+     "text": "As you can see, the pattern looks just random enough to generate intrigue."
+    },
+    {
+     "type": "h3",
+     "html": "2. Now, let’s put our dots on the grid.",
+     "text": "2. Now, let’s put our dots on the grid."
+    },
+    {
+     "type": "p",
+     "html": "To make space for text, we will get rid of the stroked circles.",
+     "text": "To make space for text, we will get rid of the stroked circles."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f32b9be8f806ae1d479d_69958729da1f0e63a0a1cbcb_1_tloqQiLlcw2aTNHF5O6rcg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "Rhythimic patterns of the dots determined in the previous step, laid out on the grid.",
+     "text": "Rhythimic patterns of the dots determined in the previous step, laid out on the grid."
+    },
+    {
+     "type": "p",
+     "html": "We can now see clear white spaces for our text to fit in.",
+     "text": "We can now see clear white spaces for our text to fit in."
+    },
+    {
+     "type": "h2",
+     "html": "3. Finally, we add text.",
+     "text": "3. Finally, we add text."
+    },
+    {
+     "type": "p",
+     "html": "For adding another level of rhythm, we are going for small text, followed by big text and another block of small text. We can then place them in the white space provided by our dotted patterns.",
+     "text": "For adding another level of rhythm, we are going for small text, followed by big text and another block of small text. We can then place them in the white space provided by our dotted patterns."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f36fbc8313cf7d6c5368_69958729da1f0e63a0a1cbc2_1_J4IpZgqOXwe2M8zZ1Axkyw.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h3",
+     "html": "4. Can we add another level of rhythm using color ?",
+     "text": "4. Can we add another level of rhythm using color ?"
+    },
+    {
+     "type": "p",
+     "html": "Let’s try to do it, but keeping in mind- we want to draw attention to the content that is included in our poster.",
+     "text": "Let’s try to do it, but keeping in mind- we want to draw attention to the content that is included in our poster."
+    },
+    {
+     "type": "p",
+     "html": "We will color the first dot in pattern ‘B’- green. The same green will appear again in ‘B mirrored’ near to the paragraph text.",
+     "text": "We will color the first dot in pattern ‘B’- green. The same green will appear again in ‘B mirrored’ near to the paragraph text."
+    },
+    {
+     "type": "h3",
+     "html": "Finally, here is our final product.",
+     "text": "Finally, here is our final product."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f39943e437a1b64a17db_69958729da1f0e63a0a1cbbc_1_DXXNT6Wj11MLC0BKlGspow.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "See how the green dots, while fitting in our initial rhythm, also brings attention to the blocks of text.",
+     "text": "See how the green dots, while fitting in our initial rhythm, also brings attention to the blocks of text."
+    },
+    {
+     "type": "h2",
+     "html": "Conclusion:",
+     "text": "Conclusion:"
+    },
+    {
+     "type": "p",
+     "html": "There is no standard rulebook to create good design, else every design would look the same. While it is important to follow rhythms and think of design analytically, we must also remember to make our design human (breaking rules where we deem necessary). I would argue that most web design currently look same because the thought leaders at big tech have all created easily accessible design systems, making it easier for us to rip off of them. However, this results in design that looks suspiciously similar to everything else that exits on the web.",
+     "text": "There is no standard rulebook to create good design, else every design would look the same. While it is important to follow rhythms and think of design analytically, we must also remember to make our design human (breaking rules where we deem necessary). I would argue that most web design currently look same because the thought leaders at big tech have all created easily accessible design systems, making it easier for us to rip off of them. However, this results in design that looks suspiciously similar to everything else that exits on the web."
+    },
+    {
+     "type": "p",
+     "html": "<strong>As designers we must strive to create our own recipes and flavors that stand apart in the crowd. This can only be achieved if we understand the basics, practice more, and think more about the foundation of what makes good design.</strong>",
+     "text": "As designers we must strive to create our own recipes and flavors that stand apart in the crowd. This can only be achieved if we understand the basics, practice more, and think more about the foundation of what makes good design."
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+      "title": "Why a Button Can Be Patented, But a Heritage Can’t",
+      "image": {
+       "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/design-and-the-question-of-authority",
+      "title": "Design and the Question of Authority",
+      "image": {
+       "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "mobile-first-design-why-most-websites-fail-on-phones",
+   "route": "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+   "listOrder": 4,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "Mobile First Design: Why Most Websites Fail on Phones",
+   "subtitle": "Most websites are designed for desktop but used on mobile. Understand the design gaps that impact usability, performance, and user retention.",
+   "heroImage": {
+    "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "April 10, 2026",
+    "authorLabel": "author:",
+    "author": "Rajashri Das",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "h2",
+     "html": "Desktop Design vs Mobile Reality",
+     "text": "Desktop Design vs Mobile Reality"
+    },
+    {
+     "type": "p",
+     "html": "Most websites are not designed for how people actually use them. They are built for large screens, full attention, and precise interaction. That is not how users show up anymore. They are on smaller screens, switching between tasks, making quick decisions. When design ignores this, it does not matter how good it looks. It fails in use.",
+     "text": "Most websites are not designed for how people actually use them. They are built for large screens, full attention, and precise interaction. That is not how users show up anymore. They are on smaller screens, switching between tasks, making quick decisions. When design ignores this, it does not matter how good it looks. It fails in use."
+    },
+    {
+     "type": "p",
+     "html": "Most websites are designed for desktops but used on phones. They assume users will read everything, click accurately, and take their time. What works with a mouse does not work on touch. What looks clear on a large screen feels crowded on a small one. Users leave.",
+     "text": "Most websites are designed for desktops but used on phones. They assume users will read everything, click accurately, and take their time. What works with a mouse does not work on touch. What looks clear on a large screen feels crowded on a small one. Users leave."
+    },
+    {
+     "type": "h2",
+     "html": "Common Mobile UX Failures",
+     "text": "Common Mobile UX Failures"
+    },
+    {
+     "type": "p",
+     "html": "Many websites are not built for mobile first use. Layouts break, text becomes hard to read, and navigation gets unclear. Menus become complex, buttons get smaller, and key actions become harder to find. On a small screen, that is enough to lose users.",
+     "text": "Many websites are not built for mobile first use. Layouts break, text becomes hard to read, and navigation gets unclear. Menus become complex, buttons get smaller, and key actions become harder to find. On a small screen, that is enough to lose users."
+    },
+    {
+     "type": "p",
+     "html": "Content adds to the problem. Long paragraphs, small fonts, and too many elements compete for attention. Users do not process all of it. They scroll past and miss key information.",
+     "text": "Content adds to the problem. Long paragraphs, small fonts, and too many elements compete for attention. Users do not process all of it. They scroll past and miss key information."
+    },
+    {
+     "type": "p",
+     "html": "Pages that take more than a few seconds to load lose users before they start. Speed directly impacts whether users stay or leave. This happens because most websites are not tested in real conditions. Different devices, screen sizes, and network speeds reveal issues that do not show up on a desktop.",
+     "text": "Pages that take more than a few seconds to load lose users before they start. Speed directly impacts whether users stay or leave. This happens because most websites are not tested in real conditions. Different devices, screen sizes, and network speeds reveal issues that do not show up on a desktop."
+    },
+    {
+     "type": "h2",
+     "html": "How Users Actually Interact on Mobile",
+     "text": "How Users Actually Interact on Mobile"
+    },
+    {
+     "type": "p",
+     "html": "Users do not use websites in ideal conditions. They are moving, multitasking, and checking things quickly. Attention is limited, but decision speed is high. As noted by Steve Jobs, mobile introduced a constraint. Interfaces need to work on small screens, often used with one hand, in motion, and understood within seconds. What appears at the top of the screen gets seen first, and often only. Content below the fold is often not seen. This forces prioritisation of what appears first. A common user observation on Reddit highlights the same constraint. Smaller screens force designers to focus on what matters while keeping the rest discoverable. This leads to simpler flows and less complexity. Interaction is physical. Most usage is one handed. The thumb does the work. The bottom of the screen is easier to reach, while top corners require more effort. Actions placed there slow users down. Touch is less precise and has no hover. Small targets and tight spacing increase errors. Desktop patterns do not translate directly. Users decide quickly if something is relevant, useful, and worth continuing. If not, they move on. If a website does not work in real conditions, it does not work. Context matters more than layout. Most websites still ignore it.",
+     "text": "Users do not use websites in ideal conditions. They are moving, multitasking, and checking things quickly. Attention is limited, but decision speed is high. As noted by Steve Jobs, mobile introduced a constraint. Interfaces need to work on small screens, often used with one hand, in motion, and understood within seconds. What appears at the top of the screen gets seen first, and often only. Content below the fold is often not seen. This forces prioritisation of what appears first. A common user observation on Reddit highlights the same constraint. Smaller screens force designers to focus on what matters while keeping the rest discoverable. This leads to simpler flows and less complexity. Interaction is physical. Most usage is one handed. The thumb does the work. The bottom of the screen is easier to reach, while top corners require more effort. Actions placed there slow users down. Touch is less precise and has no hover. Small targets and tight spacing increase errors. Desktop patterns do not translate directly. Users decide quickly if something is relevant, useful, and worth continuing. If not, they move on. If a website does not work in real conditions, it does not work. Context matters more than layout. Most websites still ignore it."
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/how-to-create-good-web-design-everytime",
+      "title": "How to create good web design. EVERYTIME.",
+      "image": {
+       "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/mobile-first-design-why-most-websites-fail-on-phones",
+      "title": "Mobile First Design: Why Most Websites Fail on Phones",
+      "image": {
+       "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f948d0271dade656319d_Frame 1244839552.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "on-webflow-right-hemisphere-and-how-we-work",
+   "route": "/blog/on-webflow-right-hemisphere-and-how-we-work",
+   "listOrder": 5,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "On Webflow, Right Hemisphere, and How We Work",
+   "subtitle": "Right Hemisphere became a certified Webflow partner in 2025, reflecting a shift in how the team approaches web design and building websites.",
+   "heroImage": {
+    "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "February 19, 2026",
+    "authorLabel": "author:",
+    "author": "Uddipta Das",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "While watching films, I have often noticed how much room the director gives a scene to breathe. Some moments are allowed to sit with you, and others are cut short to keep the story moving. Over time, this made me more aware of pacing in web design. In website design, we often move quickly from idea to execution. When that pace becomes constant, the space to experiment tends to shrink.",
+     "text": "While watching films, I have often noticed how much room the director gives a scene to breathe. Some moments are allowed to sit with you, and others are cut short to keep the story moving. Over time, this made me more aware of pacing in web design. In website design, we often move quickly from idea to execution. When that pace becomes constant, the space to experiment tends to shrink."
+    },
+    {
+     "type": "h2",
+     "html": "That awareness of pacing is something I now carry into design work. Most projects move fast. What gets built is often what fits the timeline.",
+     "text": "That awareness of pacing is something I now carry into design work. Most projects move fast. What gets built is often what fits the timeline."
+    },
+    {
+     "type": "p",
+     "html": "Around 2021, Webflow entered our workflow at Right Hemisphere. We started playing around with it, without a fixed plan of how it would fit into our process. What stood out early on was the difference it made to time. The usual back and forth between design and development felt lighter. Ideas could be tried out sooner, <strong>whether it was a </strong>landing page or a larger part of a website, and the cost of exploring something new was lower. That shift slowly changed what felt possible within the same timelines.",
+     "text": "Around 2021, Webflow entered our workflow at Right Hemisphere. We started playing around with it, without a fixed plan of how it would fit into our process. What stood out early on was the difference it made to time. The usual back and forth between design and development felt lighter. Ideas could be tried out sooner, whether it was a landing page or a larger part of a website, and the cost of exploring something new was lower. That shift slowly changed what felt possible within the same timelines."
+    },
+    {
+     "type": "h2",
+     "html": "By August 2025, our work with Webflow at <strong>Right Hemisphere</strong> had become more intentional.",
+     "text": "By August 2025, our work with Webflow at Right Hemisphere had become more intentional."
+    },
+    {
+     "type": "p",
+     "html": "Becoming a certified Webflow partner marked how much our way of working had changed since those early days of playing around with the tool. It came from using Webflow on real projects and seeing what it changed for us.",
+     "text": "Becoming a certified Webflow partner marked how much our way of working had changed since those early days of playing around with the tool. It came from using Webflow on real projects and seeing what it changed for us."
+    },
+    {
+     "type": "p",
+     "html": "Looking ahead, there is still a lot to figure out. There is still room to question our own habits. The difference now is that time feels a little less restrictive than it once did. That leaves more space to try ideas and spend more time with them. For us, that space is where the more interesting work tends to begin.",
+     "text": "Looking ahead, there is still a lot to figure out. There is still room to question our own habits. The difference now is that time feels a little less restrictive than it once did. That leaves more space to try ideas and spend more time with them. For us, that space is where the more interesting work tends to begin."
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+      "title": "Why a Button Can Be Patented, But a Heritage Can’t",
+      "image": {
+       "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/what-is-px-what-is-a-pt-what-is-dp",
+      "title": "What is px? What is a pt? What is dp?",
+      "image": {
+       "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+   "route": "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+   "listOrder": 6,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "The subtle art of choosing typography and how to approach it.",
+   "subtitle": "We spend a lot of time picking fonts, but not enough time thinking about how they are read. What changes when typography is chosen for clarity instead of style?",
+   "heroImage": {
+    "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "February 18, 2026",
+    "authorLabel": "author:",
+    "author": "Porag Gogoi",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "When I think of choosing typography, I think of a craft similar to choosing a plate for a meal. Think fried chicken served in a white plate vs fried chicken wrapped in a newspaper. The plate or the newspaper does not determine how the chicken will taste. But it will determine in what context the chicken should be consumed.",
+     "text": "When I think of choosing typography, I think of a craft similar to choosing a plate for a meal. Think fried chicken served in a white plate vs fried chicken wrapped in a newspaper. The plate or the newspaper does not determine how the chicken will taste. But it will determine in what context the chicken should be consumed."
+    },
+    {
+     "type": "p",
+     "html": "Historically, fonts were developed to make copies of written text at large scale — a revolutionary invention of its time. But as centuries passed by and copying became a widespread phenomenon, fonts took over a more complex role. The job of typography today is to be the vessel for the content that's being presented, in addition to bringing attention to itself. Think about every time you stumble upon a beautifully designed website and wonder why it felt so easy to read!",
+     "text": "Historically, fonts were developed to make copies of written text at large scale — a revolutionary invention of its time. But as centuries passed by and copying became a widespread phenomenon, fonts took over a more complex role. The job of typography today is to be the vessel for the content that's being presented, in addition to bringing attention to itself. Think about every time you stumble upon a beautifully designed website and wonder why it felt so easy to read!"
+    },
+    {
+     "type": "p",
+     "html": "The skill of choosing typography is an abstract one and the millions of fonts available online doesn't make the job any easier. But, we can still think of a few basic principles to keep in mind.",
+     "text": "The skill of choosing typography is an abstract one and the millions of fonts available online doesn't make the job any easier. But, we can still think of a few basic principles to keep in mind."
+    },
+    {
+     "type": "h2",
+     "html": "1. Understand the content first.",
+     "text": "1. Understand the content first."
+    },
+    {
+     "type": "p",
+     "html": "As designers we have a habit of not taking time to read. In most cases, we make our choice of fonts with lorem ipsum as filler material.",
+     "text": "As designers we have a habit of not taking time to read. In most cases, we make our choice of fonts with lorem ipsum as filler material."
+    },
+    {
+     "type": "p",
+     "html": "I do not agree to this approach.",
+     "text": "I do not agree to this approach."
+    },
+    {
+     "type": "p",
+     "html": "We must not forget that — our job is to bring attention to the content first. This can only happen when we try to understand what is being written. To demonstrate why reading content is important before we start choosing fonts, let’s look at the example below. It tells us nothing about the choice of fonts we must make.",
+     "text": "We must not forget that — our job is to bring attention to the content first. This can only happen when we try to understand what is being written. To demonstrate why reading content is important before we start choosing fonts, let’s look at the example below. It tells us nothing about the choice of fonts we must make."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4eff6e44a4fc083a622f6_69944e5796b627b1019aa51d_1_dzNS17roW8B1eLSr_PcJcQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:700pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "But, the paragraph below will give us a few ideas on possible fonts we might use.",
+     "text": "But, the paragraph below will give us a few ideas on possible fonts we might use."
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4f00d1f55b7be9d8de0eb_69944e5796b627b1019aa520_1_fgnyeRnhfZXlsEwMnJifTQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "2. What is the structure of the written content ?",
+     "text": "2. What is the structure of the written content ?"
+    },
+    {
+     "type": "p",
+     "html": "Content on digital mediums would rarely ever have a linear structure. Especially in websites and apps, content is designed to have various contexts, perspectives and hierarchies. Understanding the internal structure gives us clues to how many different fonts and variations we would require to present the content efficiently.",
+     "text": "Content on digital mediums would rarely ever have a linear structure. Especially in websites and apps, content is designed to have various contexts, perspectives and hierarchies. Understanding the internal structure gives us clues to how many different fonts and variations we would require to present the content efficiently."
+    },
+    {
+     "type": "h3",
+     "html": "Let’s take an example:",
+     "text": "Let’s take an example:"
+    },
+    {
+     "type": "p",
+     "html": "In point 1 below, we see a block of content that invites a user to stay connected. This is followed by an explanation for why and then- a call to action. Laid out plainly, it feels cumbersome to read.",
+     "text": "In point 1 below, we see a block of content that invites a user to stay connected. This is followed by an explanation for why and then- a call to action. Laid out plainly, it feels cumbersome to read."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f02d08282cc1c2a871ef_69944e5796b627b1019aa523_1_0LAB8ucOKrq9J1I-J-2Qag.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:700pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "In point 2 however, we use two fonts. The section suddenly becomes easier to read.",
+     "text": "In point 2 however, we use two fonts. The section suddenly becomes easier to read."
+    },
+    {
+     "type": "h2",
+     "html": "3. Does our content need images and graphics to be presented ?",
+     "text": "3. Does our content need images and graphics to be presented ?"
+    },
+    {
+     "type": "p",
+     "html": "For most digital content — illustrations, animations and photographs are inseparable. We must take time to understand the relationship between visual material and written content.",
+     "text": "For most digital content — illustrations, animations and photographs are inseparable. We must take time to understand the relationship between visual material and written content."
+    },
+    {
+     "type": "p",
+     "html": "For some parts, images would be more important and content only acts as aids to understand the images. The opposite is also true. Again, in some other sections, images/graphics would share an equal hierarchy. A better understanding of this relationship, makes our choices of typography better.",
+     "text": "For some parts, images would be more important and content only acts as aids to understand the images. The opposite is also true. Again, in some other sections, images/graphics would share an equal hierarchy. A better understanding of this relationship, makes our choices of typography better."
+    },
+    {
+     "type": "h3",
+     "html": "Let’s take the example below.",
+     "text": "Let’s take the example below."
+    },
+    {
+     "type": "p",
+     "html": "The variation in fonts between <em>Example 1 </em>and <em>2 </em>isn’t huge<em>. </em>But notice how <em>Example 2</em> does a better job of setting clear contrast between the heading and the image. As if, the font is saying — read me first.",
+     "text": "The variation in fonts between Example 1 and 2 isn’t huge. But notice how Example 2 does a better job of setting clear contrast between the heading and the image. As if, the font is saying — read me first."
+    },
+    {
+     "type": "p",
+     "html": "Press enter or click to view image in full size",
+     "text": "Press enter or click to view image in full size"
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f052fe81b221e0ac2562_69954a4275d1160393d84bfc_1_w-gAKBjTfg2E5N1iBKGhRA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:700pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "4. What degree of ornamentation should we strive for ?",
+     "text": "4. What degree of ornamentation should we strive for ?"
+    },
+    {
+     "type": "p",
+     "html": "Over ornamentation takes the user away from the story. Under-ornamentation does little to bring attention.",
+     "text": "Over ornamentation takes the user away from the story. Under-ornamentation does little to bring attention."
+    },
+    {
+     "type": "p",
+     "html": "Choosing typography for a website about a horror film studio should not compel us to go choosing fonts with obvious horror elements. But this does not imply, our choice must incline towards plain. Remember — readability always trumps aesthetics but it shouldn’t be our sole goal.",
+     "text": "Choosing typography for a website about a horror film studio should not compel us to go choosing fonts with obvious horror elements. But this does not imply, our choice must incline towards plain. Remember — readability always trumps aesthetics but it shouldn’t be our sole goal."
+    },
+    {
+     "type": "h3",
+     "html": "Take this hero section for example.",
+     "text": "Take this hero section for example."
+    },
+    {
+     "type": "p",
+     "html": "An obvious choice of typography without paying attention to nuances might end us with examples like the one below. Difficult to read. Although, the horror element is clear.",
+     "text": "An obvious choice of typography without paying attention to nuances might end us with examples like the one below. Difficult to read. Although, the horror element is clear."
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4f0758c6d1c47e3d01893_69954a4275d1160393d84c02_1_2vLxgqEo8_GZGqcFlyk9lQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    },
+    {
+     "type": "p",
+     "html": "In the example below however, readability is maintained. The choice of typography in this case signifies bold and tilts towards an element of surprise.",
+     "text": "In the example below however, readability is maintained. The choice of typography in this case signifies bold and tilts towards an element of surprise."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4f08e9be8f806ae1b747e_69954a4275d1160393d84bff_1_jloAPiGinZgIw868fmoYGA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:700pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "5. How many fonts must we choose ?",
+     "text": "5. How many fonts must we choose ?"
+    },
+    {
+     "type": "p",
+     "html": "Understanding the scope of our design project is important. How much written content must we accommodate and what is the purpose of the application or website we are designing for. If our website spans 100s of pages with different contexts, we will always be safer in choosing different styles from a same family. If our project has a smaller scope, say a microsite, we can perhaps play around with numerous fonts.",
+     "text": "Understanding the scope of our design project is important. How much written content must we accommodate and what is the purpose of the application or website we are designing for. If our website spans 100s of pages with different contexts, we will always be safer in choosing different styles from a same family. If our project has a smaller scope, say a microsite, we can perhaps play around with numerous fonts."
+    },
+    {
+     "type": "p",
+     "html": "<em>In my opinion though, less is always better. One is acceptable, two is excellent. Use 3 when 2 might not be enough.</em>",
+     "text": "In my opinion though, less is always better. One is acceptable, two is excellent. Use 3 when 2 might not be enough."
+    },
+    {
+     "type": "p",
+     "html": "We must not stress the audience with the trouble of remembering multiple fonts. But we must also not be happy with obvious choices. The correct balance will always be in its nuance.",
+     "text": "We must not stress the audience with the trouble of remembering multiple fonts. But we must also not be happy with obvious choices. The correct balance will always be in its nuance."
+    },
+    {
+     "type": "h2",
+     "html": "Conclusion.",
+     "text": "Conclusion."
+    },
+    {
+     "type": "p",
+     "html": "The correct way to approach choosing typography for any design project should always be content first. All fonts have unique features, but these visual features are just ornamentation if they have nothing to say. Just like the job of the newspaper or the plate is to bring attention to the fried chicken served, our job is to choose the correct vessel for the content. We become better at it every time we take steps to understand, analyze and think about what’s being written.",
+     "text": "The correct way to approach choosing typography for any design project should always be content first. All fonts have unique features, but these visual features are just ornamentation if they have nothing to say. Just like the job of the newspaper or the plate is to bring attention to the fried chicken served, our job is to choose the correct vessel for the content. We become better at it every time we take steps to understand, analyze and think about what’s being written."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/what-should-be-the-size-of-an-icon-button",
+      "title": "What should be the size of an icon button?",
+      "image": {
+       "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/on-webflow-right-hemisphere-and-how-we-work",
+      "title": "On Webflow, Right Hemisphere, and How We Work",
+      "image": {
+       "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f9c366397de21576dd0a_Frame 1244839553.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "watching-movies-and-how-it-helped-me-become-a-better-designer",
+   "route": "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer",
+   "listOrder": 7,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "Watching movies and how it helped me become a better designer.",
+   "subtitle": "Watching movies helped shape how I think about design and storytelling. What changes when you start paying attention to how things are framed on screen?",
+   "heroImage": {
+    "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4fd16036212d75990574c_Frame 1244839558.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "February 18, 2026",
+    "authorLabel": "author:",
+    "author": "Porag Gogoi",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "I remember watching “Moonrise Kingdom” one summer in my college dorm. I was in awe at how visually symmetric the movie felt. Every object/prop/character in the movie felt like it belonged to the story.If you ask me to quote the film today, I probably would fail. But I could describe you it’s scenes in vivid detail.",
+     "text": "I remember watching “Moonrise Kingdom” one summer in my college dorm. I was in awe at how visually symmetric the movie felt. Every object/prop/character in the movie felt like it belonged to the story.If you ask me to quote the film today, I probably would fail. But I could describe you it’s scenes in vivid detail."
+    },
+    {
+     "type": "p",
+     "html": "Perhaps it’s the influence of my trade. But I have always loved movies that are visual. I am amazed every time I can understand a scene, without having to listen to the dialog.",
+     "text": "Perhaps it’s the influence of my trade. But I have always loved movies that are visual. I am amazed every time I can understand a scene, without having to listen to the dialog."
+    },
+    {
+     "type": "h2",
+     "html": "Take for instance this scene from my all time favorites — “Tokyo Story”.",
+     "text": "Take for instance this scene from my all time favorites — “Tokyo Story”."
+    },
+    {
+     "type": "p",
+     "html": "Two women greet each other.",
+     "text": "Two women greet each other."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4edb4eb46558d48ff6a55_699568530c6249e0b195999d_1_CsfUv5hwK6S_PKGOZfjOvg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "You don’t need to watch the movie to understand that the friendly women are equal to each other within the story’s context while, at the same time, one of them is an important character.",
+     "text": "You don’t need to watch the movie to understand that the friendly women are equal to each other within the story’s context while, at the same time, one of them is an important character."
+    },
+    {
+     "type": "p",
+     "html": "It does not feel co-incidental, neither does it feel like the result of an artist painting with his subconscious.",
+     "text": "It does not feel co-incidental, neither does it feel like the result of an artist painting with his subconscious."
+    },
+    {
+     "type": "h2",
+     "html": "<strong>It feels strategic.</strong>",
+     "text": "It feels strategic."
+    },
+    {
+     "type": "h4",
+     "html": "The invisible grid on a scene.",
+     "text": "The invisible grid on a scene."
+    },
+    {
+     "type": "p",
+     "html": "If we squint our eyes on an interesting scene in a movie, we can always draw a grid that would make sense. On trying to draw a modular grid on the picture above. We begin to uncover answers to why we could understand the relationship between the characters with ease.",
+     "text": "If we squint our eyes on an interesting scene in a movie, we can always draw a grid that would make sense. On trying to draw a modular grid on the picture above. We begin to uncover answers to why we could understand the relationship between the characters with ease."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4edec449188fc15234d87_699568540c6249e0b19599b2_1_oV0B-w5EojZEFZKmay8FDw.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "See how the smiles line up on a horizontal line and so does the shoulders.",
+     "text": "See how the smiles line up on a horizontal line and so does the shoulders."
+    },
+    {
+     "type": "p",
+     "html": "The woman on the right is placed between the two black square objects on each side of her head, signifying that she must be more important to the story.",
+     "text": "The woman on the right is placed between the two black square objects on each side of her head, signifying that she must be more important to the story."
+    },
+    {
+     "type": "h2",
+     "html": "Let’s take another example from the same movie:",
+     "text": "Let’s take another example from the same movie:"
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4ee10bd84bdb3f58854d7_699568540c6249e0b19599c5_1_MFyleBb1q2jCr9F4GY_VsA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "See how the eyes and forehead line up exactly on the electrical grid lines running on the background.",
+     "text": "See how the eyes and forehead line up exactly on the electrical grid lines running on the background."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4ee28548d508c2b44e75e_699568540c6249e0b19599a8_1_4Bw3uyfUmknwkQKyhSqhxg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "“Tokyo Story” much like other Asian movies from the era has many such examples sprinkled throughout its runtime.",
+     "text": "“Tokyo Story” much like other Asian movies from the era has many such examples sprinkled throughout its runtime."
+    },
+    {
+     "type": "p",
+     "html": "You could in-fact pick any Wes Anderson or Kubrick film today and end up with grids like these.",
+     "text": "You could in-fact pick any Wes Anderson or Kubrick film today and end up with grids like these."
+    },
+    {
+     "type": "h2",
+     "html": "But how did studying invisible grids in movies make me better in design ?",
+     "text": "But how did studying invisible grids in movies make me better in design ?"
+    },
+    {
+     "type": "p",
+     "html": "In web design (and interface design in general), we deal with a combination of imagery and typography.",
+     "text": "In web design (and interface design in general), we deal with a combination of imagery and typography."
+    },
+    {
+     "type": "p",
+     "html": "Years of creating digital objects and moving them around on artboards, has made me come to the realization that all I have been trying to do is — to tell a story visually. I have learned to see blocks of texts, headings, buttons, images and interactions as props on my visual storyboard.",
+     "text": "Years of creating digital objects and moving them around on artboards, has made me come to the realization that all I have been trying to do is — to tell a story visually. I have learned to see blocks of texts, headings, buttons, images and interactions as props on my visual storyboard."
+    },
+    {
+     "type": "p",
+     "html": "In the 3 points below I try to demonstrate what I learned.",
+     "text": "In the 3 points below I try to demonstrate what I learned."
+    },
+    {
+     "type": "h3",
+     "html": "1. Alignment is simple, but subtlety is the trick.",
+     "text": "1. Alignment is simple, but subtlety is the trick."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4ee4e4a26b72d962794a6_699568540c6249e0b19599ab_1_ARjB0OVSKXDwLWVjxOYxMQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "On first glance, building this might look pretty simple. Just make a block, with text and an input box inside, align them to the center of the background image and the job is done.",
+     "text": "On first glance, building this might look pretty simple. Just make a block, with text and an input box inside, align them to the center of the background image and the job is done."
+    },
+    {
+     "type": "h3",
+     "html": "<strong>But the beauty is in its details.</strong>",
+     "text": "But the beauty is in its details."
+    },
+    {
+     "type": "p",
+     "html": "A closer look reveals that the bottom edge of the search section aligns with the iron bars in the image. The search box too aligns along the solid edges of the watch tower. The “Explore movies” line of text aligns roughly to the shape of the girl on the background as though it is an extension of her arms holding the binoculars.",
+     "text": "A closer look reveals that the bottom edge of the search section aligns with the iron bars in the image. The search box too aligns along the solid edges of the watch tower. The “Explore movies” line of text aligns roughly to the shape of the girl on the background as though it is an extension of her arms holding the binoculars."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4ee924c618ce03db782eb_699568540c6249e0b19599c1_1_PKMUfPptsUl1GdbQtHk7gg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "2. The eyes and shoulders are important",
+     "text": "2. The eyes and shoulders are important"
+    },
+    {
+     "type": "p",
+     "html": "Time and again, we have seen that in visual stories involving people, the eyes and the shoulders play a vital role.",
+     "text": "Time and again, we have seen that in visual stories involving people, the eyes and the shoulders play a vital role."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4eeb236bfab55e09f3397_699568540c6249e0b19599b8_1_kWWtsHGnf-m0-aKn7hBWyw.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "In the example above- I placed the heading along the line of sight of the girl. I also placed the button along the alignment of the shoulders. See how the layout looks balanced even if the objects aren't really placed in an orderly fashion.",
+     "text": "In the example above- I placed the heading along the line of sight of the girl. I also placed the button along the alignment of the shoulders. See how the layout looks balanced even if the objects aren't really placed in an orderly fashion."
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4eed16a14549e10419411_699568540c6249e0b19599b5_1_ms5NcQ3_fZWDZ1-_jVYUtA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "3. Lines of text are just grid lines if you squint hard.",
+     "text": "3. Lines of text are just grid lines if you squint hard."
+    },
+    {
+     "type": "p",
+     "html": "Lines of text can do more than just tell the story. They can also act as guides to the grid lines on our artboard.",
+     "text": "Lines of text can do more than just tell the story. They can also act as guides to the grid lines on our artboard."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4eee536bfab55e09f5667_699568540c6249e0b19599bb_1_7P73R37Yj0hC4vfA6GuKrg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "In the example above, the line-height of our heading is roughly same as the height of the brick on the background. The paragraph too has a line height, half of the height of a brick. See how the card feels as if its an integral part of the brick layout background ?",
+     "text": "In the example above, the line-height of our heading is roughly same as the height of the brick on the background. The paragraph too has a line height, half of the height of a brick. See how the card feels as if its an integral part of the brick layout background ?"
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4eef991c94fd9910e2fa1_699568540c6249e0b19599af_1_BbKmgLMGqI8E1LtHNaGsOA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "Close attention to visual details (the grid laid out by the bricks in this case) can make your objects come together as a singular being within the storyboard.",
+     "text": "Close attention to visual details (the grid laid out by the bricks in this case) can make your objects come together as a singular being within the storyboard."
+    },
+    {
+     "type": "h2",
+     "html": "Conclusion",
+     "text": "Conclusion"
+    },
+    {
+     "type": "p",
+     "html": "Design writers and influencers today will have you believe that a grid is this lifeless element we can use to align our objects. In-fact, designers won’t even bother most of the time. “Your grid should be 8 pixels and you would need gutters 16 px wide to make a website and and for more inspiration — just explore dribble and be done with it.”",
+     "text": "Design writers and influencers today will have you believe that a grid is this lifeless element we can use to align our objects. In-fact, designers won’t even bother most of the time. “Your grid should be 8 pixels and you would need gutters 16 px wide to make a website and and for more inspiration — just explore dribble and be done with it.”"
+    },
+    {
+     "type": "p",
+     "html": "As designers we often tend to forget our over arching purpose. We must remember — all we are trying to do is tell a story. Minor details aside, how we create harmony or tension between our objects is how we tell half of it.",
+     "text": "As designers we often tend to forget our over arching purpose. We must remember — all we are trying to do is tell a story. Minor details aside, how we create harmony or tension between our objects is how we tell half of it."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/design-and-the-question-of-authority",
+      "title": "Design and the Question of Authority",
+      "image": {
+       "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4f89d45585b8a9013cbea_Frame 1244839551.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+      "title": "Why a Button Can Be Patented, But a Heritage Can’t",
+      "image": {
+       "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "what-is-px-what-is-a-pt-what-is-dp",
+   "route": "/blog/what-is-px-what-is-a-pt-what-is-dp",
+   "listOrder": 8,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "What is px? What is a pt? What is dp?",
+   "subtitle": "iOS’ design measures in pts, Androids in dp, and design for the web is done in px but what do they mean and what is the difference?",
+   "heroImage": {
+    "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "February 17, 2026",
+    "authorLabel": "author:",
+    "author": "Porag Gogoi",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "h2",
+     "html": "Pixel",
+     "text": "Pixel"
+    },
+    {
+     "type": "p",
+     "html": "‘Pixel’ is the abbreviation of the word Picture Element (Pi x El ). It is the smallest square block (element) of color that forms an image on a screen.",
+     "text": "‘Pixel’ is the abbreviation of the word Picture Element (Pi x El ). It is the smallest square block (element) of color that forms an image on a screen."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e6f4751a23679b483c1b_699434be84956dac1baf27f2_1_Sfgq7B4Zoc0bLVb-7fjTbg.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "<em>Note: Pixels need not be squares as they can be rendered as lines and dots too.</em>",
+     "text": "Note: Pixels need not be squares as they can be rendered as lines and dots too."
+    },
+    {
+     "type": "h2",
+     "html": "Up until 2010, a pixel meant a pixel, it was measurable and life was easy.",
+     "text": "Up until 2010, a pixel meant a pixel, it was measurable and life was easy."
+    },
+    {
+     "type": "p",
+     "html": "Before the iPhone 4’s retina display, the number of pixels that could fit on a square area of 1 inch was 163 pixels. It was fixed or at least was the standard.",
+     "text": "Before the iPhone 4’s retina display, the number of pixels that could fit on a square area of 1 inch was 163 pixels. It was fixed or at least was the standard."
+    },
+    {
+     "type": "p",
+     "html": "All that changed when the iPhone introduced retina display. An inch of a retina display could now house 326 pixels. And as it is a convention, other companies started following suit with crazy pixel counts included per inch of screen.",
+     "text": "All that changed when the iPhone introduced retina display. An inch of a retina display could now house 326 pixels. And as it is a convention, other companies started following suit with crazy pixel counts included per inch of screen."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e72343d21215d20f6bc9_699434be84956dac1baf27ec_1_B0tdSuVaEaw9Wl-FF4LY_g.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:560pxpx",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "Here’s where all the problem started-",
+     "text": "Here’s where all the problem started-"
+    },
+    {
+     "type": "p",
+     "html": "Say you designed a button 2 pixels high and 4 pixels wide, the size would now vary hugely depending if your website or app is viewed on a phone screen with 163 pixels per inch or 326 pixels per inch display. You would now have to make the design over and over again every time for a range of devices with the same sizes, let alone different aspect ratios.",
+     "text": "Say you designed a button 2 pixels high and 4 pixels wide, the size would now vary hugely depending if your website or app is viewed on a phone screen with 163 pixels per inch or 326 pixels per inch display. You would now have to make the design over and over again every time for a range of devices with the same sizes, let alone different aspect ratios."
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4e74a85a96a74a4ea8e07_699434be84956dac1baf27e9_1_KpsP_Zxkk8Z7SfEPqMOrCA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "Apple solved this problem by introducing the Point (pt)",
+     "text": "Apple solved this problem by introducing the Point (pt)"
+    },
+    {
+     "type": "p",
+     "html": "A point was defined to be exactly equal to a pixel when it was viewed on the original iPhone. i.e 1 px = 1 pt when viewed on a screen of density 163 pixels/inch. As different versions of the iPhone came with different screen resolutions, iOS would then internally convert the points to pixels to make a button look the same size no matter how many pixels fit in an inch of the screen.",
+     "text": "A point was defined to be exactly equal to a pixel when it was viewed on the original iPhone. i.e 1 px = 1 pt when viewed on a screen of density 163 pixels/inch. As different versions of the iPhone came with different screen resolutions, iOS would then internally convert the points to pixels to make a button look the same size no matter how many pixels fit in an inch of the screen."
+    },
+    {
+     "type": "h3",
+     "html": "‍<strong><em>1 pt = (ppi of your sceen/163) px</em></strong>",
+     "text": "‍1 pt = (ppi of your sceen/163) px"
+    },
+    {
+     "type": "p",
+     "html": "A designer could now design a 4 x 2 pt button and they would look the same everywhere.",
+     "text": "A designer could now design a 4 x 2 pt button and they would look the same everywhere."
+    },
+    {
+     "type": "figure",
+     "align": "center",
+     "image": {
+      "src": "/images/6ab4e7a9a922adc4594ff0d9_699434be84956dac1baf27ef_1_-RPvUGYnqmf2g8P8NITQZA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": null,
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "Android did a similar thing with their density-independent pixels (dp)",
+     "text": "Android did a similar thing with their density-independent pixels (dp)"
+    },
+    {
+     "type": "p",
+     "html": "While Apple did it first, it became even more important for Android to come up with a measurement unit, that did not depend on the number of physical pixels in an inch, as it was used in anything ranging from a smartphone to a refrigerator. Hence, they introduced the density-independent pixel or dp. A dp in concept is the same as the Apple pt. The only difference being that a dp uses 160 pixels/inch as a base.",
+     "text": "While Apple did it first, it became even more important for Android to come up with a measurement unit, that did not depend on the number of physical pixels in an inch, as it was used in anything ranging from a smartphone to a refrigerator. Hence, they introduced the density-independent pixel or dp. A dp in concept is the same as the Apple pt. The only difference being that a dp uses 160 pixels/inch as a base."
+    },
+    {
+     "type": "h3",
+     "html": "‍<strong><em>1 dp= (ppi of your sceen/160) px</em></strong>",
+     "text": "‍1 dp= (ppi of your sceen/160) px"
+    },
+    {
+     "type": "p",
+     "html": "<strong>What we talked about so far was about physical pixels. This is not to be mistaken with the CSS pixel (logical pixel) used by websites or the px measure you use on Figma. Similar to the definition of pt and dp, a CSS pixel (logical pixel) is exactly equal to a physical pixel when viewed on a screen with 96 pixels/inch, at an arm’s length.</strong>",
+     "text": "What we talked about so far was about physical pixels. This is not to be mistaken with the CSS pixel (logical pixel) used by websites or the px measure you use on Figma. Similar to the definition of pt and dp, a CSS pixel (logical pixel) is exactly equal to a physical pixel when viewed on a screen with 96 pixels/inch, at an arm’s length."
+    },
+    {
+     "type": "p",
+     "html": "Similar to the definition of pt and dp, a CSS pixel (logical pixel) is exactly equal to a physical pixel when viewed on a screen with 96 pixels/inch, at an arm’s length.",
+     "text": "Similar to the definition of pt and dp, a CSS pixel (logical pixel) is exactly equal to a physical pixel when viewed on a screen with 96 pixels/inch, at an arm’s length."
+    },
+    {
+     "type": "h4",
+     "html": "But there is a major difference here -",
+     "text": "But there is a major difference here -"
+    },
+    {
+     "type": "p",
+     "html": "An arms-length is very arbitrary (different people have different arm lengths) and the definition of a pixel has more to do with the design and visibility of elements on a screen rather than physical pixels or standard measures of length, say inches or centimeters.",
+     "text": "An arms-length is very arbitrary (different people have different arm lengths) and the definition of a pixel has more to do with the design and visibility of elements on a screen rather than physical pixels or standard measures of length, say inches or centimeters."
+    },
+    {
+     "type": "p",
+     "html": "Let us simplify it further:",
+     "text": "Let us simplify it further:"
+    },
+    {
+     "type": "p",
+     "html": "A logical pixel could be defined as the smallest dot that could be viewed on a screen by a user without strain. So, a line of height 1px could comfortably be considered the thinnest and clearest line that could be drawn on a screen.",
+     "text": "A logical pixel could be defined as the smallest dot that could be viewed on a screen by a user without strain. So, a line of height 1px could comfortably be considered the thinnest and clearest line that could be drawn on a screen."
+    },
+    {
+     "type": "h4",
+     "html": "However, for or all practical purposes, a CSS pixel is equal to a physical pixel when viewed on a screen with 96 pixels/inch.",
+     "text": "However, for or all practical purposes, a CSS pixel is equal to a physical pixel when viewed on a screen with 96 pixels/inch."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/how-to-create-good-web-design-everytime",
+      "title": "How to create good web design. EVERYTIME.",
+      "image": {
+       "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/what-should-be-the-size-of-an-icon-button",
+      "title": "What should be the size of an icon button?",
+      "image": {
+       "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "why-a-button-can-be-patented-but-a-heritage-cant",
+   "route": "/blog/why-a-button-can-be-patented-but-a-heritage-cant",
+   "listOrder": 9,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "Why a Button Can Be Patented, But a Heritage Can’t",
+   "subtitle": "Why can UX elements be patented while cultural designs remain unprotected? A look at ownership, attribution, and design law",
+   "heroImage": {
+    "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4fa582c8056c528709fc5_Frame 1244839554.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "March 26, 2026",
+    "authorLabel": "author:",
+    "author": "Rajashri Das",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "Culture cannot be patented.",
+     "text": "Culture cannot be patented."
+    },
+    {
+     "type": "p",
+     "html": "That is what allows Chanel, Dior, Ralph Lauren and Louis Vuitton to use Indian design elements across collections without attribution. Jhumkas, textiles, embroidery. The reference is clear. The credit is not.",
+     "text": "That is what allows Chanel, Dior, Ralph Lauren and Louis Vuitton to use Indian design elements across collections without attribution. Jhumkas, textiles, embroidery. The reference is clear. The credit is not."
+    },
+    {
+     "type": "p",
+     "html": "So the question is simple:<br><strong>Why do these brands get to use Indian design without credit?</strong>",
+     "text": "So the question is simple:\nWhy do these brands get to use Indian design without credit?"
+    },
+    {
+     "type": "p",
+     "html": "In digital design, brands are not allowed to use design elements freely without consequences. Ownership is defined. There are legal systems that decide what can be protected and who it belongs to. Specific elements, interactions, and patterns can be claimed. A button, a gesture, even the way something responds on screen can fall under intellectual property.",
+     "text": "In digital design, brands are not allowed to use design elements freely without consequences. Ownership is defined. There are legal systems that decide what can be protected and who it belongs to. Specific elements, interactions, and patterns can be claimed. A button, a gesture, even the way something responds on screen can fall under intellectual property."
+    },
+    {
+     "type": "p",
+     "html": "Using someone else’s design without permission is not just questionable. It can be challenged, restricted, and enforced.",
+     "text": "Using someone else’s design without permission is not just questionable. It can be challenged, restricted, and enforced."
+    },
+    {
+     "type": "p",
+     "html": "If a company creates a specific way something works on a website, they can claim it. How a page responds, how elements move, how users navigate. If it is new and clearly defined, it can be registered.",
+     "text": "If a company creates a specific way something works on a website, they can claim it. How a page responds, how elements move, how users navigate. If it is new and clearly defined, it can be registered."
+    },
+    {
+     "type": "p",
+     "html": "That is what makes it enforceable. Once it is registered, others cannot freely copy it. If they do, there are consequences.",
+     "text": "That is what makes it enforceable. Once it is registered, others cannot freely copy it. If they do, there are consequences."
+    },
+    {
+     "type": "p",
+     "html": "This is not just about legal systems. It is also how designers approach their work. As one user on Quora notes, much of UI and UX is shared by default. Patterns repeat, interactions feel familiar, and designers build on what already exists.",
+     "text": "This is not just about legal systems. It is also how designers approach their work. As one user on Quora notes, much of UI and UX is shared by default. Patterns repeat, interactions feel familiar, and designers build on what already exists."
+    },
+    {
+     "type": "p",
+     "html": "Ownership only applies when something is specific enough to be claimed.",
+     "text": "Ownership only applies when something is specific enough to be claimed."
+    },
+    {
+     "type": "p",
+     "html": "Even within Indian law, protection has limits. The Designs Act, 2000 allows a design to be registered only if it is new and tied to a specific creator. It protects form, not origin. Which means cultural designs do not really fit into this system. They are not new. They are not owned by one person. So they remain unprotected.",
+     "text": "Even within Indian law, protection has limits. The Designs Act, 2000 allows a design to be registered only if it is new and tied to a specific creator. It protects form, not origin. Which means cultural designs do not really fit into this system. They are not new. They are not owned by one person. So they remain unprotected."
+    },
+    {
+     "type": "p",
+     "html": "So the difference is not just about design. It is about what the system chooses to recognize as ownership. In one case, something new can be defined, claimed, and protected. In the other, something that has always existed remains open to use without obligation.",
+     "text": "So the difference is not just about design. It is about what the system chooses to recognize as ownership. In one case, something new can be defined, claimed, and protected. In the other, something that has always existed remains open to use without obligation."
+    },
+    {
+     "type": "p",
+     "html": "The difference is clear. What is new can be owned. What has always existed cannot.",
+     "text": "The difference is clear. What is new can be owned. What has always existed cannot."
+    },
+    {
+     "type": "p",
+     "html": "‍",
+     "text": "‍",
+     "empty": true
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/how-to-create-good-web-design-everytime",
+      "title": "How to create good web design. EVERYTIME.",
+      "image": {
+       "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fc9b1f55b7be9d96c92c_Frame 1244839556.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/what-should-be-the-size-of-an-icon-button",
+      "title": "What should be the size of an icon button?",
+      "image": {
+       "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "what-should-be-the-size-of-an-icon-button",
+   "route": "/blog/what-should-be-the-size-of-an-icon-button",
+   "listOrder": 10,
+   "documentTitle": "Right Hemisphere 3.0",
+   "metaDescription": null,
+   "title": "What should be the size of an icon button?",
+   "subtitle": "Buttons are everywhere. And yet we see an overabundance of \"bad buttons\". So, how to resolve that?",
+   "heroImage": {
+    "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+    "loading": "lazy",
+    "srcset": [
+     {
+      "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-500.png",
+      "w": "500w"
+     },
+     {
+      "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-800.png",
+      "w": "800w"
+     },
+     {
+      "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555-p-1080.png",
+      "w": "1080w"
+     },
+     {
+      "src": "/images/6ab4fd4f6d0dccfa68e1f71a_Frame 1244839555.png",
+      "w": "1200w"
+     }
+    ],
+    "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+   },
+   "meta": {
+    "publishedLabel": "published on:",
+    "date": "February 7, 2025",
+    "authorLabel": "author:",
+    "author": "Porag Gogoi",
+    "shareLabel_hidden": "share"
+   },
+   "body": [
+    {
+     "type": "p",
+     "html": "In our very first article, we try to explore the comfortable range of sizes in which designers can experiment with the size of icon buttons. We also dive into how size can be used to guide users to the most favorable actions.",
+     "text": "In our very first article, we try to explore the comfortable range of sizes in which designers can experiment with the size of icon buttons. We also dive into how size can be used to guide users to the most favorable actions."
+    },
+    {
+     "type": "h2",
+     "html": "1. Touch Target",
+     "text": "1. Touch Target"
+    },
+    {
+     "type": "p",
+     "html": "Interaction with buttons on desktops (and to a large extent on laptops) are done using mouse cursors. Hence button sizes could possibly be smaller. The problem arises when we encounter touchscreens. We use our fingers to interact with touch screens. Thus the size of our fingertips (index finger and thumb) decides how small an icon button could possibly be to effectively serve its purpose.",
+     "text": "Interaction with buttons on desktops (and to a large extent on laptops) are done using mouse cursors. Hence button sizes could possibly be smaller. The problem arises when we encounter touchscreens. We use our fingers to interact with touch screens. Thus the size of our fingertips (index finger and thumb) decides how small an icon button could possibly be to effectively serve its purpose."
+    },
+    {
+     "type": "p",
+     "html": "<strong>An MIT study found that the average width of an index finger is 45–57 px and the avg size of the thumb is 72 px.</strong>",
+     "text": "An MIT study found that the average width of an index finger is 45–57 px and the avg size of the thumb is 72 px."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e1bf751a23679b447f3a_699419c69a8b894a0ebf4386_1_I4oMIsFu34Drf0-C2AVKhA.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:630px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "2. Touch Accuracy",
+     "text": "2. Touch Accuracy"
+    },
+    {
+     "type": "p",
+     "html": "Too small icons might be difficult to target, while too large icons might confuse users as to where exactly to touch to successfully complete the task.",
+     "text": "Too small icons might be difficult to target, while too large icons might confuse users as to where exactly to touch to successfully complete the task."
+    },
+    {
+     "type": "p",
+     "html": "<strong>The same MIT study also found that that touch accuracy is low below 42 px and above 72 px.</strong>",
+     "text": "The same MIT study also found that that touch accuracy is low below 42 px and above 72 px."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e1ddf6a866f90ba1c714_699419c69a8b894a0ebf4383_1_UORotpXUTLtkqWesfsGUyQ.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:630px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h2",
+     "html": "3. What do design systems say about button sizes?",
+     "text": "3. What do design systems say about button sizes?"
+    },
+    {
+     "type": "p",
+     "html": "Design systems are a very good source to understand acceptable size limits. <strong>Material Design prescribes an icon area of 24 dp and a touch target of 48 dp </strong>(1 dp = 1 px for a screen of size 320 X 480 px)<strong>. Similarly, apple suggests 44 pts </strong>(1 pt = 1.333 px)",
+     "text": "Design systems are a very good source to understand acceptable size limits. Material Design prescribes an icon area of 24 dp and a touch target of 48 dp (1 dp = 1 px for a screen of size 320 X 480 px). Similarly, apple suggests 44 pts (1 pt = 1.333 px)"
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e2a559c6630905c8886b_699419c69a8b894a0ebf4380_1_4D9AGeUAg2FG42xbrgQZ1g.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:630px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "<strong>We could thus comfortably say that the safe limits of icon button sizes lie between 42 -72 px. However, we must remember that it is always advisable to follow the specifications prescribed by the OS we are designing for.</strong>",
+     "text": "We could thus comfortably say that the safe limits of icon button sizes lie between 42 -72 px. However, we must remember that it is always advisable to follow the specifications prescribed by the OS we are designing for."
+    },
+    {
+     "type": "h2",
+     "html": "But should all buttons be of the same size?",
+     "text": "But should all buttons be of the same size?"
+    },
+    {
+     "type": "p",
+     "html": "Short answer- No, Hierarchy is important.",
+     "text": "Short answer- No, Hierarchy is important."
+    },
+    {
+     "type": "h2",
+     "html": "Hierarchy",
+     "text": "Hierarchy"
+    },
+    {
+     "type": "p",
+     "html": "When we are designing a number of icons together, there are always icon buttons that are more important than the ones around them.",
+     "text": "When we are designing a number of icons together, there are always icon buttons that are more important than the ones around them."
+    },
+    {
+     "type": "p",
+     "html": "<strong>The size of a button in a set of buttons helps guide the user to the most important action!</strong>",
+     "text": "The size of a button in a set of buttons helps guide the user to the most important action!"
+    },
+    {
+     "type": "p",
+     "html": "Thus, while designing many icon buttons together, varying sizes can help guide the user to the most favorable action.",
+     "text": "Thus, while designing many icon buttons together, varying sizes can help guide the user to the most favorable action."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e2e1df25aefa4daba647_699419c69a8b894a0ebf437d_1_67TYEyIsBdpCyo8mIjGHnw.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:630px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "h3",
+     "html": "Here is an example.",
+     "text": "Here is an example."
+    },
+    {
+     "type": "figure",
+     "align": "fullwidth",
+     "image": {
+      "src": "/images/6ab4e2fcfa48142758e1ad13_699419c69a8b894a0ebf4389_1_EzKopBaRnp1qs26BDq9Ofw.png",
+      "loading": "lazy"
+     },
+     "caption": null,
+     "figureStyle": "max-width:630px",
+     "imgWrapperStyle": null
+    },
+    {
+     "type": "p",
+     "html": "<em>This was an attempt on my part to simplify some of the logic behind why we design the buttons the way we do and how the conventions came to be. Hope you find this informative and useful.</em>",
+     "text": "This was an attempt on my part to simplify some of the logic behind why we design the buttons the way we do and how the conventions came to be. Hope you find this informative and useful."
+    }
+   ],
+   "readMore": {
+    "heading": "read more",
+    "cards": [
+     {
+      "href": "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it",
+      "title": "The subtle art of choosing typography and how to approach it.",
+      "image": {
+       "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4feca8c6d1c47e3dca8e0_Frame 1244839559.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     },
+     {
+      "href": "/blog/what-is-px-what-is-a-pt-what-is-dp",
+      "title": "What is px? What is a pt? What is dp?",
+      "image": {
+       "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+       "loading": "lazy",
+       "srcset": [
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-500.png",
+         "w": "500w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-800.png",
+         "w": "800w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557-p-1080.png",
+         "w": "1080w"
+        },
+        {
+         "src": "/images/6ab4fcde95cad70f03429864_Frame 1244839557.png",
+         "w": "1200w"
+        }
+       ],
+       "sizes": "(max-width: 767px) 100vw, (max-width: 991px) 727px, 939px"
+      },
+      "cta": "READ BLOG"
+     }
+    ]
+   }
+  }
+ ],
+ "missingLocalImages": [
+  "6abdeadb0baefae6e8d529a6_image 34.png"
+ ]
+}

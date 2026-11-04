@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PP Mori is commercial: drop the licensed file at public/fonts/PPMori-Regular.woff2.
+   Until then the stack falls back to Inter 400. */
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* CLONE_SPEC-PAGES: the 600 face renders <strong> on blog posts. */
+@font-face {
+  font-family: 'PP Mori';
+  src: url('/fonts/PPMori-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  body {
+    @apply bg-paper font-sans font-normal leading-body text-ink;
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+  h1,
+  h2,
+  h3 {
+    font-weight: 400;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  /* §0.3 layout */
+  .padding-global {
+    @apply px-32 md:px-20 xs:px-16;
+  }
+  .container-main {
+    @apply mx-auto w-full max-w-container;
+  }
+  .grid-six {
+    @apply grid grid-cols-six gap-0;
+  }
+
+  /* §0.2 type roles. Class names double as motion hooks (§14.4). */
+  .text-size-h2 {
+    @apply text-t32;
+  }
+  h2.text-size-h2.caps {
+    @apply mb-10 uppercase tracking-h2;
+  }
+  .text-size-large {
+    @apply text-t24;
+  }
+  .text-size-medium,
+  .text-size-medium_hero {
+    @apply text-t20;
+  }
+  .text-size-regular {
+    @apply text-t16;
+  }
+  .text-size-small,
+  .text-size-small_hero {
+    @apply text-t14;
+  }
+  .caps {
+    text-transform: uppercase;
+  }
+  .color-grey {
+    @apply text-grey;
+  }
+
+  /* Nav + footer links: instant colour swap, no transition (§14.5) */
+  .nav_link {
+    @apply inline-block pb-2 pt-4 text-t14 uppercase text-ink;
+    line-height: 1;
+  }
+  .nav_link:hover,
+  .nav_link.w--current {
+    @apply text-accent;
+  }
+  /* CLONE_SPEC-PAGES §0 correction: hover also underlines (instant). The current
+     page link and the CONTACT link never underline (original rule order). */
+  .nav_link:hover {
+    text-decoration: underline;
+  }
+  .nav_link.w--current,
+  .nav_link.contact {
+    text-decoration: none;
+  }
+  .nav_link.contact.w--current {
+    border-bottom-color: theme('colors.accent');
+  }
+
+  /* §0.5 button_v2 */
+  .button_v2 {
+    @apply relative flex items-center justify-between overflow-hidden pb-2.4 uppercase text-ink;
+  }
+  .button_v2 .text-size-medium,
+  .button_v2 .text-size-regular {
+    @apply transition-colors duration-500 ease-quart;
+  }
+  .button_line {
+    @apply absolute bottom-0 left-0 right-0 h-1 w-full bg-ink transition-colors duration-500 ease-quart;
+  }
+  .button_v2:hover .text-size-medium,
+  .button_v2:hover .text-size-regular {
+    @apply text-accent;
+  }
+  .button_v2:hover .button_line,
+  .nav_link.contact:hover .button_line {
+    @apply bg-accent;
+  }
+  .btn_v2_arrow_wrapper {
+    @apply flex h-16 w-16 flex-none justify-end overflow-hidden md:h-14 md:w-14;
+  }
+  .arrow_mid {
+    @apply h-full w-full flex-none;
+  }
+
+  /* §0.5 diagonal-arrow pair: .default in place, .bottom parked bottom-left */
+  .arrow_pair {
+    @apply relative block flex-none overflow-hidden;
+  }
+  .arrow_pair > .default {
+    @apply block h-full w-full text-ink;
+  }
+  .arrow_pair > .bottom {
+    @apply absolute h-full w-full text-accent;
+    left: -100%;
+    bottom: -100%;
+  }
+  /* Right-arrow pair: .left (blue) parked one box-width to the left */
+  .arrow_pair > .left {
+    @apply absolute top-0 h-full w-full text-accent;
+    left: -100%;
+  }
+
+  /* §0.5 list rows: border colour → accent on hover (§14.5) */
+  .list_row {
+    @apply border-b border-solid border-rule transition-colors duration-500 ease-quart;
+  }
+  .list_row:hover {
+    @apply border-accent;
+  }
+
+  /* §3 work card detail row border (transparent → accent) */
+  .work_card_detail_wrapper {
+    @apply border-b border-solid border-white-0 transition-colors duration-500 ease-quart;
+  }
+  .work_card:hover .work_card_detail_wrapper {
+    @apply border-accent;
+  }
+
+  /* §14.5 blog card: whole card drives its inner button row */
+  .blog_card:hover .text-size-regular {
+    @apply text-accent;
+  }
+  .blog_card:hover .button_line {
+    @apply bg-accent;
+  }
+
+  /* §9 slider arrows: label hover colour */
+  .slider_arrow .slider_label {
+    @apply transition-colors duration-500 ease-quart;
+  }
+  .slider_arrow:hover .slider_label {
+    @apply text-accent-alt;
+  }
+}
