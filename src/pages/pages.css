@@ -47,6 +47,7 @@
   gap: 8px;
   align-items: flex-end;
   position: relative;
+  font-weight: 500;
 }
 .lh-115 {
   line-height: 1.15;
@@ -778,7 +779,7 @@ h1.blog_heading {
 .project_brief_element > h2.text-size-medium.caps {
   margin: 0 0 10px;
   letter-spacing: -0.4px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .project_detail_element {
   display: grid;
