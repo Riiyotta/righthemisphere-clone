@@ -48,6 +48,11 @@
    "rule": "A reference spec's route is mapped to its template in routes.json (the catch-all 404 may use any unmatched path)."
   },
   {
+   "id": "META_SOCIAL_MATCHES_TEMPLATE",
+   "severity": "error",
+   "rule": "meta.social equals the template's head.social: site (index.html tags, home), full (og/twitter title + description, og:type, twitter:card), title (og/twitter title only, case studies) or none (blog posts, 404). The og:image exists only on the home page (index.html)."
+  },
+  {
    "id": "RETRIEVAL_INELIGIBLE_SHELL_ONLY",
    "severity": "error",
    "rule": "Only SHELL/UTILITY sections may be retrievalEligible:false; nodes cannot override the contract."

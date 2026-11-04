@@ -57,7 +57,7 @@ MEDIA_SCHEMES = ("generated://", "placeholder://", "user://")
 RULES = {  # graph rule ids -> severity; verify_all.py checks equality with compatibility/graph.json
     "ONE_HERO": "error", "HERO_FIRST_CONTENT": "error", "MUST_BE_FIRST": "error", "MUST_BE_LAST": "error", "ONE_PER_PAGE": "error",
     "REQUIRES_SECTION": "error", "TEMPLATE_ONLY": "error", "ROUTE_PATTERN": "error", "ROUTE_TEMPLATE_MISMATCH": "error",
-    "RETRIEVAL_INELIGIBLE_SHELL_ONLY": "error", "BLOG_CLUSTER_LAYOUT": "error", "CARD_CLUSTER_LAST_ONLY_SEE_ALL": "error",
+    "META_SOCIAL_MATCHES_TEMPLATE": "error", "RETRIEVAL_INELIGIBLE_SHELL_ONLY": "error", "BLOG_CLUSTER_LAYOUT": "error", "CARD_CLUSTER_LAST_ONLY_SEE_ALL": "error",
     "NO_ADJACENT_SAME_CATEGORY": "warn", "NO_CONSECUTIVE_DUPLICATE": "warn", "ARTICLE_HAS_HEADED_CHAPTER": "warn", "MOTION_BUDGET": "warn",
 }
 
@@ -420,6 +420,8 @@ def validate(spec, repo=None):
                 errs.append(("ROUTE_TEMPLATE_MISMATCH", f"{spec['route']} is a served route ({r['template']}), not a 404"))
         elif not r or r["template"] != spec["template"]:
             errs.append(("ROUTE_TEMPLATE_MISMATCH", f"route {spec['route']} is mapped to {r['template'] if r else 'nothing'}, spec says {spec['template']}"))
+    if spec["meta"]["social"] != tpl["head"]["social"]:
+        errs.append(("META_SOCIAL_MATCHES_TEMPLATE", f"meta.social {spec['meta']['social']!r} but template {spec['template']} emits {tpl['head']['social']!r} (src/components/shared/head.js)"))
     match_template(spec, repo, errs)
     cats = [C[n["section"]]["semantic"]["category"] for n in nodes]
     present = [n["section"] for n in nodes]

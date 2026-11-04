@@ -1,5 +1,5 @@
 {
- "pageSpecVersion": "1.0.0",
+ "pageSpecVersion": "1.1.0",
  "mode": "reference",
  "template": "work-index",
  "route": "/work",
@@ -7,7 +7,8 @@
  "theme": "light",
  "meta": {
   "title": "Placeholder page title",
-  "description": "Placeholder description of the reference page."
+  "description": "Placeholder description of the reference page.",
+  "social": "full"
  },
  "brand": {
   "studioName": "Right Hemisphere",

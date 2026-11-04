@@ -3,7 +3,7 @@
 inject one defect, run verify_all.py there and require exit 1 plus a FAIL line for the expected check.
 The untouched copy must pass (control).
 
-    python3 extraction/prove_drift.py
+    python3 extraction/prove_drift.py [--scratch DIR]
 
 When the source evidence tree (src/, CLONE_SPEC.md, CLONE_SPEC-PAGES.md, asset-manifest.json, tailwind.config.js,
 index.html, ia/ next to design-repo/) is present it is linked read-only into the temp project so the citation / source-tag / slug /
@@ -16,6 +16,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT.parent
 SOURCE_ENTRIES = ["src", "CLONE_SPEC.md", "CLONE_SPEC-PAGES.md", "asset-manifest.json", "tailwind.config.js", "index.html", "ia"]
+SCRATCH = sys.argv[sys.argv.index("--scratch") + 1] if "--scratch" in sys.argv else None  # parent dir for the temp copies (default: OS temp)
 HAS_SOURCE = all((SRC / e).exists() for e in SOURCE_ENTRIES)
 
 
@@ -87,6 +88,7 @@ CASES = [
     ("contract schema loosened by hand", jedit("schema/section-contract.schema.json", lambda d: d.update(additionalProperties=True)), "DERIVED", False),
     ("motion fallback outside the closed enum", jedit("tokens/00-foundation/motion-patterns.json", lambda d: d["patterns"]["scroll-fade"].update(reducedMotionFallback="spin")), "MOTION", False),
     # graph / templates / examples / gate / hygiene
+    ("template head.social edited", jedit("templates/templates.json", lambda d: d["templates"]["blog-post"]["head"].update(social="full")), "EXAMPLES", False),
     ("graph rule severity drift", jedit("compatibility/graph.json", lambda d: d["rules"][0].update(severity="warn")), "GRAPH_SYNC", False),
     ("route removed", jedit("templates/routes.json", lambda d: d["routes"].pop()), "TEMPLATES", False),
     ("route mapped twice", jedit("templates/routes.json", lambda d: d["routes"].append(d["routes"][0])), "TEMPLATES", False),
@@ -115,7 +117,7 @@ CASES = [
 
 
 def make_copy():
-    tmp = Path(tempfile.mkdtemp(prefix="drift-"))
+    tmp = Path(tempfile.mkdtemp(prefix="drift-", dir=SCRATCH))
     proj = tmp / "project"; proj.mkdir()
     shutil.copytree(ROOT, proj / "design-repo", ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
     if HAS_SOURCE:

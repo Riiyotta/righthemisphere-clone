@@ -20,7 +20,7 @@ from pathlib import Path
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parent.parent
 ALLOWLIST_VERSION = "1.0.0"
-PAGESPEC_VERSION = "1.0.0"
+PAGESPEC_VERSION = "1.1.0"
 
 
 def j(rel):
@@ -97,7 +97,7 @@ def build_schema():
             "route": {"type": "string", "pattern": "^/"},
             "locale": {"enum": ["en"]},
             "theme": {"enum": ["light"]},
-            "meta": {"type": "object", "additionalProperties": False, "required": ["title", "description"], "properties": {"title": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}}},
+            "meta": {"type": "object", "additionalProperties": False, "required": ["title", "description", "social"], "properties": {"title": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 1}, "social": {"enum": ["site", "full", "title", "none"]}}},
             "brand": {"type": "object", "additionalProperties": False, "required": ["studioName", "domain"],
                       "properties": {"studioName": {"type": "string", "minLength": 1}, "domain": {"type": "string", "minLength": 1}}},
             "nodes": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/node"}},

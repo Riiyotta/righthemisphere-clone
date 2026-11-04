@@ -3,6 +3,9 @@
  "note": "One template per page purpose (9, from ia/ia.json, re-checked against src/Router.jsx). nodes are structured objects; maxRepeat caps a repeatable cluster; a 'slot' node accepts a run of the listed sections in any order (case-study bodies vary per project). Routes: templates/routes.json (18, each once) plus the catch-all 404.",
  "templates": {
   "home": {
+   "head": {
+    "social": "site"
+   },
    "purpose": "Home: the studio's front page. Hero with display words, the selected work as two card clusters, a statement, services, awards, press mentions, client logos, testimonials, FAQ, blog strip and the contact call to action.",
    "family": "home",
    "routePattern": "^/$",
@@ -12,8 +15,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/App.jsx:17",
@@ -109,6 +116,9 @@
    ]
   },
   "about": {
+   "head": {
+    "social": "full"
+   },
    "purpose": "About: who the studio is. Words hero, intro statement, team roster, process note, client logos, products, blog strip and contact call to action.",
    "family": "about",
    "routePattern": "^/about$",
@@ -118,8 +128,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/About.jsx:41",
@@ -196,6 +210,9 @@
    ]
   },
   "services": {
+   "head": {
+    "social": "full"
+   },
    "purpose": "Services: what the studio does and costs. Services hero, price table, FAQ and contact call to action.",
    "family": "services",
    "routePattern": "^/services$",
@@ -205,8 +222,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/Services.jsx:12",
@@ -259,6 +280,9 @@
    ]
   },
   "work-index": {
+   "head": {
+    "social": "full"
+   },
    "purpose": "Work index: the full project list as up to four card clusters under a words hero, then the contact call to action.",
    "family": "portfolio-index",
    "routePattern": "^/work$",
@@ -268,8 +292,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/Work.jsx:9",
@@ -317,6 +345,9 @@
    ]
   },
   "contact": {
+   "head": {
+    "social": "full"
+   },
    "purpose": "Contact: words hero, contact details and the enquiry form (no contact call to action on this page).",
    "family": "contact",
    "routePattern": "^/contact$",
@@ -326,8 +357,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/Contact.jsx:9",
@@ -374,6 +409,9 @@
    ]
   },
   "blog-list": {
+   "head": {
+    "social": "full"
+   },
    "purpose": "Blog index: words hero and the blog posts as staggered card clusters of three (no contact call to action).",
    "family": "article-index",
    "routePattern": "^/blog$",
@@ -383,8 +421,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/BlogList.jsx:12",
@@ -426,6 +468,9 @@
    ]
   },
   "blog-post": {
+   "head": {
+    "social": "none"
+   },
    "purpose": "Blog post: article header, the body as chapters, and a two-card read-more row.",
    "family": "article",
    "routePattern": "^/blog/[a-z0-9-]+$",
@@ -444,8 +489,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/BlogPost.jsx:15",
@@ -493,6 +542,9 @@
    ]
   },
   "case-study": {
+   "head": {
+    "social": "title"
+   },
    "purpose": "Case study: header, overview, a body slot of showcase media and image/text rows whose order is data-driven per study, then the 'see more work' link.",
    "family": "case-study",
    "routePattern": "^/(?!about$|services$|work$|contact$|blog$)[a-z0-9-]+$",
@@ -503,8 +555,12 @@
    "catchAll": false,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/CaseStudy.jsx:136",
@@ -560,6 +616,9 @@
    ]
   },
   "not-found": {
+   "head": {
+    "social": "none"
+   },
    "purpose": "Not found: the hosting-level 404 screen with no site chrome; served for any unmatched path.",
    "family": "system",
    "routePattern": "^/.*$",
@@ -567,8 +626,12 @@
    "catchAll": true,
    "evidence": [
     {
-     "cite": "src/Router.jsx:71",
+     "cite": "src/Router.jsx:73",
      "needle": "export default function Router"
+    },
+    {
+     "cite": "src/components/shared/head.js:3",
+     "needle": "`social` mirrors which Open Graph / Twitter tags"
     },
     {
      "cite": "src/pages/NotFound.jsx:3",

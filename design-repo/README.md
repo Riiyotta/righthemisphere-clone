@@ -35,6 +35,9 @@ h2-bounded chapter plus a related row; the 25-card /work grid is four `work.card
 /blog index is four 3-card clusters. Measured as one block each, /work (86% of its page) and /blog (83%) would
 fail the wrapper gate.
 
+Each template also records `head.social`, which Open Graph / Twitter tags the clone's `head.js` emits for it; a
+PageSpec's `meta.social` must match (`META_SOCIAL_MATCHES_TEMPLATE`). The `og:image` exists only on the home page.
+
 ## Design policy
 
 `registry.manifest.json` has `category: "portfolio"` and binds the generic common design policy
@@ -49,7 +52,7 @@ in `policy/design-policy.json`. **Approval is pending architecture review**: no 
 <!-- counts:start (written by extraction/verify_all.py --write-counts) -->
 | item | count |
 |---|---|
-| tokens | 164 |
+| tokens | 165 |
 | pageSpecReferenceableTokens | 25 |
 | primitives | 11 |
 | components | 11 |
@@ -60,13 +63,13 @@ in `policy/design-policy.json`. **Approval is pending architecture review**: no 
 | assetRoles | 28 |
 | generationSafeAssetRoles | 17 |
 | motionPatterns | 24 |
-| graphRules | 16 |
+| graphRules | 17 |
 | examples | 18 |
 | referenceExamples | 9 |
 | generatedExamples | 9 |
-| adversarialMutations | 171 |
+| adversarialMutations | 177 |
 | adversarialControls | 19 |
-| driftCases | 57 |
+| driftCases | 58 |
 <!-- counts:end -->
 
 ## Run
@@ -76,7 +79,7 @@ pip install jsonschema                         # the only dependency
 python3 extraction/verify_all.py               # everything, exit 1 on any failure
 python3 schema/semantic_validate.py --examples
 python3 schema/tests/adversarial_test.py
-python3 extraction/prove_drift.py              # copies the repo to a temp dir and injects each defect
+python3 extraction/prove_drift.py [--scratch DIR]  # copies the repo to a temp dir and injects each defect
 python3 extraction/wrapper_gate.py
 python3 extraction/build_derived.py            # after editing a contract / token / role / pattern
 python3 extraction/build_protected.py          # after the source copy or names change (needs the clone source)

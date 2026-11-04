@@ -15,7 +15,7 @@
  ],
  "note": "DERIVED by extraction/build_derived.py; verify_all.py re-derives it and fails on any drift (missing, extra or changed token). Values trace to tailwind.config.js / src/pages/pages.css via each token's evidence.",
  "counts": {
-  "total": 164,
+  "total": 165,
   "pageSpecReferenceable": 25
  },
  "tokens": {
@@ -598,6 +598,12 @@
   "font.weight.regular": {
    "category": "fontWeight",
    "value": "400",
+   "file": "tokens/00-foundation/typography.json",
+   "pageSpecReferenceable": false
+  },
+  "font.weight.medium": {
+   "category": "fontWeight",
+   "value": "500",
    "file": "tokens/00-foundation/typography.json",
    "pageSpecReferenceable": false
   },

@@ -1,6 +1,6 @@
 {
  "category": "typography",
- "note": "Type scale from the fluid --t* variables in tailwind.config.js (clamp formulas, desktop; <=991 and <=479 overrides are in the same file) plus the fixed article sizes of CLONE_SPEC-PAGES.md 6.1. PP Mori is commercial: it is font.family.reference (not PageSpec-referenceable); generated pages use font.family.sans.",
+ "note": "Type scale from the fluid --t* variables in tailwind.config.js (clamp formulas, desktop; <=991 and <=479 overrides are in the same file) plus the fixed article sizes of CLONE_SPEC-PAGES.md 6.1. h2 is declared weight 500 (index.css) but renders with the 400 face because no 500 face exists (font.weight.medium records the declared value). PP Mori is commercial: it is font.family.reference (not PageSpec-referenceable); generated pages use font.family.sans.",
  "tokens": {
   "font.family.sans": {
    "$type": "fontFamily",
@@ -44,6 +44,17 @@
     {
      "cite": "CLONE_SPEC.md:36",
      "needle": "Use a 400 weight only"
+    }
+   ]
+  },
+  "font.weight.medium": {
+   "$type": "fontWeight",
+   "$value": "500",
+   "category": "fontWeight",
+   "evidence": [
+    {
+     "cite": "src/index.css:32",
+     "needle": "Webflow base weights; only the 400/600 faces exist, so 500 renders with the 400 face."
     }
    ]
   },

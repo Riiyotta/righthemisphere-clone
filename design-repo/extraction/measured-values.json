@@ -10,7 +10,7 @@
  },
  "sectionHeights": {
   "viewport": "1440x900",
-  "measuredAt": "2026-11-04T12:38:37.647Z",
+  "measuredAt": "2026-11-04T13:18:15.244Z",
   "routes": {
    "/": {
     "template": "home",
@@ -1817,7 +1817,7 @@
  "responsiveHeights": {
   "768x1024": {
    "viewport": "768x1024",
-   "measuredAt": "2026-11-04T12:38:37.674Z",
+   "measuredAt": "2026-11-04T13:18:15.245Z",
    "routes": {
     "/": {
      "template": "home",
@@ -3614,7 +3614,7 @@
   },
   "390x844": {
    "viewport": "390x844",
-   "measuredAt": "2026-11-04T12:38:37.652Z",
+   "measuredAt": "2026-11-04T13:18:15.245Z",
    "routes": {
     "/": {
      "template": "home",
@@ -5563,7 +5563,7 @@
     "h2.text-size-h2": {
      "fontFamily": "\"PP Mori\", Inter, sans-serif",
      "fontSize": "29.4516px",
-     "fontWeight": "400",
+     "fontWeight": "500",
      "lineHeight": "35.3419px",
      "letterSpacing": "-0.4px",
      "textTransform": "uppercase",
@@ -5689,7 +5689,7 @@
     ".contact_heading": {
      "fontFamily": "\"PP Mori\", Inter, sans-serif",
      "fontSize": "75.1726px",
-     "fontWeight": "400",
+     "fontWeight": "500",
      "lineHeight": "90.2071px",
      "letterSpacing": "-0.4px",
      "textTransform": "uppercase",
@@ -5990,7 +5990,7 @@
     "h2.text-size-h2": {
      "fontFamily": "\"PP Mori\", Inter, sans-serif",
      "fontSize": "24px",
-     "fontWeight": "400",
+     "fontWeight": "500",
      "lineHeight": "28.8px",
      "letterSpacing": "-0.4px",
      "textTransform": "uppercase",
@@ -6116,7 +6116,7 @@
     ".contact_heading": {
      "fontFamily": "\"PP Mori\", Inter, sans-serif",
      "fontSize": "40px",
-     "fontWeight": "400",
+     "fontWeight": "500",
      "lineHeight": "48px",
      "letterSpacing": "-0.4px",
      "textTransform": "uppercase",
@@ -6286,8 +6286,12 @@
    "needle": "const STATIC = {"
   },
   {
-   "cite": "src/Router.jsx:59",
+   "cite": "src/Router.jsx:61",
    "needle": "const study = Object.values(caseStudies)"
+  },
+  {
+   "cite": "src/components/shared/head.js:3",
+   "needle": "`social` mirrors which Open Graph / Twitter tags"
   },
   {
    "cite": "ia/ia.json:5",
@@ -6300,6 +6304,7 @@
   "Measured at 1440: tallest HERO hero.article-header 850px; largest in-flow share 41% (conversion.enquiry-form on /contact), reported by extraction/wrapper_gate.py. Without decomposition /work (86% in one grid) and /blog (83%) would exceed the 60% gate.",
   "src/pages/pages.css and CLONE_SPEC-PAGES.md note one image missing locally (team member 12); the home Work section and the live site randomise the 3 home blog cards (Webflow shuffle): the clone shows the cached trio.",
   "The clone has no prefers-reduced-motion handling; motion is gated by breakpoint (<=767 static). Reduced-motion fallbacks in motion-patterns.json are what generated pages must do, not what the clone does.",
+  "Reconciled with clone commit 7335551 (merged after the first build): h2 and .contact_heading now compute font-weight 500 (declared in src/index.css; no 500 face exists so they render with the 400 face; token font.weight.medium), and src/components/shared/head.js applies per-route Open Graph / Twitter tags (templates[].head.social, PageSpec meta.social). Section heights at 1440, 768 and 390 were re-measured from a fresh production build and are identical to the earlier measurement (no section or page height moved).",
   "Visual parity against the live site was NOT measured in this build (no live-vs-clone pixel harness was run); no percentage is claimed."
  ],
  "parity": {
