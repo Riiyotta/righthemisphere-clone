@@ -540,9 +540,24 @@ def main(write_counts=False):
         for e in excs:
             k = (e.get("viewport"), e.get("route"), e.get("index")); exk.add(k)
             if k not in below: perr.append(f"exception {k} is not a section below the gate (exceptions are never added to bypass the gate)")
-            if e.get("status") != "pending human approval" or e.get("approvedBy") is not None: perr.append(f"exception {k}: status must be 'pending human approval' with approvedBy null (an agent never approves)")
+            if e.get("status") != "pending human approval" or e.get("approvedBy") is not None: perr.append(f"exception {k}: status must be 'pending human approval' with approvedBy null (the recorder never approves; owner decisions live in extraction/parity-approvals.json)")
             if not e.get("cause") or e.get("cause") == "UNDIAGNOSED" or len(e["cause"]) < 40: perr.append(f"exception {k}: a real, written cause is required")
         for k in below - exk: perr.append(f"section {k} is below the gate and has no exception")
+        # owner decisions: extraction/parity-approvals.json (a named human, a date and a written decision; never an agent)
+        apf = ROOT / "extraction/parity-approvals.json"
+        if (man.get("entryPoints") or {}).get("parityApprovals") != "extraction/parity-approvals.json" or not apf.is_file():
+            perr.append("parity-approvals.json is not registered / missing")
+        else:
+            human_bad = re.compile(r"claude|anthropic|\bai\b|agent|\bbot\b|assistant|automat|gpt|llm|\bmodel\b", re.I)
+            seen = set()
+            for a in json.loads(apf.read_text()).get("approvals", []):
+                ak = (a.get("viewport"), a.get("route"), a.get("index")); seen.add(ak)
+                if ak not in exk: perr.append(f"approval {ak} does not match an exception in parity-results.json")
+                ab = a.get("approvedBy")
+                if not isinstance(ab, str) or not ab.strip() or human_bad.search(ab): perr.append(f"approval {ak}: approvedBy must be a named human (an agent never approves)")
+                if a.get("status") != "approved-deliberate": perr.append(f"approval {ak}: status must be 'approved-deliberate'")
+                if not a.get("approvedOn"): perr.append(f"approval {ak}: approvedOn missing")
+                if len(a.get("decision", "")) < 40: perr.append(f"approval {ak}: a written decision is required")
         # measured-values.json summary must be exactly what the results derive
         mp = mvals.get("parity")
         if not isinstance(mp, dict) or mp.get("measured") is not True: perr.append("measured-values.json parity.measured is not true")

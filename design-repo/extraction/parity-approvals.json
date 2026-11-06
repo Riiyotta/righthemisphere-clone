@@ -1,0 +1,16 @@
+{
+ "description": "Owner decisions on parity exceptions. parity-results.json is machine-recorded and never approves; the owner's decisions live here, keyed by the exception they cover.",
+ "approvals": [
+  {
+   "viewport": "390x844",
+   "route": "/",
+   "index": 11,
+   "section": "editorial.blog-card-grid",
+   "status": "approved-deliberate",
+   "approvedBy": "Riya Ghosh (repository owner)",
+   "approvedOn": "2026-11-06",
+   "decision": "The live home blog strip shows 3 random posts and that difference is deliberate: do not adapt the clone to it. The clone keeps its fixed three posts; this section is accepted below the 0.80 raw gate.",
+   "recordedBy": "owner decision recorded by Claude from the owner's chat message, 2026-11-06"
+  }
+ ]
+}

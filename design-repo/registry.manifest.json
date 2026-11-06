@@ -83,7 +83,8 @@
   "policyHash": "extraction/policy_hash.py",
   "designPolicy": "policy/design-policy.json",
   "generationGuide": "docs/generation-guide.md",
-  "sensitivity": "docs/sensitivity-and-licensing.md"
+  "sensitivity": "docs/sensitivity-and-licensing.md",
+  "parityApprovals": "extraction/parity-approvals.json"
  },
  "counts": {
   "tokens": 165,
@@ -103,6 +104,6 @@
   "generatedExamples": 9,
   "adversarialMutations": 177,
   "adversarialControls": 19,
-  "driftCases": 78
+  "driftCases": 82
  }
 }

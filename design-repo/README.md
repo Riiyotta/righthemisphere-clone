@@ -69,7 +69,7 @@ in `policy/design-policy.json`. **Approval is pending architecture review**: no 
 | generatedExamples | 9 |
 | adversarialMutations | 177 |
 | adversarialControls | 19 |
-| driftCases | 78 |
+| driftCases | 82 |
 <!-- counts:end -->
 
 ## Run
@@ -137,11 +137,12 @@ Per-route and per-section numbers: `extraction/parity-results.json`. Route page 
 A live-vs-live control (the live site captured twice, about an hour apart) gives mean 99.99 and min 98.1 at 1440 and 100.0 at
 390, so the harness noise floor is about 2 points on one section.
 
-**Exception (pending human approval).** `/` at 390x844, section 11 `editorial.blog-card-grid`: raw 62.1. The live home blog
+**Exception (approved as deliberate by the owner, 2026-11-06).** `/` at 390x844, section 11 `editorial.blog-card-grid`: raw 62.1. The live home blog
 strip shows 3 random posts, CDN-cached; the clone pins a different three. Layout matches (geo 100.0 at 390, 99.2 at 1440, ink
 96.9) and the live site returned the same three on every capture, so this is live content and not noise. The clone was not
-pinned to one random draw. The same section passes at 1440 (82.5, mostly white area). `approvedBy` is null: approving it is a
-human decision on this evidence.
+pinned to one random draw. The same section passes at 1440 (82.5, mostly white area). The owner decided on 2026-11-06 that
+this difference is deliberate and the clone must not be adapted to it (`extraction/parity-approvals.json`); the recorded
+result file itself stays `pending human approval` because the recorder never approves anything.
 
 **Masked regions** (percent of the section area masked): `/cheggout-sdk` media.case-showcase 90.6 (390: 87.0) and two
 work.case-image-text 33.0 (390: 37.4 and 44.3); `/watch-with-papa` media.case-showcase 85.7. Their raw score covers only the

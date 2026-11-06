@@ -102,6 +102,10 @@ CASES = [
     # R12 parity record
     ("parity: a section score lowered (no exception)", jedit("extraction/parity-results.json", lambda d: d["viewports"]["1440x900"]["routes"]["/about"]["sections"][1].update(rawPct=40.0)), "PARITY", False),
     ("parity: exception approved by an agent", jedit("extraction/parity-results.json", lambda d: d["exceptions"][0].update(approvedBy="agent", status="approved")), "PARITY", False),
+    ("parity: owner approval by an agent", jedit("extraction/parity-approvals.json", lambda d: d["approvals"][0].update(approvedBy="Claude")), "PARITY", False),
+    ("parity: owner approval without a date", jedit("extraction/parity-approvals.json", lambda d: d["approvals"][0].pop("approvedOn")), "PARITY", False),
+    ("parity: owner approval for an exception that does not exist", jedit("extraction/parity-approvals.json", lambda d: d["approvals"][0].update(index=3)), "PARITY", False),
+    ("parity: approvals file missing", lambda root: (root / "extraction/parity-approvals.json").unlink(), "PARITY", False),
     ("parity: exception removed, section still below the gate", jedit("extraction/parity-results.json", lambda d: d["exceptions"].pop(0)), "PARITY", False),
     ("parity: exception added for a section that passes the gate", jedit("extraction/parity-results.json", lambda d: d["exceptions"].append({"viewport": "1440x900", "route": "/about", "index": 1, "section": "hero.words", "rawPct": 97.6, "cause": "an invented exception added to bypass the gate for a passing section", "status": "pending human approval", "approvedBy": None})), "PARITY", False),
     ("parity: exception cause blanked", jedit("extraction/parity-results.json", lambda d: d["exceptions"][0].update(cause="UNDIAGNOSED")), "PARITY", False),
