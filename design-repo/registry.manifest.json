@@ -1,6 +1,6 @@
 {
  "repositoryId": "righthemisphere-portfolio-design-repo",
- "repositoryVersion": "1.0.1",
+ "repositoryVersion": "1.1.0",
  "pageSpecVersion": "1.1.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
@@ -73,6 +73,11 @@
   "wrapperGate": "extraction/wrapper_gate.py",
   "proveDrift": "extraction/prove_drift.py",
   "measureSections": "extraction/measure_sections.mjs",
+  "parityCapture": "extraction/parity_capture.mjs",
+  "parityCompare": "extraction/parity_compare.py",
+  "parityGeometry": "extraction/parity_geometry.py",
+  "parityRecord": "extraction/parity_record.py",
+  "parityResults": "extraction/parity-results.json",
   "buildDerived": "extraction/build_derived.py",
   "buildProtected": "extraction/build_protected.py",
   "policyHash": "extraction/policy_hash.py",
@@ -98,6 +103,6 @@
   "generatedExamples": 9,
   "adversarialMutations": 177,
   "adversarialControls": 19,
-  "driftCases": 58
+  "driftCases": 78
  }
 }

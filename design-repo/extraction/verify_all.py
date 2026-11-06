@@ -37,6 +37,13 @@ Checks (each named in the output):
   EXAMPLES        every example passes schema + semantic validation; a generated AND a reference example
                   per template family
   WRAPPER_GATE    R9: extraction/wrapper_gate.py
+  PARITY          R12: extraction/parity-results.json is the tracked live-vs-clone parity record. Pins: pixelThreshold 24 and
+                  gate 80 here == results == parity_compare.py / parity_record.py constants; sha256 of the four scripts and the four
+                  text-free geometry dumps; geoPct recomputed from the dumps; averages/means/below-gate lists recomputed; every
+                  route of templates/routes.json (+ the 404 probe) at 1440x900 and home + a blog post + a case study at 390x844;
+                  every section below 80 is an exception (and every exception a section below 80) with status
+                  "pending human approval" and approvedBy null; no route average below 80; the two recorded runs agree;
+                  measured-values.json parity == the summary derived from the results; no screenshots or .playwright-mcp citations
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
 Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
 design-repo/); when that source tree is absent they are reported as warnings, never as passes or failures.
@@ -82,7 +89,7 @@ PINNED_AVAILABILITY = {
 RETRIEVAL_INELIGIBLE = {"overlay.partner-credits"}
 RUNTIME_ID = re.compile(r"(^shell\.|^utility\.|^overlay\.|overlay|modal|dialog|drawer|loader|preloader|toast|hud|cookie|consent|cursor|lightbox)")
 REQUIRED_ENTRYPOINTS = ("token-catalog", "token-policy", "component-allowlist", "motion-patterns", "asset-roles", "pagespec.schema", "section-contract.schema",
-                        "semantic_validate", "adversarial_test", "verify_all", "wrapper_gate", "prove_drift", "measured-values", "measure_sections", "build_derived", "protected-content", "build_protected", "policy_hash", "design-policy")
+                        "semantic_validate", "adversarial_test", "verify_all", "wrapper_gate", "prove_drift", "measured-values", "measure_sections", "parity_capture", "parity_compare", "parity_geometry", "parity_record", "parity-results", "build_derived", "protected-content", "build_protected", "policy_hash", "design-policy")
 
 BOUND_POLICY = {"policyId": "n0-design-constraints-common", "policyVersion": "0.1.0", "commonIrVersion": "0.5", "enforcementMode": "hard-and-soft", "domain": "portfolio"}
 
@@ -475,6 +482,76 @@ def main(write_counts=False):
     if man.get("status") != "design-review-pending" or man.get("productionApproved") is not False: errs.append("status must be design-review-pending and productionApproved false")
     for e in errs: fail("POLICY", e)
     PASSES.append("POLICY")
+    # PARITY (R12)
+    pr = load_module("pr", "extraction/parity_record.py"); pg = load_module("pg", "extraction/parity_geometry.py")
+    perr = []
+    PIN_THRESH, PIN_GATE = 24, 80.0
+    pres_p = ROOT / "extraction/parity-results.json"
+    if not pres_p.exists(): perr.append("extraction/parity-results.json missing")
+    else:
+        res = json.loads(pres_p.read_text())
+        cmp_src = (ROOT / "extraction/parity_compare.py").read_text(); rec_src = (ROOT / "extraction/parity_record.py").read_text()
+        if "THRESH, GATE = 24, 0.80" not in cmp_src: perr.append("parity_compare.py: pixel threshold / gate constants are not 'THRESH, GATE = 24, 0.80'")
+        if "THRESH, GATE = 24, 80.0" not in rec_src: perr.append("parity_record.py: constants are not 'THRESH, GATE = 24, 80.0'")
+        if res.get("pixelThreshold") != PIN_THRESH or res.get("gate") != {"perSectionMinPct": PIN_GATE, "pageAverageMinPct": PIN_GATE}:
+            perr.append(f"results pixelThreshold/gate {res.get('pixelThreshold')}/{res.get('gate')} != pinned {PIN_THRESH}/{PIN_GATE}")
+        want_files = {f"extraction/{f}" for f in ("parity_capture.mjs", "parity_compare.py", "parity_geometry.py", "parity_record.py")} | {f"extraction/parity-geometry/{k}-{vp}.json" for k in ("live", "clone") for vp in ("1440x900", "390x844")}
+        if set(res.get("files", {})) != want_files: perr.append(f"results.files != expected set ({sorted(set(res.get('files', {})) ^ want_files)})")
+        import hashlib
+        for rel, h in res.get("files", {}).items():
+            fp = ROOT / rel
+            if not fp.exists(): perr.append(f"pinned file missing: {rel}")
+            elif hashlib.sha256(fp.read_bytes()).hexdigest() != h: perr.append(f"sha256 pin of {rel} does not match the file (re-record with extraction/parity_record.py)")
+        routes_j = j("templates/routes.json"); want_routes = [r["path"] for r in routes_j["routes"]] + [routes_j["catchAll"]["probe"]]
+        vps = res.get("viewports", {})
+        if set(vps) != {"1440x900", "390x844"}: perr.append(f"viewports {sorted(vps)} != ['1440x900', '390x844']")
+        for vp, v in vps.items():
+            rts = v.get("routes", {})
+            if vp == "1440x900" and sorted(rts) != sorted(want_routes): perr.append(f"{vp}: route set differs from templates/routes.json (+404 probe): {sorted(set(rts) ^ set(want_routes))}")
+            if vp == "390x844":
+                kinds = {r["template"] for r in rts.values()}
+                if not ({"home", "blog-post", "case-study"} <= kinds): perr.append(f"{vp}: needs the home page, a blog post and a case study, has {sorted(kinds)}")
+            avg1 = lambda xs: round(sum(xs) / max(1, len(xs)), 1)
+            allsec = []
+            gp = ROOT / f"extraction/parity-geometry/live-{vp}.json"; gc = ROOT / f"extraction/parity-geometry/clone-{vp}.json"
+            geo = pg.compute(json.loads(gp.read_text()), json.loads(gc.read_text())) if gp.exists() and gc.exists() else {}
+            ldump = json.loads(gp.read_text()) if gp.exists() else {"routes": {}}
+            for r, rv in rts.items():
+                secs = rv["sections"]; allsec += secs
+                if r not in geo or len(geo[r]) != len(secs): perr.append(f"{vp} {r}: sections ({len(secs)}) != geometry dump ({len(geo.get(r, []))})"); continue
+                for s, g, ls in zip(secs, geo[r], ldump["routes"][r]["sections"]):
+                    if (s["id"], s["instance"]) != (g["id"], g["instance"]) or abs(s["liveH"] - ls["h"]) > 0.05: perr.append(f"{vp} {r}[{s['i']}]: section id/height differs from the live geometry dump")
+                    if abs(s["geoPct"] - g["geoPct"]) > 0.05: perr.append(f"{vp} {r}[{s['i']}] {s['id']}: geoPct {s['geoPct']} != recomputed {g['geoPct']}")
+                if rv["rawAvg"] != avg1([s["rawPct"] for s in secs]) or rv["rawMin"] != min(s["rawPct"] for s in secs) or rv["inkAvg"] != avg1([s["inkPct"] for s in secs]) or rv["geoAvg"] != avg1([s["geoPct"] for s in secs]):
+                    perr.append(f"{vp} {r}: route averages/min differ from the section numbers")
+                if rv["rawAvg"] < PIN_GATE: perr.append(f"{vp} {r}: page average {rv['rawAvg']} < gate {PIN_GATE} (an average below the gate cannot be excepted)")
+                if rv["cloneOnlySections"] or rv["sectionCount"] != len(secs): perr.append(f"{vp} {r}: clone has sections the live page does not ({rv['cloneOnlySections']})")
+                for s in secs:
+                    if abs(s["rawPct"] - s["rawPct2"]) > 3.0: perr.append(f"{vp} {r}[{s['i']}]: the two runs disagree ({s['rawPct']} vs {s['rawPct2']})")
+            o = v["overall"]
+            if o["sections"] != len(allsec) or o["meanRawPct"] != avg1([s["rawPct"] for s in allsec]) or o["meanInkPct"] != avg1([s["inkPct"] for s in allsec]) or o["meanGeoPct"] != avg1([s["geoPct"] for s in allsec]) or o["minRawPct"] != min(s["rawPct"] for s in allsec) or o["sectionsBelowGate"] != sum(1 for s in allsec if s["rawPct"] < PIN_GATE):
+                perr.append(f"{vp}: overall numbers differ from the section numbers")
+            for side in ("live", "clone"):
+                for r, cs in v.get("captureState", {}).get(side, {}).items():
+                    if cs.get("imagesIncomplete") != 0 or cs.get("videos") != 0: perr.append(f"{vp} {side} {r}: captureState has incomplete images or unpaused video: {cs}")
+        # gate rule: every section below the gate is an exception and every exception is a section below the gate
+        below = {(vp, r, s["i"]) for vp, v in vps.items() for r, rv in v["routes"].items() for s in rv["sections"] if s["rawPct"] < PIN_GATE}
+        excs = res.get("exceptions", []); exk = set()
+        for e in excs:
+            k = (e.get("viewport"), e.get("route"), e.get("index")); exk.add(k)
+            if k not in below: perr.append(f"exception {k} is not a section below the gate (exceptions are never added to bypass the gate)")
+            if e.get("status") != "pending human approval" or e.get("approvedBy") is not None: perr.append(f"exception {k}: status must be 'pending human approval' with approvedBy null (an agent never approves)")
+            if not e.get("cause") or e.get("cause") == "UNDIAGNOSED" or len(e["cause"]) < 40: perr.append(f"exception {k}: a real, written cause is required")
+        for k in below - exk: perr.append(f"section {k} is below the gate and has no exception")
+        # measured-values.json summary must be exactly what the results derive
+        mp = mvals.get("parity")
+        if not isinstance(mp, dict) or mp.get("measured") is not True: perr.append("measured-values.json parity.measured is not true")
+        elif mp != pr.summary(res): perr.append("measured-values.json parity differs from the summary derived from extraction/parity-results.json (re-run parity_record.py)")
+        for p in ROOT.rglob("*"):
+            if p.is_file() and p.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp", ".gif"): perr.append(f"image file in the package (live screenshots are never committed): {p.relative_to(ROOT)}")
+            elif p.is_file() and p.suffix in (".json", ".md", ".py", ".mjs") and (".playwright" + "-mcp") in p.read_text(errors="ignore") and p.name != "verify_all.py": perr.append(f".playwright-mcp citation in {p.relative_to(ROOT)}")
+    for e in perr: fail("PARITY", e)
+    PASSES.append("PARITY")
     # HYGIENE (character classes keep this file free of the literal patterns it searches for)
     absre = re.compile(r"/U[s]ers/[A-Za-z0-9._-]+/|/h[o]me/[A-Za-z0-9._-]+/|/p[r]ivate/(tmp|var)/|C:\\\\U[s]ers\\\\")
     for p in ROOT.rglob("*"):

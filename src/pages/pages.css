@@ -937,6 +937,12 @@ h1.blog_heading {
   align-items: end;
   line-height: 120%;
 }
+/* The text-right / text-left class only picks the grid column. The original's copy is start-aligned on both
+   sides (measured text-align: start at 1440, 900, 600 and 390), so cancel the Tailwind text-align utility. */
+.project_showcase_text_wrapper.text-right,
+.project_showcase_text_wrapper.text-left {
+  text-align: start;
+}
 .project_showcase_text_wrapper.text-right > .project_showcase_content_wrapper {
   grid-column: 2 / 4;
 }

@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.1.0 (design-review-pending): live-vs-clone parity measured
+
+Added the missing R12 evidence. Approval is a human decision based on it; nothing here is approved.
+
+- Harness: `extraction/parity_capture.mjs`, `parity_compare.py`, `parity_geometry.py`, `parity_record.py`. Record: `extraction/parity-results.json` (per route and section `rawPct` gated at 80 with pixel threshold 24/255, `inkPct`, `geoPct`, `maskedPct`, run-2 value, capture state, sha256 pins) and `extraction/parity-geometry/` (four text-free geometry dumps; no screenshot is committed). `measured-values.json` `parity` is now the real summary (measured true) instead of `measured: false`.
+- Measured 18 routes plus the 404 probe at 1440x900 (154 sections) and home / one blog post / one case study at 390x844 (30 sections), twice. Mean raw 98.8 (1440) and 96.6 (390); every section is at or above 80 except one (below). Run-to-run max delta 1.9, live-vs-live control min 98.1.
+- One exception, status "pending human approval", approvedBy null: `/` 390x844 `editorial.blog-card-grid` raw 62.1. The live site shows 3 random CDN-cached posts; the clone pins a different three. Layout matches (geo 100.0 / 99.2). Not pinned to one draw.
+- Lottie players and iframes are masked on both sides (up to 90.6% of a section; see README); animated GIFs frozen on frame 0.
+- The clone ships the studio's REAL copy, logos and photos, so raw parity is meaningful and proves nothing about generated-mode output. The real-studio-branding, sensitivity and generated-mode protections are unchanged.
+- Real clone mismatches fixed in `src/`: case-study copy alignment (`pages.css`), wrapped FAQ rows on narrow viewports (`tailwind.config.js` `gridTemplateRows.faq`, `Faq.jsx`). FAQ heights at 768 / 390 re-measured (501 -> 520, 580 -> 599); `responsiveHeights` and `content.faq-accordion` contract heights updated; the 1440 heights are unchanged. Three citations re-pointed (the `faq` token now cites `Faq.jsx`); `protected-content.json` re-derived (one shingle fewer).
+- `verify_all.py` PARITY check (pins threshold 24 and gate 80 in code and results, sha256 of scripts and dumps, geoPct recomputed from the dumps, averages and means recomputed, route coverage, exception rules, measured-values summary equality, no screenshots, no browser-tool citations); 20 drift cases in `prove_drift.py`.
+- IR left untouched by request; no IR file or schema was edited.
+
+Still not done: no human review or approval of the parity result or the exception; Lottie / iframe regions are not pixel-measured; pixel and ink numbers cannot be recomputed from the repo (live screenshots are not committed); one capture date.
+
 ## 1.0.1 (design-review-pending): reconciled with clone commit 7335551
 
 The clone moved on one commit ("Match original social tags and heading weights": `index.html`, `src/Router.jsx`,

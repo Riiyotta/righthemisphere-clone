@@ -47,7 +47,7 @@ function FaqItem({ index, item }) {
         onClick={() => setOpen((o) => !o)}
       >
         <div className="faq_item_header_wrapper col-span-3 flex items-center">
-          <div className="text-size-medium w-40 flex-none">{String(index + 1).padStart(2, '0')}</div>
+          <div className="text-size-medium w-40 shrink">{String(index + 1).padStart(2, '0')}</div>
           <div className="text-size-medium">{item.q}</div>
         </div>
         <div className="faq-toggle flex h-32 w-32 items-center justify-center justify-self-end">

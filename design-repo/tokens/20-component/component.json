@@ -52,8 +52,8 @@
    "category": "component",
    "evidence": [
     {
-     "cite": "tailwind.config.js:150",
-     "needle": "faq: '32px'"
+     "cite": "src/components/Faq.jsx:53",
+     "needle": "faq-toggle flex h-32 w-32"
     }
    ]
   },

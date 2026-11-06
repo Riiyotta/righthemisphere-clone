@@ -109,13 +109,13 @@
   "inFlowAt1440": true,
   "instancesAt1440": 2,
   "heightAt768": [
-   501,
-   501
+   520,
+   520
   ],
   "instancesAt768": 2,
   "heightAt390": [
-   580,
-   580
+   599,
+   599
   ],
   "instancesAt390": 2,
   "source": "extraction/measured-values.json#sectionHeights"

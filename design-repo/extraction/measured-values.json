@@ -1,5 +1,5 @@
 {
- "version": "1.0.0",
+ "version": "1.1.0",
  "note": "Measured and cited evidence for this design-repo. sectionHeights (1440x900) feeds extraction/wrapper_gate.py; responsiveHeights records 768x1024 and 390x844 for every route (informational for sizes, required to exist). Citations (path:line) resolve against the clone source when it sits next to design-repo/ and are skipped, never passed, when it does not.",
  "sourceStackNote": "Documentation only: React 18 + Vite 5 + Tailwind 3 clone of a Webflow site (GSAP 3 + ScrollTrigger + SplitText, Lenis, lottie-web). Nothing here depends on it.",
  "thresholds": {
@@ -1817,11 +1817,11 @@
  "responsiveHeights": {
   "768x1024": {
    "viewport": "768x1024",
-   "measuredAt": "2026-11-04T13:18:15.245Z",
+   "measuredAt": "2026-11-06T07:44:01.209Z",
    "routes": {
     "/": {
      "template": "home",
-     "pageHeight": 14649,
+     "pageHeight": 14669,
      "inFlowSections": 13,
      "sections": [
       {
@@ -1929,13 +1929,13 @@
        "top": 12019.3,
        "left": 0,
        "w": 768,
-       "h": 501,
+       "h": 520.2,
        "position": "static",
        "inFlow": true
       },
       {
        "id": "editorial.blog-card-grid",
-       "top": 12632.3,
+       "top": 12651.5,
        "left": 20,
        "w": 728,
        "h": 947.2,
@@ -1945,7 +1945,7 @@
       },
       {
        "id": "cta.contact-lines",
-       "top": 13691.5,
+       "top": 13710.7,
        "left": 0,
        "w": 768,
        "h": 435.3,
@@ -1954,7 +1954,7 @@
       },
       {
        "id": "chrome.footer",
-       "top": 14126.8,
+       "top": 14146,
        "left": 0,
        "w": 768,
        "h": 522.6,
@@ -2073,7 +2073,7 @@
     },
     "/services": {
      "template": "services",
-     "pageHeight": 3333,
+     "pageHeight": 3352,
      "inFlowSections": 5,
      "sections": [
       {
@@ -2118,13 +2118,13 @@
        "top": 1874.3,
        "left": 0,
        "w": 768,
-       "h": 501,
+       "h": 520.2,
        "position": "static",
        "inFlow": true
       },
       {
        "id": "cta.contact-lines",
-       "top": 2375.3,
+       "top": 2394.5,
        "left": 0,
        "w": 768,
        "h": 435.3,
@@ -2133,7 +2133,7 @@
       },
       {
        "id": "chrome.footer",
-       "top": 2810.5,
+       "top": 2829.7,
        "left": 0,
        "w": 768,
        "h": 522.6,
@@ -3614,11 +3614,11 @@
   },
   "390x844": {
    "viewport": "390x844",
-   "measuredAt": "2026-11-04T13:18:15.245Z",
+   "measuredAt": "2026-11-06T07:44:01.112Z",
    "routes": {
     "/": {
      "template": "home",
-     "pageHeight": 13336,
+     "pageHeight": 13355,
      "inFlowSections": 13,
      "sections": [
       {
@@ -3726,13 +3726,13 @@
        "top": 9872.8,
        "left": 0,
        "w": 390,
-       "h": 579.8,
+       "h": 599,
        "position": "static",
        "inFlow": true
       },
       {
        "id": "editorial.blog-card-grid",
-       "top": 10564.6,
+       "top": 10583.8,
        "left": 16,
        "w": 358,
        "h": 1444.8,
@@ -3742,7 +3742,7 @@
       },
       {
        "id": "cta.contact-lines",
-       "top": 12121.4,
+       "top": 12140.6,
        "left": 0,
        "w": 390,
        "h": 439.2,
@@ -3751,7 +3751,7 @@
       },
       {
        "id": "chrome.footer",
-       "top": 12560.6,
+       "top": 12579.8,
        "left": 0,
        "w": 390,
        "h": 775.7,
@@ -3870,7 +3870,7 @@
     },
     "/services": {
      "template": "services",
-     "pageHeight": 3247,
+     "pageHeight": 3266,
      "inFlowSections": 5,
      "sections": [
       {
@@ -3915,13 +3915,13 @@
        "top": 1452.5,
        "left": 0,
        "w": 390,
-       "h": 579.8,
+       "h": 599,
        "position": "static",
        "inFlow": true
       },
       {
        "id": "cta.contact-lines",
-       "top": 2032.3,
+       "top": 2051.5,
        "left": 0,
        "w": 390,
        "h": 439.2,
@@ -3930,7 +3930,7 @@
       },
       {
        "id": "chrome.footer",
-       "top": 2471.5,
+       "top": 2490.7,
        "left": 0,
        "w": 390,
        "h": 775.7,
@@ -6308,7 +6308,1592 @@
   "Visual parity against the live site was NOT measured in this build (no live-vs-clone pixel harness was run); no percentage is claimed."
  ],
  "parity": {
-  "measured": false,
-  "note": "No live-vs-clone pixel harness was run for this design-repo, so no parity number exists. The clone's own QA evidence is in CLONE_SPEC*.md and its commit history."
+  "measured": true,
+  "resultsFile": "extraction/parity-results.json",
+  "pixelThreshold": 24,
+  "gate": {
+   "perSectionMinPct": 80.0,
+   "pageAverageMinPct": 80.0
+  },
+  "metrics": {
+   "rawPct": "GATED: share of live-section pixels whose RGB channels all differ by <= 24/255 (clone padded as non-matching)",
+   "inkPct": "layout parity from pixels: ink block-map Dice (attio method); reported, not gated",
+   "geoPct": "layout parity from text-free DOM geometry (text rows, media, controls on an 8 px grid) Dice; recomputed by verify_all from the tracked dumps"
+  },
+  "captureState": {
+   "viewports": "1440x900 for all 18 routes + the catch-all 404 probe; 390x844 for the home page, one blog post and one case study",
+   "arrival": "full-page stepped scroll (400 px) after the load intro (5.5 s at 1440, 4.5 s at 390), then each section tile reached by stepped scroll with a 1.2 s settle",
+   "fontsAndImages": "document.fonts.ready awaited; every <img> forced eager, loaded and decoded; images still incomplete after that are counted (must be 0)",
+   "video": "every <video> is paused at 0.5 s after the seek; neither side has a <video> on any measured route",
+   "animations": "finite CSS/WAAPI animations finished, infinite ones paused at 0 (none were found on either side); GSAP/IX3 reveals reach their end state during the arrival scroll",
+   "consentBanners": "no consent banner exists on the live site; a stylesheet that hides cookie/consent overlays and the partner-credits overlay is injected on BOTH sides, nothing is ever clicked",
+   "masked": "only (a) autoplaying looping Lottie players (time-based, cannot be paused on the same frame on both sides) and (b) third-party iframes; masked pixels leave the counts on both sides and are reported per section as maskedPct",
+   "liveSiteState": "the live site was captured on the date in measuredAt; its home-page blog strip is 3 random posts of 10 chosen at origin render and CDN-cached, so it can differ from the clone's fixed three"
+  },
+  "viewports": {
+   "1440x900": {
+    "overall": {
+     "routes": 19,
+     "sections": 154,
+     "meanRawPct": 98.8,
+     "meanRawPct2": 98.8,
+     "meanInkPct": 99.3,
+     "meanGeoPct": 98.2,
+     "minRawPct": 82.5,
+     "sectionsBelowGate": 0,
+     "routesBelowAverageGate": [],
+     "maxAbsRunDeltaRawPct": 1.9,
+     "meanAbsRunDeltaRawPct": 0.0
+    },
+    "routes": {
+     "/": {
+      "template": "home",
+      "rawAvg": 98.4,
+      "rawMin": 82.5,
+      "inkAvg": 98.4,
+      "geoAvg": 95.0,
+      "sections": [
+       [
+        "chrome.navbar",
+        99.0,
+        98.3,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.home",
+        99.6,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.8,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.8,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "content.studio-statement",
+        99.8,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "list.service-rows",
+        99.9,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.award-groups",
+        99.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.press-mentions",
+        99.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.client-logo-grid",
+        100.0,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.testimonial-slider",
+        98.6,
+        83.8,
+        85.4,
+        0.0
+       ],
+       [
+        "content.faq-accordion",
+        99.9,
+        99.4,
+        53.3,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        82.5,
+        98.4,
+        99.2,
+        0.0
+       ],
+       [
+        "cta.contact-lines",
+        99.8,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        99.0,
+        99.3,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/about": {
+      "template": "about",
+      "rawAvg": 99.4,
+      "rawMin": 97.6,
+      "inkAvg": 99.0,
+      "geoAvg": 99.0,
+      "sections": [
+       [
+        "chrome.navbar",
+        99.0,
+        98.3,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.words",
+        97.6,
+        95.1,
+        98.6,
+        0.0
+       ],
+       [
+        "content.studio-statement",
+        99.3,
+        99.5,
+        100.0,
+        0.0
+       ],
+       [
+        "list.team-roster",
+        99.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "content.process-note",
+        99.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.client-logo-grid",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "list.product-links",
+        99.9,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "cta.contact-lines",
+        99.8,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        98.7,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/services": {
+      "template": "services",
+      "rawAvg": 99.5,
+      "rawMin": 98.7,
+      "inkAvg": 99.3,
+      "geoAvg": 90.8,
+      "sections": [
+       [
+        "chrome.navbar",
+        99.0,
+        98.3,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.services",
+        99.6,
+        99.5,
+        100.0,
+        0.0
+       ],
+       [
+        "list.pricing-table",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "content.faq-accordion",
+        99.9,
+        99.4,
+        53.3,
+        0.0
+       ],
+       [
+        "cta.contact-lines",
+        99.8,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.7,
+        99.2,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/work": {
+      "template": "work-index",
+      "rawAvg": 99.6,
+      "rawMin": 98.8,
+      "inkAvg": 99.5,
+      "geoAvg": 98.9,
+      "sections": [
+       [
+        "chrome.navbar",
+        99.0,
+        98.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.words",
+        99.7,
+        99.5,
+        99.5,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.8,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.8,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.8,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "cta.contact-lines",
+        99.8,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        99.1,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/contact": {
+      "template": "contact",
+      "rawAvg": 99.3,
+      "rawMin": 98.7,
+      "inkAvg": 99.2,
+      "geoAvg": 98.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        98.7,
+        98.3,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.words",
+        99.5,
+        99.0,
+        100.0,
+        0.0
+       ],
+       [
+        "cta.contact-details",
+        99.5,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "conversion.enquiry-form",
+        99.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        99.1,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog": {
+      "template": "blog-list",
+      "rawAvg": 99.5,
+      "rawMin": 98.8,
+      "inkAvg": 99.2,
+      "geoAvg": 98.7,
+      "sections": [
+       [
+        "chrome.navbar",
+        99.0,
+        98.5,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.words",
+        99.5,
+        98.7,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.8,
+        99.9,
+        99.4,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.7,
+        98.4,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        99.1,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/are-designers-just-copycats-the-truth-about-ux-originality": {
+      "template": "blog-post",
+      "rawAvg": 98.6,
+      "rawMin": 95.7,
+      "inkAvg": 99.5,
+      "geoAvg": 98.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        95.7,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        98.6,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.6,
+        98.7,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/design-and-the-question-of-authority": {
+      "template": "blog-post",
+      "rawAvg": 98.9,
+      "rawMin": 97.9,
+      "inkAvg": 99.4,
+      "geoAvg": 98.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.9,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        98.3,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.2,
+        98.5,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/how-to-create-good-web-design-everytime": {
+      "template": "blog-post",
+      "rawAvg": 98.0,
+      "rawMin": 92.5,
+      "inkAvg": 99.1,
+      "geoAvg": 99.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.8,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        95.3,
+        98.1,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        96.9,
+        96.7,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.7,
+        98.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.3,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        92.5,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        97.5,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.6,
+        99.1,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/mobile-first-design-why-most-websites-fail-on-phones": {
+      "template": "blog-post",
+      "rawAvg": 97.2,
+      "rawMin": 87.1,
+      "inkAvg": 99.5,
+      "geoAvg": 98.8,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        87.1,
+        98.7,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        95.1,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.7,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.3,
+        98.4,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/on-webflow-right-hemisphere-and-how-we-work": {
+      "template": "blog-post",
+      "rawAvg": 98.9,
+      "rawMin": 97.7,
+      "inkAvg": 99.6,
+      "geoAvg": 98.8,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.7,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.4,
+        99.5,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        97.7,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.4,
+        98.8,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/the-subtle-art-of-choosing-typography-and-how-to-approach-it": {
+      "template": "blog-post",
+      "rawAvg": 98.4,
+      "rawMin": 95.9,
+      "inkAvg": 99.4,
+      "geoAvg": 99.2,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        96.6,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.1,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.1,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        95.9,
+        97.1,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.2,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        96.0,
+        98.8,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.9,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        99.0,
+        99.3,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/watching-movies-and-how-it-helped-me-become-a-better-designer": {
+      "template": "blog-post",
+      "rawAvg": 97.9,
+      "rawMin": 89.3,
+      "inkAvg": 99.5,
+      "geoAvg": 99.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.5,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.3,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.7,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.5,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        96.0,
+        99.4,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.1,
+        98.4,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.7,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        89.3,
+        98.6,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        97.5,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        99.3,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/what-is-px-what-is-a-pt-what-is-dp": {
+      "template": "blog-post",
+      "rawAvg": 98.6,
+      "rawMin": 94.7,
+      "inkAvg": 99.6,
+      "geoAvg": 99.1,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.1,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.7,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.4,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        94.7,
+        99.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        98.9,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.6,
+        98.7,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/why-a-button-can-be-patented-but-a-heritage-cant": {
+      "template": "blog-post",
+      "rawAvg": 98.7,
+      "rawMin": 95.5,
+      "inkAvg": 99.3,
+      "geoAvg": 98.3,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        95.5,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.8,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.3,
+        98.4,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/blog/what-should-be-the-size-of-an-icon-button": {
+      "template": "blog-post",
+      "rawAvg": 99.2,
+      "rawMin": 97.1,
+      "inkAvg": 99.7,
+      "geoAvg": 99.2,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.9,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.1,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        97.1,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        99.2,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        98.3,
+        99.6,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.2,
+        98.6,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/cheggout-sdk": {
+      "template": "case-study",
+      "rawAvg": 99.9,
+      "rawMin": 98.8,
+      "inkAvg": 99.7,
+      "geoAvg": 99.1,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.case-header",
+        100.0,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-overview",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "media.case-showcase",
+        100.0,
+        100.0,
+        100.0,
+        90.6
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        99.9,
+        100.0,
+        33.0
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        99.8,
+        100.0,
+        33.0
+       ],
+       [
+        "cta.case-more-work",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        98.8,
+        98.8,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/watch-with-papa": {
+      "template": "case-study",
+      "rawAvg": 99.9,
+      "rawMin": 99.0,
+      "inkAvg": 99.8,
+      "geoAvg": 99.2,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        99.2,
+        100.0,
+        0.0
+       ],
+       [
+        "hero.case-header",
+        100.0,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-overview",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "media.case-showcase",
+        100.0,
+        99.1,
+        100.0,
+        85.7
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-image-text",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "media.case-showcase",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "cta.case-more-work",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        99.0,
+        99.3,
+        91.7,
+        0.0
+       ]
+      ]
+     },
+     "/does-not-exist": {
+      "template": "not-found",
+      "rawAvg": 99.1,
+      "rawMin": 99.1,
+      "inkAvg": 89.7,
+      "geoAvg": 83.8,
+      "sections": [
+       [
+        "system.not-found",
+        99.1,
+        89.7,
+        83.8,
+        0.0
+       ]
+      ]
+     }
+    }
+   },
+   "390x844": {
+    "overall": {
+     "routes": 3,
+     "sections": 30,
+     "meanRawPct": 96.6,
+     "meanRawPct2": 96.6,
+     "meanInkPct": 99.2,
+     "meanGeoPct": 98.5,
+     "minRawPct": 62.1,
+     "sectionsBelowGate": 1,
+     "routesBelowAverageGate": [],
+     "maxAbsRunDeltaRawPct": 0.0,
+     "meanAbsRunDeltaRawPct": 0.0
+    },
+    "routes": {
+     "/": {
+      "template": "home",
+      "rawAvg": 96.2,
+      "rawMin": 62.1,
+      "inkAvg": 99.1,
+      "geoAvg": 97.0,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        100.0,
+        98.8,
+        0.0
+       ],
+       [
+        "hero.home",
+        99.8,
+        99.8,
+        100.0,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        99.9,
+        100.0,
+        99.7,
+        0.0
+       ],
+       [
+        "work.card-cluster",
+        98.2,
+        99.3,
+        99.9,
+        0.0
+       ],
+       [
+        "content.studio-statement",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "list.service-rows",
+        98.3,
+        99.1,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.award-groups",
+        97.3,
+        97.9,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.press-mentions",
+        98.1,
+        99.5,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.client-logo-grid",
+        98.7,
+        98.6,
+        100.0,
+        0.0
+       ],
+       [
+        "proof.testimonial-slider",
+        97.3,
+        99.6,
+        94.5,
+        0.0
+       ],
+       [
+        "content.faq-accordion",
+        97.7,
+        97.3,
+        65.5,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        62.1,
+        96.9,
+        100.0,
+        0.0
+       ],
+       [
+        "cta.contact-lines",
+        99.7,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        99.4,
+        98.8,
+        99.9,
+        0.0
+       ]
+      ]
+     },
+     "/blog/mobile-first-design-why-most-websites-fail-on-phones": {
+      "template": "blog-post",
+      "rawAvg": 96.2,
+      "rawMin": 80.6,
+      "inkAvg": 99.7,
+      "geoAvg": 99.8,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        100.0,
+        98.8,
+        0.0
+       ],
+       [
+        "hero.article-header",
+        99.9,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        96.2,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        80.6,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.article-chapter",
+        98.2,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "editorial.blog-card-grid",
+        99.4,
+        99.7,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        99.0,
+        98.4,
+        99.9,
+        0.0
+       ]
+      ]
+     },
+     "/cheggout-sdk": {
+      "template": "case-study",
+      "rawAvg": 97.7,
+      "rawMin": 94.1,
+      "inkAvg": 99.2,
+      "geoAvg": 99.8,
+      "sections": [
+       [
+        "chrome.navbar",
+        100.0,
+        100.0,
+        98.8,
+        0.0
+       ],
+       [
+        "hero.case-header",
+        100.0,
+        100.0,
+        100.0,
+        0.0
+       ],
+       [
+        "work.case-overview",
+        99.0,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "media.case-showcase",
+        97.2,
+        96.4,
+        100.0,
+        87.0
+       ],
+       [
+        "work.case-image-text",
+        97.3,
+        99.9,
+        99.9,
+        0.0
+       ],
+       [
+        "work.case-image-text",
+        94.1,
+        99.8,
+        100.0,
+        37.4
+       ],
+       [
+        "work.case-image-text",
+        96.4,
+        99.5,
+        100.0,
+        44.3
+       ],
+       [
+        "cta.case-more-work",
+        99.7,
+        99.9,
+        100.0,
+        0.0
+       ],
+       [
+        "chrome.footer",
+        95.8,
+        97.1,
+        99.9,
+        0.0
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "belowGate": [
+   {
+    "viewport": "390x844",
+    "route": "/",
+    "index": 11,
+    "section": "editorial.blog-card-grid",
+    "rawPct": 62.1
+   }
+  ],
+  "mostlyMasked": [
+   {
+    "viewport": "1440x900",
+    "route": "/cheggout-sdk",
+    "index": 3,
+    "section": "media.case-showcase",
+    "maskedPct": 90.6
+   },
+   {
+    "viewport": "1440x900",
+    "route": "/watch-with-papa",
+    "index": 3,
+    "section": "media.case-showcase",
+    "maskedPct": 85.7
+   },
+   {
+    "viewport": "390x844",
+    "route": "/cheggout-sdk",
+    "index": 3,
+    "section": "media.case-showcase",
+    "maskedPct": 87.0
+   }
+  ],
+  "exceptions": [
+   {
+    "viewport": "390x844",
+    "route": "/",
+    "index": 11,
+    "section": "editorial.blog-card-grid",
+    "rawPct": 62.1,
+    "status": "pending human approval",
+    "approvedBy": null
+   }
+  ]
  }
 }

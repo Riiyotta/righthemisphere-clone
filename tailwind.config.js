@@ -147,7 +147,7 @@ export default {
         one: '1fr',
       },
       gridTemplateRows: {
-        faq: '32px',
+        faq: 'auto',
       },
       zIndex: { nav: '998', overlay: '999', 5: '5' },
       transitionTimingFunction: {
