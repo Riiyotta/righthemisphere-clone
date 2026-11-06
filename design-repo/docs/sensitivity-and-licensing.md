@@ -32,4 +32,4 @@ team members and their photographs, personal contact details, vendor partner bad
 `font.family.sans` (Inter, OFL) or a font the operator licenses.
 
 **Open approvals** (see `registry.manifest.json approvalFlags`): architecture review of the policy binding,
-asset-licensing review, legal-content sign-off, human review of the pinned patterns. All are pending.
+asset-licensing review and legal-content sign-off remain open. The pinned patterns, protected registry, whitelists and classification were reviewed by the owner on 2026-11-06.

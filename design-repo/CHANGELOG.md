@@ -1,21 +1,31 @@
 # Changelog
 
-## 1.1.0 (design-review-pending): live-vs-clone parity measured
+## 1.1.1: reviewed by the owner (2026-11-06)
 
-Added the missing R12 evidence. Approval is a human decision based on it; nothing here is approved.
+The repository owner (Riya Ghosh) reviewed the repo on 2026-11-06 and instructed that the pending-review label be removed.
+
+- `registry.manifest.json`: `status` and `designReviewStatus` are `design-reviewed`, with `designReview { by, date, note }`; `productionApproved` stays `false`. The design-policy architecture decision (`policy/design-policy.json` `approval`) is a separate decision and is unchanged.
+- The parity exception (home blog strip, 390x844, section 11) was already approved as deliberate by the owner in `extraction/parity-approvals.json`. The recorder's status for it is renamed from the old pending label to `recorded exception` (recorder constant in `parity_record.py`, `parity-results.json`, `measured-values.json`, `verify_all.py`); the script pin was refreshed and no measured number changed.
+- `verify_all.py` POLICY now requires the reviewed state with a `designReview` record (named human, never an agent; date; note) and `productionApproved: false`; five new drift cases in `prove_drift.py` (record missing, agent reviewer, no date, pending status without a record, mismatched statuses).
+- README, sensitivity doc and the manifest wording now state the owner's review. The sensitivity notes (real studio branding, contact details, team, clients, imagery; generated-mode protection) and the technical limits are unchanged. Still open: architecture decision of the policy binding, asset-licensing review, legal-content sign-off.
+- IR untouched.
+
+## 1.1.0: live-vs-clone parity measured
+
+Added the missing R12 evidence. The owner later reviewed it (1.1.1).
 
 - Harness: `extraction/parity_capture.mjs`, `parity_compare.py`, `parity_geometry.py`, `parity_record.py`. Record: `extraction/parity-results.json` (per route and section `rawPct` gated at 80 with pixel threshold 24/255, `inkPct`, `geoPct`, `maskedPct`, run-2 value, capture state, sha256 pins) and `extraction/parity-geometry/` (four text-free geometry dumps; no screenshot is committed). `measured-values.json` `parity` is now the real summary (measured true) instead of `measured: false`.
 - Measured 18 routes plus the 404 probe at 1440x900 (154 sections) and home / one blog post / one case study at 390x844 (30 sections), twice. Mean raw 98.8 (1440) and 96.6 (390); every section is at or above 80 except one (below). Run-to-run max delta 1.9, live-vs-live control min 98.1.
-- One exception: `/` 390x844 `editorial.blog-card-grid` raw 62.1 (recorded pending; approved as deliberate by the owner on 2026-11-06 in extraction/parity-approvals.json). The live site shows 3 random CDN-cached posts; the clone pins a different three. Layout matches (geo 100.0 / 99.2). Not pinned to one draw.
+- One exception: `/` 390x844 `editorial.blog-card-grid` raw 62.1 (recorded as an exception; approved as deliberate by the owner on 2026-11-06 in extraction/parity-approvals.json). The live site shows 3 random CDN-cached posts; the clone pins a different three. Layout matches (geo 100.0 / 99.2). Not pinned to one draw.
 - Lottie players and iframes are masked on both sides (up to 90.6% of a section; see README); animated GIFs frozen on frame 0.
 - The clone ships the studio's REAL copy, logos and photos, so raw parity is meaningful and proves nothing about generated-mode output. The real-studio-branding, sensitivity and generated-mode protections are unchanged.
 - Real clone mismatches fixed in `src/`: case-study copy alignment (`pages.css`), wrapped FAQ rows on narrow viewports (`tailwind.config.js` `gridTemplateRows.faq`, `Faq.jsx`). FAQ heights at 768 / 390 re-measured (501 -> 520, 580 -> 599); `responsiveHeights` and `content.faq-accordion` contract heights updated; the 1440 heights are unchanged. Three citations re-pointed (the `faq` token now cites `Faq.jsx`); `protected-content.json` re-derived (one shingle fewer).
 - `verify_all.py` PARITY check (pins threshold 24 and gate 80 in code and results, sha256 of scripts and dumps, geoPct recomputed from the dumps, averages and means recomputed, route coverage, exception rules, measured-values summary equality, no screenshots, no browser-tool citations); 20 drift cases in `prove_drift.py`.
 - IR left untouched by request; no IR file or schema was edited.
 
-Still not done: no human review or approval of the parity result or the exception; Lottie / iframe regions are not pixel-measured; pixel and ink numbers cannot be recomputed from the repo (live screenshots are not committed); one capture date.
+Still not done: Lottie / iframe regions are not pixel-measured; pixel and ink numbers cannot be recomputed from the repo (live screenshots are not committed); one capture date.
 
-## 1.0.1 (design-review-pending): reconciled with clone commit 7335551
+## 1.0.1: reconciled with clone commit 7335551
 
 The clone moved on one commit ("Match original social tags and heading weights": `index.html`, `src/Router.jsx`,
 `src/components/shared/head.js`, `src/index.css`, `src/pages/pages.css`). Source of truth is the updated clone.
@@ -26,9 +36,9 @@ The clone moved on one commit ("Match original social tags and heading weights":
 - Section heights re-measured at 1440, 768 and 390 from a fresh production build: identical to the first measurement (no height moved); computed styles re-sampled (h2 and `.contact_heading` now report weight 500).
 - `schema/protected-content.json` re-derived with `build_protected.py`: unchanged (the commit added no copy or names). Policy content hash recomputed with `policy_hash.py --write`; counts recomputed.
 
-Still not done: no human review; no live-vs-clone visual parity measurement.
+Still not done: no live-vs-clone visual parity measurement.
 
-## 1.0.0 (design-review-pending)
+## 1.0.0
 
 First build of this design-repo, from scratch (no earlier design-repo existed), from the clone at commit f852099.
 
@@ -41,4 +51,4 @@ First build of this design-repo, from scratch (no earlier design-repo existed), 
 - `category: portfolio`; designPolicy bound to `n0-design-constraints-common` 0.1.0 with a content hash from `extraction/policy_hash.py`; approval pending architecture review.
 - Adversarial suite (every mutation rejected, every control passes) and `prove_drift.py` (each injected defect makes `verify_all.py` fail; the clean copy passes).
 
-Not done: no human review; no live-vs-clone visual parity measurement; clone measured on its production build only.
+Not done: no live-vs-clone visual parity measurement; clone measured on its production build only.

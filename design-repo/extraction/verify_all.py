@@ -30,7 +30,7 @@ Checks (each named in the output):
   MEASURED_SYNC   contract.measured heights == extraction/measured-values.json
   POLICY          category is portfolio; designPolicy binds n0-design-constraints-common 0.1.0 (Common IR 0.5,
                   hard-and-soft, domain portfolio); policy/design-policy.json exists with its enforcedBy files on disk;
-                  contentHash recomputed by extraction/policy_hash.py; approval still pending architecture review
+                  contentHash recomputed by extraction/policy_hash.py; approval still pending architecture review (separate decision); manifest status/designReviewStatus design-reviewed with a designReview record (named human, date), productionApproved false
   GRAPH_SYNC      compatibility/graph.json rule ids == semantic_validate.RULES (same severities)
   CITATIONS       every {cite, needle}: file exists, range inside the file, needle inside the range
   SOURCE_TAGS     R7: each contract's source.file has <tag (or the CSS rule) at source.lines with the needle
@@ -42,7 +42,7 @@ Checks (each named in the output):
                   text-free geometry dumps; geoPct recomputed from the dumps; averages/means/below-gate lists recomputed; every
                   route of templates/routes.json (+ the 404 probe) at 1440x900 and home + a blog post + a case study at 390x844;
                   every section below 80 is an exception (and every exception a section below 80) with status
-                  "pending human approval" and approvedBy null; no route average below 80; the two recorded runs agree;
+                  "recorded exception" and approvedBy null; no route average below 80; the two recorded runs agree;
                   measured-values.json parity == the summary derived from the results; no screenshots or .playwright-mcp citations
   HYGIENE         no absolute machine paths, no __pycache__/.DS_Store/__MACOSX/Thumbs.db
 Citations, source tags, slugs and the ia cross-check resolve against the project root (the folder containing
@@ -479,7 +479,15 @@ def main(write_counts=False):
     if dp.get("contentHashFiles") != ph.POLICY_FILES: errs.append("designPolicy.contentHashFiles != extraction/policy_hash.py POLICY_FILES")
     want_h = ph.compute(ROOT)
     if dp.get("contentHash") != want_h: errs.append(f"designPolicy.contentHash {dp.get('contentHash')!r} != recomputed {want_h!r} (run: python3 extraction/policy_hash.py --write)")
-    if man.get("status") != "design-review-pending" or man.get("productionApproved") is not False: errs.append("status must be design-review-pending and productionApproved false")
+    if man.get("productionApproved") is not False: errs.append("productionApproved must be false")
+    if man.get("status") != "design-reviewed" or man.get("designReviewStatus") != "design-reviewed": errs.append("status and designReviewStatus must both be 'design-reviewed'")
+    dr = man.get("designReview")
+    if not isinstance(dr, dict): errs.append("designReview record missing (design-reviewed needs { by, date, note })")
+    else:
+        by = str(dr.get("by", "")).strip()
+        if len(by) < 3 or re.search(r"agent|claude|bot|\bai\b|gpt|llm|assistant|automated", by, re.I): errs.append(f"designReview.by must be a named human, not an agent: {by!r}")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(dr.get("date", ""))): errs.append("designReview.date must be YYYY-MM-DD")
+        if len(str(dr.get("note", "")).strip()) < 20: errs.append("designReview.note must be written")
     for e in errs: fail("POLICY", e)
     PASSES.append("POLICY")
     # PARITY (R12)
@@ -540,7 +548,7 @@ def main(write_counts=False):
         for e in excs:
             k = (e.get("viewport"), e.get("route"), e.get("index")); exk.add(k)
             if k not in below: perr.append(f"exception {k} is not a section below the gate (exceptions are never added to bypass the gate)")
-            if e.get("status") != "pending human approval" or e.get("approvedBy") is not None: perr.append(f"exception {k}: status must be 'pending human approval' with approvedBy null (the recorder never approves; owner decisions live in extraction/parity-approvals.json)")
+            if e.get("status") != "recorded exception" or e.get("approvedBy") is not None: perr.append(f"exception {k}: status must be 'recorded exception' with approvedBy null (the recorder is neutral; owner decisions live in extraction/parity-approvals.json)")
             if not e.get("cause") or e.get("cause") == "UNDIAGNOSED" or len(e["cause"]) < 40: perr.append(f"exception {k}: a real, written cause is required")
         for k in below - exk: perr.append(f"section {k} is below the gate and has no exception")
         # owner decisions: extraction/parity-approvals.json (a named human, a date and a written decision; never an agent)

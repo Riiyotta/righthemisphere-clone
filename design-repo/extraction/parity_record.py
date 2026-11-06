@@ -8,7 +8,7 @@
 
 cmp_runN.json are parity_compare.py outputs. Run 1 numbers are the recorded ones; run 2 is kept per section (rawPct2) to show
 reproducibility. causes.json maps "<width>|<route>|<section index>" to the real cause of any section below the gate; those
-sections become exceptions with status "pending human approval" and approvedBy null. The recorder never approves anything.
+sections become exceptions with status "recorded exception" and approvedBy null. The recorder is neutral: it records, and owner decisions live in extraction/parity-approvals.json.
 The geometry dumps are copied into --geometry-dir and pinned by sha256."""
 import hashlib, json, shutil, sys
 from pathlib import Path
@@ -85,7 +85,7 @@ def main():
                     if s["rawPct"] < GATE:
                         key = f"{w}|{route}|{s['i']}"
                         res["exceptions"].append({"viewport": vp, "route": route, "section": s["id"], "index": s["i"], "rawPct": s["rawPct"], "rawPct2": s2["rawPct"], "inkPct": s["inkPct"], "geoPct": g["geoPct"],
-                                                  "cause": causes.get(key, "UNDIAGNOSED"), "status": "pending human approval", "approvedBy": None})
+                                                  "cause": causes.get(key, "UNDIAGNOSED"), "status": "recorded exception", "approvedBy": None})
                 routes[route] = {"template": tpl.get(route), "liveDoc": v["liveDoc"], "cloneDoc": v["cloneDoc"], "sectionCount": len(secs), "cloneOnlySections": v["cloneOnlySections"],
                                  "rawAvg": avg([x["rawPct"] for x in secs]), "rawMin": min(x["rawPct"] for x in secs), "inkAvg": avg([x["inkPct"] for x in secs]), "geoAvg": avg([x["geoPct"] for x in secs]),
                                  "rawAvg2": avg([x["rawPct2"] for x in secs]), "sections": secs}

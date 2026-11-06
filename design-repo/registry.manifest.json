@@ -1,17 +1,23 @@
 {
  "repositoryId": "righthemisphere-portfolio-design-repo",
- "repositoryVersion": "1.1.0",
+ "repositoryVersion": "1.1.1",
  "pageSpecVersion": "1.1.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion is machine-checked by extraction/verify_all.py (must equal tokens/llm/component-allowlist.json version). pageSpecVersion is enforced by the schema (const). repositoryVersion is documentation-only and hand-maintained; nothing checks it.",
- "status": "design-review-pending",
+ "status": "design-reviewed",
+ "designReviewStatus": "design-reviewed",
  "productionApproved": false,
+ "designReview": {
+  "by": "Riya Ghosh (repository owner)",
+  "date": "2026-11-06",
+  "note": "Reviewed by the repository owner; the owner instructed (chat, 2026-11-06) that the pending-review label be removed."
+ },
  "category": "portfolio",
  "approvalFlags": {
   "architectureReview": "pending",
   "assetLicensingReviewed": false,
   "legalContentSignOff": false,
-  "humanReviewOfPinnedPatterns": false
+  "humanReviewOfPinnedPatterns": true
  },
  "designPolicy": {
   "policyId": "n0-design-constraints-common",
@@ -104,6 +110,6 @@
   "generatedExamples": 9,
   "adversarialMutations": 177,
   "adversarialControls": 19,
-  "driftCases": 82
+  "driftCases": 87
  }
 }

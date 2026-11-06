@@ -3,7 +3,7 @@
 A machine-validated PageSpec system extracted from the clone next to this folder (a React/Vite rebuild of the
 Webflow site https://www.righthemisphere.studio/, a creative studio's portfolio). An AI can compose new pages in
 the same design language (`mode: "generated"`) without inventing colours, copy or structure, and without reusing
-anything that identifies the source. Status: **design-review-pending**, `productionApproved: false`.
+anything that identifies the source. Status: **design-reviewed** (reviewed by the repository owner on 2026-11-06; `registry.manifest.json` `designReview`), `productionApproved: false` (not production-approved).
 **Read `docs/sensitivity-and-licensing.md` first**: the clone ships the studio's real content.
 
 ## Layout
@@ -45,7 +45,7 @@ PageSpec's `meta.social` must match (`META_SOCIAL_MATCHES_TEMPLATE`). The `og:im
 computed by `extraction/policy_hash.py` over `tokens/llm/token-policy.json`, `compatibility/graph.json`,
 `schema/pagespec.schema.json` and `schema/semantic_validate.py`; `verify_all.py` (POLICY) recomputes it. Editing
 any of those four files requires `python3 extraction/policy_hash.py --write`. The portfolio generation rules are
-in `policy/design-policy.json`. **Approval is pending architecture review**: no human has confirmed the binding.
+in `policy/design-policy.json`. The policy binding's architecture decision is a separate decision that is still open (`policy/design-policy.json` `approval`).
 
 ## Counts
 
@@ -69,7 +69,7 @@ in `policy/design-policy.json`. **Approval is pending architecture review**: no 
 | generatedExamples | 9 |
 | adversarialMutations | 177 |
 | adversarialControls | 19 |
-| driftCases | 82 |
+| driftCases | 87 |
 <!-- counts:end -->
 
 ## Run
@@ -142,7 +142,7 @@ strip shows 3 random posts, CDN-cached; the clone pins a different three. Layout
 96.9) and the live site returned the same three on every capture, so this is live content and not noise. The clone was not
 pinned to one random draw. The same section passes at 1440 (82.5, mostly white area). The owner decided on 2026-11-06 that
 this difference is deliberate and the clone must not be adapted to it (`extraction/parity-approvals.json`); the recorded
-result file itself stays `pending human approval` because the recorder never approves anything.
+result file keeps the status `recorded exception`, the recorder's neutral default (it records and never decides); the owner's decision is in `extraction/parity-approvals.json`.
 
 **Masked regions** (percent of the section area masked): `/cheggout-sdk` media.case-showcase 90.6 (390: 87.0) and two
 work.case-image-text 33.0 (390: 37.4 and 44.3); `/watch-with-papa` media.case-showcase 85.7. Their raw score covers only the
@@ -170,14 +170,12 @@ python3 extraction/parity_compare.py <live_dir> <clone_dir> <cmp.json> [--sheets
 
 ## Honest limits
 
-- No human has reviewed the pinned patterns (availability, retrieval, token rules) or the protected registry.
-  The wrapper whitelist convention says "agent attestation, not a human sign-off" for agent reviewers; there are
-  no whitelist entries.
+- The pinned patterns (availability, retrieval, token rules), the protected registry, the whitelists and the classification were reviewed by the owner on 2026-11-06. The wrapper whitelist convention still requires an agent reviewer to write "agent attestation, not a human sign-off"; there are no whitelist entries.
 - Leakage detection is string based (normalised text, regexes, hashed word n-grams). It will miss a paraphrase,
   a logo drawn into an image, or an identity expressed only visually. Hashing names and copy keeps this repo from
   shipping them in plain text; it is not encryption and short names can be guessed by brute force.
 - One-word client names that are ordinary English words are matched case-sensitively only.
-- Visual parity was measured (see "Parity evidence"), but only on the dates and at the viewports recorded there, and approval of the result is a human decision, not made here. Two things the numbers do not cover: the Lottie / iframe regions (masked, percentages below) and the home blog strip, which shows a random draw on the live site.
+- Visual parity was measured (see "Parity evidence"), but only on the dates and at the viewports recorded there, and the owner reviewed the result on 2026-11-06. Two things the numbers do not cover: the Lottie / iframe regions (masked, percentages below) and the home blog strip, which shows a random draw on the live site.
 - The clone has no `prefers-reduced-motion` handling. The reduced-motion fallbacks are rules for generated pages.
 - Section heights were measured on the production build of the clone (`sectionHeights`, `responsiveHeights`); the live heights are in the parity record (`liveH` per section).
 - `list.pricing-table` exists because the clone has a real rate card on /services; the policy forbids other

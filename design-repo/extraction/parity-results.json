@@ -3166,8 +3166,8 @@
    "rawPct2": 62.1,
    "inkPct": 96.9,
    "geoPct": 100.0,
-   "cause": "Content, not layout. The live home page's blog strip is a Webflow collection list that shows 3 random posts of 10, chosen when the origin renders and then CDN-cached; on the capture date it showed watching-movies, the-subtle-art and design-and-the-question. The clone renders a fixed three (mobile-first, the-subtle-art, why-a-button), so two of three cards carry a different image and title, and title wrapping makes the section 1444.8 px against 1424.1 px. Evidence: layout matches (geoPct 100.0 at 390, 99.2 at 1440; inkPct 96.9); the same section passes the gate at 1440 (82.5) because most of the area is white; the live site re-captured in a second and a third run gave the identical three posts (live-vs-live control 100.0). It is therefore live content, not harness noise. Pinning the clone to one random draw was deliberately not done. Needs a human decision.",
-   "status": "pending human approval",
+   "cause": "Content, not layout. The live home page's blog strip is a Webflow collection list that shows 3 random posts of 10, chosen when the origin renders and then CDN-cached; on the capture date it showed watching-movies, the-subtle-art and design-and-the-question. The clone renders a fixed three (mobile-first, the-subtle-art, why-a-button), so two of three cards carry a different image and title, and title wrapping makes the section 1444.8 px against 1424.1 px. Evidence: layout matches (geoPct 100.0 at 390, 99.2 at 1440; inkPct 96.9); the same section passes the gate at 1440 (82.5) because most of the area is white; the live site re-captured in a second and a third run gave the identical three posts (live-vs-live control 100.0). It is therefore live content, not harness noise. Pinning the clone to one random draw was deliberately not done. Decided as deliberate by the owner (extraction/parity-approvals.json).",
+   "status": "recorded exception",
    "approvedBy": null
   }
  ],
@@ -3179,6 +3179,6 @@
   "extraction/parity_capture.mjs": "25f1ed6235a8f6199245df73559350047cc7fe7d8c43ae8d73a81c6f3f168fd9",
   "extraction/parity_compare.py": "9848117df91c1abacbe0ebd3468e02adb794ae1f001aed997a7df038b79e609b",
   "extraction/parity_geometry.py": "d3763095eca0f77c9cbf9d412c3f307b299de54ad6014db1f6ed4c716887dabb",
-  "extraction/parity_record.py": "8492dc0c52b5a181d6d29253bfb3b4af275a6cce24cfef365862a9d50016d691"
+  "extraction/parity_record.py": "bd0ac9b0bee95f9d52553797bf826d18cbe8a4ddfcbf02d6a14233191f9299be"
  }
 }
